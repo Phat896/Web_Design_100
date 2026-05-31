@@ -1,0 +1,447 @@
+/* ============================================================
+   STELLARMIND COSMIC CHATBOT STYLE
+   Premium Glassmorphism 2.0 UI
+   ============================================================ */
+
+/* --- Floating Launcher Button --- */
+.cosmic-chat-launcher {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(82, 0, 245, 0.45), rgba(0, 180, 219, 0.45));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(82, 0, 245, 0.3), 
+              0 0 15px rgba(0, 180, 219, 0.2), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: launcher-pulse 3s infinite alternate;
+  outline: none;
+}
+
+.cosmic-chat-launcher:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 12px 40px rgba(82, 0, 245, 0.5), 
+              0 0 25px rgba(0, 180, 219, 0.4), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cosmic-chat-launcher:active {
+  transform: scale(0.95);
+}
+
+.cosmic-chat-launcher svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+/* Launcher Badge Notification */
+.cosmic-chat-launcher::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #00ffcc;
+  border: 2px solid #070d19;
+  box-shadow: 0 0 8px #00ffcc;
+  animation: badge-glow 1.5s infinite alternate;
+}
+
+/* --- Chat Window Container --- */
+.cosmic-chat-window {
+  position: fixed;
+  bottom: 105px;
+  right: 30px;
+  width: 380px;
+  height: 550px;
+  max-width: calc(100vw - 60px);
+  max-height: calc(100vh - 150px);
+  border-radius: 20px;
+  background: rgba(10, 16, 32, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(82, 0, 245, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cosmic-chat-window.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* --- Chat Header --- */
+.cosmic-chat-header {
+  padding: 16px 20px;
+  background: linear-gradient(90deg, rgba(20, 25, 45, 0.8), rgba(30, 20, 50, 0.8));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cosmic-chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cosmic-chat-avatar-wrap {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5200f5, #00b4db);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(82, 0, 245, 0.3);
+}
+
+.cosmic-chat-avatar-wrap::before {
+  content: '✨';
+  font-size: 16px;
+}
+
+.cosmic-chat-status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ffcc;
+  border: 2px solid #0c1226;
+  box-shadow: 0 0 6px #00ffcc;
+}
+
+.cosmic-chat-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cosmic-chat-title {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+}
+
+.cosmic-chat-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.cosmic-chat-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.cosmic-chat-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff4a6b;
+  transform: rotate(90deg);
+}
+
+/* --- Chat Messages Area --- */
+.cosmic-chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Message Custom Scrollbar */
+.cosmic-chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+.cosmic-chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cosmic-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.cosmic-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Message Bubble */
+.cosmic-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  animation: message-appear 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.cosmic-message-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 4px;
+  padding: 0 4px;
+}
+
+/* User Message styling */
+.cosmic-message-user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.cosmic-message-user .cosmic-message-bubble {
+  background: linear-gradient(135deg, rgba(82, 0, 245, 0.6), rgba(120, 0, 219, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 16px 16px 4px 16px;
+  box-shadow: 0 4px 15px rgba(82, 0, 245, 0.2);
+}
+
+/* Bot Message styling */
+.cosmic-message-bot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.cosmic-message-bot .cosmic-message-bubble {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px 16px 16px 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cosmic-message-bubble {
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+/* Highlight planet name inside messages */
+.cosmic-message-bubble strong {
+  color: #00ffcc;
+  font-weight: 600;
+}
+
+/* --- Typing Indicator --- */
+.cosmic-typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 8px 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cosmic-typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+
+.cosmic-typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.cosmic-typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+/* --- Quick Suggestions Container --- */
+.cosmic-chat-suggestions-container {
+  padding: 0 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cosmic-chat-suggestions-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+.cosmic-chat-suggestions {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.cosmic-chat-suggestions::-webkit-scrollbar {
+  height: 3px;
+}
+.cosmic-chat-suggestions::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+.cosmic-chat-btn-suggestion {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.cosmic-chat-btn-suggestion:hover {
+  background: rgba(82, 0, 245, 0.15);
+  border-color: rgba(82, 0, 245, 0.4);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(82, 0, 245, 0.15);
+}
+
+/* --- Input Area --- */
+.cosmic-chat-input-bar {
+  padding: 12px 20px 20px 20px;
+  background: rgba(8, 12, 24, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cosmic-chat-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.cosmic-chat-input:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(82, 0, 245, 0.5);
+  box-shadow: 0 0 10px rgba(82, 0, 245, 0.2);
+}
+
+.cosmic-chat-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cosmic-chat-send {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5200f5, #00b4db);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(82, 0, 245, 0.2);
+  outline: none;
+}
+
+.cosmic-chat-send:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(82, 0, 245, 0.4);
+  background: linear-gradient(135deg, #6210ff, #00c4eb);
+}
+
+.cosmic-chat-send:active {
+  transform: scale(0.95);
+}
+
+.cosmic-chat-send svg {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+  transform: translateX(1px);
+}
+
+/* --- KEYFRAME ANIMATIONS --- */
+@keyframes launcher-pulse {
+  0% {
+    box-shadow: 0 8px 32px rgba(82, 0, 245, 0.3), 
+                0 0 15px rgba(0, 180, 219, 0.2), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(82, 0, 245, 0.4), 
+                0 0 25px rgba(0, 180, 219, 0.4), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes badge-glow {
+  0% {
+    box-shadow: 0 0 4px #00ffcc;
+  }
+  100% {
+    box-shadow: 0 0 10px #00ffcc;
+  }
+}
+
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}

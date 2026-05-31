@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CỘNG ĐỒNG — Trạm Giao Tiếp Cảm Xúc</title>
+  <meta name="description" content="Chia sẻ cảm xúc của bạn với vũ trụ và kết nối với những hành tinh khác." />
+  <meta name="theme-color" content="#010812" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/planets-enhanced.css" />
+  <link rel="stylesheet" href="../css/community.css" />
+  <link rel="stylesheet" href="../css/chatbot.css" />
+</head>
+<body>
+
+  <!-- ═══ SCENE LAYERS ═════════════════════════════════════════ -->
+  <canvas id="starfield" class="starfield-canvas"></canvas>
+  <div class="nebula-layer nebula-1"></div>
+  <div class="nebula-layer nebula-2"></div>
+  <div class="nebula-layer nebula-3"></div>
+
+  <!-- ═══ TOP NAVBAR ════════════════════════════════════════════ -->
+  <nav class="top-nav" id="topNav" role="navigation" aria-label="Menu chính">
+    <div class="nav-logo">🪐 STELLAR<span>MIND</span></div>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link" id="navHome">Trang chủ</a></li>
+      <li><a href="#" class="nav-link" id="navExplore">Khám phá</a></li>
+      <li><a href="community.html" class="nav-link active" id="navCommunity">Cộng đồng</a></li>
+      <li><a href="#" class="nav-link" id="navTest">Bài test</a></li>
+      <li><a href="#" class="nav-link" id="navContact">Liên hệ</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-auth-section" id="navAuthSection">
+      <button class="nav-auth-btn" id="loginTriggerBtn">🔑 ĐĂNG NHẬP</button>
+      <div class="nav-user-badge hidden" id="navUserBadge">
+        <span>🌌 <strong id="navUserName">...</strong></span>
+        <button id="logoutBtn" class="nav-logout-btn" title="Đăng xuất">ĐĂNG XUẤT</button>
+      </div>
+    </div>
+    <div class="nav-avatar" id="navAvatar" role="button" aria-label="Hồ sơ người dùng" tabindex="0">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">U</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ MAIN COMMUNITY CONTENT ════════════════════════════════════════════ -->
+  <main class="comm-main">
+    <header class="comm-header">
+      <h1 class="comm-title">TRẠM GIAO TIẾP VŨ TRỤ</h1>
+      <p class="comm-subtitle">Khu vực an toàn để phát tín hiệu và nhận phản hồi từ các hành tinh khác.</p>
+    </header>
+
+    <section class="comm-composer">
+      <div class="composer-inner">
+        <div class="composer-header">
+          <div class="composer-modes">
+            <button type="button" class="mode-btn active" id="modePublic" data-mode="public">🔓 Đăng Công Khai</button>
+            <button type="button" class="mode-btn" id="modeAnon" data-mode="anon">🔒 Đăng Ẩn Danh</button>
+          </div>
+          <div class="nickname-wrap" id="nicknameWrap">
+            <input type="text" id="commNickname" class="comm-nickname-input" placeholder="Biệt danh của bạn..." maxlength="20" />
+          </div>
+        </div>
+        <textarea id="commInput" class="comm-textarea" placeholder="Bạn đang cảm thấy gì? Hãy phát tín hiệu vào không gian..." rows="3"></textarea>
+        <div class="composer-actions">
+          <span class="composer-hint" id="composerHint">Tín hiệu của bạn sẽ được hiển thị công khai với biệt danh.</span>
+          <button id="commSendBtn" class="comm-btn">🚀 PHÁT TÍN HIỆU</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="comm-feed" id="commFeed">
+      <!-- Posts will be generated here by JS -->
+    </section>
+  </main>
+
+  <!-- ═══ AUTHENTICATION MODAL ════════════════════════════════ -->
+  <div class="auth-modal-overlay" id="authModal">
+    <div class="auth-modal-box">
+      <div class="auth-modal-header">
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" id="tabLoginBtn">Đăng Nhập</button>
+          <button class="auth-tab-btn" id="tabRegisterBtn">Đăng Ký</button>
+        </div>
+        <button class="auth-close-btn" id="authCloseBtn">✕</button>
+      </div>
+      <div class="auth-modal-body">
+        <form id="authForm" onsubmit="return false;">
+          <div class="auth-field">
+            <label for="authUsername">Tên đăng nhập</label>
+            <input type="text" id="authUsername" placeholder="Nhập tên đăng nhập (tối thiểu 3 ký tự)..." required minlength="3" />
+          </div>
+          <div class="auth-field">
+            <label for="authPassword">Mật khẩu</label>
+            <input type="password" id="authPassword" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)..." required minlength="6" />
+          </div>
+          <div class="auth-error-msg hidden" id="authErrorMsg"></div>
+          <button type="submit" class="auth-submit-btn" id="authSubmitBtn">ĐĂNG NHẬP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/community.js"></script>
+  <script src="../js/chatbot.js"></script>
+</body>
+</html>

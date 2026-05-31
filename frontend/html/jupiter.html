@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAO MỘC — Khám Phá Hệ Mặt Trời</title>
+  <meta name="description" content="Khám phá Sao Mộc — hành tinh khổng lồ. Trải nghiệm cảm xúc Tự Tin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Barlow+Condensed:wght@400;600;700&family=Exo+2:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/planet-page.css">
+  <link rel="stylesheet" href="../css/chatbot.css">
+</head>
+<body data-planet="jupiter">
+  <nav class="pp-nav"><a href="#" class="pp-nav-back" id="ppBack">← QUAY LẠI</a><span class="pp-nav-title" id="ppNavTitle">SAO MỘC — Hy Vọng</span><div class="pp-nav-dots" id="ppDots"></div><div class="pp-nav-tools"><button class="pp-nav-tool-btn" id="ppAudioToggle">🎵 Âm Thanh: Tắt</button><button class="pp-nav-tool-btn" id="ppYoutubeBtn">🎥 Gợi Ý</button></div></nav>
+  <div class="pp-main">
+    <aside class="pp-hero"><div class="pp-planet-canvas-wrap"><canvas id="ppPlanetCanvas"></canvas></div><h1 class="pp-planet-name" id="ppName">SAO MỘC</h1><p class="pp-planet-subtitle" id="ppSubtitle">Người khổng lồ của vũ trụ</p><div class="pp-emotion-tag"><span class="pp-emotion-dot"></span><span id="ppEmotion">Hy Vọng</span></div><div class="pp-stats-grid" id="ppStats"></div></aside>
+    <section class="pp-content">
+      <nav class="pp-tabs-nav"><button class="pp-tab-btn active" data-tab="overview">TỔNG QUAN</button><button class="pp-tab-btn" data-tab="symptoms">Biểu hiện</button><button class="pp-tab-btn" data-tab="causes">Nguyên nhân</button><button class="pp-tab-btn" data-tab="advice">Lời khuyên</button><button class="pp-tab-btn" data-tab="interact">Tương tác</button><button class="pp-tab-btn" data-tab="action">Hành động ngay</button></nav>
+      <div class="pp-tab-panel active" data-tab="overview"><div class="pp-quote" id="ppQuote"></div><p class="pp-desc" id="ppDesc"></p></div>
+      <div class="pp-tab-panel" data-tab="symptoms"><span class="pp-section-label">BIỂU HIỆN</span><ul class="pp-list" id="ppSymptoms"></ul></div>
+      <div class="pp-tab-panel" data-tab="causes"><span class="pp-section-label">NGUYÊN NHÂN</span><ul class="pp-list" id="ppCauses"></ul></div>
+      <div class="pp-tab-panel" data-tab="advice"><span class="pp-section-label">LỜI KHUYÊN</span><ul class="pp-list" id="ppAdvice"></ul></div>
+      <div class="pp-tab-panel" data-tab="interact"><span class="pp-section-label">CHIA SẺ CẢM XÚC</span><div class="pp-ai-wrap"><textarea class="pp-ai-textarea" id="ppAiInput" placeholder="Bạn đang cảm thấy gì?" rows="3"></textarea><button class="pp-ai-btn" id="ppAiSend">💬 CHIA SẺ</button><div class="pp-ai-response" id="ppAiResponse"></div></div><div class="pp-slider-wrap"><div class="pp-slider-label"><span>MỨC ĐỘ CẢM XÚC</span><span id="ppSliderVal">5 / 10</span></div><input type="range" class="pp-slider" id="ppSlider" min="1" max="10" value="5"></div></div>
+      <div class="pp-tab-panel" data-tab="action"><span class="pp-section-label">HÀNH ĐỘNG NGAY</span><div id="ppActions"></div><span class="pp-section-label">HƯỚNG DẪN THỞ</span><div class="pp-breathing"><div class="pp-breath-circle" id="ppBreathCircle">●</div><div class="pp-breath-label" id="ppBreathLabel">Nhấn bắt đầu</div><div class="pp-breath-timer" id="ppBreathTimer">—</div><button class="pp-breath-btn" id="ppBreathBtn">BẮT ĐẦU</button></div></div>
+    </section>
+  </div>
+
+  <div class="pp-modal" id="ppYoutubeModal"><div class="pp-modal-content"><button class="pp-modal-close" id="ppModalClose">&times;</button><h3 class="pp-modal-title">Gợi Ý (Youtube)</h3><ul class="pp-yt-list" id="ppYtList"></ul></div></div><script src="../js/planets-enhanced.js"></script>
+  <script src="../js/planet-page.js"></script>
+  <script src="../js/chatbot.js"></script>
+</body>
+</html>

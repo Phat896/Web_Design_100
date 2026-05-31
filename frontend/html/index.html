@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HỆ MẶT TRỜI — Trình Khám Phá Không Gian Tương Tác</title>
+  <meta name="description" content="Trình khám phá Hệ Mặt Trời trực quan, sinh động bằng HTML5 Canvas. Nhấp vào bất kỳ hành tinh nào để phóng to và khám phá bí ẩn. Mô hình quỹ đạo tương tác." />
+  <meta property="og:title" content="Hệ Mặt Trời — Trình Khám Phá Không Gian Tương Tác" />
+  <meta property="og:description" content="Khám phá Hệ Mặt Trời thông qua mô hình quỹ đạo 2D tương tác sống động." />
+  <meta name="theme-color" content="#010812" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/planets-enhanced.css" />
+  <link rel="stylesheet" href="../css/chatbot.css" />
+</head>
+<body>
+
+  <!-- ═══ LOADING SCREEN ═══════════════════════════════════════ -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-inner">
+      <div class="loading-spinner">
+        <div class="spinner-orbit spinner-o1"></div>
+        <div class="spinner-orbit spinner-o2"></div>
+        <div class="spinner-orbit spinner-o3"></div>
+        <div class="spinner-sun"></div>
+      </div>
+      <div class="loading-text">
+        <span class="loading-title">HỆ MẶT TRỜI</span>
+        <span class="loading-sub">ĐANG KHỞI TẠO MÔ HÌNH VŨ TRỤ</span>
+        <div class="loading-bar-wrap">
+          <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+        <span class="loading-pct" id="loadingPct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SCENE LAYERS ═════════════════════════════════════════ -->
+  <div class="nebula-layer nebula-1"></div>
+  <div class="nebula-layer nebula-2"></div>
+  <div class="nebula-layer nebula-3"></div>
+  <canvas id="starfield"    class="starfield-canvas"></canvas>
+  <canvas id="solarSystem"  class="solar-canvas"></canvas>
+
+  <!-- ═══ TOP NAVBAR ════════════════════════════════════════════ -->
+  <nav class="top-nav" id="topNav" role="navigation" aria-label="Menu chính">
+    <div class="nav-logo">🪐 STELLAR<span>MIND</span></div>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link active" id="navHome">Trang chủ</a></li>
+      <li><a href="#" class="nav-link" id="navExplore">Khám phá</a></li>
+      <li><a href="community.html" class="nav-link" id="navCommunity">Cộng đồng</a></li>
+      <li><a href="#" class="nav-link" id="navTest">Bài test</a></li>
+      <li><a href="#" class="nav-link" id="navContact">Liên hệ</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-avatar" id="navAvatar" role="button" aria-label="Hồ sơ người dùng" tabindex="0">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">U</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HEADER ══════════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-left">
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">MÔ PHỎNG TRỰC TIẾP</span>
+      </div>
+      <h1 class="site-title">HỆ MẶT TRỜI</h1>
+      <p class="site-subtitle">KHÁM PHÁ VŨ TRỤ — MÔ HÌNH QUỸ ĐẠO TƯƠNG TÁC</p>
+    </div>
+    <div class="header-right">
+      <div class="system-stats">
+        <div class="stat-item">
+          <span class="stat-label">TUỔI</span>
+          <span class="stat-value">4.6 TỶ NĂM</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">HÀNH TINH</span>
+          <span class="stat-value">8</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">PHÂN LOẠI</span>
+          <span class="stat-value">SAO LOẠI G2V</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">ĐƯỜNG KÍNH</span>
+          <span class="stat-value">2.5 LY</span>
+        </div>
+      </div>
+      <div class="header-controls">
+        <button class="ctrl-btn" id="btnSpeed" title="Tốc độ mô phỏng: 0.5× / 1× / 2× / 5×" aria-label="Thay đổi tốc độ mô phỏng">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </button>
+        <button class="ctrl-btn" id="btnReset" title="Đặt lại góc nhìn (Esc)" aria-label="Đặt lại góc nhìn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+        </button>
+        <button class="ctrl-btn" id="btnPause" title="Tạm dừng / Tiếp tục (Space)" aria-label="Tạm dừng hoặc tiếp tục">
+          <svg id="pauseIcon" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+          </svg>
+          <svg id="playIcon"  viewBox="0 0 24 24" fill="currentColor" style="display:none">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+        </button>
+        <button class="ctrl-btn" id="btnKeys" title="Phím tắt bàn phím" aria-label="Hiển thị phím tắt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ LEFT SIDEBAR ═════════════════════════════════════════ -->
+  <aside class="planet-sidebar" id="planetSidebar">
+    <div class="sidebar-label">HÀNH TINH</div>
+    <div class="sidebar-inner">
+      <div class="sidebar-scroll" id="sidebarScroll">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+    <button class="sidebar-scroll-btn sidebar-up"   id="sidebarUp"   aria-label="Cuộn lên">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <button class="sidebar-scroll-btn sidebar-down" id="sidebarDown" aria-label="Cuộn xuống">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </aside>
+
+  <!-- ═══ PLANET DETAIL PANEL (simplified) ════════════════════ -->
+  <div class="planet-panel" id="planetPanel">
+    <div class="panel-scan"></div>
+
+    <div class="panel-header">
+      <div class="panel-planet-icon" id="panelIcon"></div>
+      <div class="panel-title-block">
+        <div class="panel-planet-number" id="panelNumber">01 / 08</div>
+        <h2 class="panel-planet-name"    id="panelName">MERCURY</h2>
+        <p  class="panel-planet-subtitle" id="panelSubtitle">HÀNH TINH CẬN MẶT TRỜI</p>
+      </div>
+      <button class="panel-close" id="panelClose" aria-label="Đóng bảng thông tin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6"  x2="6"  y2="18"/>
+          <line x1="6"  y1="6"  x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="panel-body">
+      <div class="panel-stats"       id="panelStats"></div>
+      <div class="panel-description" id="panelDesc"></div>
+    </div>
+
+    <a class="panel-cta-btn" id="panelCta" href="#">
+      <span class="cta-icon">🚀</span>
+      <span class="cta-text">KHÁM PHÁ TRANG ĐẦY ĐỦ</span>
+      <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+    <div class="panel-footer">
+      <div class="panel-nav">
+        <button class="panel-nav-btn" id="prevPlanet" aria-label="Hành tinh trước">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="15 18 9 12 15 6"/></svg>
+          TRƯỚC
+        </button>
+        <div class="panel-planet-dots" id="panelDots"></div>
+        <button class="panel-nav-btn" id="nextPlanet" aria-label="Hành tinh sau">
+          TIẾP
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ KEYBOARD SHORTCUTS OVERLAY ══════════════════════════ -->
+  <div class="shortcuts-overlay" id="shortcutsOverlay">
+    <div class="shortcuts-box">
+      <div class="shortcuts-header">
+        <span class="shortcuts-title">PHÍM TẮT BÀN PHÍM</span>
+        <button class="shortcuts-close" id="shortcutsClose" aria-label="Đóng bảng phím tắt">✕</button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-item"><kbd>1</kbd>–<kbd>8</kbd><span>Chọn hành tinh</span></div>
+        <div class="shortcut-item"><kbd>Esc</kbd><span>Đặt lại góc nhìn</span></div>
+        <div class="shortcut-item"><kbd>Space</kbd><span>Tạm dừng / Chạy tiếp</span></div>
+        <div class="shortcut-item"><kbd>← →</kbd><span>Hành tinh Trước / Sau</span></div>
+        <div class="shortcut-item"><kbd>S</kbd><span>Thay đổi tốc độ</span></div>
+        <div class="shortcut-item"><kbd>?</kbd><span>Bảng điều khiển này</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TOOLTIP ══════════════════════════════════════════════ -->
+  <div class="planet-tooltip" id="tooltip">
+    <span class="tooltip-name" id="tooltipName"></span>
+    <span class="tooltip-type" id="tooltipType"></span>
+  </div>
+
+  <!-- ═══ BOTTOM HOLO-BAR ══════════════════════════════════════ -->
+  <div class="holo-bar" id="holoBar">
+    <!-- Speed HUD -->
+    <div class="holo-section speed-hud" id="speedHud">
+      <span class="holo-label">TỐC ĐỘ MÔ PHỎNG</span>
+      <div class="speed-bar-wrap">
+        <div class="speed-bar-fill" id="speedBarFill"></div>
+      </div>
+      <span class="speed-val" id="speedVal">1×</span>
+    </div>
+
+    <!-- Center hint -->
+    <div class="holo-section bottom-hint" id="bottomHint">
+      <span>BẤM VÀO HÀNH TINH</span>
+      <span class="hint-dot"></span>
+      <span>DI CHUỘT ĐỂ XEM TRƯỚC</span>
+      <span class="hint-dot"></span>
+      <span>ESC ĐỂ ĐẶT LẠI GÓC NHÌN</span>
+    </div>
+
+    <!-- Orbit indicator -->
+    <div class="holo-section orbit-hud" id="orbitHud">
+      <span class="holo-label">TỶ LỆ QUỸ ĐẠO</span>
+      <div class="orbit-scale-bar">
+        <div class="orbit-scale-tick" style="left:0%"></div>
+        <div class="orbit-scale-tick" style="left:25%"></div>
+        <div class="orbit-scale-tick" style="left:50%"></div>
+        <div class="orbit-scale-tick" style="left:75%"></div>
+        <div class="orbit-scale-tick" style="left:100%"></div>
+      </div>
+      <span class="holo-label">0 — 5 TỶ KM</span>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/planets-enhanced.js"></script>
+  <script src="../js/chatbot.js"></script>
+</body>
+</html>
