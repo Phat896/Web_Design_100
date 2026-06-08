@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let authTab = 'login'; // 'login' or 'register'
   let token = localStorage.getItem('stellar_auth_token') || null;
   let username = localStorage.getItem('stellar_auth_username') || null;
+  let activePlanetFilter = 'all';
+
+  // Planet name mapping
+  const PLANET_NAMES = {
+    mercury: 'Sao Thủy', venus: 'Sao Kim', earth: 'Trái Đất', mars: 'Sao Hỏa',
+    jupiter: 'Sao Mộc', saturn: 'Sao Thổ', uranus: 'Sao T.Vương', neptune: 'Sao H.Vương'
+  };
+  const PLANET_ICONS = {
+    mercury: '☿', venus: '♀', earth: '🌍', mars: '♂',
+    jupiter: '♃', saturn: '♄', uranus: '⛢', neptune: '♆'
+  };
+  const SIGNAL_LEVEL_NAMES = [
+    '', 'Thì thầm (1x)', 'Vô tuyến (2x)', 'Năng lượng cao (4x)', 'Bão mặt trời (8x)', 'Siêu tân tinh (16x)'
+  ];
 
   // ────────────────────────────────────────────────────────
   //  AUTH SYSTEM LOGIC
@@ -227,11 +241,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const resData = await response.json();
       
       if (resData.success) {
-        const postsList = resData.data;
+        let postsList = resData.data;
         feedEl.innerHTML = '';
 
+        // Apply planet filter
+        if (activePlanetFilter !== 'all') {
+          postsList = postsList.filter(p => p.planet === activePlanetFilter);
+        }
+
         if (postsList.length === 0) {
-          feedEl.innerHTML = '<div class="composer-hint" style="text-align:center; padding: 20px;">Trạm rỗng. Hãy phát tín hiệu đầu tiên của bạn!</div>';
+          const filterMsg = activePlanetFilter !== 'all'
+            ? `Chưa có tín hiệu nào từ ${PLANET_NAMES[activePlanetFilter] || activePlanetFilter}. Hãy là người đầu tiên!`
+            : 'Trạm rỗng. Hãy phát tín hiệu đầu tiên của bạn!';
+          feedEl.innerHTML = `<div class="composer-hint" style="text-align:center; padding: 20px;">${filterMsg}</div>`;
           return;
         }
 
@@ -240,12 +262,29 @@ document.addEventListener('DOMContentLoaded', () => {
           const isAnon = post.isAnon !== undefined ? post.isAnon : true;
           postEl.className = `comm-post ${isAnon ? 'post-anon' : 'post-public'}`;
           
+          // Build planet badge HTML
+          let planetBadgeHtml = '';
+          if (post.planet && PLANET_NAMES[post.planet]) {
+            planetBadgeHtml = `<span class="planet-badge" data-planet="${post.planet}"><span class="badge-dot"></span>${PLANET_ICONS[post.planet] || '🪐'} ${PLANET_NAMES[post.planet]}</span>`;
+          }
+
+          // Build signal level badge HTML
+          let signalBadgeHtml = '';
+          if (post.signalLevel && post.signalLevel >= 1 && post.signalLevel <= 5) {
+            const lvl = post.signalLevel;
+            let barsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+              barsHtml += `<span class="sbar${i <= lvl ? ' on' : ''}"></span>`;
+            }
+            signalBadgeHtml = `<span class="signal-level-badge" data-level="${lvl}"><span class="signal-bars">${barsHtml}</span>${SIGNAL_LEVEL_NAMES[lvl]}</span>`;
+          }
+
           postEl.innerHTML = `
             <div class="post-header">
               <div class="post-avatar">${post.avatar}</div>
               <div class="post-meta">
-                <span class="post-author">${post.author}</span>
-                <span class="post-time">${formatTime(post.timestamp)}</span>
+                <span class="post-author">${post.author}${planetBadgeHtml}</span>
+                <span class="post-time">${formatTime(post.timestamp)}${signalBadgeHtml}</span>
               </div>
             </div>
             <div class="post-content">
@@ -457,6 +496,26 @@ document.addEventListener('DOMContentLoaded', () => {
       year: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
+    });
+  }
+
+  // ────────────────────────────────────────────────────────
+  //  PLANET FILTER BAR LOGIC
+  // ────────────────────────────────────────────────────────
+  const filterBar = document.getElementById('planetFilterBar');
+  if (filterBar) {
+    filterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      const planet = btn.dataset.planet;
+      activePlanetFilter = planet || 'all';
+
+      // Update active state
+      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Re-render feed with filter
+      renderFeed();
     });
   }
 

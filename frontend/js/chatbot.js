@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 1. Inject Chatbot HTML into document body if not already present
   if (!document.getElementById('cosmicChatLauncher')) {
+    const isVenus = document.body.dataset.planet === 'venus';
+    const subtitle = isVenus ? 'StellarMind Empathy AI' : 'StellarMind Healing AI';
+    const suggestionPrompt2 = isVenus
+      ? 'Tôi đang cảm thấy kiệt sức và quá tải, tôi nên đến hành tinh nào để tìm sự cân bằng?'
+      : 'Tôi đang cảm thấy kiệt sức và quá tải, tôi nên đến hành tinh nào để phục hồi?';
+
     const chatbotHtml = `
       <button class="cosmic-chat-launcher" id="cosmicChatLauncher" title="Trò chuyện với Trợ lý Tinh hà">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -27,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="cosmic-chat-title-group">
               <span class="cosmic-chat-title">TRỢ LÝ TINH HÀ</span>
-              <span class="cosmic-chat-subtitle">StellarMind Healing AI</span>
+              <span class="cosmic-chat-subtitle">${subtitle}</span>
             </div>
           </div>
           <button class="cosmic-chat-close" id="cosmicChatClose" title="Đóng cửa sổ">✕</button>
@@ -37,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="cosmic-chat-suggestions-title">Gợi ý câu hỏi:</div>
           <div class="cosmic-chat-suggestions" id="cosmicChatSuggestions">
             <button class="cosmic-chat-btn-suggestion" data-prompt="Mục tiêu của dự án StellarMind là gì?">Mục tiêu dự án</button>
-            <button class="cosmic-chat-btn-suggestion" data-prompt="Tôi đang cảm thấy kiệt sức và quá tải, tôi nên đến hành tinh nào để phục hồi?">Tôi bị kiệt sức</button>
+            <button class="cosmic-chat-btn-suggestion" data-prompt="${suggestionPrompt2}">Tôi bị kiệt sức</button>
             <button class="cosmic-chat-btn-suggestion" data-prompt="Tôi đang rất tức giận, hãy chỉ cho tôi hành tinh giúp điều hòa cơn giận.">Tôi thấy tức giận</button>
             <button class="cosmic-chat-btn-suggestion" data-prompt="Tôi cảm thấy bồn chồn lo lắng, không yên lòng.">Tôi thấy bồn chồn</button>
             <button class="cosmic-chat-btn-suggestion" data-prompt="Tôi cảm thấy trống rỗng và vô hồn lúc này, có hành tinh nào bầu bạn không?">Tôi thấy trống rỗng</button>
@@ -202,10 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Welcome Greeting
   function showBotGreeting() {
     hasGreeted = true;
-    addMessageBubble('bot', `🌌 Chào mừng bạn du hành đến Trạm Chữa Lành của **StellarMind**! 
-Tôi là **Trợ lý Tinh hà**, người bạn đồng hành của bạn trong không gian vô tận này.
-
-Hôm nay tâm hồn bạn cảm thấy thế nào? Hãy chia sẻ với tôi để tìm kiếm hành tinh chữa lành thích hợp nhất cho cảm xúc của bạn nhé! ✨`);
+    const isVenus = document.body.dataset.planet === 'venus';
+    const greetingText = isVenus
+      ? `🌌 Chào mừng bạn du hành đến Không Gian Thấu Cảm của **StellarMind**! \nTôi là **Trợ lý Tinh hà**, người bạn đồng hành của bạn trong không gian vô tận này.\n\nHôm nay tâm hồn bạn cảm thấy thế nào? Hãy chia sẻ với tôi để tìm kiếm hành tinh thấu cảm thích hợp nhất cho cảm xúc của bạn nhé! ✨`
+      : `🌌 Chào mừng bạn du hành đến Trạm Chữa Lành của **StellarMind**! \nTôi là **Trợ lý Tinh hà**, người bạn đồng hành của bạn trong không gian vô tận này.\n\nHôm nay tâm hồn bạn cảm thấy thế nào? Hãy chia sẻ với tôi để tìm kiếm hành tinh chữa lành thích hợp nhất cho cảm xúc của bạn nhé! ✨`;
+    addMessageBubble('bot', greetingText);
   }
 
   // 6. Formatting Text Helper
