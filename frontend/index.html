@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=./html/index.html" />
+  <title>StellarMind - Chuyển hướng...</title>
+  <style>
+    body {
+      background-color: #010812;
+      color: #00d4ff;
+      font-family: 'Rajdhani', 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+    .redirect-box {
+      text-align: center;
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 212, 255, 0.1);
+      border-radius: 50%;
+      border-top-color: #00d4ff;
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto 20px auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    window.location.replace("./html/index.html");
+  </script>
+</head>
+<body>
+  <div class="redirect-box">
+    <div class="spinner"></div>
+    <p>Đang kết nối với Hệ Mặt Trời StellarMind...</p>
+  </div>
+</body>
+</html>
