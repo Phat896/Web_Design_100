@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="interiorBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020813" />
+      <stop offset="100%" stop-color="#071829" />
+    </linearGradient>
+    <linearGradient id="windowView" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#081e35" />
+      <stop offset="50%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#052e16" />
+    </linearGradient>
+    <radialGradient id="earthGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+    <linearGradient id="holoScreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="holoScreenGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes floatHolo {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(0.9) opacity(0.3); }
+      50% { transform: scale(1.2) opacity(0.8); }
+    }
+    @keyframes twinkling {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .holo-float-1 { animation: floatHolo 5s infinite ease-in-out; }
+    .holo-float-2 { animation: floatHolo 6s infinite ease-in-out 1.5s; }
+    .pulse-ring { animation: pulseHeart 4s infinite ease-in-out; transform-origin: 200px 290px; }
+    .pulse-ring-slow { animation: pulseHeart 6s infinite ease-in-out 1s; transform-origin: 200px 290px; }
+    .star-twinkle { animation: twinkling 3s infinite ease-in-out; }
+  </style>
+
+  <!-- Room Interior Background -->
+  <rect width="800" height="450" fill="url(#interiorBg)" />
+
+  <!-- The Large Digital/Glass Window -->
+  <g transform="translate(380, 30)">
+    <!-- Window Frame Backing -->
+    <rect width="380" height="370" rx="10" fill="url(#windowView)" stroke="#0f172a" stroke-width="6" />
+    
+    <!-- Outside Elements: Mountains / Forests & Oceans -->
+    <!-- Ocean -->
+    <path d="M 0 310 Q 100 290, 200 305 T 380 300 L 380 370 L 0 370 Z" fill="#0c4a6e" />
+    <!-- Forests/Mountains -->
+    <path d="M 0 290 Q 60 270, 120 290 T 250 280 T 380 295 L 380 370 L 0 370 Z" fill="#14532d" opacity="0.8" />
+    <path d="M 0 305 C 50 290, 180 280, 220 310 C 260 320, 320 290, 380 315 L 380 370 L 0 370 Z" fill="#064e3b" opacity="0.9" />
+
+    <!-- Space Sky stars -->
+    <circle cx="50" cy="60" r="1.2" fill="#ffffff" class="star-twinkle" />
+    <circle cx="180" cy="90" r="1" fill="#38bdf8" />
+    <circle cx="290" cy="40" r="1.5" fill="#4ade80" class="star-twinkle" style="animation-delay: 1.5s;" />
+
+    <!-- Giant Rising Planet Earth in the sky -->
+    <g transform="translate(240, 120)">
+      <circle cx="0" cy="0" r="60" fill="url(#earthGlow)" filter="url(#glow)" />
+      <!-- Atmosphere outline -->
+      <circle cx="0" cy="0" r="61" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8" />
+      <!-- Landmasses on rising Earth -->
+      <path d="M -40 -20 Q -20 -40, 0 -30 T 30 -40 Q 40 -10, 20 10 T -20 20 Z" fill="#4ade80" opacity="0.3" />
+      <path d="M -10 20 Q 10 30, 20 10 T 40 30" fill="none" stroke="#4ade80" stroke-width="2" opacity="0.4" />
+    </g>
+
+    <!-- Glass reflections -->
+    <path d="M 20 0 L 0 20 M 150 0 L 0 150 M 380 100 L 280 200" stroke="#ffffff" stroke-width="1.5" opacity="0.1" stroke-linecap="round" />
+  </g>
+
+  <!-- Room Interior Items -->
+  <!-- Balcony ledge / floor platform -->
+  <rect x="20" y="380" width="760" height="40" rx="3" fill="#0b1322" stroke="#1e293b" stroke-width="2" />
+  <!-- Platform divider line -->
+  <line x1="20" y1="380" x2="780" y2="380" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+
+  <!-- Mindful Meditating Human -->
+  <g transform="translate(110, 190)">
+    <!-- Base tatami/Meditation Cushion -->
+    <ellipse cx="90" cy="165" rx="55" ry="12" fill="#0d1b2e" stroke="#4ade80" stroke-width="1.5" />
+    <ellipse cx="90" cy="165" rx="45" ry="8" fill="none" stroke="#38bdf8" stroke-width="1" />
+
+    <!-- The Person in Lotus Position -->
+    <g fill="#020914" stroke="#38bdf8" stroke-width="1.5">
+      <!-- Legs crossed -->
+      <path d="M 45 160 Q 90 135, 135 160 Q 90 175, 45 160 Z" fill="#040e1d" />
+      <!-- Torso -->
+      <path d="M 75 110 L 105 110 L 110 145 L 70 145 Z" fill="#040e1d" />
+      <!-- Neck -->
+      <rect x="87" y="98" width="6" height="12" fill="#040e1d" />
+      <!-- Head / Helmet -->
+      <circle cx="90" cy="85" r="14" fill="#040e1d" />
+      <!-- Visor -->
+      <path d="M 80 85 Q 90 77, 100 85 Q 102 93, 90 95 Q 78 93, 80 85 Z" fill="#4ade80" filter="url(#glow)" />
+      <!-- Arms resting on knees -->
+      <path d="M 75 112 Q 55 130, 52 150 Q 65 152, 70 144" fill="none" />
+      <path d="M 105 112 Q 125 130, 128 150 Q 115 152, 110 144" fill="none" />
+      <!-- Hands resting points -->
+      <circle cx="53" cy="150" r="3.5" fill="#38bdf8" />
+      <circle cx="127" cy="150" r="3.5" fill="#38bdf8" />
+    </g>
+
+    <!-- Bio-Field Harmony Rings -->
+    <circle cx="90" cy="115" r="20" fill="none" stroke="#4ade80" stroke-width="1" stroke-dasharray="2 4" class="pulse-ring" />
+    <circle cx="90" cy="115" r="35" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="5 5" class="pulse-ring-slow" />
+    <circle cx="90" cy="115" r="50" fill="none" stroke="#4ade80" stroke-width="0.5" class="pulse-ring" style="animation-delay: 2s;" />
+  </g>
+
+  <!-- Sleeping Cat beside the person -->
+  <g transform="translate(265, 335)" filter="url(#glow)">
+    <path d="M 0 15 Q 15 -10, 30 15 Z" fill="#020914" stroke="#4ade80" stroke-width="1.5" />
+    <circle cx="23" cy="5" r="6" fill="#020914" stroke="#4ade80" stroke-width="1.5" />
+    <!-- Tail curled -->
+    <path d="M 0 15 Q -10 20, -5 23 Q 5 25, 0 15" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <!-- Ears -->
+    <path d="M 18 -1 L 19 -5 L 23 -1" fill="#4ade80" />
+    <path d="M 23 -1 L 27 -5 L 28 -1" fill="#4ade80" />
+    <!-- Cat sleeping aura -->
+    <ellipse cx="15" cy="10" rx="22" ry="12" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- Floating Holographic Work/Life Screens -->
+  <!-- Screen 1: Work stats -->
+  <g transform="translate(40, 80)" class="holo-float-1">
+    <rect width="180" height="90" rx="6" fill="url(#holoScreen)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)" />
+    <!-- Tech details -->
+    <line x1="10" y1="20" x2="170" y2="20" stroke="#38bdf8" stroke-width="0.5" opacity="0.6" />
+    <circle cx="15" cy="10" r="3" fill="#4ade80" />
+    
+    <text x="25" y="14" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" font-weight="bold" letter-spacing="1">PROJECT: D-BALANCE</text>
+    
+    <text x="15" y="38" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" font-weight="bold">ALL TASKS DELEGATED</text>
+    <text x="15" y="52" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">SYS.STATUS: 100% DONE</text>
+    
+    <!-- Progress bar -->
+    <rect x="15" y="66" width="150" height="6" rx="2" fill="#020813" />
+    <rect x="15" y="66" width="150" height="6" rx="2" fill="#4ade80" />
+    
+    <text x="15" y="82" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="7">SYSTEM CALIBRATED: OK</text>
+  </g>
+
+  <!-- Screen 2: Bio-feedback metrics -->
+  <g transform="translate(240, 60)" class="holo-float-2">
+    <rect width="130" height="95" rx="6" fill="url(#holoScreenGreen)" stroke="#4ade80" stroke-width="1.2" filter="url(#glow)" />
+    <line x1="8" y1="18" x2="122" y2="18" stroke="#4ade80" stroke-width="0.5" opacity="0.6" />
+    
+    <text x="10" y="12" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" font-weight="bold">BIO-METRICS</text>
+    
+    <!-- Pulse wave visual -->
+    <path d="M 10 35 Q 20 25, 30 35 T 50 35 T 70 35 T 90 35 T 110 35 T 120 35" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    
+    <text x="10" y="52" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">STRESS RATE: 0%</text>
+    <text x="10" y="66" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">HEART SYNC: 99.4%</text>
+    
+    <!-- Status indicator dot -->
+    <circle cx="115" cy="11" r="3" fill="#38bdf8" />
+  </g>
+
+  <!-- Holographic connection lines -->
+  <path d="M 130 170 Q 160 210, 180 230" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 3" opacity="0.5" />
+  <path d="M 280 155 Q 250 200, 215 225" fill="none" stroke="#4ade80" stroke-width="1" stroke-dasharray="3 3" opacity="0.5" />
+
+  <!-- Scenario labels -->
+  <g transform="translate(400, 20)" opacity="0.6">
+    <text x="0" y="0" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" letter-spacing="4">SCENARIO MODULE: NEURAL RESTORATION // EARTH ENVIRONMENT</text>
+  </g>
+
+  <!-- Bottom Coordinates -->
+  <text x="760" y="440" text-anchor="end" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" opacity="0.6">COORD: 35.68.N / 139.69.E // ENV: OPTIMAL</text>
+  <text x="40" y="440" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" opacity="0.6">USER STATE: BALANCED INTEGRATION</text>
+</svg>

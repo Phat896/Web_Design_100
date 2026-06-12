@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Dark Background -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1e1306" />
+      <stop offset="50%" stop-color="#0c0702" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Golden Beam Gradient -->
+    <linearGradient id="beam-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0" />
+      <stop offset="20%" stop-color="#fb923c" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#fbbf24" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="1" />
+    </linearGradient>
+
+    <!-- Ship Thruster Glow -->
+    <radialGradient id="thruster-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fef08a" />
+      <stop offset="80%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#7c2d12" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Blur and Glow Filters -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="heavy-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes propulsion {
+      0%, 100% { transform: scaleY(1); opacity: 0.9; }
+      50% { transform: scaleY(1.2); opacity: 1; }
+    }
+    @keyframes float-shards {
+      0% { transform: translateY(50px) rotate(0deg); opacity: 0.2; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-150px) rotate(360deg); opacity: 0; }
+    }
+    @keyframes ring-pulse {
+      0%, 100% { transform: scale(1) rotate(-20deg); opacity: 0.6; }
+      50% { transform: scale(1.05) rotate(-18deg); opacity: 0.9; }
+    }
+    .thruster { animation: propulsion 0.2s infinite alternate; transform-origin: 400px 380px; }
+    .shard-1 { animation: float-shards 6s infinite linear; transform-origin: 300px 250px; }
+    .shard-2 { animation: float-shards 8s infinite linear 2s; transform-origin: 500px 200px; }
+    .shard-3 { animation: float-shards 5s infinite linear 4s; transform-origin: 350px 300px; }
+    .ring-glow { animation: ring-pulse 6s infinite ease-in-out; transform-origin: 400px 140px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="90" cy="120" r="1.2" />
+    <circle cx="210" cy="80" r="1" />
+    <circle cx="680" cy="100" r="1.5" />
+    <circle cx="730" cy="220" r="1" />
+    <circle cx="150" cy="320" r="1" />
+    <circle cx="620" cy="350" r="1.2" />
+  </g>
+
+  <!-- Big Columns of Light (Avenue of Ascent) -->
+  <rect x="360" y="0" width="80" height="450" fill="url(#beam-grad)" opacity="0.35" filter="url(#heavy-glow)" />
+  <line x1="360" y1="0" x2="360" y2="450" stroke="#fb923c" stroke-width="1.5" opacity="0.3" />
+  <line x1="440" y1="0" x2="440" y2="450" stroke="#fb923c" stroke-width="1.5" opacity="0.3" />
+
+  <!-- The Portal / Jupiter Ring at the destination (top center) -->
+  <g class="ring-glow" transform="translate(0, 0)">
+    <ellipse cx="400" cy="140" rx="160" ry="40" fill="none" stroke="url(#beam-grad)" stroke-width="8" filter="url(#glow)" />
+    <ellipse cx="400" cy="140" rx="180" ry="45" fill="none" stroke="#fef08a" stroke-width="2" opacity="0.5" />
+    <ellipse cx="400" cy="140" rx="140" ry="35" fill="none" stroke="#ea580c" stroke-width="3" opacity="0.8" />
+  </g>
+
+  <!-- Floating Crystal/Gold Shards (Integrating Consciousness) -->
+  <g fill="url(#beam-grad)" stroke="#fef08a" stroke-width="1" filter="url(#glow)">
+    <!-- Shard 1 -->
+    <polygon points="300,240 315,225 310,250" class="shard-1" />
+    <!-- Shard 2 -->
+    <polygon points="510,180 525,195 500,200" class="shard-2" />
+    <!-- Shard 3 -->
+    <polygon points="330,310 340,290 350,315" class="shard-3" />
+    <!-- Shard 4 (right side) -->
+    <polygon points="480,280 495,260 490,295" class="shard-2" />
+  </g>
+
+  <!-- Flying Vector Craft / Soul Core rising upward -->
+  <g transform="translate(0, -20)">
+    <!-- Propulsion flame -->
+    <path d="M 385 365 L 400 420 L 415 365 Z" fill="url(#thruster-glow)" class="thruster" filter="url(#glow)" />
+    <path d="M 392 365 L 400 400 L 408 365 Z" fill="#ffffff" class="thruster" />
+
+    <!-- Craft / Energy Spear body -->
+    <!-- Wing left -->
+    <polygon points="400,310 350,360 380,360" fill="#ea580c" stroke="#fb923c" stroke-width="1.5" />
+    <!-- Wing right -->
+    <polygon points="400,310 450,360 420,360" fill="#ea580c" stroke="#fb923c" stroke-width="1.5" />
+    <!-- Main fuselage -->
+    <polygon points="400,280 415,355 400,365 385,355" fill="#fef08a" stroke="#fbbf24" stroke-width="2" filter="url(#glow)" />
+    <!-- Cockpit / Core light -->
+    <ellipse cx="400" cy="325" rx="5" ry="15" fill="#ffffff" />
+  </g>
+
+  <!-- UI Bracket Graphics -->
+  <g stroke="#fbbf24" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M 300, 140 L 250, 140 L 250, 170" />
+    <path d="M 500, 140 L 550, 140 L 550, 170" />
+    <circle cx="250" cy="140" r="3" fill="#fbbf24" />
+    <circle cx="550" cy="140" r="3" fill="#fbbf24" />
+  </g>
+
+  <!-- HUD Coordinates / Info -->
+  <g font-family="JetBrains Mono, monospace" fill="#fbbf24" font-size="10" opacity="0.8">
+    <!-- Left panel -->
+    <text x="40" y="380">TRANSFORMATION STAGE: VORTEX_09</text>
+    <text x="40" y="395">VELOCITY: 0.92 C (LIGHT-SPEED)</text>
+    <text x="40" y="410">TARGET ORBIT: JUPITER COGNITIVE CORE</text>
+    <line x1="40" y1="420" x2="260" y2="420" stroke="#fbbf24" stroke-width="1.5" opacity="0.4" />
+
+    <!-- Right panel -->
+    <text x="760" y="380" text-anchor="end">CONVERGENCE RATIO: 100%</text>
+    <text x="760" y="395" text-anchor="end">CONFIDENCE LEVEL: OVERFLOW</text>
+    <text x="760" y="410" text-anchor="end">SHIELD BUFFER: STABLE</text>
+    <line x1="540" y1="420" x2="760" y2="420" stroke="#fbbf24" stroke-width="1.5" opacity="0.4" stroke-dasharray="10, 5" />
+  </g>
+
+  <!-- Center HUD indicators -->
+  <g transform="translate(400, 320)" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.4">
+    <circle r="40" stroke-dasharray="4,4" />
+    <path d="M -50 0 L -60 0" />
+    <path d="M 50 0 L 60 0" />
+  </g>
+
+  <!-- Title top middle -->
+  <g font-family="JetBrains Mono, monospace" text-anchor="middle" fill="#ffffff">
+    <text x="400" y="40" font-size="13" font-weight="bold" letter-spacing="4" filter="url(#glow)">TRANSFORMATION JOURNEY</text>
+    <text x="400" y="55" font-size="8" fill="#fb923c" letter-spacing="2">BREAKING THE BOUNDARIES OF DOUBT</text>
+  </g>
+</svg>

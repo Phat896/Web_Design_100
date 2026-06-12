@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#221505" />
+      <stop offset="60%" stop-color="#0c0702" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Radiant Glow Gradient -->
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="1" />
+      <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#ea580c" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#7c2d12" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Golden Metallic Gradient -->
+    <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#fbbf24" />
+      <stop offset="70%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#7c2d12" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="blur-bg" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes rotate-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse-grow {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+    @keyframes float-particle {
+      0% { transform: translateY(450px) translateX(0px); opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-50px) translateX(20px); opacity: 0; }
+    }
+    .rotating-group { animation: rotate-slow 25s infinite linear; transform-origin: 400px 225px; }
+    .rotating-group-reverse { animation: rotate-slow 35s infinite linear reverse; transform-origin: 400px 225px; }
+    .core { animation: pulse-grow 4s infinite ease-in-out; transform-origin: 400px 225px; }
+    .p1 { animation: float-particle 8s infinite linear; }
+    .p2 { animation: float-particle 11s infinite linear 2s; }
+    .p3 { animation: float-particle 6s infinite linear 4s; }
+    .p4 { animation: float-particle 9s infinite linear 1s; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Floating Golden Particles of Confidence -->
+  <g fill="#fbbf24" filter="url(#glow)">
+    <circle cx="150" cy="0" r="3" class="p1" />
+    <circle cx="280" cy="0" r="4.5" class="p2" />
+    <circle cx="580" cy="0" r="2.5" class="p3" />
+    <circle cx="670" cy="0" r="4" class="p4" />
+  </g>
+
+  <!-- Background Aura -->
+  <circle cx="400" cy="225" r="250" fill="url(#core-glow)" opacity="0.6" filter="url(#blur-bg)" />
+
+  <!-- Geometric Confidence Matrix (Rotating) -->
+  <g class="rotating-group">
+    <!-- Star Hexagon Core -->
+    <polygon points="400,75 440,180 550,180 460,250 500,355 400,290 300,355 340,250 250,180 360,180" 
+             fill="none" stroke="#ea580c" stroke-width="1" opacity="0.4" />
+    <!-- concentric geometric rings -->
+    <circle cx="400" cy="225" r="160" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="12 8" opacity="0.6" />
+    <circle cx="400" cy="225" r="200" fill="none" stroke="#fb923c" stroke-width="1" stroke-dasharray="4 6" opacity="0.4" />
+    <circle cx="400" cy="225" r="120" fill="none" stroke="#fef08a" stroke-width="2" stroke-dasharray="20 40" opacity="0.7" />
+    
+    <!-- Outer tick lines -->
+    <line x1="400" y1="15" x2="400" y2="40" stroke="#fef08a" stroke-width="2" />
+    <line x1="400" y1="410" x2="400" y2="435" stroke="#fef08a" stroke-width="2" />
+    <line x1="190" y1="225" x2="215" y2="225" stroke="#fef08a" stroke-width="2" />
+    <line x1="585" y1="225" x2="610" y2="225" stroke="#fef08a" stroke-width="2" />
+  </g>
+
+  <g class="rotating-group-reverse">
+    <circle cx="400" cy="225" r="180" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 15" />
+    <polygon points="400,105 480,225 400,345 320,225" fill="none" stroke="#fb923c" stroke-width="1.5" opacity="0.5" />
+  </g>
+
+  <!-- Massive Columns of Light originating from Core -->
+  <g class="core" filter="url(#glow)">
+    <!-- Central Golden Core -->
+    <circle cx="400" cy="225" r="65" fill="url(#gold-metal)" />
+    <circle cx="400" cy="225" r="50" fill="#fef08a" filter="url(#glow)" opacity="0.9" />
+    
+    <!-- Crown Spires (Confidence/Self-Belief) -->
+    <path d="M 400 120 L 415 170 L 385 170 Z" fill="#fef08a" />
+    <path d="M 400 330 L 415 280 L 385 280 Z" fill="#ea580c" />
+    <path d="M 295 225 L 345 210 L 345 240 Z" fill="#fb923c" />
+    <path d="M 505 225 L 455 210 L 455 240 Z" fill="#fbbf24" />
+    
+    <path d="M 325 150 L 370 185 L 350 205 Z" fill="#b45309" />
+    <path d="M 475 150 L 430 185 L 450 205 Z" fill="#b45309" />
+    <path d="M 325 300 L 370 265 L 350 245 Z" fill="#fbbf24" />
+    <path d="M 475 300 L 430 265 L 450 245 Z" fill="#fbbf24" />
+  </g>
+
+  <!-- Surrounding spikes representing obstacles overcome (confidence conquering fear) -->
+  <g fill="none" stroke="#ea580c" stroke-width="2">
+    <path d="M 100 380 Q 200 320, 310 350" />
+    <path d="M 700 380 Q 600 320, 490 350" />
+  </g>
+
+  <!-- Foreground Mountain Silhouettes at bottom corners -->
+  <polygon points="-20,450 150,320 300,450" fill="#110a03" stroke="#fbbf24" stroke-width="1.5" />
+  <polygon points="500,450 650,300 820,450" fill="#110a03" stroke="#fbbf24" stroke-width="1.5" />
+
+  <!-- Sci-Fi HUD Text Overlays -->
+  <g font-family="JetBrains Mono, monospace" fill="#fbbf24" opacity="0.8" font-size="10">
+    <text x="35" y="45">EMOTION FIELD: CONFIDENCE / RADIANTS</text>
+    <text x="35" y="60">RESONANCE VALUE: 98.42% // MAX STABILITY</text>
+    <path d="M 35 70 L 250 70" stroke="#fbbf24" stroke-width="1.5" opacity="0.4" />
+    
+    <rect x="35" y="80" width="12" height="6" fill="#fbbf24" />
+    <rect x="52" y="80" width="12" height="6" fill="#fb923c" />
+    <text x="75" y="86" font-size="8" fill="#fef08a">SYSTEMS LOCKED</text>
+  </g>
+
+  <g font-family="JetBrains Mono, monospace" fill="#fbbf24" opacity="0.8" font-size="10" text-anchor="end">
+    <text x="765" y="45">EMOTIONAL SPECTRUM: GOLD</text>
+    <text x="765" y="60">WAVELENGTH: 590nm - 610nm</text>
+    <path d="M 550 70 L 765 70" stroke="#fb923c" stroke-width="1.5" opacity="0.4" />
+  </g>
+
+  <!-- Core branding name in center-bottom -->
+  <g font-family="JetBrains Mono, monospace" text-anchor="middle" fill="#ffffff">
+    <text x="400" y="415" font-size="14" letter-spacing="4" font-weight="bold" filter="url(#glow)">WORLD OF CONFIDENCE</text>
+    <text x="400" y="430" font-size="9" fill="#fbbf24" letter-spacing="1">SELF-BELIEF ENGINE: ONLINE</text>
+  </g>
+
+  <!-- Decorative HUD brackets -->
+  <path d="M 15 30 L 15 15 L 30 15" fill="none" stroke="#fb923c" stroke-width="2" />
+  <path d="M 785 30 L 785 15 L 770 15" fill="none" stroke="#fb923c" stroke-width="2" />
+</svg>

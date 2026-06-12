@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020816"/>
+      <stop offset="100%" stop-color="#071d42"/>
+    </linearGradient>
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+  <style>
+    .wave { fill: none; stroke-linecap: round; animation: flow 6s infinite ease-in-out; }
+    .wave-1 { stroke: #2563eb; opacity: 0.3; stroke-width: 4; }
+    .wave-2 { stroke: #3b82f6; opacity: 0.4; stroke-width: 3; animation-delay: 1.5s; }
+    .wave-3 { stroke: #22d3ee; opacity: 0.6; stroke-width: 2; animation-delay: 3s; }
+    @keyframes flow {
+      0%, 100% { d: path("M -50,200 Q 150,150 350,230 T 750,180 T 850,200"); }
+      50%      { d: path("M -50,200 Q 120,250 320,180 T 720,220 T 850,200"); }
+    }
+  </style>
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+
+  <!-- Background Glows -->
+  <circle cx="200" cy="200" r="150" fill="#1e3b8a" opacity="0.25" filter="url(#soft-glow)" />
+  <circle cx="600" cy="200" r="180" fill="#0369a1" opacity="0.2" filter="url(#soft-glow)" />
+
+  <!-- Wave paths (animated via CSS keyframes changing path d attribute) -->
+  <path class="wave wave-1" d="M -50,200 Q 150,150 350,230 T 750,180 T 850,200" />
+  <path class="wave wave-2" d="M -50,220 Q 150,200 350,250 T 750,200 T 850,220" />
+  <path class="wave wave-3" d="M -50,180 Q 150,130 350,200 T 750,160 T 850,180" />
+  
+  <!-- Wave 2nd tier -->
+  <path class="wave wave-1" style="animation-delay: -2s; opacity: 0.2" d="M -50,250 Q 150,220 350,280 T 750,230 T 850,250" />
+  <path class="wave wave-3" style="animation-delay: -1s; opacity: 0.3" d="M -50,150 Q 150,110 350,180 T 750,130 T 850,150" />
+
+  <!-- Stardust dots -->
+  <g opacity="0.6">
+    <circle cx="120" cy="170" r="1" fill="#fff" />
+    <circle cx="280" cy="220" r="1.5" fill="#38bdf8" />
+    <circle cx="340" cy="180" r="1" fill="#fff" />
+    <circle cx="490" cy="210" r="1.5" fill="#38bdf8" />
+    <circle cx="560" cy="160" r="1" fill="#fff" />
+    <circle cx="680" cy="230" r="1.5" fill="#38bdf8" />
+  </g>
+  
+  <text x="30" y="50" font-family="'Outfit', sans-serif" font-size="16" font-weight="bold" fill="#38bdf8" letter-spacing="1">COSMIC DEEP OCEAN</text>
+</svg>

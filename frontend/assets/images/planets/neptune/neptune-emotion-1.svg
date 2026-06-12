@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="abyss" cx="50%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <linearGradient id="glow-line" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+  <style>
+    .falling { animation: fall 6s infinite linear; }
+    .beam { stroke: url(#glow-line); opacity: 0.3; stroke-dasharray: 100; animation: stream 4s infinite linear; }
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(350px) rotate(360deg); opacity: 0; }
+    }
+    @keyframes stream {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+  <rect width="100%" height="100%" fill="url(#abyss)" />
+  
+  <!-- Glowing streams of data/fear -->
+  <line x1="150" y1="0" x2="150" y2="400" stroke-width="2" class="beam" />
+  <line x1="300" y1="0" x2="300" y2="400" stroke-width="4" class="beam" style="animation-delay: 1.5s;" />
+  <line x1="500" y1="0" x2="500" y2="400" stroke-width="1.5" class="beam" style="animation-delay: 0.7s;" />
+  <line x1="650" y1="0" x2="650" y2="400" stroke-width="3" class="beam" style="animation-delay: 2.2s;" />
+
+  <!-- Falling Astronaut Silhouette -->
+  <g class="falling" transform="translate(400, 100)">
+    <g transform="translate(-25, -25)">
+      <!-- Suit -->
+      <circle cx="25" cy="25" r="18" fill="#020617" stroke="#38bdf8" stroke-width="2" />
+      <rect x="15" y="30" width="20" height="20" rx="3" fill="#020617" stroke="#38bdf8" stroke-width="2" />
+      <!-- Limbs flailing -->
+      <line x1="15" y1="35" x2="2" y2="25" stroke="#38bdf8" stroke-width="2" />
+      <line x1="35" y1="35" x2="48" y2="25" stroke="#38bdf8" stroke-width="2" />
+      <line x1="18" y1="50" x2="8" y2="68" stroke="#38bdf8" stroke-width="2" />
+      <line x1="32" y1="50" x2="42" y2="68" stroke="#38bdf8" stroke-width="2" />
+    </g>
+  </g>
+  
+  <!-- Center Glow in Abyss -->
+  <circle cx="400" cy="450" r="180" fill="#38bdf8" opacity="0.15" filter="url(#blur)" />
+  <circle cx="400" cy="450" r="80" fill="#60a5fa" opacity="0.2" filter="url(#blur)" />
+
+  <text x="30" y="360" font-family="'Outfit', sans-serif" font-size="20" font-weight="bold" fill="#38bdf8">FEAR OF FAILURE</text>
+  <text x="30" y="380" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8">The silent descent into uncertainty and doubt.</text>
+</svg>

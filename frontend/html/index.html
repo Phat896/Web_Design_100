@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HỆ MẶT TRỜI — Trình Khám Phá Không Gian Tương Tác</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/branding/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/branding/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/branding/apple-touch-icon.png">
   <meta name="description" content="Trình khám phá Hệ Mặt Trời trực quan, sinh động bằng HTML5 Canvas. Nhấp vào bất kỳ hành tinh nào để phóng to và khám phá bí ẩn. Mô hình quỹ đạo tương tác." />
   <meta property="og:title" content="Hệ Mặt Trời — Trình Khám Phá Không Gian Tương Tác" />
   <meta property="og:description" content="Khám phá Hệ Mặt Trời thông qua mô hình quỹ đạo 2D tương tác sống động." />
   <meta name="theme-color" content="#010812" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/planets-enhanced.css" />
   <link rel="stylesheet" href="../css/chatbot.css" />
@@ -46,20 +49,19 @@
 
   <!-- ═══ TOP NAVBAR ════════════════════════════════════════════ -->
   <nav class="top-nav" id="topNav" role="navigation" aria-label="Menu chính">
-    <div class="nav-logo">🪐 STELLAR<span>MIND</span></div>
+    <a href="index.html" class="nav-logo" aria-label="StellarMind - Trang chủ"><img src="../assets/branding/stellarmind-logo.png" alt="Logo StellarMind" width="40" height="40"></a>
     <ul class="nav-links" role="list">
       <li><a href="index.html" class="nav-link active" id="navHome">Trang chủ</a></li>
       <li><a href="#" class="nav-link" id="navExplore">Khám phá</a></li>
       <li><a href="community.html" class="nav-link" id="navCommunity">Cộng đồng</a></li>
-      <li><a href="#" class="nav-link" id="navTest">Bài test</a></li>
-      <li><a href="#" class="nav-link" id="navContact">Liên hệ</a></li>
+      <li><a href="contact.html" class="nav-link" id="navContact">Liên hệ</a></li>
     </ul>
     <div class="nav-spacer"></div>
-    <div class="nav-avatar" id="navAvatar" role="button" aria-label="Hồ sơ người dùng" tabindex="0">
+    <a class="nav-avatar" id="navAvatar" href="community.html?auth=login" aria-label="Mở đăng nhập hoặc đăng ký tài khoản" title="Đăng nhập / Đăng ký">
       <div class="avatar-ring">
         <div class="avatar-placeholder">U</div>
       </div>
-    </div>
+    </a>
   </nav>
 
   <!-- ═══ HEADER ══════════════════════════════════════════════ -->

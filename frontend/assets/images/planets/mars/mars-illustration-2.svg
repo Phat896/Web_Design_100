@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="space-dark" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#140103"/>
+      <stop offset="100%" stop-color="#040000"/>
+    </radialGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .calm-glow { animation: goldGlow 3s infinite ease-in-out; }
+    .storm-flicker { animation: redFlicker 0.4s infinite alternate ease-in-out; }
+    .float-slow { animation: floatPerson 6s infinite ease-in-out; }
+
+    @keyframes goldGlow {
+      0%, 100% { filter: drop-shadow(0 0 4px #eab308); opacity: 0.8; }
+      50% { filter: drop-shadow(0 0 12px #facc15); opacity: 1; }
+    }
+    @keyframes redFlicker {
+      0% { opacity: 0.65; transform: scale(0.98); }
+      100% { opacity: 0.85; transform: scale(1.02); }
+    }
+    @keyframes floatPerson {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#space-dark)" />
+
+  <!-- Technical Grid Circles (Expanding from center) -->
+  <g stroke="#991b1b" stroke-width="0.5" fill="none" opacity="0.15">
+    <circle cx="400" cy="180" r="140" />
+    <circle cx="400" cy="180" r="220" />
+    <circle cx="400" cy="180" r="300" />
+    <line x1="100" y1="180" x2="700" y2="180" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+  </g>
+
+  <!-- Outer Chaos/Storm (Jagged Fire/Spikes) -->
+  <g stroke="#dc2626" fill="none" stroke-width="2.5" class="storm-flicker" filter="url(#glow-red)" transform-origin="400 180">
+    <!-- Wild jagged circles and spikes outside the 110px radius -->
+    <!-- Top-Left Storm -->
+    <path d="M 220,80 L 250,110 L 210,130 L 260,150 L 230,170 M 180,60 L 210,90" />
+    <!-- Bottom-Left Storm -->
+    <path d="M 230,220 L 260,240 L 210,260 L 270,280 M 160,290 L 210,310" />
+    <!-- Top-Right Storm -->
+    <path d="M 580,80 L 550,110 L 590,130 L 540,150 L 570,170 M 620,60 L 590,90" />
+    <!-- Bottom-Right Storm -->
+    <path d="M 570,220 L 540,240 L 590,260 L 530,280 M 640,290 L 590,310" />
+    
+    <!-- Giant outer flames -->
+    <path d="M 120,180 L 160,195 L 140,210 L 180,220 L 130,240" />
+    <path d="M 680,180 L 640,195 L 660,210 L 620,220 L 670,240" />
+  </g>
+
+  <!-- The Protective Calm Barrier (Concentric Glowing Circles) -->
+  <g class="calm-glow">
+    <!-- Golden Shield Ring -->
+    <circle cx="400" cy="180" r="105" fill="#140103" stroke="#facc15" stroke-width="3.5" filter="url(#glow-gold)" />
+    <circle cx="400" cy="180" r="95" fill="none" stroke="#eab308" stroke-width="1.5" stroke-dasharray="10 5" />
+    <circle cx="400" cy="180" r="85" fill="none" stroke="#facc15" stroke-width="0.5" />
+  </g>
+
+  <!-- Meditating Silhouette (Floating inside the protective circle) -->
+  <g class="float-slow" transform-origin="400 180">
+    <!-- Glowing aura behind silhouette -->
+    <circle cx="400" cy="180" r="40" fill="#facc15" opacity="0.25" filter="url(#glow-gold)" />
+    
+    <!-- Human Meditating Silhouette -->
+    <!-- Head -->
+    <circle cx="400" cy="130" r="12" fill="#040000" stroke="#facc15" stroke-width="2" />
+    <!-- Torso / Arms / Crossed Legs -->
+    <path d="M 400,143 
+             C 385,145 375,160 370,175 
+             L 362,175 C 352,175 348,185 355,190 
+             L 370,200 L 350,220 
+             C 345,225 350,232 360,230 
+             L 400,223 
+             L 440,230 
+             C 450,232 455,225 450,220 
+             L 430,200 L 445,190 
+             C 452,185 448,175 438,175 
+             L 430,175 
+             C 425,160 415,145 400,143 Z" 
+          fill="#040000" stroke="#facc15" stroke-width="2" />
+    
+    <!-- Glowing Core Center (Heart/Solar Plexus) -->
+    <circle cx="400" cy="175" r="5" fill="#ffffff" filter="url(#glow-gold)" />
+  </g>
+
+  <!-- Labels & HUD -->
+  <text x="35" y="325" font-family="'Outfit', sans-serif" font-size="20" font-weight="bold" fill="#ef4444" letter-spacing="1">THE CALM CENTER</text>
+  <text x="35" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#f87171" opacity="0.8">Establishing a mindful boundary to absorb thermal shocks and defuse reactive impulses.</text>
+  <text x="35" y="368" font-family="'JetBrains Mono', monospace" font-size="10" fill="#facc15" opacity="0.9">SHIELD_STATUS: 100% [CONTAINED] // PULSE_ABSORPTION: STABLE</text>
+</svg>

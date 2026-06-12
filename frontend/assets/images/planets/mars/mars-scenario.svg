@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Deep industrial reactor background -->
+    <radialGradient id="reactor-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#140203"/>
+      <stop offset="100%" stop-color="#050000"/>
+    </radialGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glow-high">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="3" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-orange">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Steam Gradient -->
+    <linearGradient id="steam-grad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#f97316" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#facc15" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .pressure-needle { transform-origin: 200px 200px; animation: needleVibrate 0.2s infinite alternate; }
+    .steam-vent-left { stroke-dasharray: 40 20; animation: ventLeft 2s infinite linear; }
+    .steam-vent-right { stroke-dasharray: 40 20; animation: ventRight 2s infinite linear; }
+    .button-flash { animation: btnFlash 1.5s infinite alternate; }
+    .gauge-pulse { animation: redPulse 2s infinite alternate; }
+
+    @keyframes needleVibrate {
+      0% { transform: rotate(78deg); }
+      100% { transform: rotate(82deg); }
+    }
+    @keyframes ventLeft {
+      0% { stroke-dashoffset: 0; opacity: 0.8; }
+      100% { stroke-dashoffset: 120; opacity: 0.1; }
+    }
+    @keyframes ventRight {
+      0% { stroke-dashoffset: 120; opacity: 0.8; }
+      100% { stroke-dashoffset: 0; opacity: 0.1; }
+    }
+    @keyframes btnFlash {
+      0% { fill: #1c0505; stroke: #f97316; }
+      100% { fill: #ef4444; stroke: #ffffff; filter: drop-shadow(0 0 8px #ef4444); }
+    }
+    @keyframes redPulse {
+      0% { stroke: #991b1b; }
+      100% { stroke: #ef4444; filter: drop-shadow(0 0 6px #ef4444); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#reactor-bg)" />
+
+  <!-- Technical Dashboard Grid -->
+  <g stroke="#991b1b" stroke-width="0.5" opacity="0.1">
+    <line x1="0" y1="80" x2="800" y2="80" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="400" y1="80" x2="400" y2="360" />
+  </g>
+
+  <!-- Title & Status -->
+  <text x="40" y="45" font-family="'Outfit', sans-serif" font-size="18" font-weight="bold" fill="#ef4444" letter-spacing="1">PRESSURE RELEASE PROTOCOL</text>
+  <text x="40" y="68" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f97316" opacity="0.8">SCENARIO: CONTROLLED VENTING / STRESS RELIEF</text>
+  <line x1="40" y1="78" x2="350" y2="78" stroke="#ef4444" stroke-width="1.5" opacity="0.3" />
+
+  <!-- LEFT ZONE: Pressure Gauge -->
+  <g transform="translate(0, 0)">
+    <!-- Outer Gauge Ring -->
+    <circle cx="200" cy="220" r="85" fill="#080102" stroke="#450a0a" stroke-width="3" />
+    <circle cx="200" cy="220" r="75" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="6 4" opacity="0.4" />
+    
+    <!-- Colored Zones (Green, Yellow, Red) -->
+    <!-- Arc from 135deg to 315deg -->
+    <!-- Safe zone (left) -->
+    <path d="M 147,273 A 75,75 0 0,1 200,145" fill="none" stroke="#22c55e" stroke-width="6" opacity="0.4" />
+    <!-- Warning zone (middle) -->
+    <path d="M 200,145 A 75,75 0 0,1 253,167" fill="none" stroke="#eab308" stroke-width="6" opacity="0.6" />
+    <!-- Critical zone (right) -->
+    <path d="M 253,167 A 75,75 0 0,1 273,220" fill="none" stroke="#ef4444" stroke-width="8" class="gauge-pulse" />
+
+    <!-- Center Hub -->
+    <circle cx="200" cy="220" r="12" fill="#150505" stroke="#ef4444" stroke-width="2" />
+    
+    <!-- Gauge Needle (Pointing to Critical zone - Red Zone) -->
+    <line x1="200" y1="220" x2="265" y2="155" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" class="pressure-needle" filter="url(#glow-high)" />
+
+    <!-- Numerical Labels -->
+    <text x="200" y="275" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">980 kPa</text>
+    <text x="200" y="290" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f87171" text-anchor="middle">[DANGER ZONE]</text>
+  </g>
+
+  <!-- MIDDLE ZONE: Reactor Vessel & Venting Exhaust -->
+  <g transform="translate(415, 0)">
+    <!-- Reactor Body Silhouette -->
+    <rect x="-35" y="110" width="70" height="220" rx="10" fill="#080102" stroke="#450a0a" stroke-width="2" />
+    
+    <!-- Glowing core indicator inside reactor -->
+    <line x1="0" y1="140" x2="0" y2="300" stroke="#ef4444" stroke-width="12" stroke-linecap="round" opacity="0.8" filter="url(#glow-high)" />
+    <line x1="0" y1="160" x2="0" y2="280" stroke="#f97316" stroke-width="4" stroke-linecap="round" filter="url(#glow-orange)" />
+
+    <!-- Left Vent Pipe -->
+    <path d="M -35,170 H -70 V 160" fill="none" stroke="#450a0a" stroke-width="2.5" />
+    <!-- Vent Steam Left -->
+    <line x1="-70" y1="160" x2="-210" y2="120" stroke="url(#steam-grad)" stroke-width="15" stroke-linecap="round" class="steam-vent-left" filter="url(#glow-orange)" />
+
+    <!-- Right Vent Pipe -->
+    <path d="M 35,250 H 70 V 260" fill="none" stroke="#450a0a" stroke-width="2.5" />
+    <!-- Vent Steam Right -->
+    <line x1="70" y1="260" x2="210" y2="300" stroke="url(#steam-grad)" stroke-width="15" stroke-linecap="round" class="steam-vent-right" filter="url(#glow-orange)" />
+
+    <text x="0" y="100" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">CORE TEMPERATURE</text>
+  </g>
+
+  <!-- RIGHT ZONE: Manual Vent Button Interface -->
+  <g transform="translate(590, 150)">
+    <!-- Console background box -->
+    <rect width="170" height="150" rx="8" fill="#0c0102" stroke="#450a0a" stroke-width="1.5" />
+    <text x="85" y="25" font-family="'Outfit', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">OVERPRESSURE RELIEF</text>
+    
+    <!-- Emergency Button (Blinking Red) -->
+    <rect x="35" y="45" width="100" height="45" rx="6" stroke-width="2.5" class="button-flash" />
+    <text x="85" y="72" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" style="pointer-events: none;">VENT CORE</text>
+    
+    <!-- Status text below button -->
+    <text x="85" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="#22c55e" text-anchor="middle">MANUAL VENT: READY</text>
+    <text x="85" y="130" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f87171" text-anchor="middle">TRIGGER FOR DE-ESCALATION</text>
+  </g>
+
+  <!-- Warning Panel Footer -->
+  <g transform="translate(40, 390)">
+    <!-- Warning flashing bar -->
+    <rect width="720" height="28" rx="4" fill="#ef4444" opacity="0.15">
+      <animate attributeName="opacity" values="0.05;0.25;0.05" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+    <text x="360" y="18" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">WARNING: INTERNAL PRESSURE EXCEEDS THRESHOLD // INITIATING CONTROLLED STEAM RELEASE</text>
+  </g>
+</svg>

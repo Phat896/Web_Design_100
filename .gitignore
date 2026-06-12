@@ -1,19 +1,16 @@
-# Thư mục thư viện Node.js
+# Dependency directories
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+backend/node_modules/
 
-# Tệp cấu hình bảo mật (Chứa mật khẩu Database, API key)
+# Environment variables
 .env
+backend/.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Các thư mục/tệp tin rác của hệ điều hành và IDE
-.DS_Store
-Thumbs.db
+# IDEs and editors
 .vscode/
 .idea/
 *.suo
@@ -21,3 +18,18 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Python files (temp)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+find_urls.py
+check.py
+image_report.txt

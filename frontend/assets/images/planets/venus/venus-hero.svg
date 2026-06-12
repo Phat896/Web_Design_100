@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Deep Space Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1e052e"/>
+      <stop offset="50%" stop-color="#0f0217"/>
+      <stop offset="100%" stop-color="#050007"/>
+    </radialGradient>
+
+    <!-- Venus Body Gradient (Pink, Purple, Gold) -->
+    <radialGradient id="venus-grad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffd700"/> <!-- Gold highlight -->
+      <stop offset="30%" stop-color="#ffb6c1"/> <!-- Pink body -->
+      <stop offset="70%" stop-color="#da70d6"/> <!-- Purple shadow -->
+      <stop offset="100%" stop-color="#2c003e"/> <!-- Deep dark edge -->
+    </radialGradient>
+
+    <!-- Atmosphere Glow Gradient -->
+    <radialGradient id="atmosphere-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#ffb6c1" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#da70d6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0.6"/>
+    </radialGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="gold-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ff8c00"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Soft Glow Filter -->
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Styling & Animations */
+    .bg { fill: url(#bg-grad); }
+    .star { fill: #ffffff; opacity: 0.3; }
+    .star-twinkle-1 { animation: twinkle 3s infinite ease-in-out; }
+    .star-twinkle-2 { animation: twinkle 4s infinite ease-in-out 1.5s; }
+    .star-twinkle-3 { animation: twinkle 5s infinite ease-in-out 3s; }
+    
+    .planet-group { animation: float-slow 12s infinite ease-in-out; }
+    .hud-rotate-clockwise { transform-origin: 250px 225px; animation: rotate-cw 25s linear infinite; }
+    .hud-rotate-counter { transform-origin: 250px 225px; animation: rotate-ccw 35s linear infinite; }
+    .astronaut-float { transform-origin: 580px 210px; animation: float-astronaut 8s infinite ease-in-out; }
+    .stardust { animation: pulse-glow 3s infinite ease-in-out; }
+    .hud-line { stroke-dasharray: 4, 4; animation: dash-slide 10s linear infinite; }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes float-astronaut {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes rotate-cw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotate-ccw {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 2px #ffb6c1); }
+      50% { opacity: 0.9; filter: drop-shadow(0 0 8px #ffd700); }
+    }
+    @keyframes dash-slide {
+      to { stroke-dashoffset: -20; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" class="bg"/>
+
+  <!-- Twinkling Starfield -->
+  <g id="stars">
+    <circle cx="75" cy="80" r="1.5" class="star star-twinkle-1"/>
+    <circle cx="150" cy="50" r="1" class="star star-twinkle-2"/>
+    <circle cx="280" cy="90" r="2" class="star star-twinkle-3"/>
+    <circle cx="380" cy="40" r="1" class="star star-twinkle-1"/>
+    <circle cx="480" cy="70" r="1.5" class="star star-twinkle-2"/>
+    <circle cx="620" cy="55" r="2.5" class="star star-twinkle-3"/>
+    <circle cx="710" cy="95" r="1" class="star star-twinkle-1"/>
+    <circle cx="90" cy="380" r="1.5" class="star star-twinkle-2"/>
+    <circle cx="210" cy="410" r="1.5" class="star star-twinkle-3"/>
+    <circle cx="340" cy="380" r="1" class="star star-twinkle-1"/>
+    <circle cx="550" cy="400" r="2" class="star star-twinkle-2"/>
+    <circle cx="670" cy="370" r="1" class="star star-twinkle-3"/>
+    <circle cx="740" cy="340" r="2" class="star star-twinkle-1"/>
+  </g>
+
+  <!-- Nebula Background Glow (Soft purple and pink clouds) -->
+  <ellipse cx="250" cy="225" rx="200" ry="150" fill="#da70d6" opacity="0.15" filter="url(#soft-glow)" />
+  <ellipse cx="600" cy="180" rx="150" ry="120" fill="#ffb6c1" opacity="0.12" filter="url(#soft-glow)" />
+
+  <!-- Connecting Space Lattice Grid (Love Paths) -->
+  <g stroke="#da70d6" stroke-width="0.5" opacity="0.3" fill="none">
+    <path d="M 100 150 Q 250 80 400 150 T 700 150" />
+    <path d="M 80 300 Q 250 380 420 300 T 720 300" />
+    <path d="M 250 225 L 580 210" stroke-dasharray="3, 10" stroke="#ffd700" stroke-width="1"/>
+  </g>
+
+  <!-- HUD rings surrounding Venus -->
+  <g class="planet-group">
+    <!-- Outer dashed tech circle -->
+    <circle cx="250" cy="225" r="160" stroke="#da70d6" stroke-width="1.5" fill="none" opacity="0.4" stroke-dasharray="10, 40" class="hud-rotate-clockwise"/>
+    <!-- Outer solid thin circle with crosshairs -->
+    <circle cx="250" cy="225" r="140" stroke="#ffd700" stroke-width="0.75" fill="none" opacity="0.3"/>
+    <line x1="250" y1="70" x2="250" y2="60" stroke="#ffd700" stroke-width="1.5" opacity="0.6"/>
+    <line x1="250" y1="380" x2="250" y2="390" stroke="#ffd700" stroke-width="1.5" opacity="0.6"/>
+    <line x1="95" y1="225" x2="85" y2="225" stroke="#ffd700" stroke-width="1.5" opacity="0.6"/>
+    <line x1="405" y1="225" x2="415" y2="225" stroke="#ffd700" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Dynamic orbital rings of Love (angled) -->
+    <ellipse cx="250" cy="225" rx="190" ry="45" fill="none" stroke="url(#gold-accent)" stroke-width="1.5" opacity="0.7" transform="rotate(-15 250 225)" stroke-dasharray="150, 20" class="hud-rotate-clockwise" filter="url(#glow)"/>
+    <ellipse cx="250" cy="225" rx="170" ry="30" fill="none" stroke="#ffb6c1" stroke-width="1" opacity="0.5" transform="rotate(25 250 225)" class="hud-rotate-counter"/>
+
+    <!-- Core Planet Atmosphere Glow -->
+    <circle cx="250" cy="225" r="94" fill="url(#atmosphere-glow)" filter="url(#glow)"/>
+
+    <!-- Venus Planet Sphere -->
+    <circle cx="250" cy="225" r="90" fill="url(#venus-grad)"/>
+
+    <!-- Swirling Stardust Heart Orbiting (Path overlay) -->
+    <path d="M 250 120 C 235 105 205 105 190 125 C 175 105 145 105 130 120 C 110 140 140 190 190 220 C 240 190 270 140 250 120 Z" 
+          fill="none" stroke="#ffb6c1" stroke-width="1.5" opacity="0.7" transform="translate(60, 10) scale(0.3)" filter="url(#glow)" class="stardust"/>
+    <path d="M 250 120 C 235 105 205 105 190 125 C 175 105 145 105 130 120 C 110 140 140 190 190 220 C 240 190 270 140 250 120 Z" 
+          fill="none" stroke="#ffd700" stroke-width="1" opacity="0.6" transform="translate(200, 200) scale(0.2) rotate(45)" filter="url(#glow)" class="stardust"/>
+  </g>
+
+  <!-- Astronaut Silhouette Floating -->
+  <g class="astronaut-float">
+    <!-- Tether wire -->
+    <path d="M 520 230 Q 550 260 580 220" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4, 4" opacity="0.8"/>
+    
+    <!-- Astronaut body parts (Detailed vector art) -->
+    <g transform="translate(560, 180)">
+      <!-- Jetpack -->
+      <rect x="5" y="15" width="12" height="30" rx="3" fill="#da70d6" opacity="0.9" stroke="#ffd700" stroke-width="1"/>
+      <rect x="33" y="15" width="12" height="30" rx="3" fill="#da70d6" opacity="0.9" stroke="#ffd700" stroke-width="1"/>
+      <!-- Body/Suit -->
+      <rect x="12" y="18" width="26" height="35" rx="6" fill="#ffffff" stroke="#da70d6" stroke-width="2"/>
+      <!-- Helmet -->
+      <circle cx="25" cy="10" r="11" fill="#ffffff" stroke="#da70d6" stroke-width="2"/>
+      <path d="M 18 10 A 7 7 0 0 1 32 10 Z" fill="#ffd700" opacity="0.9" filter="url(#glow)"/> <!-- Gold Visor -->
+      <!-- Limbs -->
+      <!-- Left arm (reaching out) -->
+      <path d="M 12 22 Q 0 15 -10 25" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 12 22 Q 0 15 -10 25" fill="none" stroke="#da70d6" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Right arm -->
+      <path d="M 38 22 Q 48 30 50 15" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 38 22 Q 48 30 50 15" fill="none" stroke="#da70d6" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Left leg -->
+      <path d="M 17 53 Q 12 70 8 78" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 17 53 Q 12 70 8 78" fill="none" stroke="#da70d6" stroke-width="2" stroke-linecap="round"/>
+      <!-- Right leg -->
+      <path d="M 33 53 Q 35 70 42 76" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 33 53 Q 35 70 42 76" fill="none" stroke="#da70d6" stroke-width="2" stroke-linecap="round"/>
+      <!-- Small details/Chest piece -->
+      <rect x="18" y="24" width="14" height="10" rx="1" fill="#ffb6c1" opacity="0.8"/>
+      <circle cx="21" cy="29" r="1.5" fill="#ffd700"/>
+      <circle cx="25" cy="29" r="1.5" fill="#da70d6"/>
+    </g>
+  </g>
+
+  <!-- Interactive HUD overlays / Grid / Panels -->
+  <!-- Top Left Info Panel -->
+  <g transform="translate(40, 40)" font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="10" opacity="0.85">
+    <rect x="-10" y="-10" width="180" height="70" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.4"/>
+    <line x1="-10" y1="-10" x2="20" y2="-10" stroke="#ffd700" stroke-width="3"/>
+    <line x1="-10" y1="-10" x2="-10" y2="20" stroke="#ffd700" stroke-width="3"/>
+    <text x="5" y="12" font-weight="bold" fill="#ffd700">TARGET: VENUS // SECTOR 02</text>
+    <text x="5" y="27">SYS.STAT: EMOTION ACTIVE</text>
+    <text x="5" y="42">COORD: 108.200.000 KM</text>
+    <text x="5" y="54">FIELD: INTENSE CURIOSITY/LOVE</text>
+  </g>
+
+  <!-- Top Right HUD graph -->
+  <g transform="translate(620, 40)" opacity="0.8">
+    <rect x="-10" y="-10" width="150" height="70" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.4"/>
+    <path d="M 0 45 L 20 25 L 40 35 L 60 10 L 80 40 L 100 20 L 120 15 L 140 30" fill="none" stroke="#ffd700" stroke-width="1.5" filter="url(#glow)"/>
+    <line x1="0" y1="50" x2="140" y2="50" stroke="#da70d6" stroke-width="1"/>
+    <text x="0" y="-15" font-family="JetBrains Mono, Courier New, monospace" font-size="9" fill="#ffb6c1">HORMONE INTEGRATION RATIO</text>
+  </g>
+
+  <!-- Bottom HUD Bar -->
+  <g transform="translate(40, 400)">
+    <line x1="0" y1="0" x2="720" y2="0" stroke="#da70d6" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="0" x2="150" y2="0" stroke="#ffd700" stroke-width="2.5"/>
+    
+    <!-- Coordinate ticks -->
+    <line x1="200" y1="0" x2="200" y2="5" stroke="#da70d6" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="5" stroke="#da70d6" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="5" stroke="#da70d6" stroke-width="1"/>
+
+    <text x="0" y="20" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ffd700" letter-spacing="1">SCANNING NEURO-LINK PATHWAYS... COMPLETE</text>
+    <text x="580" y="20" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ffb6c1" text-anchor="end">SYS.REF: 99.8% ESTABLISHED</text>
+  </g>
+</svg>

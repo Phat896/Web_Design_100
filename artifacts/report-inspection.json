@@ -1,0 +1,2689 @@
+{
+  "source": "D:\\D_Dowload\\tailieu_doan\\DACSI-Nguyễn Tấn Phát -25AS037.docx",
+  "paragraph_count": 697,
+  "nonempty_paragraph_count": 523,
+  "table_count": 2,
+  "inline_shape_count": 20,
+  "section_count": 2,
+  "paragraphs": [
+    {
+      "index": 0,
+      "style": "Normal",
+      "text": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN & TRUYỀN THÔNG VIỆT-HÀN"
+    },
+    {
+      "index": 1,
+      "style": "Normal",
+      "text": "Khoa Khoa Học Máy Tính"
+    },
+    {
+      "index": 5,
+      "style": "Normal",
+      "text": "ĐỒ ÁN CƠ SỞ 2"
+    },
+    {
+      "index": 6,
+      "style": "Normal",
+      "text": "WEBSITE QUẢN LÍ VÀ ĐẶT LỊCH CẮT TÓC"
+    },
+    {
+      "index": 14,
+      "style": "Normal",
+      "text": "Đà Nẵng, tháng 05 năm 2025"
+    },
+    {
+      "index": 15,
+      "style": "Normal",
+      "text": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN & TRUYỀN THÔNG VIỆT-HÀN"
+    },
+    {
+      "index": 16,
+      "style": "Normal",
+      "text": "Khoa Khoa Học Máy Tính"
+    },
+    {
+      "index": 20,
+      "style": "Normal",
+      "text": "ĐỒ ÁN CƠ SỞ 2"
+    },
+    {
+      "index": 21,
+      "style": "Normal",
+      "text": "WEBSITE QUẢN LÍ VÀ ĐẶT LỊCH CẮT TÓC"
+    },
+    {
+      "index": 28,
+      "style": "Normal",
+      "text": "Đà Nẵng, tháng 5 năm 2025"
+    },
+    {
+      "index": 29,
+      "style": "toc 1",
+      "text": "NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN"
+    },
+    {
+      "index": 61,
+      "style": "toc 1",
+      "text": "LỜI CẢM ƠN"
+    },
+    {
+      "index": 63,
+      "style": "Body Text",
+      "text": "Trước hết, em xin gửi lời cảm ơn chân thành đến các thầy cô khoa Kỹ thuật máy tính, trường Đại học Công nghệ thông tin và truyền thông Việt Hàn. Các thầy cô đã truyền đạt cho em những kiến ​​thức thiết yếu và chia sẻ những kinh nghiệm quý báu trong suốt kỳ qua. Em cũng xin cảm ơn sự hỗ trợ, quan tâm và tạo điều kiện thuận lợi cho em trong quá trình học tập tại trường, đặc biệt là trong quá trình hoàn thành đồ án này."
+    },
+    {
+      "index": 64,
+      "style": "Body Text",
+      "text": "Đặc biệt, em xin gửi lời cảm ơn chân thành đến cô Nguyễn Ngọc Huyền Trân, Thạc sĩ, người hướng dẫn đồ án tốt nghiệp của em. Cô đã tận tình hướng dẫn, hỗ trợ và giám sát, đưa ra những lời khuyên và phản hồi quý báu để đảm bảo đồ án của em được hoàn thành thành công."
+    },
+    {
+      "index": 65,
+      "style": "Body Text",
+      "text": "Tuy nhiên, do hạn chế về thời gian và trình độ chuyên môn còn hạn chế, mặc dù đã rất cố gắng, đồ án này vẫn không tránh khỏi những hạn chế và thiếu sót. em chân thành mong nhận được sự thông cảm, phản hồi và những hiểu biết sâu sắc của các thầy cô để giúp em hoàn thiện bản thân hơn nữa trong những công trình sau này."
+    },
+    {
+      "index": 66,
+      "style": "Body Text",
+      "text": "Cuối cùng, em chân thành cảm ơn các bạn cùng lớp đã hỗ trợ em trong suốt quá trình học tập."
+    },
+    {
+      "index": 67,
+      "style": "Normal",
+      "text": "Xin chân thành cảm ơn."
+    },
+    {
+      "index": 68,
+      "style": "Normal",
+      "text": "Sinh viên,"
+    },
+    {
+      "index": 69,
+      "style": "Normal",
+      "text": "Nguyễn Quốc Sách"
+    },
+    {
+      "index": 75,
+      "style": "toc 1",
+      "text": "MỤC LỤC"
+    },
+    {
+      "index": 87,
+      "style": "Heading 1",
+      "text": "DANH MỤC HÌNH ẢNH"
+    },
+    {
+      "index": 88,
+      "style": "table of figures",
+      "text": "Hình Ảnh 1. Rect JS 8"
+    },
+    {
+      "index": 89,
+      "style": "table of figures",
+      "text": "Hình Ảnh 2. HTML 9"
+    },
+    {
+      "index": 90,
+      "style": "table of figures",
+      "text": "Hình Ảnh 3. TailWind CSS 9"
+    },
+    {
+      "index": 91,
+      "style": "table of figures",
+      "text": "Hình Ảnh 4. Node JS 10"
+    },
+    {
+      "index": 92,
+      "style": "table of figures",
+      "text": "Hình Ảnh 5. JavaScript XML 10"
+    },
+    {
+      "index": 93,
+      "style": "table of figures",
+      "text": "Hình Ảnh 6. MonoDB 11"
+    },
+    {
+      "index": 94,
+      "style": "table of figures",
+      "text": "Hình Ảnh 7. VS Code 12"
+    },
+    {
+      "index": 95,
+      "style": "table of figures",
+      "text": "Hình Ảnh 8. Express JS 14"
+    },
+    {
+      "index": 96,
+      "style": "table of figures",
+      "text": "Hình Ảnh 9. Use Case khách hàng 23"
+    },
+    {
+      "index": 97,
+      "style": "table of figures",
+      "text": "Hình Ảnh 10. Use Case Admin 24"
+    },
+    {
+      "index": 98,
+      "style": "table of figures",
+      "text": "Hình Ảnh 11. Đăng ký 25"
+    },
+    {
+      "index": 99,
+      "style": "table of figures",
+      "text": "Hình Ảnh 12. Đăng nhập 26"
+    },
+    {
+      "index": 100,
+      "style": "table of figures",
+      "text": "Hình Ảnh 13. Lịch hẹn 27"
+    },
+    {
+      "index": 101,
+      "style": "table of figures",
+      "text": "Hình Ảnh 14. Hủy lịch hẹn 28"
+    },
+    {
+      "index": 102,
+      "style": "table of figures",
+      "text": "Hình Ảnh 15. Đặt sản phẩm 29"
+    },
+    {
+      "index": 103,
+      "style": "table of figures",
+      "text": "Hình Ảnh 16. Đặc lịch cắt tóc 30"
+    },
+    {
+      "index": 104,
+      "style": "table of figures",
+      "text": "Hình Ảnh 17. Cập nhập đơn 31"
+    },
+    {
+      "index": 105,
+      "style": "table of figures",
+      "text": "Hình Ảnh 18. Sửa sản phẩm 32"
+    },
+    {
+      "index": 106,
+      "style": "table of figures",
+      "text": "Hình Ảnh 19. Thêm sản phẩm 33"
+    },
+    {
+      "index": 107,
+      "style": "table of figures",
+      "text": "Hình Ảnh 20. Câp nhập lịch hẹn 33"
+    },
+    {
+      "index": 108,
+      "style": "table of figures",
+      "text": "Hình Ảnh 21. Admin xóa sản phẩm 34"
+    },
+    {
+      "index": 109,
+      "style": "table of figures",
+      "text": "Hình Ảnh 22. Class Diagram 35"
+    },
+    {
+      "index": 110,
+      "style": "table of figures",
+      "text": "Hình Ảnh 23. ERD 36"
+    },
+    {
+      "index": 121,
+      "style": "Heading 1",
+      "text": "MỞ ĐẦU"
+    },
+    {
+      "index": 122,
+      "style": "Body Text",
+      "text": "1.Giới Thiệu"
+    },
+    {
+      "index": 123,
+      "style": "Normal",
+      "text": "Trong bối cảnh công nghệ thông tin ngày càng phát triển và được ứng dụng rộng rãi trong nhiều lĩnh vực của đời sống, việc xây dựng các hệ thống phần mềm hỗ trợ quản lý và vận hành trở nên vô cùng cần thiết. Xuất phát từ nhu cầu đó, đồ án này được thực hiện nhằm áp dụng những kiến thức đã học vào việc phân tích, thiết kế và xây dựng một hệ thống phần mềm hoàn chỉnh."
+    },
+    {
+      "index": 124,
+      "style": "Normal (Web)",
+      "text": "Nội dung đồ án tập trung vào việc tìm hiểu bài toán thực tế, phân tích yêu cầu, thiết kế hệ thống và triển khai các chức năng cơ bản theo hướng tiếp cận có hệ thống. Thông qua đồ án, không chỉ củng cố kiến thức về lập trình, cơ sở dữ liệu và phân tích thiết kế hệ thống mà còn rèn luyện kỹ năng tư duy logic, giải quyết vấn đề và làm việc theo quy trình phát triển phần mềm."
+    },
+    {
+      "index": 125,
+      "style": "Normal (Web)",
+      "text": "Báo cáo này trình bày chi tiết quá trình thực hiện đồ án, từ khâu phân tích yêu cầu, thiết kế mô hình, xây dựng chức năng cho đến đánh giá kết quả đạt được, qua đó thể hiện khả năng vận dụng lý thuyết vào thực tiễn của sinh viên."
+    },
+    {
+      "index": 126,
+      "style": "Body Text",
+      "text": "2.Mục Tiêu Đề Tài"
+    },
+    {
+      "index": 127,
+      "style": "Body Text",
+      "text": "Mục tiêu của đề tài là xây dựng một hệ thống phần mềm đáp ứng được các yêu cầu cơ bản của bài toán đặt ra, góp phần hỗ trợ người dùng trong việc quản lý và sử dụng thông tin một cách hiệu quả. Thông qua việc thực hiện đề tài có cơ hội vận dụng các kiến thức đã học về phân tích thiết kế hệ thống, lập trình và cơ sở dữ liệu vào một sản phẩm thực tế."
+    },
+    {
+      "index": 128,
+      "style": "Body Text",
+      "text": "giúp rèn luyện tư duy logic, kỹ năng phân tích yêu cầu, thiết kế hệ thống và triển khai các chức năng theo quy trình phát triển phần mềm."
+    },
+    {
+      "index": 129,
+      "style": "Body Text",
+      "text": "Cuối cùng, đề tài hướng đến việc hoàn thiện một sản phẩm có tính ứng dụng, giao diện thân thiện, dễ sử dụng và có khả năng mở rộng, làm nền tảng cho việc nghiên cứu và phát triển các chức năng nâng cao trong tương lai."
+    },
+    {
+      "index": 135,
+      "style": "Body Text",
+      "text": "3.Nội Dung Và Kế Hoạch"
+    },
+    {
+      "index": 136,
+      "style": "Body Text",
+      "text": "Nội Dung:"
+    },
+    {
+      "index": 137,
+      "style": "Body Text",
+      "text": "Thu thập và phân tích yêu cầu hệ thống, xác định các chức năng chính và đối tượng sử dụng."
+    },
+    {
+      "index": 138,
+      "style": "Body Text",
+      "text": "Phân tích nghiệp vụ và xây dựng các mô hình hệ thống như: sơ đồ Use Case, mô hình dữ liệu, sơ đồ lớp (Class Diagram) nhằm mô tả cấu trúc và hành vi của hệ thống."
+    },
+    {
+      "index": 139,
+      "style": "Body Text",
+      "text": "Thiết kế cơ sở dữ liệu phù hợp với yêu cầu nghiệp vụ, đảm bảo tính toàn vẹn và khả năng mở rộng."
+    },
+    {
+      "index": 140,
+      "style": "Body Text",
+      "text": "Thiết kế giao diện người dùng theo hướng trực quan, thân thiện và dễ sử dụng."
+    },
+    {
+      "index": 141,
+      "style": "Body Text",
+      "text": "Xây dựng và triển khai các chức năng chính của hệ thống bằng React.js, Vite, Tailwind CSS, Node.js, Express.js và MongoDB."
+    },
+    {
+      "index": 142,
+      "style": "Body Text",
+      "text": "Kiểm thử, đánh giá hệ thống và hoàn thiện sản phẩm."
+    },
+    {
+      "index": 143,
+      "style": "Body Text",
+      "text": "Tổng hợp kết quả, viết báo cáo và rút ra nhận xét, đánh giá về đề tài."
+    },
+    {
+      "index": 145,
+      "style": "Body Text",
+      "text": "Kế Hoạch Thực Hiện:"
+    },
+    {
+      "index": 146,
+      "style": "Body Text",
+      "text": "Giai đoạn 1: Khảo sát và xác định yêu cầu"
+    },
+    {
+      "index": 148,
+      "style": "Body Text",
+      "text": "Tìm hiểu bài toán thực tế của mô hình tiệm tóc kết hợp bán sản phẩm."
+    },
+    {
+      "index": 149,
+      "style": "Body Text",
+      "text": "Xác định các nhóm người dùng chính gồm khách hàng và quản trị viên."
+    },
+    {
+      "index": 150,
+      "style": "Body Text",
+      "text": "Xác định các chức năng cần xây dựng như đăng ký, đăng nhập, đặt lịch, mua hàng, quản trị lịch hẹn, đơn hàng và sản phẩm."
+    },
+    {
+      "index": 151,
+      "style": "Body Text",
+      "text": "Giai đoạn 2: Phân tích và thiết kế hệ thống"
+    },
+    {
+      "index": 153,
+      "style": "Body Text",
+      "text": "Phân tích nghiệp vụ của hệ thống."
+    },
+    {
+      "index": 154,
+      "style": "Body Text",
+      "text": "Thiết kế cơ sở dữ liệu gồm các collection như user, barber, service, appointment, product, order, review."
+    },
+    {
+      "index": 155,
+      "style": "Body Text",
+      "text": "Xây dựng các biểu đồ phân tích thiết kế như use case, tuần tự, lớp và kiến trúc tổng thể."
+    },
+    {
+      "index": 156,
+      "style": "Body Text",
+      "text": "Thiết kế cấu trúc giao diện cho từng trang chức năng."
+    },
+    {
+      "index": 157,
+      "style": "Body Text",
+      "text": "Giai đoạn 3: Xây dựng giao diện người dùng"
+    },
+    {
+      "index": 159,
+      "style": "Body Text",
+      "text": "Thiết lập dự án frontend bằng React.js và Vite."
+    },
+    {
+      "index": 160,
+      "style": "Body Text",
+      "text": "Xây dựng các trang giao diện chính như trang chủ, trang đặt lịch, trang shop, trang lịch hẹn cá nhân và trang quản trị."
+    },
+    {
+      "index": 161,
+      "style": "Body Text",
+      "text": "Hoàn thiện responsive, dark mode và hiệu ứng giao diện."
+    },
+    {
+      "index": 162,
+      "style": "Body Text",
+      "text": "Giai đoạn 4: Xây dựng backend và cơ sở dữ liệu"
+    },
+    {
+      "index": 164,
+      "style": "Body Text",
+      "text": "Thiết lập server backend bằng Node.js và Express.js."
+    },
+    {
+      "index": 165,
+      "style": "Body Text",
+      "text": "Kết nối MongoDB và xây dựng các model bằng Mongoose."
+    },
+    {
+      "index": 166,
+      "style": "Body Text",
+      "text": "Xây dựng các API cho đăng nhập, đăng ký, đặt lịch, quản lý lịch hẹn, sản phẩm, đơn hàng và thống kê quản trị."
+    },
+    {
+      "index": 167,
+      "style": "Body Text",
+      "text": "Tích hợp xác thực JWT, mã hóa mật khẩu bằng bcryptjs và gửi email bằng nodemailer."
+    },
+    {
+      "index": 168,
+      "style": "Body Text",
+      "text": "Giai đoạn 5: Kiểm thử và hoàn thiện chức năng"
+    },
+    {
+      "index": 170,
+      "style": "Body Text",
+      "text": "Kiểm tra hoạt động của từng chức năng chính."
+    },
+    {
+      "index": 171,
+      "style": "Body Text",
+      "text": "Kiểm tra luồng đăng nhập, đặt lịch, đặt hàng và quản trị."
+    },
+    {
+      "index": 172,
+      "style": "Body Text",
+      "text": "Sửa lỗi giao diện, lỗi logic và tối ưu trải nghiệm người dùng."
+    },
+    {
+      "index": 173,
+      "style": "Body Text",
+      "text": "Kiểm tra tính nhất quán dữ liệu giữa frontend, backend và database."
+    },
+    {
+      "index": 174,
+      "style": "Body Text",
+      "text": "Giai đoạn 6: Tổng hợp và viết báo cáo"
+    },
+    {
+      "index": 176,
+      "style": "Body Text",
+      "text": "Tổng hợp kết quả đạt được sau khi hoàn thiện hệ thống."
+    },
+    {
+      "index": 177,
+      "style": "Body Text",
+      "text": "Viết các chương báo cáo như giới thiệu đề tài, phân tích thiết kế, công nghệ sử dụng, kết quả đạt được, hạn chế và hướng phát triển."
+    },
+    {
+      "index": 178,
+      "style": "Body Text",
+      "text": "Hoàn chỉnh hình ảnh minh họa, biểu đồ và tài liệu tham khảo."
+    },
+    {
+      "index": 179,
+      "style": "Body Text",
+      "text": "Kế hoạch thực hiện tóm tắt theo tiến trình"
+    },
+    {
+      "index": 181,
+      "style": "Body Text",
+      "text": "Khảo sát yêu cầu"
+    },
+    {
+      "index": 182,
+      "style": "Body Text",
+      "text": "Phân tích và thiết kế hệ thống"
+    },
+    {
+      "index": 183,
+      "style": "Body Text",
+      "text": "Xây dựng frontend"
+    },
+    {
+      "index": 184,
+      "style": "Body Text",
+      "text": "Xây dựng backend và cơ sở dữ liệu"
+    },
+    {
+      "index": 185,
+      "style": "Body Text",
+      "text": "Kiểm thử và hoàn thiện"
+    },
+    {
+      "index": 186,
+      "style": "Body Text",
+      "text": "Viết báo cáo và tổng kết đề tài"
+    },
+    {
+      "index": 187,
+      "style": "Body Text",
+      "text": "4.Bố cục báo cáo"
+    },
+    {
+      "index": 188,
+      "style": "Normal",
+      "text": "Sau phần Mở đầu, báo cáo được trình bày trong ba chương, cụ thể như sau:"
+    },
+    {
+      "index": 189,
+      "style": "Normal",
+      "text": "Chương 1: Tổng quan về hệ thống quản lý đặt lịch cắt tóc."
+    },
+    {
+      "index": 190,
+      "style": "Normal",
+      "text": "Chương 2: Phân tích và thiết kế hệ thống quản lý đặt lịch cắt tóc."
+    },
+    {
+      "index": 191,
+      "style": "Normal",
+      "text": "Chương 3: Xây dựng và triển khai hệ thống quản lý đặt lịch cắt tóc."
+    },
+    {
+      "index": 192,
+      "style": "Normal",
+      "text": "Cuối cùng là Kết luận, Tài liệu tham khảo và Phụ lục liên quan đến đề tài."
+    },
+    {
+      "index": 197,
+      "style": "Heading 1",
+      "text": "Chương 1: Tổng quan về hệ thống quản lý ."
+    },
+    {
+      "index": 198,
+      "style": "Normal",
+      "text": "1. Giới thiệu"
+    },
+    {
+      "index": 199,
+      "style": "Normal (Web)",
+      "text": "Tiệm Tóc 1989 là dự án xây dựng website đặt lịch cắt tóc trực tuyến được phát triển nhằm hỗ trợ quá trình quản lý và đặt lịch tại các salon/barber shop theo hướng hiện đại và tự động hóa. Trong bối cảnh nhu cầu sử dụng các dịch vụ trực tuyến ngày càng tăng, việc áp dụng công nghệ vào quản lý lịch hẹn giúp nâng cao trải nghiệm khách hàng và tối ưu quy trình vận hành cho salon. Xuất phát từ thực tế trên, đề tài website đặt lịch cắt tóc Tiệm Tóc 1989 được thực hiện nhằm xây dựng một ứng dụng hỗ trợ khách hàng đặt lịch, mua sản phẩm chăm sóc tóc và hỗ trợ quản trị viên quản lý hoạt động của cửa hàng."
+    },
+    {
+      "index": 200,
+      "style": "Normal",
+      "text": "2. Hệ thống đặt lịch cắt tóc Tiệm Tóc 1989"
+    },
+    {
+      "index": 201,
+      "style": "Normal",
+      "text": "Website được thiết kế theo phong cách hiện đại, chuyên nghiệp với giao diện hoàn toàn bằng tiếng Việt, tối ưu cho cả máy tính và thiết bị di động. Hệ thống cho phép người dùng dễ dàng xem danh sách dịch vụ, lựa chọn barber, đặt lịch theo thời gian thực và theo dõi lịch hẹn một cách thuận tiện."
+    },
+    {
+      "index": 202,
+      "style": "Normal",
+      "text": "3. Đặc điểm của hệ thống"
+    },
+    {
+      "index": 203,
+      "style": "Normal",
+      "text": "Hệ thống đặt lịch cắt tóc trong đồ án có các đặc điểm chính sau:"
+    },
+    {
+      "index": 204,
+      "style": "List Paragraph",
+      "text": "Quản lý thông tin người dùng thông qua chức năng đăng ký và đăng nhập."
+    },
+    {
+      "index": 205,
+      "style": "List Paragraph",
+      "text": "Cung cấp danh sách dịch vụ với đầy đủ thông tin như kiểu tóc, thợ cắt tóc, chi phí, thời gian và gửi email khi xác nhận đặt lịch."
+    },
+    {
+      "index": 206,
+      "style": "List Paragraph",
+      "text": "Xem chi tiết và đặt lịch cắt tóc."
+    },
+    {
+      "index": 207,
+      "style": "List Paragraph",
+      "text": "Cho phép người dùng theo dõi lịch sử đặt lịch."
+    },
+    {
+      "index": 208,
+      "style": "List Paragraph",
+      "text": "Giao diện trực quan, dễ sử dụng, phù hợp với nhiều đối tượng người dùng."
+    },
+    {
+      "index": 209,
+      "style": "List Paragraph",
+      "text": "Hỗ trợ tìm kiếm sản phẩm chăm sóc tóc."
+    },
+    {
+      "index": 212,
+      "style": "Normal",
+      "text": "4. Mục tiêu và phạm vi của hệ thống"
+    },
+    {
+      "index": 213,
+      "style": "Heading 3",
+      "text": "1.1. Mục Tiêu"
+    },
+    {
+      "index": 214,
+      "style": "List Paragraph",
+      "text": "Xây dựng một hệ thống đặt lịch cắt tóc và bán sản phẩm chăm sóc tóc đáp ứng các chức năng cơ bản của bài toán."
+    },
+    {
+      "index": 215,
+      "style": "List Paragraph",
+      "text": "Áp dụng kiến thức đã học về lập trình, cơ sở dữ liệu và phân tích thiết kế hệ thống vào sản phẩm thực tế."
+    },
+    {
+      "index": 216,
+      "style": "List Paragraph",
+      "text": "Tạo ra một sản phẩm có tính ứng dụng, dễ sử dụng và có khả năng mở rộng trong tương lai."
+    },
+    {
+      "index": 217,
+      "style": "Heading 3",
+      "text": "1.2. Phạm Vi"
+    },
+    {
+      "index": 218,
+      "style": "List Paragraph",
+      "text": "Hệ thống tập trung vào các chức năng cốt lõi như quản lý người dùng, quản lý danh mục sản phẩm, quản lý lịch cắt tóc, xem thống kê thu nhập."
+    },
+    {
+      "index": 219,
+      "style": "List Paragraph",
+      "text": "Đối tượng sử dụng chính là người dùng và người quản lý hệ thống(admin)."
+    },
+    {
+      "index": 220,
+      "style": "List Paragraph",
+      "text": "Đồ án được triển khai ở mức độ học tập, chưa bao gồm đầy đủ các chức năng nâng cao của một hệ thống thương mại."
+    },
+    {
+      "index": 222,
+      "style": "Heading 2",
+      "text": "5. Công nghệ sử dụng"
+    },
+    {
+      "index": 223,
+      "style": "Normal",
+      "text": "Hệ thống được xây dựng dựa trên các công nghệ sau:"
+    },
+    {
+      "index": 224,
+      "style": "Heading 3",
+      "text": "1.1. React.js"
+    },
+    {
+      "index": 225,
+      "style": "Normal",
+      "text": "React.js (hay ReactJS) là một thư viện JavaScript mã nguồn mở được phát triển bởi Meta (Facebook), chuyên dùng để xây dựng giao diện người dùng (UI) cho các ứng dụng web. Trong đề tài này React.js đóng vai trò xây dựng giao diện người dùng theo component như Navbar, Booking, Shop, AdminDashboard."
+    },
+    {
+      "index": 226,
+      "style": "Normal",
+      "text": "Hình ảnh 1: react.js"
+    },
+    {
+      "index": 228,
+      "style": "Heading 3",
+      "text": "1.2. HTML được sử dụng để xây dựng cấu trúc nội dung của các trang web."
+    },
+    {
+      "index": 230,
+      "style": "Heading 3",
+      "text": "Hình Ảnh 2. HTML"
+    },
+    {
+      "index": 231,
+      "style": "Normal",
+      "text": "1.3 Tailwind CSS là một framework CSS theo trường phái \"utility-first\" (tiện ích trước tiên). Thiết kế giao diện nhanh bằng utility class, dùng cho layout, màu sắc, responsive, dark mode."
+    },
+    {
+      "index": 233,
+      "style": "Caption",
+      "text": "Hình Ảnh 3. Tailwind.CSS"
+    },
+    {
+      "index": 239,
+      "style": "List Paragraph",
+      "text": "1.4. Node.js là môi trường chạy JavaScript phía server, được sử dụng để xây dựng backend cho hệ thống."
+    },
+    {
+      "index": 241,
+      "style": "Caption",
+      "text": "Hình Ảnh 4. NodeJS"
+    },
+    {
+      "index": 242,
+      "style": "Normal",
+      "text": "Trong đề tài, JavaScript là ngôn ngữ chính được sử dụng ở cả frontend và backend. Phía frontend dùng JavaScript/JSX để xây dựng giao diện React, còn phía backend dùng JavaScript với Node.js và Express.js để xử lý API."
+    },
+    {
+      "index": 243,
+      "style": "Normal",
+      "text": "1.5. JSX (JavaScript XML) là cú pháp mở rộng thường dùng khi làm việc với React, giúp mô tả giao diện bằng dạng thẻ ngay trong mã JavaScript. Trong đề tài này, JSX được sử dụng để xây dựng các component giao diện như Navbar, Booking, Shop và AdminDashboard."
+    },
+    {
+      "index": 245,
+      "style": "List Paragraph",
+      "text": "Hình Ảnh 5: JavaScriptXML"
+    },
+    {
+      "index": 247,
+      "style": "Heading 3",
+      "text": "1.6. MongoDB"
+    },
+    {
+      "index": 248,
+      "style": "Normal",
+      "text": "MongoDB là hệ quản trị cơ sở dữ liệu NoSQL mã nguồn mở, lưu trữ dữ liệu theo dạng tài liệu linh hoạt. Trong đề tài này, MongoDB được dùng để lưu trữ dữ liệu người dùng, barber, dịch vụ, lịch hẹn, sản phẩm, đơn hàng và đánh giá. Mongoose được sử dụng để định nghĩa schema, model và thao tác với MongoDB trong backend."
+    },
+    {
+      "index": 249,
+      "style": "Caption",
+      "text": "Hình Ảnh 6: MongoDB"
+    },
+    {
+      "index": 252,
+      "style": "List Paragraph",
+      "text": "1.7. Môi trường phát triển Visual Studio Code"
+    },
+    {
+      "index": 253,
+      "style": "Normal",
+      "text": "Visual Studio Code là môi trường phát triển nhẹ và linh hoạt, hỗ trợ hiệu quả cho việc phát triển web. Trong đề tài này, công cụ được sử dụng để quản lý mã nguồn và lập trình với React.js, JSX, Tailwind CSS, Node.js, Express.js và MongoDB."
+    },
+    {
+      "index": 256,
+      "style": "Caption",
+      "text": "Hình Ảnh 7. VsCode"
+    },
+    {
+      "index": 268,
+      "style": "Heading 2",
+      "text": "1.8. Express.js là framework backend dùng để xây dựng REST API như /api/auth, /api/appointments, /api/products, /api/orders và /api/admin."
+    },
+    {
+      "index": 270,
+      "style": "Caption",
+      "text": "Hình Ảnh 8: Express JS"
+    },
+    {
+      "index": 271,
+      "style": "Heading 2",
+      "text": "6. Tổng kết"
+    },
+    {
+      "index": 272,
+      "style": "Normal",
+      "text": "Chương 1 đã trình bày những nội dung tổng quan của đề tài website đặt lịch cắt tóc Tiệm Tóc 1989, bao gồm bối cảnh thực tế, mục tiêu, phạm vi nghiên cứu, các chức năng chính và các công nghệ sử dụng trong hệ thống."
+    },
+    {
+      "index": 273,
+      "style": "Normal",
+      "text": "Trong đề tài, React.js được sử dụng để xây dựng giao diện người dùng theo mô hình component, kết hợp với JSX để mô tả giao diện, React Router DOM để điều hướng trang, Tailwind CSS để thiết kế giao diện và Framer Motion để tạo hiệu ứng chuyển động. Phía backend sử dụng Node.js và Express.js để xây dựng REST API. MongoDB được dùng để lưu trữ dữ liệu, còn Mongoose hỗ trợ định nghĩa schema và thao tác dữ liệu. Hệ thống sử dụng JWT và bcryptjs cho xác thực và bảo mật, express-validator để kiểm tra dữ liệu đầu vào, nodemailer để gửi email, dotenv để quản lý biến môi trường, cors để cho phép giao tiếp frontend-backend, và morgan để ghi log trong quá trình phát triển."
+    },
+    {
+      "index": 276,
+      "style": "Heading 1",
+      "text": "Chương 2: Phân tích và thiết kế hệ thống đặt lịch cắt tóc Tiệm Tóc 1989."
+    },
+    {
+      "index": 277,
+      "style": "Heading 2",
+      "text": "1. Giới thiệu"
+    },
+    {
+      "index": 278,
+      "style": "Normal",
+      "text": "Chương này trình bày quá trình phân tích yêu cầu và thiết kế hệ thống đặt lịch cắt tóc Tiệm Tóc 1989. Nội dung tập trung vào việc xác định các chức năng của hệ thống, các đối tượng tham gia, cũng như mô tả chi tiết cách hệ thống hoạt động thông qua các mô hình UML. Các biểu đồ được sử dụng trong chương gồm biểu đồ Use Case, biểu đồ tuần tự (Sequence Diagram) và biểu đồ lớp (Class Diagram), nhằm mô tả đầy đủ hành vi và cấu trúc của hệ thống trước khi tiến hành xây dựng và triển khai."
+    },
+    {
+      "index": 279,
+      "style": "Heading 2",
+      "text": "2. Khảo sát và phân tích yêu cầu hệ thống"
+    },
+    {
+      "index": 280,
+      "style": "Heading 3",
+      "text": "1.1. Đối tượng sử dụng hệ thống (Actor)"
+    },
+    {
+      "index": 281,
+      "style": "List Paragraph",
+      "text": "Người dùng (User): người sử dụng trang web xem thông tin và đặt lịch cắt tóc, đặt sản phẩm"
+    },
+    {
+      "index": 282,
+      "style": "List Paragraph",
+      "text": "Quản trị viên (Admin): người quản lý hệ thống, chịu trách nhiệm cập nhật và quản lý trang web, xác nhận đơn cắt tóc, đơn hàng."
+    },
+    {
+      "index": 283,
+      "style": "Heading 3",
+      "text": "1.2. Yêu cầu chức năng"
+    },
+    {
+      "index": 284,
+      "style": "List Paragraph",
+      "text": "Chức năng dành cho người dùng:"
+    },
+    {
+      "index": 285,
+      "style": "List Paragraph",
+      "text": "Đăng ký và đăng nhập tài khoản."
+    },
+    {
+      "index": 286,
+      "style": "List Paragraph",
+      "text": "Xem danh sách thợ cắt tóc giá cả, kiểu tóc."
+    },
+    {
+      "index": 287,
+      "style": "List Paragraph",
+      "text": "Đặt lịch hẹn và hủy lịch hẹn, đặt hàng."
+    },
+    {
+      "index": 288,
+      "style": "List Paragraph",
+      "text": "Quản lý thông tin cá nhân."
+    },
+    {
+      "index": 289,
+      "style": "List Paragraph",
+      "text": "Chức năng dành cho quản trị viên:"
+    },
+    {
+      "index": 290,
+      "style": "List Paragraph",
+      "text": "Quản lý sản phẩm bán ra (thêm, sửa, xóa)."
+    },
+    {
+      "index": 291,
+      "style": "List Paragraph",
+      "text": "Xác nhận đơn hàng từ khách hàng"
+    },
+    {
+      "index": 292,
+      "style": "Heading 3",
+      "text": "1.3. Yêu cầu phi chức năng"
+    },
+    {
+      "index": 293,
+      "style": "List Paragraph",
+      "text": "Hệ thống hoạt động ổn định, dễ sử dụng"
+    },
+    {
+      "index": 294,
+      "style": "List Paragraph",
+      "text": "Giao diện thân thiện với người dùng"
+    },
+    {
+      "index": 295,
+      "style": "List Paragraph",
+      "text": "Dữ liệu được lưu trữ an toàn"
+    },
+    {
+      "index": 296,
+      "style": "List Paragraph",
+      "text": "Có khả năng mở rộng trong tương lai"
+    },
+    {
+      "index": 297,
+      "style": "Heading 2",
+      "text": "3. Biểu đồ Use-Case"
+    },
+    {
+      "index": 298,
+      "style": "List Paragraph",
+      "text": "Biểu đồ Use Case của hệ thống được tách thành hai nhóm tác nhân chính:"
+    },
+    {
+      "index": 299,
+      "style": "List Paragraph",
+      "text": "Khách hàng sử dụng hệ thống để đăng ký, đăng nhập, xem dịch vụ, đặt lịch cắt tóc, quản lý lịch hẹn cá nhân, xem sản phẩm và đặt hàng."
+    },
+    {
+      "index": 300,
+      "style": "Caption",
+      "text": "Hình Ảnh 9. USE-CASE Khách hàng"
+    },
+    {
+      "index": 301,
+      "style": "List Paragraph",
+      "text": "Quản trị viên sử dụng hệ thống để theo dõi số liệu tổng quan, quản lý lịch hẹn, quản lý đơn hàng và quản lý sản phẩm. Việc tách riêng hai biểu đồ giúp làm rõ vai trò và phạm vi chức năng của từng nhóm người dùng trong hệ thống."
+    },
+    {
+      "index": 302,
+      "style": "Normal",
+      "text": "Hình ảnh 10: Use case Quản trị viên"
+    },
+    {
+      "index": 303,
+      "style": "Normal",
+      "text": "Các Use Case chính bao gồm:"
+    },
+    {
+      "index": 304,
+      "style": "Heading 2",
+      "text": "Đối với khách hàng:"
+    },
+    {
+      "index": 306,
+      "style": "Heading 2",
+      "text": "Đăng ký tài khoản"
+    },
+    {
+      "index": 307,
+      "style": "Heading 2",
+      "text": "Đăng nhập"
+    },
+    {
+      "index": 308,
+      "style": "Heading 2",
+      "text": "Xem barber"
+    },
+    {
+      "index": 309,
+      "style": "Heading 2",
+      "text": "Xem dịch vụ"
+    },
+    {
+      "index": 310,
+      "style": "Heading 2",
+      "text": "Đặt lịch cắt tóc"
+    },
+    {
+      "index": 311,
+      "style": "Heading 2",
+      "text": "Xem lịch hẹn cá nhân"
+    },
+    {
+      "index": 312,
+      "style": "Heading 2",
+      "text": "Hủy lịch hẹn"
+    },
+    {
+      "index": 313,
+      "style": "Heading 2",
+      "text": "Xem sản phẩm"
+    },
+    {
+      "index": 314,
+      "style": "Heading 2",
+      "text": "Tìm kiếm / lọc sản phẩm"
+    },
+    {
+      "index": 315,
+      "style": "Heading 2",
+      "text": "Thêm sản phẩm vào giỏ hàng"
+    },
+    {
+      "index": 316,
+      "style": "Heading 2",
+      "text": "Đặt hàng"
+    },
+    {
+      "index": 317,
+      "style": "Heading 2",
+      "text": "Đối với quản trị viên:"
+    },
+    {
+      "index": 319,
+      "style": "Heading 2",
+      "text": "Đăng nhập"
+    },
+    {
+      "index": 320,
+      "style": "Heading 2",
+      "text": "Xem dashboard thống kê"
+    },
+    {
+      "index": 321,
+      "style": "Heading 2",
+      "text": "Quản lý lịch hẹn"
+    },
+    {
+      "index": 322,
+      "style": "Heading 2",
+      "text": "Cập nhật trạng thái lịch hẹn"
+    },
+    {
+      "index": 323,
+      "style": "Heading 2",
+      "text": "Quản lý đơn hàng"
+    },
+    {
+      "index": 324,
+      "style": "Heading 2",
+      "text": "Cập nhật trạng thái đơn hàng"
+    },
+    {
+      "index": 325,
+      "style": "Heading 2",
+      "text": "Quản lý sản phẩm"
+    },
+    {
+      "index": 326,
+      "style": "Heading 2",
+      "text": "Thêm sản phẩm"
+    },
+    {
+      "index": 327,
+      "style": "Heading 2",
+      "text": "Sửa sản phẩm"
+    },
+    {
+      "index": 328,
+      "style": "Heading 2",
+      "text": "Xóa sản phẩm"
+    },
+    {
+      "index": 329,
+      "style": "Heading 2",
+      "text": "4. Mô tả chi tiết Use Case"
+    },
+    {
+      "index": 330,
+      "style": "Heading 3",
+      "text": "1.1. Use Case: đăng nhập"
+    },
+    {
+      "index": 331,
+      "style": "List Paragraph",
+      "text": "Tác nhân: Khách hàng, Quản trị viên"
+    },
+    {
+      "index": 332,
+      "style": "List Paragraph",
+      "text": "Mô tả: Use Case cho phép người dùng đăng nhập vào hệ thống bằng tên đăng nhập và mật khẩu. Hệ thống hỗ trợ phân quyền đăng nhập trực tiếp trên form đăng nhập giữa người dùng (User) và quản trị viên (Admin, ManagerAdmin). Dựa vào loại tài khoản và thông tin trong cơ sở dữ liệu, hệ thống thực hiện các kiểm tra tương ứng để quyết định quyền truy cập."
+    },
+    {
+      "index": 333,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Actor đã có tài khoản trong hệ thống và truy cập vào trang đăng nhập."
+    },
+    {
+      "index": 334,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 335,
+      "style": "List Paragraph",
+      "text": "Người dùng mở form đăng nhập."
+    },
+    {
+      "index": 336,
+      "style": "List Paragraph",
+      "text": "Người dùng nhập email và mật khẩu."
+    },
+    {
+      "index": 337,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi thông tin đăng nhập lên máy chủ."
+    },
+    {
+      "index": 338,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra email và mật khẩu."
+    },
+    {
+      "index": 339,
+      "style": "List Paragraph",
+      "text": "Nếu hợp lệ, máy chủ trả về thông tin người dùng và token."
+    },
+    {
+      "index": 340,
+      "style": "List Paragraph",
+      "text": "Giao diện lưu trạng thái đăng nhập và cập nhật menu theo vai trò."
+    },
+    {
+      "index": 341,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 342,
+      "style": "List Paragraph",
+      "text": "Nếu email hoặc mật khẩu sai, hệ thống báo lỗi đăng nhập."
+    },
+    {
+      "index": 343,
+      "style": "List Paragraph",
+      "text": "Nếu token hết hạn ở các lần dùng sau, hệ thống yêu cầu đăng nhập lại."
+    },
+    {
+      "index": 344,
+      "style": "Heading 3",
+      "text": "1.2. Use Case: đăng kí"
+    },
+    {
+      "index": 345,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 346,
+      "style": "List Paragraph",
+      "text": "Mô tả: Use Case cho phép người dùng đăng ký tài khoản mới nhằm tạo một tài khoản hợp lệ để sử dụng các chức năng của hệ thống. Trong quá trình đăng ký, hệ thống sử dụng xác thực mã OTP được gửi qua Gmail để đảm bảo tính hợp lệ của tài khoản.cho phép người dùng đăng ký tài khoản để có tài khoản hoạt động."
+    },
+    {
+      "index": 347,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Người dùng chưa có tài khoản."
+    },
+    {
+      "index": 348,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 349,
+      "style": "List Paragraph",
+      "text": "Người dùng mở form đăng ký."
+    },
+    {
+      "index": 350,
+      "style": "List Paragraph",
+      "text": "Người dùng nhập họ tên, số điện thoại, email, mật khẩu và xác nhận mật khẩu."
+    },
+    {
+      "index": 351,
+      "style": "List Paragraph",
+      "text": "Hệ thống kiểm tra dữ liệu hợp lệ."
+    },
+    {
+      "index": 352,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi yêu cầu đăng ký lên máy chủ."
+    },
+    {
+      "index": 353,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra email chưa tồn tại."
+    },
+    {
+      "index": 354,
+      "style": "List Paragraph",
+      "text": "Hệ thống tạo tài khoản mới, mã hóa mật khẩu, sinh token đăng nhập."
+    },
+    {
+      "index": 355,
+      "style": "List Paragraph",
+      "text": "Hệ thống lưu thông tin đăng nhập ở phía trình duyệt và đóng form."
+    },
+    {
+      "index": 356,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 357,
+      "style": "List Paragraph",
+      "text": "Nếu mật khẩu xác nhận không khớp, hệ thống báo lỗi."
+    },
+    {
+      "index": 358,
+      "style": "List Paragraph",
+      "text": "Nếu mật khẩu dưới 6 ký tự, hệ thống báo lỗi."
+    },
+    {
+      "index": 359,
+      "style": "List Paragraph",
+      "text": "Nếu email đã tồn tại, hệ thống từ chối đăng ký."
+    },
+    {
+      "index": 360,
+      "style": "List Paragraph",
+      "text": "Nếu gửi email chào mừng thất bại, tài khoản vẫn được tạo."
+    },
+    {
+      "index": 361,
+      "style": "Heading 3",
+      "text": "1.3. Use Case: Xem barber và dịch vụ"
+    },
+    {
+      "index": 362,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 363,
+      "style": "List Paragraph",
+      "text": "Mô tả: cho phép người dùng xem danh sách barber và dịch vụ cắt tóc hiện có trong hệ thống."
+    },
+    {
+      "index": 364,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: không yêu cầu đăng nhập."
+    },
+    {
+      "index": 371,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 372,
+      "style": "List Paragraph",
+      "text": "Người dùng truy cập trang chủ."
+    },
+    {
+      "index": 373,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải danh sách barber từ máy chủ."
+    },
+    {
+      "index": 374,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải danh sách dịch vụ khi người dùng đến bước chọn dịch vụ."
+    },
+    {
+      "index": 375,
+      "style": "List Paragraph",
+      "text": "Giao diện hiển thị thông tin barber, chuyên môn, trạng thái và dịch vụ tương ứng"
+    },
+    {
+      "index": 376,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 377,
+      "style": "List Paragraph",
+      "text": "Nếu tải barber thất bại, hệ thống báo lỗi không thể tải danh sách barber."
+    },
+    {
+      "index": 378,
+      "style": "List Paragraph",
+      "text": "Nếu tải dịch vụ thất bại, hệ thống báo lỗi không thể tải danh sách dịch vụ."
+    },
+    {
+      "index": 379,
+      "style": "Heading 3",
+      "text": "1.4. Use Case: Đặt lịch cắt tóc"
+    },
+    {
+      "index": 380,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 381,
+      "style": "List Paragraph",
+      "text": "Mô tả: đăng ký lịch hẹn"
+    },
+    {
+      "index": 382,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: không yêu cầu đăng nhập."
+    },
+    {
+      "index": 383,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 384,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn một barber còn hoạt động."
+    },
+    {
+      "index": 385,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn một dịch vụ."
+    },
+    {
+      "index": 386,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải danh sách khung giờ còn trống theo barber, dịch vụ và ngày chọn."
+    },
+    {
+      "index": 387,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn ngày và khung giờ phù hợp."
+    },
+    {
+      "index": 388,
+      "style": "List Paragraph",
+      "text": "Người dùng xác nhận đặt lịch."
+    },
+    {
+      "index": 389,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi yêu cầu tạo lịch lên máy chủ."
+    },
+    {
+      "index": 390,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra lại xung đột lịch."
+    },
+    {
+      "index": 391,
+      "style": "List Paragraph",
+      "text": "Nếu hợp lệ, máy chủ tạo lịch hẹn và lưu giá dịch vụ vào lịch."
+    },
+    {
+      "index": 392,
+      "style": "List Paragraph",
+      "text": "Hệ thống trả kết quả thành công và hiển thị thông báo xác nhận."
+    },
+    {
+      "index": 393,
+      "style": "List Paragraph",
+      "text": "Hệ thống cố gắng gửi email xác nhận cho khách hàng."
+    },
+    {
+      "index": 394,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 395,
+      "style": "List Paragraph",
+      "text": "Nếu người dùng chưa đăng nhập, hệ thống mở form đăng nhập."
+    },
+    {
+      "index": 396,
+      "style": "List Paragraph",
+      "text": "Nếu không còn khung giờ trống, hệ thống yêu cầu chọn ngày khác."
+    },
+    {
+      "index": 397,
+      "style": "List Paragraph",
+      "text": "Nếu khung giờ vừa bị người khác đặt trước, hệ thống báo xung đột và yêu cầu chọn giờ khác."
+    },
+    {
+      "index": 398,
+      "style": "List Paragraph",
+      "text": "Nếu gửi email xác nhận thất bại, lịch vẫn được tạo thành công."
+    },
+    {
+      "index": 399,
+      "style": "Heading 3",
+      "text": "1.5. Use Case: Xem lịch hẹn cá nhân"
+    },
+    {
+      "index": 400,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 401,
+      "style": "List Paragraph",
+      "text": "Mô tả: Theo dõi các lịch đã đặt."
+    },
+    {
+      "index": 402,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Người dùng đã đăng nhập."
+    },
+    {
+      "index": 403,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 404,
+      "style": "List Paragraph",
+      "text": "Người dùng truy cập trang “Lịch hẹn của tôi”."
+    },
+    {
+      "index": 405,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi yêu cầu lấy danh sách lịch hẹn theo tài khoản đang đăng nhập."
+    },
+    {
+      "index": 406,
+      "style": "List Paragraph",
+      "text": "Máy chủ truy vấn các lịch liên quan và nạp kèm thông tin barber, dịch vụ."
+    },
+    {
+      "index": 407,
+      "style": "List Paragraph",
+      "text": "Giao diện hiển thị ngày, giờ, barber, dịch vụ, giá và trạng thái lịch"
+    },
+    {
+      "index": 408,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 409,
+      "style": "List Paragraph",
+      "text": "Nếu người dùng chưa đăng nhập, hệ thống chuyển về trang chủ."
+    },
+    {
+      "index": 410,
+      "style": "List Paragraph",
+      "text": "Nếu không có lịch hẹn nào, hệ thống hiển thị trạng thái rỗng"
+    },
+    {
+      "index": 412,
+      "style": "Heading 3",
+      "text": "1.6. Use Case: Hủy lịch hẹn"
+    },
+    {
+      "index": 413,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 414,
+      "style": "List Paragraph",
+      "text": "Mô tả: Hủy một lịch hẹn đã đặt."
+    },
+    {
+      "index": 415,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Người dùng đã đăng nhập và lịch thuộc về chính người dùng."
+    },
+    {
+      "index": 416,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 417,
+      "style": "List Paragraph",
+      "text": "Người dùng mở danh sách lịch hẹn của mình."
+    },
+    {
+      "index": 418,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn chức năng hủy lịch."
+    },
+    {
+      "index": 419,
+      "style": "List Paragraph",
+      "text": "Hệ thống yêu cầu xác nhận thao tác."
+    },
+    {
+      "index": 420,
+      "style": "List Paragraph",
+      "text": "Người dùng xác nhận hủy."
+    },
+    {
+      "index": 421,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi yêu cầu hủy lịch lên máy chủ."
+    },
+    {
+      "index": 422,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra quyền sở hữu lịch và trạng thái hiện tại."
+    },
+    {
+      "index": 423,
+      "style": "List Paragraph",
+      "text": "Nếu hợp lệ, máy chủ cập nhật trạng thái lịch thành cancelled."
+    },
+    {
+      "index": 424,
+      "style": "List Paragraph",
+      "text": "Giao diện tải lại danh sách lịch."
+    },
+    {
+      "index": 425,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 426,
+      "style": "List Paragraph",
+      "text": "Nếu người dùng bấm hủy thao tác xác nhận, hệ thống không thay đổi dữ liệu."
+    },
+    {
+      "index": 427,
+      "style": "List Paragraph",
+      "text": "Nếu lịch đã ở trạng thái completed hoặc cancelled, hệ thống báo không thể hủy."
+    },
+    {
+      "index": 428,
+      "style": "List Paragraph",
+      "text": "Nếu lịch không thuộc người dùng hiện tại, máy chủ từ chối thao tác"
+    },
+    {
+      "index": 429,
+      "style": "Heading 3",
+      "text": "1.7. Use Case: Xem, tìm kiếm và lọc sản phẩm"
+    },
+    {
+      "index": 430,
+      "style": "List Paragraph",
+      "text": "Actor: người dùng."
+    },
+    {
+      "index": 431,
+      "style": "List Paragraph",
+      "text": "Mô tả: Tìm sản phẩm phù hợp để mua"
+    },
+    {
+      "index": 432,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: không cần đăng nhập."
+    },
+    {
+      "index": 433,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 434,
+      "style": "List Paragraph",
+      "text": "Người dùng mở trang cửa hàng."
+    },
+    {
+      "index": 435,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải danh sách sản phẩm đang hoạt động."
+    },
+    {
+      "index": 436,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn danh mục sản phẩm."
+    },
+    {
+      "index": 437,
+      "style": "List Paragraph",
+      "text": "Người dùng nhập từ khóa tìm kiếm nếu cần."
+    },
+    {
+      "index": 438,
+      "style": "List Paragraph",
+      "text": "Giao diện lọc và hiển thị danh sách sản phẩm phù hợp."
+    },
+    {
+      "index": 439,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 440,
+      "style": "List Paragraph",
+      "text": "Nếu không có sản phẩm phù hợp, hệ thống hiển thị thông báo không tìm thấy."
+    },
+    {
+      "index": 441,
+      "style": "List Paragraph",
+      "text": "Nếu tải danh sách sản phẩm thất bại, giao diện không hiển thị đủ dữ liệu."
+    },
+    {
+      "index": 442,
+      "style": "Heading 3",
+      "text": "1.8. Use Case: Thêm sản phẩm vào giỏ hàng"
+    },
+    {
+      "index": 443,
+      "style": "List Paragraph",
+      "text": "Actor: Người dùng."
+    },
+    {
+      "index": 444,
+      "style": "List Paragraph",
+      "text": "Mô tả: Tạo giỏ hàng trước khi mua."
+    },
+    {
+      "index": 445,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Sản phẩm còn hàng."
+    },
+    {
+      "index": 446,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 447,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn một sản phẩm."
+    },
+    {
+      "index": 448,
+      "style": "List Paragraph",
+      "text": "Người dùng bấm thêm vào giỏ hàng."
+    },
+    {
+      "index": 449,
+      "style": "List Paragraph",
+      "text": "Hệ thống kiểm tra sản phẩm đã có trong giỏ hay chưa."
+    },
+    {
+      "index": 450,
+      "style": "List Paragraph",
+      "text": "Nếu chưa có, hệ thống thêm mới với số lượng mặc định là 1."
+    },
+    {
+      "index": 451,
+      "style": "List Paragraph",
+      "text": "Nếu đã có, hệ thống tăng số lượng nhưng không vượt quá tồn kho."
+    },
+    {
+      "index": 452,
+      "style": "List Paragraph",
+      "text": "Giỏ hàng được lưu vào localStorage"
+    },
+    {
+      "index": 453,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 454,
+      "style": "List Paragraph",
+      "text": "Nếu sản phẩm hết hàng, nút thêm giỏ hàng bị vô hiệu hóa."
+    },
+    {
+      "index": 455,
+      "style": "List Paragraph",
+      "text": "Nếu số lượng vượt quá tồn kho, hệ thống chỉ giữ ở mức tối đa cho phép."
+    },
+    {
+      "index": 456,
+      "style": "Heading 3",
+      "text": "1.9. Use Case: Đặt hàng sản phẩm"
+    },
+    {
+      "index": 457,
+      "style": "List Paragraph",
+      "text": "Actor: Người dùng"
+    },
+    {
+      "index": 458,
+      "style": "List Paragraph",
+      "text": "Mô tả: Tạo đơn hàng sản phẩm"
+    },
+    {
+      "index": 459,
+      "style": "List Paragraph",
+      "text": "Điều kiện tiên quyết: Người dùng đã đăng nhập và giỏ hàng có ít nhất một sản phẩm"
+    },
+    {
+      "index": 460,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 461,
+      "style": "List Paragraph",
+      "text": "Người dùng mở giỏ hàng."
+    },
+    {
+      "index": 462,
+      "style": "List Paragraph",
+      "text": "Người dùng chọn tiến hành đặt hàng."
+    },
+    {
+      "index": 463,
+      "style": "List Paragraph",
+      "text": "Người dùng nhập tên người nhận, số điện thoại, địa chỉ giao hàng, ghi chú và phương thức thanh toán."
+    },
+    {
+      "index": 464,
+      "style": "List Paragraph",
+      "text": "Hệ thống kiểm tra đủ thông tin bắt buộc."
+    },
+    {
+      "index": 465,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi yêu cầu tạo đơn lên máy chủ."
+    },
+    {
+      "index": 466,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra từng sản phẩm, số lượng tồn kho và trạng thái hoạt động."
+    },
+    {
+      "index": 467,
+      "style": "List Paragraph",
+      "text": "Nếu hợp lệ, máy chủ trừ tồn kho, tăng số lượng đã bán và tạo đơn hàng."
+    },
+    {
+      "index": 468,
+      "style": "List Paragraph",
+      "text": "Hệ thống thông báo đặt hàng thành công và xóa giỏ hàng trên trình duyệt."
+    },
+    {
+      "index": 469,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 470,
+      "style": "List Paragraph",
+      "text": "Nếu người dùng chưa đăng nhập, hệ thống yêu cầu đăng nhập."
+    },
+    {
+      "index": 471,
+      "style": "List Paragraph",
+      "text": "Nếu thiếu thông tin giao hàng, hệ thống báo lỗi và không gửi đơn."
+    },
+    {
+      "index": 472,
+      "style": "List Paragraph",
+      "text": "Nếu một sản phẩm không còn hoạt động hoặc không đủ tồn kho, máy chủ từ chối tạo đơn."
+    },
+    {
+      "index": 473,
+      "style": "List Paragraph",
+      "text": "Nếu có lỗi từ máy chủ, hệ thống giữ nguyên giỏ hàng để người dùng thử lại."
+    },
+    {
+      "index": 475,
+      "style": "Normal",
+      "text": "1.10. Use Case Quản lý lịch hẹn"
+    },
+    {
+      "index": 476,
+      "style": "Normal",
+      "text": "Tác nhân: Quản trị viên"
+    },
+    {
+      "index": 477,
+      "style": "Normal",
+      "text": "Mục tiêu: Theo dõi và cập nhật trạng thái các lịch hẹn."
+    },
+    {
+      "index": 478,
+      "style": "Normal",
+      "text": "Tiền điều kiện: Admin đã đăng nhập."
+    },
+    {
+      "index": 479,
+      "style": "Normal",
+      "text": "Hậu điều kiện: Trạng thái lịch hẹn được cập nhật đúng nghiệp vụ."
+    },
+    {
+      "index": 480,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 481,
+      "style": "List Paragraph",
+      "text": "Admin mở tab quản lý lịch hẹn."
+    },
+    {
+      "index": 482,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải toàn bộ lịch hẹn từ máy chủ."
+    },
+    {
+      "index": 483,
+      "style": "List Paragraph",
+      "text": "Admin lọc theo trạng thái nếu cần."
+    },
+    {
+      "index": 484,
+      "style": "List Paragraph",
+      "text": "Admin chọn một lịch hẹn."
+    },
+    {
+      "index": 485,
+      "style": "List Paragraph",
+      "text": "Admin cập nhật trạng thái sang confirmed, completed hoặc cancelled."
+    },
+    {
+      "index": 486,
+      "style": "List Paragraph",
+      "text": "Máy chủ kiểm tra trạng thái hợp lệ và cập nhật dữ liệu."
+    },
+    {
+      "index": 487,
+      "style": "List Paragraph",
+      "text": "Giao diện cập nhật lại danh sách lịch."
+    },
+    {
+      "index": 488,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 489,
+      "style": "List Paragraph",
+      "text": "Nếu trạng thái gửi lên không hợp lệ, máy chủ từ chối cập nhật."
+    },
+    {
+      "index": 490,
+      "style": "List Paragraph",
+      "text": "Nếu không tìm thấy lịch hẹn, hệ thống báo lỗi."
+    },
+    {
+      "index": 491,
+      "style": "Normal",
+      "text": "11.11. Use Case Quản lý đơn hàng"
+    },
+    {
+      "index": 492,
+      "style": "Normal",
+      "text": "Tác nhân: Quản trị viên"
+    },
+    {
+      "index": 493,
+      "style": "Normal",
+      "text": "Mục tiêu: Xử lý các đơn hàng của khách."
+    },
+    {
+      "index": 494,
+      "style": "Normal",
+      "text": "Tiền điều kiện: Admin đã đăng nhập."
+    },
+    {
+      "index": 495,
+      "style": "Normal",
+      "text": "Hậu điều kiện: Đơn hàng được cập nhật trạng thái mới; nếu hủy đơn thì tồn kho được hoàn lại."
+    },
+    {
+      "index": 496,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 497,
+      "style": "List Paragraph",
+      "text": "Admin mở tab quản lý đơn hàng."
+    },
+    {
+      "index": 498,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải toàn bộ đơn hàng."
+    },
+    {
+      "index": 499,
+      "style": "List Paragraph",
+      "text": "Admin lọc theo trạng thái nếu cần."
+    },
+    {
+      "index": 500,
+      "style": "List Paragraph",
+      "text": "Admin chọn một đơn hàng."
+    },
+    {
+      "index": 501,
+      "style": "List Paragraph",
+      "text": "Admin cập nhật trạng thái sang confirmed, shipping, delivered hoặc cancelled."
+    },
+    {
+      "index": 502,
+      "style": "List Paragraph",
+      "text": "Máy chủ cập nhật trạng thái đơn."
+    },
+    {
+      "index": 503,
+      "style": "List Paragraph",
+      "text": "Nếu đơn bị hủy và trước đó chưa hủy, hệ thống cộng lại tồn kho cho các sản phẩm trong đơn."
+    },
+    {
+      "index": 504,
+      "style": "List Paragraph",
+      "text": "Giao diện hiển thị trạng thái mới của đơn hàng."
+    },
+    {
+      "index": 505,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 506,
+      "style": "List Paragraph",
+      "text": "Nếu trạng thái không hợp lệ, máy chủ từ chối cập nhật."
+    },
+    {
+      "index": 507,
+      "style": "List Paragraph",
+      "text": "Nếu không tìm thấy đơn hàng, hệ thống báo lỗi."
+    },
+    {
+      "index": 508,
+      "style": "Normal",
+      "text": "11.12 Use Case Quản lý sản phẩm"
+    },
+    {
+      "index": 509,
+      "style": "Normal",
+      "text": "Tác nhân: Quản trị viên"
+    },
+    {
+      "index": 510,
+      "style": "Normal",
+      "text": "Mục tiêu: Thêm, sửa, xóa sản phẩm bán trong cửa hàng."
+    },
+    {
+      "index": 511,
+      "style": "Normal",
+      "text": "Tiền điều kiện: Admin đã đăng nhập."
+    },
+    {
+      "index": 512,
+      "style": "Normal",
+      "text": "Hậu điều kiện: Danh mục sản phẩm được cập nhật."
+    },
+    {
+      "index": 513,
+      "style": "List Paragraph",
+      "text": "Luồng chính:"
+    },
+    {
+      "index": 514,
+      "style": "List Paragraph",
+      "text": "Admin mở tab quản lý sản phẩm."
+    },
+    {
+      "index": 515,
+      "style": "List Paragraph",
+      "text": "Hệ thống tải danh sách sản phẩm hiện có."
+    },
+    {
+      "index": 516,
+      "style": "List Paragraph",
+      "text": "Admin chọn thêm mới hoặc chỉnh sửa một sản phẩm."
+    },
+    {
+      "index": 517,
+      "style": "List Paragraph",
+      "text": "Admin nhập các thông tin như tên, mô tả, giá, danh mục, tồn kho, thương hiệu, dung tích."
+    },
+    {
+      "index": 518,
+      "style": "List Paragraph",
+      "text": "Hệ thống gửi dữ liệu lên máy chủ."
+    },
+    {
+      "index": 519,
+      "style": "List Paragraph",
+      "text": "Máy chủ tạo mới hoặc cập nhật sản phẩm tương ứng."
+    },
+    {
+      "index": 520,
+      "style": "List Paragraph",
+      "text": "Giao diện tải lại danh sách sản phẩm."
+    },
+    {
+      "index": 521,
+      "style": "List Paragraph",
+      "text": "Nếu admin chọn xóa, hệ thống yêu cầu xác nhận rồi gửi yêu cầu xóa lên máy chủ."
+    },
+    {
+      "index": 522,
+      "style": "List Paragraph",
+      "text": "Luồng phụ:"
+    },
+    {
+      "index": 523,
+      "style": "List Paragraph",
+      "text": "Nếu dữ liệu không hợp lệ, máy chủ từ chối lưu."
+    },
+    {
+      "index": 524,
+      "style": "List Paragraph",
+      "text": "Nếu không tìm thấy sản phẩm cần sửa hoặc xóa, hệ thống báo lỗi."
+    },
+    {
+      "index": 525,
+      "style": "List Paragraph",
+      "text": "Nếu admin hủy thao tác xác nhận xóa, hệ thống không thay đổi dữ liệu."
+    },
+    {
+      "index": 526,
+      "style": "Heading 2",
+      "text": "5. Biểu đồ tuần tự"
+    },
+    {
+      "index": 527,
+      "style": "Normal",
+      "text": "Biểu đồ tuần tự được sử dụng để mô tả trình tự tương tác giữa các đối tượng trong hệ thống theo thời gian. Biểu đồ thể hiện rõ quá trình xử lý của một Use Case cụ thể."
+    },
+    {
+      "index": 528,
+      "style": "Heading 3",
+      "text": "1.1. Biểu đồ tuần tự Use Case: đăng ký"
+    },
+    {
+      "index": 530,
+      "style": "Caption",
+      "text": "Hình Ảnh 11: Đăng Ký"
+    },
+    {
+      "index": 531,
+      "style": "Normal (Web)",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình khách hàng tạo tài khoản mới trên hệ thống. Người dùng nhập thông tin đăng ký trên giao diện, bao gồm họ tên, email, số điện thoại và mật khẩu. Giao diện trước hết kiểm tra tính hợp lệ cơ bản, đặc biệt là việc xác nhận mật khẩu. Sau đó, dữ liệu được gửi đến backend thông qua api.js. AuthController kiểm tra xem email đã tồn tại trong cơ sở dữ liệu hay chưa. Nếu email chưa được sử dụng, hệ thống tạo tài khoản mới, mã hóa mật khẩu, sinh token đăng nhập và trả về thông tin người dùng cho frontend. Đồng thời, hệ thống thực hiện gửi email chào mừng. Cuối cùng, frontend lưu thông tin đăng nhập vào localStorage và thông báo đăng ký thành công. Nếu email đã tồn tại hoặc dữ liệu không hợp lệ, hệ thống trả về thông báo lỗi tương ứng."
+    },
+    {
+      "index": 532,
+      "style": "Heading 3",
+      "text": "1.2. Biểu đồ tuần tự Use Case: đăng nhập"
+    },
+    {
+      "index": 534,
+      "style": "Caption",
+      "text": "Hình Ảnh 12. Đăng Nhập"
+    },
+    {
+      "index": 535,
+      "style": "Normal (Web)",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình người dùng đăng nhập vào hệ thống. Đầu tiên, người dùng nhập email và mật khẩu trên giao diện React. Giao diện gửi yêu cầu đăng nhập thông qua api.js đến backend tại route đăng nhập. Tại đây, AuthController tiếp nhận yêu cầu, truy vấn cơ sở dữ liệu để tìm tài khoản theo email, sau đó kiểm tra mật khẩu bằng bcrypt. Nếu thông tin hợp lệ, hệ thống tạo JWT token và trả về thông tin người dùng kèm token cho frontend. Cuối cùng, giao diện lưu thông tin này vào localStorage và cập nhật trạng thái đăng nhập. Biểu đồ cho thấy rõ luồng xác thực từ giao diện, qua API, tới cơ sở dữ liệu và ngược lại."
+    },
+    {
+      "index": 536,
+      "style": "Heading 3",
+      "text": "1.3. Biểu đồ tuần tự Use Case: Xem lịch hẹn cá nhân."
+    },
+    {
+      "index": 538,
+      "style": "Caption",
+      "text": "Hình Ảnh 13. Xem lịch hẹn cá nhân"
+    },
+    {
+      "index": 539,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình khách hàng xem danh sách lịch hẹn của mình. Khi người dùng truy cập trang “Lịch hẹn cá nhân”, giao diện gửi yêu cầu đến backend kèm theo token xác thực. AuthMiddleware kiểm tra token để xác minh người dùng hợp lệ. Nếu xác thực thành công, AppointmentController sẽ truy vấn cơ sở dữ liệu để lấy các lịch hẹn thuộc về tài khoản đó. Dữ liệu sau khi truy vấn được trả về frontend và hiển thị cho người dùng dưới dạng danh sách. Trong trường hợp token không hợp lệ hoặc hết hạn, backend sẽ từ chối truy cập và giao diện hiển thị lỗi xác thực."
+    },
+    {
+      "index": 540,
+      "style": "Heading 3",
+      "text": "1.4. Biểu đồ tuần tự Use Case: Hủy lịch hẹn"
+    },
+    {
+      "index": 542,
+      "style": "Caption",
+      "text": "Hình Ảnh 14. Hủy lịch hẹn"
+    },
+    {
+      "index": 543,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình khách hàng hủy một lịch hẹn đã đặt. Người dùng chọn lịch hẹn cần hủy trên giao diện và hệ thống hiển thị hộp thoại xác nhận. Nếu người dùng xác nhận, frontend gửi yêu cầu hủy lịch đến backend kèm token đăng nhập. Sau khi AuthMiddleware xác thực thành công, AppointmentController tìm lịch hẹn theo mã định danh trong cơ sở dữ liệu. Tiếp theo, hệ thống kiểm tra lịch hẹn đó có thuộc về người dùng hiện tại hay không, đồng thời kiểm tra trạng thái hiện tại của lịch. Nếu hợp lệ, hệ thống cập nhật trạng thái lịch thành cancelled, lưu lại vào cơ sở dữ liệu và trả kết quả thành công về frontend. Giao diện sau đó tải lại danh sách lịch. Nếu người dùng không có quyền, lịch không tồn tại hoặc không thể hủy do trạng thái không phù hợp, hệ thống sẽ trả thông báo lỗi."
+    },
+    {
+      "index": 545,
+      "style": "Heading 3",
+      "text": "1.5. Biểu đồ tuần tự Use Case: Đặt hàng sản phẩm"
+    },
+    {
+      "index": 547,
+      "style": "Caption",
+      "text": "Hình Ảnh 15. Đặt hàng sản phẩm"
+    },
+    {
+      "index": 548,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình khách hàng tạo đơn hàng mua sản phẩm. Người dùng chọn sản phẩm, thêm vào giỏ hàng, nhập thông tin giao hàng và xác nhận đặt hàng trên giao diện. Sau đó, frontend gửi dữ liệu đơn hàng đến backend thông qua api.js. OrderController tiếp nhận yêu cầu, lần lượt kiểm tra từng sản phẩm trong cơ sở dữ liệu để xác minh tồn kho, trạng thái hoạt động và giá trị đơn hàng. Nếu hợp lệ, hệ thống tính tổng tiền, cập nhật lại số lượng tồn kho và số lượng đã bán của sản phẩm, rồi tạo bản ghi đơn hàng mới trong cơ sở dữ liệu. Sau khi hoàn tất, backend trả kết quả thành công về cho frontend. Giao diện sẽ xóa giỏ hàng lưu ở trình duyệt và thông báo cho người dùng biết đơn hàng đã được tạo thành công."
+    },
+    {
+      "index": 550,
+      "style": "Heading 3",
+      "text": "1.6. Biểu đồ tuần tự Use Case: Đặt lịch cắt tóc"
+    },
+    {
+      "index": 552,
+      "style": "Caption",
+      "text": "Hình Ảnh 16. Đặt lịch cắt tóc"
+    },
+    {
+      "index": 553,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình khách hàng đặt lịch hẹn. Trước hết, khách hàng chọn barber, dịch vụ và ngày mong muốn trên giao diện đặt lịch. Giao diện gửi yêu cầu lấy danh sách khung giờ trống tới backend. AppointmentController sẽ đọc dữ liệu barber, dịch vụ và các lịch đã tồn tại trong cơ sở dữ liệu, sau đó xử lý để tính ra các khung giờ còn trống và trả về cho frontend. Sau khi khách hàng chọn giờ phù hợp và xác nhận, frontend gửi yêu cầu tạo lịch hẹn mới. Backend kiểm tra lại xung đột lịch để tránh trùng giờ, sau đó lưu lịch hẹn vào cơ sở dữ liệu. Nếu thành công, hệ thống tiếp tục gọi dịch vụ email để gửi thông báo xác nhận cho khách hàng. Cuối cùng, kết quả được trả về giao diện để hiển thị thông báo đặt lịch thành công."
+    },
+    {
+      "index": 554,
+      "style": "Heading 3",
+      "text": "1.7. Biểu đồ tuần tự Use Case: Admin cập nhập trạng thái đơn hàng"
+    },
+    {
+      "index": 556,
+      "style": "Caption",
+      "text": "Hình Ảnh 17. Cập nhập đơn"
+    },
+    {
+      "index": 557,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả cách quản trị viên xử lý đơn hàng trong trang quản trị. Khi admin chọn một đơn hàng và thay đổi trạng thái trên giao diện, frontend gửi yêu cầu cập nhật trạng thái tới backend. AuthMiddleware xác thực token và kiểm tra quyền quản trị. Nếu hợp lệ, OrderController sẽ tìm đơn hàng trong cơ sở dữ liệu. Sau đó, hệ thống kiểm tra trạng thái mới có hợp lệ hay không. Nếu admin chuyển đơn sang trạng thái cancelled và đơn trước đó chưa bị hủy, backend đồng thời hoàn lại số lượng tồn kho cho các sản phẩm trong đơn. Sau khi cập nhật thành công, hệ thống trả kết quả mới về giao diện để hiển thị. Nếu đơn không tồn tại hoặc trạng thái không hợp lệ, hệ thống sẽ từ chối cập nhật."
+    },
+    {
+      "index": 565,
+      "style": "Heading 3",
+      "text": "1.8. Biểu đồ tuần tự Use Case: Admin sửa sản phẩm"
+    },
+    {
+      "index": 567,
+      "style": "Caption",
+      "text": "Hình Ảnh 18. Admin sửa sản phẩm"
+    },
+    {
+      "index": 568,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình chỉnh sửa thông tin sản phẩm bởi quản trị viên. Admin chọn một sản phẩm trong danh sách hiện có, thay đổi thông tin cần cập nhật và gửi dữ liệu mới lên backend. Sau khi xác thực quyền quản trị, ProductController tìm sản phẩm theo mã định danh trong cơ sở dữ liệu. Nếu tìm thấy, hệ thống cập nhật các trường dữ liệu tương ứng và lưu lại thay đổi. Kết quả cập nhật được trả về frontend, từ đó giao diện tải lại danh sách sản phẩm và hiển thị thông tin mới. Nếu sản phẩm không tồn tại, hệ thống trả về thông báo lỗi."
+    },
+    {
+      "index": 569,
+      "style": "Heading 3",
+      "text": "1.9. Biểu đồ tuần tự Use Case: Admin thêm sản phẩm"
+    },
+    {
+      "index": 571,
+      "style": "Caption",
+      "text": "Hình Ảnh 19. Admin thêm sản"
+    },
+    {
+      "index": 572,
+      "style": "Normal",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình quản trị viên thêm sản phẩm mới vào hệ thống. Admin mở form thêm sản phẩm trên giao diện quản trị, nhập các thông tin như tên sản phẩm, mô tả, giá, danh mục và số lượng tồn kho. Dữ liệu sau đó được gửi đến backend thông qua api.js. Sau bước xác thực quyền admin, ProductController tiếp nhận dữ liệu và tạo một bản ghi sản phẩm mới trong cơ sở dữ liệu. Khi tạo thành công, backend trả về kết quả cho frontend. Giao diện quản trị sẽ tải lại danh sách sản phẩm và hiển thị sản phẩm mới vừa được thêm vào hệ thống."
+    },
+    {
+      "index": 573,
+      "style": "Heading 3",
+      "text": "1.10. Biểu đồ tuần tự Use Case: Admin cập nhập trạng thái lịch hẹn"
+    },
+    {
+      "index": 576,
+      "style": "Caption",
+      "text": "Hình Ảnh 20. Admin cập nhập trạng thái lịch hẹn"
+    },
+    {
+      "index": 577,
+      "style": "Normal (Web)",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình quản trị viên xử lý lịch hẹn trong trang quản trị. Khi admin chọn một lịch hẹn và thay đổi trạng thái trên giao diện AdminDashboard, frontend gửi yêu cầu cập nhật lên backend. AdminController tiếp nhận yêu cầu, truy vấn cơ sở dữ liệu để tìm lịch hẹn tương ứng, kiểm tra tính hợp lệ của trạng thái mới, sau đó cập nhật lại dữ liệu. Sau khi lưu thành công, backend trả về thông tin lịch hẹn đã cập nhật. Frontend nhận dữ liệu mới và cập nhật lại danh sách lịch hẹn hiển thị trên màn hình. Biểu đồ này thể hiện rõ tương tác giữa giao diện quản trị, backend và cơ sở dữ liệu trong nghiệp vụ xử lý lịch hẹn."
+    },
+    {
+      "index": 578,
+      "style": "Heading 3",
+      "text": "1.11. Biểu đồ tuần tự Use Case:Admin xóa sản phẩm"
+    },
+    {
+      "index": 580,
+      "style": "Caption",
+      "text": "Hình Ảnh 21. Admin xóa sản phẩm"
+    },
+    {
+      "index": 581,
+      "style": "Normal (Web)",
+      "text": "Mô tả: Biểu đồ này mô tả quá trình xóa sản phẩm khỏi hệ thống. Quản trị viên chọn sản phẩm cần xóa và hệ thống hiển thị hộp thoại xác nhận để tránh thao tác nhầm. Nếu admin xác nhận, frontend gửi yêu cầu xóa tới backend kèm token xác thực. Sau khi kiểm tra quyền admin, ProductController tìm sản phẩm tương ứng trong cơ sở dữ liệu. Nếu sản phẩm tồn tại, hệ thống thực hiện xóa bản ghi và trả kết quả thành công về frontend. Giao diện quản trị sau đó tải lại danh sách sản phẩm để phản ánh dữ liệu mới. Trong trường hợp admin hủy thao tác xác nhận hoặc sản phẩm không tồn tại, hệ thống sẽ không thay đổi dữ liệu và hiển thị thông báo phù hợp."
+    },
+    {
+      "index": 583,
+      "style": "Heading 2",
+      "text": "6. Biểu đồ lớp"
+    },
+    {
+      "index": 584,
+      "style": "Normal",
+      "text": "Biểu đồ lớp (Class Diagram) là một trong những biểu đồ quan trọng của UML, dùng để mô tả cấu trúc tĩnh của hệ thống. Biểu đồ lớp thể hiện các lớp, thuộc tính, phương thức của từng lớp, đồng thời mô tả các mối quan hệ giữa các lớp như: liên kết (Association), tổng hợp (Aggregation), kết hợp chặt (Composition) và kế thừa (Inheritance)."
+    },
+    {
+      "index": 585,
+      "style": "Normal",
+      "text": "Trong hệ thống, biểu đồ lớp giúp làm rõ cách tổ chức dữ liệu và cách các đối tượng trong hệ thống tương tác với nhau ở mức độ cấu trúc. Các lớp trong biểu đồ được xây dựng dựa trên việc phân tích nghiệp vụ, các use-case và các đối tượng xuất hiện trong sơ đồ tuần tự."
+    },
+    {
+      "index": 586,
+      "style": "Heading 3",
+      "text": "1.1. Biểu đồ lớp tổng quát"
+    },
+    {
+      "index": 588,
+      "style": "Caption",
+      "text": "Hình Ảnh 22. Class Diagram"
+    },
+    {
+      "index": 589,
+      "style": "Normal",
+      "text": "Sơ đồ này:"
+    },
+    {
+      "index": 590,
+      "style": "List Paragraph",
+      "text": "User, Barber, Service, Appointment, Product, Order, Review, Gallery là các lớp dữ liệu chính của hệ thống."
+    },
+    {
+      "index": 591,
+      "style": "List Paragraph",
+      "text": "Appointment liên kết với User, Barber, Service để quản lý nghiệp vụ đặt lịch."
+    },
+    {
+      "index": 592,
+      "style": "List Paragraph",
+      "text": "Order chứa nhiều OrderItem, mỗi OrderItem tham chiếu đến Product để lưu thông tin sản phẩm tại thời điểm đặt hàng."
+    },
+    {
+      "index": 593,
+      "style": "List Paragraph",
+      "text": "Các lớp Controller như AuthController, AppointmentController, OrderController, AdminController đóng vai trò xử lý nghiệp vụ và thao tác với các model tương ứng."
+    },
+    {
+      "index": 594,
+      "style": "Heading 2",
+      "text": "7. Thiết kế hệ thống"
+    },
+    {
+      "index": 595,
+      "style": "Heading 3",
+      "text": "1.1. Kiến trúc hệ thống tổng thể"
+    },
+    {
+      "index": 596,
+      "style": "Normal",
+      "text": "Hệ thống được xây dựng theo mô hình kiến trúc 3 lớp, gồm lớp giao diện người dùng (Frontend), lớp xử lý nghiệp vụ (Backend/API) và lớp dữ liệu (Database). Mô hình này giúp tách biệt rõ phần hiển thị, phần xử lý logic và phần lưu trữ dữ liệu, từ đó làm cho hệ thống dễ phát triển, dễ bảo trì và dễ mở rộng trong tương lai."
+    },
+    {
+      "index": 597,
+      "style": "List Paragraph",
+      "text": "Ở lớp giao diện người dùng, hệ thống sử dụng React.js kết hợp với Vite để xây dựng website theo mô hình SPA. Giao diện chịu trách nhiệm hiển thị thông tin, tiếp nhận thao tác từ người dùng và gửi yêu cầu đến backend thông qua các API. Các trang chính gồm trang chủ, trang đặt lịch, trang cửa hàng sản phẩm, trang lịch hẹn cá nhân và trang quản trị."
+    },
+    {
+      "index": 598,
+      "style": "List Paragraph",
+      "text": "Ở lớp xử lý nghiệp vụ, hệ thống sử dụng Node.js và Express.js để xây dựng REST API. Backend tiếp nhận yêu cầu từ frontend, thực hiện kiểm tra dữ liệu, xác thực người dùng, xử lý logic nghiệp vụ như đăng nhập, đặt lịch, tạo đơn hàng, quản lý lịch hẹn, quản lý sản phẩm và trả kết quả về cho giao diện. Đây là lớp trung gian đóng vai trò kết nối giữa frontend và cơ sở dữ liệu."
+    },
+    {
+      "index": 599,
+      "style": "List Paragraph",
+      "text": "Ở lớp dữ liệu, hệ thống sử dụng MongoDB để lưu trữ toàn bộ thông tin như người dùng, barber, dịch vụ, lịch hẹn, sản phẩm, đơn hàng và đánh giá. Mongoose được dùng để định nghĩa schema, model và hỗ trợ thao tác với MongoDB một cách có cấu trúc hơn."
+    },
+    {
+      "index": 600,
+      "style": "List Paragraph",
+      "text": "Ngoài ba lớp chính, hệ thống còn tích hợp một số thành phần hỗ trợ như JWT để xác thực người dùng, bcryptjs để mã hóa mật khẩu, nodemailer để gửi email xác nhận, và localStorage ở phía trình duyệt để lưu trạng thái đăng nhập, giỏ hàng và giao diện sáng/tối."
+    },
+    {
+      "index": 601,
+      "style": "Heading 3",
+      "text": "1.2. Thiết kế cơ sở dữ liệu"
+    },
+    {
+      "index": 602,
+      "style": "Normal",
+      "text": "Cơ sở dữ liệu của hệ thống được thiết kế dựa trên các đối tượng nghiệp vụ chính, bao gồm: User -> Appointment: một user có nhiều lịch hẹn."
+    },
+    {
+      "index": 603,
+      "style": "Normal",
+      "text": "Barber -> Appointment: một barber có nhiều lịch hẹn."
+    },
+    {
+      "index": 604,
+      "style": "Normal",
+      "text": "Service -> Appointment: một dịch vụ được dùng trong nhiều lịch hẹn."
+    },
+    {
+      "index": 605,
+      "style": "Normal",
+      "text": "User -> Order: một user có nhiều đơn hàng."
+    },
+    {
+      "index": 606,
+      "style": "Normal",
+      "text": "Order.items -> Product: một đơn chứa nhiều sản phẩm, lưu snapshot name/price/quantity/image."
+    },
+    {
+      "index": 607,
+      "style": "Normal",
+      "text": "User -> Review: một user viết nhiều review."
+    },
+    {
+      "index": 608,
+      "style": "Normal",
+      "text": "Barber -> Review: một barber nhận nhiều review. Các bảng được xây dựng với khóa chính và khóa ngoại rõ ràng để thể hiện mối quan hệ giữa các đối tượng."
+    },
+    {
+      "index": 610,
+      "style": "Caption",
+      "text": "Hình Ảnh 23. ERD"
+    },
+    {
+      "index": 611,
+      "style": "Heading 3",
+      "text": "1.3. Thiết kế giao diện người dùng (UI)"
+    },
+    {
+      "index": 612,
+      "style": "List Paragraph",
+      "text": "Giao diện người dùng của hệ thống được thiết kế theo hướng hiện đại, trực quan và dễ sử dụng."
+    },
+    {
+      "index": 613,
+      "style": "List Paragraph",
+      "text": "Đối với khách hàng, hệ thống hỗ trợ xem thông tin dịch vụ, đăng ký/đăng nhập, đặt lịch cắt tóc trực tuyến, quản lý lịch hẹn cá nhân, mua sắm sản phẩm chăm sóc tóc, sử dụng giỏ hàng và đặt hàng."
+    },
+    {
+      "index": 614,
+      "style": "List Paragraph",
+      "text": "Đối với quản trị viên, giao diện cung cấp dashboard thống kê và các chức năng quản lý lịch hẹn, đơn hàng, sản phẩm. Ngoài ra, hệ thống còn hỗ trợ giao diện sáng/tối, hiệu ứng chuyển trang và khả năng tương thích trên nhiều thiết bị."
+    },
+    {
+      "index": 616,
+      "style": "Heading 2",
+      "text": "8. Tổng kết"
+    },
+    {
+      "index": 617,
+      "style": "Normal",
+      "text": "Chương này đã trình bày chi tiết về thiết kế hệ thống, bao gồm kiến trúc tổng thể, thiết kế cơ sở dữ liệu và thiết kế giao diện người dùng. Những nội dung này là nền tảng quan trọng cho việc triển khai và phát triển hệ thống ở các giai đoạn tiếp theo, đồng thời đảm bảo hệ thống hoạt động ổn định, hiệu quả và dễ mở rộng trong tương lai"
+    },
+    {
+      "index": 619,
+      "style": "Normal",
+      "text": "Chương 3: Xây dựng và triển khai hệ thống đặt lịch cắt tóc Tiệm Tóc 1989"
+    },
+    {
+      "index": 620,
+      "style": "Heading 2",
+      "text": "1. Giới thiệu"
+    },
+    {
+      "index": 621,
+      "style": "Normal",
+      "text": "Chương này trình bày quá trình xây dựng và triển khai hệ thống dựa trên các nội dung đã phân tích và thiết kế ở chương trước. Nội dung chương tập trung vào môi trường, công cụ phát triển, các công nghệ sử dụng, quá trình cài đặt các chức năng chính cũng như kiểm thử hệ thống nhằm đánh giá mức độ đáp ứng yêu cầu của đề tài."
+    },
+    {
+      "index": 622,
+      "style": "Heading 2",
+      "text": "2. Môi trường và công cụ phát triển"
+    },
+    {
+      "index": 623,
+      "style": "Heading 3",
+      "text": "1.1. Môi trường phát triển"
+    },
+    {
+      "index": 624,
+      "style": "Normal",
+      "text": "Hệ thống được xây dựng và triển khai trong môi trường phát triển web thông dụng. Việc sử dụng môi trường phát triển phù hợp giúp quá trình lập trình, kiểm thử và quản lý mã nguồn được thực hiện hiệu quả. Môi trường bao gồm máy tính cá nhân, hệ điều hành và các công cụ hỗ trợ cần thiết cho việc phát triển ứng dụng web."
+    },
+    {
+      "index": 625,
+      "style": "Heading 3",
+      "text": "1.2. Công nghệ sử dụng"
+    },
+    {
+      "index": 626,
+      "style": "Normal",
+      "text": "Frontend:"
+    },
+    {
+      "index": 627,
+      "style": "List Paragraph",
+      "text": "React.js: xây dựng giao diện người dùng dạng SPA."
+    },
+    {
+      "index": 628,
+      "style": "List Paragraph",
+      "text": "Vite: công cụ build và chạy môi trường phát triển frontend."
+    },
+    {
+      "index": 629,
+      "style": "List Paragraph",
+      "text": "React Router DOM: điều hướng giữa các trang trong ứng dụng."
+    },
+    {
+      "index": 630,
+      "style": "List Paragraph",
+      "text": "Tailwind CSS: xây dựng giao diện và style nhanh theo utility class."
+    },
+    {
+      "index": 631,
+      "style": "List Paragraph",
+      "text": "Framer Motion: tạo hiệu ứng chuyển động, animation cho giao diện."
+    },
+    {
+      "index": 632,
+      "style": "List Paragraph",
+      "text": "Lucide React: thư viện icon cho frontend."
+    },
+    {
+      "index": 633,
+      "style": "List Paragraph",
+      "text": "Visual Studio Code: môi trường phát triển tích hợp hỗ trợ lập trình và quản lý mã nguồn."
+    },
+    {
+      "index": 634,
+      "style": "Normal",
+      "text": "Backend:"
+    },
+    {
+      "index": 636,
+      "style": "List Paragraph",
+      "text": "Node.js: môi trường chạy phía server."
+    },
+    {
+      "index": 637,
+      "style": "List Paragraph",
+      "text": "Express.js: framework xây dựng REST API cho hệ thống."
+    },
+    {
+      "index": 638,
+      "style": "Normal",
+      "text": "Database:"
+    },
+    {
+      "index": 639,
+      "style": "List Paragraph",
+      "text": "MongoDB: cơ sở dữ liệu NoSQL lưu dữ liệu hệ thống."
+    },
+    {
+      "index": 640,
+      "style": "List Paragraph",
+      "text": "Mongoose: ODM dùng để định nghĩa schema và thao tác với MongoDB."
+    },
+    {
+      "index": 641,
+      "style": "Normal",
+      "text": "Xác thực và bảo mật:"
+    },
+    {
+      "index": 642,
+      "style": "List Paragraph",
+      "text": "JWT (jsonwebtoken): xác thực người dùng bằng token."
+    },
+    {
+      "index": 643,
+      "style": "List Paragraph",
+      "text": "bcryptjs: mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu."
+    },
+    {
+      "index": 644,
+      "style": "List Paragraph",
+      "text": "express-validator: kiểm tra và xác thực dữ liệu đầu vào từ request."
+    },
+    {
+      "index": 645,
+      "style": "Normal",
+      "text": "Hỗ trợ hệ thống"
+    },
+    {
+      "index": 646,
+      "style": "List Paragraph",
+      "text": "cors: cho phép frontend và backend giao tiếp khác cổng."
+    },
+    {
+      "index": 647,
+      "style": "List Paragraph",
+      "text": "dotenv: quản lý biến môi trường."
+    },
+    {
+      "index": 648,
+      "style": "List Paragraph",
+      "text": "morgan: log request trong quá trình phát triển."
+    },
+    {
+      "index": 649,
+      "style": "List Paragraph",
+      "text": "nodemailer: gửi email xác nhận đăng ký và đặt lịch."
+    },
+    {
+      "index": 651,
+      "style": "Heading 2",
+      "text": "3. Cài đặt các chức năng chính"
+    },
+    {
+      "index": 652,
+      "style": "Normal",
+      "text": "trình bày quá trình triển khai các chức năng chính của hệ thống đặt lịch cắt tóc Tiệm Tóc 1989, bao gồm:"
+    },
+    {
+      "index": 653,
+      "style": "List Paragraph",
+      "text": "Quản lý tài khoản"
+    },
+    {
+      "index": 654,
+      "style": "List Paragraph",
+      "text": "Đặt lịch cắt tóc"
+    },
+    {
+      "index": 655,
+      "style": "List Paragraph",
+      "text": "Quản lý lịch hẹn cá nhân"
+    },
+    {
+      "index": 656,
+      "style": "List Paragraph",
+      "text": "Mua sản phẩm và đặt hàng"
+    },
+    {
+      "index": 657,
+      "style": "List Paragraph",
+      "text": "Quản lý lịch hẹn và đơn hàng"
+    },
+    {
+      "index": 658,
+      "style": "List Paragraph",
+      "text": "Quản lý sản phẩm"
+    },
+    {
+      "index": 659,
+      "style": "Heading 2",
+      "text": "4. Kiểm thử hệ thống"
+    },
+    {
+      "index": 660,
+      "style": "Normal",
+      "text": "Sau khi hoàn thành việc cài đặt các chức năng, hệ thống được tiến hành kiểm thử nhằm phát hiện và khắc phục các lỗi có thể phát sinh trong quá trình hoạt động. Việc kiểm thử tập trung vào:"
+    },
+    {
+      "index": 661,
+      "style": "List Paragraph",
+      "text": "Kiểm tra các chức năng chính của hệ thống."
+    },
+    {
+      "index": 662,
+      "style": "List Paragraph",
+      "text": "Kiểm tra tính đúng đắn của dữ liệu."
+    },
+    {
+      "index": 663,
+      "style": "List Paragraph",
+      "text": "Đánh giá khả năng vận hành và độ ổn định của hệ thống."
+    },
+    {
+      "index": 664,
+      "style": "Heading 2",
+      "text": "5. Tổng Kết"
+    },
+    {
+      "index": 665,
+      "style": "Normal",
+      "text": "Chương 3 đã trình bày quá trình xây dựng và triển khai hệ thống, bao gồm môi trường phát triển, các công nghệ sử dụng, quá trình cài đặt chức năng và kiểm thử hệ thống. Đây là cơ sở để đánh giá mức độ hoàn thiện của hệ thống và làm tiền đề cho các đề xuất cải tiến trong các chương tiếp theo."
+    },
+    {
+      "index": 666,
+      "style": "Heading 1",
+      "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN"
+    },
+    {
+      "index": 667,
+      "style": "Normal",
+      "text": "1. Kết quả đạt được"
+    },
+    {
+      "index": 668,
+      "style": "Normal",
+      "text": "Sau quá trình phân tích, thiết kế và xây dựng, đề tài website đặt lịch cắt tóc và bán sản phẩm TIỆM TÓC 1989 đã hoàn thành được các mục tiêu cơ bản đề ra. Hệ thống đã xây dựng thành công một nền tảng web gồm cả frontend và backend, cho phép người dùng tương tác trực tiếp với các chức năng đặt lịch và mua sắm sản phẩm chăm sóc tóc."
+    },
+    {
+      "index": 670,
+      "style": "Normal",
+      "text": "Về phía người dùng, hệ thống đã hỗ trợ các chức năng chính như đăng ký tài khoản, đăng nhập, xem danh sách barber, xem dịch vụ, đặt lịch cắt tóc trực tuyến, xem và hủy lịch hẹn cá nhân, xem sản phẩm, thêm sản phẩm vào giỏ hàng và đặt hàng. Giao diện được xây dựng theo hướng hiện đại, trực quan, hỗ trợ responsive và chế độ sáng/tối, giúp nâng cao trải nghiệm sử dụng."
+    },
+    {
+      "index": 672,
+      "style": "Normal",
+      "text": "Về phía quản trị viên, hệ thống đã xây dựng được trang quản trị cho phép theo dõi thống kê tổng quan, quản lý lịch hẹn, quản lý đơn hàng và quản lý sản phẩm. Admin có thể cập nhật trạng thái lịch hẹn, cập nhật trạng thái đơn hàng, đồng thời thực hiện thêm, sửa, xóa sản phẩm ngay trên giao diện quản trị."
+    },
+    {
+      "index": 674,
+      "style": "Normal",
+      "text": "Về mặt kỹ thuật, hệ thống đã triển khai thành công mô hình tách biệt giữa frontend và backend. Frontend được phát triển bằng React và Vite, backend được xây dựng bằng Node.js và Express.js, dữ liệu được lưu trữ trên MongoDB thông qua Mongoose. Hệ thống cũng đã tích hợp xác thực người dùng bằng JWT, mã hóa mật khẩu bằng bcryptjs, kiểm tra dữ liệu đầu vào, lưu trữ giỏ hàng và trạng thái đăng nhập trên trình duyệt, đồng thời hỗ trợ gửi email xác nhận trong một số chức năng quan trọng."
+    },
+    {
+      "index": 676,
+      "style": "Normal",
+      "text": "Nhìn chung, đề tài đã đạt được kết quả là xây dựng thành công một hệ thống web tương đối hoàn chỉnh, đáp ứng được các nghiệp vụ chính của một tiệm tóc hiện đại, bao gồm đặt lịch dịch vụ, bán sản phẩm trực tuyến và quản lý hoạt động kinh doanh trên cùng một nền tảng."
+    },
+    {
+      "index": 677,
+      "style": "Normal",
+      "text": "2. Hướng nghiên cứu"
+    },
+    {
+      "index": 678,
+      "style": "List Paragraph",
+      "text": "Trong thời gian tới, hệ thống có thể được mở rộng theo nhiều hướng nhằm nâng cao tính thực tiễn và giá trị ứng dụng. Trước hết, có thể nghiên cứu tích hợp thanh toán trực tuyến thông qua ví điện tử hoặc cổng thanh toán ngân hàng, giúp khách hàng thanh toán nhanh chóng và thuận tiện hơn khi mua sản phẩm hoặc đặt lịch dịch vụ."
+    },
+    {
+      "index": 680,
+      "style": "List Paragraph",
+      "text": "Tiếp theo, hệ thống có thể bổ sung chức năng quản lý hồ sơ người dùng nâng cao, bao gồm lịch sử đặt lịch, lịch sử đơn hàng, điểm thưởng, đánh giá dịch vụ và thông tin cá nhân chi tiết. Điều này giúp tăng tính cá nhân hóa và cải thiện trải nghiệm khách hàng. Song song với đó, có thể phát triển thêm phần quản lý barber, cho phép từng barber theo dõi lịch làm việc riêng, cập nhật trạng thái online/busy và xem đánh giá từ khách hàng."
+    },
+    {
+      "index": 682,
+      "style": "List Paragraph",
+      "text": "Về mặt công nghệ, hướng phát triển tiếp theo là tái cấu trúc backend theo kiến trúc rõ ràng hơn, chẳng hạn tách thêm tầng service hoặc áp dụng kiến trúc module hóa để dễ bảo trì và mở rộng. Đồng thời, hệ thống có thể được bổ sung kiểm thử tự động, phân quyền chi tiết hơn, ghi log tập trung, và tối ưu hiệu năng truy vấn để đáp ứng tốt hơn khi số lượng người dùng tăng lên."
+    },
+    {
+      "index": 684,
+      "style": "List Paragraph",
+      "text": "Ngoài ra, một hướng nghiên cứu đáng chú ý là ứng dụng trí tuệ nhân tạo hoặc phân tích dữ liệu vào hệ thống, ví dụ như gợi ý kiểu tóc phù hợp, đề xuất sản phẩm liên quan, hoặc dự đoán khung giờ đông khách để hỗ trợ quản lý lịch hẹn hiệu quả hơn. Bên cạnh đó, hệ thống cũng có thể được phát triển thêm ứng dụng di động hoặc PWA để tăng khả năng tiếp cận và thuận tiện cho người dùng."
+    },
+    {
+      "index": 686,
+      "style": "Heading 1",
+      "text": "TÀI LIỆU THAM KHẢO"
+    },
+    {
+      "index": 687,
+      "style": "Normal (Web)",
+      "text": "[1] express-validator Team. (n.d.). express-validator Documentation. Truy cập ngày 17/05/2026, từhttps://express-validator.github.io/docs/"
+    },
+    {
+      "index": 688,
+      "style": "Normal (Web)",
+      "text": "[2] OpenJS Foundation. (n.d.). Node.js Documentation. Truy cập ngày 17/05/2026, từ.https://nodejs.org/dist/latest/docs/api/"
+    },
+    {
+      "index": 689,
+      "style": "Normal (Web)",
+      "text": "[3] React Team. (n.d.). React Documentation. Truy cập ngày 17/05/2026, từ,https://react.dev/learn"
+    },
+    {
+      "index": 690,
+      "style": "Normal (Web)",
+      "text": "[4] Vite Team. (n.d.). Getting Started | Vite. Truy cập ngày 17/05/2026, từ, https://vite.dev/guide/"
+    },
+    {
+      "index": 691,
+      "style": "Normal (Web)",
+      "text": "[5] React Router Team. (n.d.). React Router Official Documentation. Truy cập ngày 17/05/2026, từ https://reactrouter.com/"
+    },
+    {
+      "index": 692,
+      "style": "Normal (Web)",
+      "text": "[6] Fowler, M., UML Distilled: A Brief Guide to the Standard Object Modeling Language, Addison-Wesley, 3rd Edition, 2003."
+    },
+    {
+      "index": 693,
+      "style": "Normal (Web)",
+      "text": "[7] Tailwind Labs. (n.d.). Tailwind CSS Documentation. Truy cập ngày 17/05/2026, từ https://tailwindcss.com/docs"
+    },
+    {
+      "index": 694,
+      "style": "Normal (Web)",
+      "text": "[8] MongoDB, Inc. (n.d.). MongoDB Documentation. Truy cập ngày 17/05/2026, từ https://www.mongodb.com/docs/"
+    }
+  ],
+  "tables": [
+    {
+      "index": 0,
+      "rows": [
+        [
+          "Sinh viên thực hiện:",
+          "Nguyễn Quốc Sách"
+        ],
+        [
+          "Lớp:",
+          "25IT1"
+        ],
+        [
+          "Mã sinh viên",
+          "25IT169"
+        ],
+        [
+          "Giảng viên hướng dẫn:",
+          "ThS.Nguyễn Ngọc Huyền Trân"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        [
+          "Sinh viên thực hiện:",
+          "Nguyễn Quốc Sách"
+        ],
+        [
+          "Lớp:",
+          "25IT"
+        ],
+        [
+          "Mã sinh viên",
+          "25IT169"
+        ],
+        [
+          "Giảng viên hướng dẫn:",
+          "ThS.Nguyễn Ngọc Huyền Trân"
+        ]
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "width": 7560310,
+      "height": 10692130,
+      "top_margin": 914400,
+      "bottom_margin": 914400,
+      "left_margin": 914400,
+      "right_margin": 914400
+    },
+    {
+      "index": 1,
+      "width": 7560310,
+      "height": 10692130,
+      "top_margin": 914400,
+      "bottom_margin": 914400,
+      "left_margin": 914400,
+      "right_margin": 914400
+    }
+  ]
+}

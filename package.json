@@ -1,0 +1,7 @@
+{
+  "name": "stellarmind",
+  "version": "1.0.0",
+  "scripts": {
+    "report": "python generate_report.py"
+  }
+}

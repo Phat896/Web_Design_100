@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Space Gradient -->
+    <radialGradient id="space-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#010c18"/>
+      <stop offset="60%" stop-color="#00060e"/>
+      <stop offset="100%" stop-color="#000103"/>
+    </radialGradient>
+    
+    <!-- Origin Core Glow -->
+    <radialGradient id="origin-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0f0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00a0ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00a0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-glow { animation: pulse 3s infinite ease-in-out; }
+    .node-pulse { animation: nodePulse 2s infinite ease-in-out; }
+    .node-pulse-delay { animation: nodePulse 2s infinite ease-in-out; animation-delay: 1s; }
+    
+    /* Moving electric pulses along paths */
+    .flow-line {
+      stroke: #00f0f0;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-dasharray: 8 300;
+      animation: electricFlow 4s infinite linear;
+    }
+    .flow-line-slow {
+      stroke: #00a0ff;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-dasharray: 12 400;
+      animation: electricFlow 6s infinite linear;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.1); }
+    }
+    @keyframes nodePulse {
+      0%, 100% { r: 5; fill: #00f0f0; filter: drop-shadow(0 0 2px #00f0f0); }
+      50% { r: 8; fill: #ffffff; filter: drop-shadow(0 0 8px #00f0f0); }
+    }
+    @keyframes electricFlow {
+      0% { stroke-dashoffset: 350; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#space-bg)" />
+
+  <!-- Technical Grid lines -->
+  <g opacity="0.1">
+    <path d="M 0,225 L 800,225" stroke="#00f0f0" stroke-width="1" />
+    <path d="M 120,50 L 120,400 M 260,50 L 260,400 M 420,50 L 420,400 M 580,50 L 580,400 M 700,50 L 700,400" stroke="#00f0f0" stroke-width="0.5" stroke-dasharray="2 4" />
+  </g>
+
+  <!-- Origin Core (Left) -->
+  <g transform="translate(120, 225)">
+    <circle cx="0" cy="0" r="80" fill="url(#origin-glow)" class="pulse-glow" style="transform-origin: 0px 0px;" />
+    <!-- Outer decorative ring -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#00f0f0" stroke-dasharray="10 5" stroke-width="1" class="pulse-glow" />
+    <!-- Core seed of curiosity -->
+    <circle cx="0" cy="0" r="12" fill="#ffffff" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#00a0ff" stroke-width="2" />
+    
+    <text x="-50" y="-50" font-family="'JetBrains Mono', monospace" font-size="10" fill="#00f0f0" font-weight="bold">T_ZERO // SPARK</text>
+  </g>
+
+  <!-- Primary Branching Lines -->
+  <!-- Top Branch: 120,225 -> 260,125 -> 420,125 -> 580,90 -->
+  <path d="M 120,225 L 260,125 L 420,125 L 580,90 L 700,90" fill="none" stroke="#003366" stroke-width="2.5" />
+  <!-- Center Branch: 120,225 -> 260,225 -> 420,225 -> 580,225 -> 700,225 -->
+  <path d="M 120,225 L 700,225" fill="none" stroke="#003366" stroke-width="2.5" />
+  <!-- Bottom Branch: 120,225 -> 260,325 -> 420,325 -> 580,360 -->
+  <path d="M 120,225 L 260,325 L 420,325 L 580,360 L 700,360" fill="none" stroke="#003366" stroke-width="2.5" />
+
+  <!-- Animated flows running along paths -->
+  <path d="M 120,225 L 260,125 L 420,125 L 580,90 L 700,90" class="flow-line" />
+  <path d="M 120,225 L 700,225" class="flow-line-slow" />
+  <path d="M 120,225 L 260,325 L 420,325 L 580,360 L 700,360" class="flow-line" />
+
+  <!-- Nodes (Intersections and Milestones) -->
+  
+  <!-- Step 1 Nodes (Observation) -->
+  <g transform="translate(260, 125)">
+    <circle cx="0" cy="0" r="5" class="node-pulse" />
+    <text x="10" y="-12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">01_OBSERVE</text>
+    <text x="10" y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" opacity="0.8">ANOMALY_DETECTED</text>
+  </g>
+  <g transform="translate(260, 325)">
+    <circle cx="0" cy="0" r="5" class="node-pulse-delay" />
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">01_TRIGGER</text>
+    <text x="10" y="27" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" opacity="0.8">INCONGRUENCE</text>
+  </g>
+
+  <!-- Step 2 Nodes (Formulation / Question) -->
+  <g transform="translate(420, 125)">
+    <circle cx="0" cy="0" r="6" fill="#00a0ff" stroke="#ffffff" stroke-width="1" filter="url(#glow)" />
+    <text x="-10" y="-15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0" text-anchor="middle">02_QUESTION</text>
+  </g>
+  <g transform="translate(420, 225)">
+    <circle cx="0" cy="0" r="5" class="node-pulse" />
+    <text x="10" y="-10" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">02_QUERY</text>
+  </g>
+  <g transform="translate(420, 325)">
+    <circle cx="0" cy="0" r="6" fill="#00a0ff" stroke="#ffffff" stroke-width="1" filter="url(#glow)" />
+    <text x="-10" y="20" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0" text-anchor="middle">02_DIALECTIC</text>
+  </g>
+
+  <!-- Step 3 Nodes (Investigation / Hypotheses) -->
+  <g transform="translate(580, 90)">
+    <circle cx="0" cy="0" r="5" class="node-pulse-delay" />
+    <text x="10" y="-10" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">03_MODEL_A</text>
+  </g>
+  <g transform="translate(580, 225)">
+    <circle cx="0" cy="0" r="6" fill="#00f0f0" filter="url(#glow)" />
+    <text x="10" y="-10" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">03_CORE_HYP</text>
+  </g>
+  <g transform="translate(580, 360)">
+    <circle cx="0" cy="0" r="5" class="node-pulse" />
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">03_MODEL_B</text>
+  </g>
+
+  <!-- Destination Nodes (Synthesized Knowledge) -->
+  <g transform="translate(700, 90)">
+    <polygon points="-6,-6 6,-6 6,6 -6,6" fill="#00f0f0" filter="url(#glow)" />
+    <text x="-10" y="-15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0" text-anchor="end">K_VAL_01</text>
+  </g>
+  <g transform="translate(700, 225)">
+    <polygon points="-6,-6 6,-6 6,6 -6,6" fill="#00f0f0" filter="url(#glow)" />
+    <text x="-10" y="-15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0" text-anchor="end">K_VAL_02</text>
+  </g>
+  <g transform="translate(700, 360)">
+    <polygon points="-6,-6 6,-6 6,6 -6,6" fill="#00f0f0" filter="url(#glow)" />
+    <text x="-10" y="20" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0" text-anchor="end">K_VAL_03</text>
+  </g>
+
+  <!-- HUD Labels and Details -->
+  <!-- Header Info -->
+  <g transform="translate(30, 40)">
+    <text font-family="'JetBrains Mono', monospace" font-size="11" fill="#00f0f0" letter-spacing="1">ORIGIN FLOW // SEQUENCE MAP</text>
+    <text y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff" opacity="0.7">TRACE_ID: INQUIRY_SPARK_MERCURY_02</text>
+    <line x1="0" y1="22" x2="220" y2="22" stroke="#00f0f0" stroke-width="1.2" opacity="0.4" />
+  </g>
+
+  <!-- Timeline ticks at bottom -->
+  <g transform="translate(120, 410)" opacity="0.5">
+    <line x1="0" y1="0" x2="580" y2="0" stroke="#00f0f0" stroke-width="1.2" />
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#00f0f0" stroke-width="1" />
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" text-anchor="middle">t0 (0ms)</text>
+    
+    <line x1="140" y1="-5" x2="140" y2="5" stroke="#00f0f0" stroke-width="1" />
+    <text x="140" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" text-anchor="middle">t1 (12ms)</text>
+
+    <line x1="300" y1="-5" x2="300" y2="5" stroke="#00f0f0" stroke-width="1" />
+    <text x="300" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" text-anchor="middle">t2 (35ms)</text>
+
+    <line x1="460" y1="-5" x2="460" y2="5" stroke="#00f0f0" stroke-width="1" />
+    <text x="460" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" text-anchor="middle">t3 (88ms)</text>
+
+    <line x1="580" y1="-5" x2="580" y2="5" stroke="#00f0f0" stroke-width="1" />
+    <text x="580" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00a0ff" text-anchor="middle">t4 (150ms)</text>
+  </g>
+</svg>

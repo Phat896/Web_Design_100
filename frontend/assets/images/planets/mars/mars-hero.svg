@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Dark crimson space background -->
+    <radialGradient id="space" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#180202"/>
+      <stop offset="100%" stop-color="#050000"/>
+    </radialGradient>
+    
+    <!-- Mars atmospheric glow -->
+    <radialGradient id="mars-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ef4444" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#b91c1c" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Mars planet surface gradient -->
+    <linearGradient id="planet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="30%" stop-color="#ea580c"/>
+      <stop offset="70%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+    
+    <!-- Golden lava vein gradient -->
+    <linearGradient id="lava-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <!-- Standard glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Intense glow filter -->
+    <filter id="intense-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="15" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .star { fill: #ffffff; opacity: 0.6; animation: twinkle 3s infinite ease-in-out; }
+    .star-1 { animation-delay: 0s; }
+    .star-2 { animation-delay: 0.8s; }
+    .star-3 { animation-delay: 1.6s; }
+    .pulse-glow { animation: pulseGlow 4s infinite ease-in-out; }
+    .lava-pulse { animation: lavaFlow 5s infinite ease-in-out; }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.02); }
+    }
+    @keyframes lavaFlow {
+      0%, 100% { filter: drop-shadow(0 0 2px #facc15); opacity: 0.7; }
+      50% { filter: drop-shadow(0 0 8px #f97316); opacity: 1; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#space)" />
+  
+  <!-- Reddish Nebula Clouds -->
+  <circle cx="550" cy="220" r="300" fill="url(#mars-glow)" opacity="0.45" class="pulse-glow" transform-origin="550 220" />
+  <circle cx="200" cy="100" r="150" fill="#ef4444" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Parallax Stars -->
+  <circle cx="80" cy="60" r="1" class="star star-1" />
+  <circle cx="230" cy="140" r="1.5" class="star star-2" />
+  <circle cx="410" cy="40" r="1" class="star star-3" />
+  <circle cx="680" cy="180" r="2" class="star star-1" />
+  <circle cx="740" cy="80" r="1" class="star star-2" />
+  <circle cx="120" cy="280" r="1.5" class="star star-3" />
+  <circle cx="320" cy="330" r="1" class="star star-1" />
+  <circle cx="480" cy="300" r="2.5" class="star star-2" />
+  <circle cx="650" cy="340" r="1" class="star star-3" />
+
+  <!-- Mars Planet Body -->
+  <circle cx="550" cy="220" r="120" fill="url(#planet-grad)" filter="url(#glow)" />
+
+  <!-- Volcanic Cracks & Lava Veins (Olympus Mons region) -->
+  <g class="lava-pulse">
+    <!-- Main Fissure -->
+    <path d="M 510,160 Q 530,190 540,230 T 570,270" stroke="url(#lava-grad)" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#intense-glow)" />
+    <!-- Secondary Fissure -->
+    <path d="M 540,230 Q 570,220 590,200" stroke="url(#lava-grad)" stroke-width="2" fill="none" stroke-linecap="round" filter="url(#intense-glow)" />
+    <!-- Small Eruption Vent -->
+    <circle cx="510" cy="160" r="3" fill="#ffffff" filter="url(#intense-glow)" />
+    <circle cx="540" cy="230" r="4" fill="#ffffff" filter="url(#intense-glow)" />
+  </g>
+
+  <!-- Planet Shadow Overlay -->
+  <path d="M 430,220 A 120,120 0 0,0 670,220 A 120,70 0 0,1 430,220 Z" fill="#030000" opacity="0.65" />
+
+  <!-- Planet Limb Glow (High-energy outline) -->
+  <path d="M 430,220 A 120,120 0 0,1 670,220" stroke="#f87171" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#glow)" />
+
+  <!-- Silhouette Foreground Ledge -->
+  <path d="M 0,370 L 260,370 L 230,405 L 0,405 Z" fill="#150505" stroke="#ef4444" stroke-width="2.5" />
+  <path d="M 0,405 L 230,405 L 190,450 L 0,450 Z" fill="#0a0202" />
+
+  <!-- Astronaut Silhouette Standing -->
+  <g transform="translate(150, 298) scale(0.6)">
+    <!-- Suit Body -->
+    <rect x="25" y="45" width="20" height="35" rx="5" fill="#1c0505" stroke="#ef4444" stroke-width="2" />
+    <!-- Helmet with reflective amber visor -->
+    <circle cx="35" cy="30" r="15" fill="#ea580c" stroke="#f97316" stroke-width="2" />
+    <path d="M 23,30 Q 35,18 47,30 Q 35,35 23,30 Z" fill="#450a0a" />
+    <!-- Oxygen Pack -->
+    <rect x="18" y="48" width="8" height="25" rx="2" fill="#0a0202" stroke="#ef4444" stroke-width="1" />
+    <!-- Chest Plate HUD detail -->
+    <line x1="30" y1="55" x2="40" y2="55" stroke="#facc15" stroke-width="2" />
+    <!-- Boots -->
+    <rect x="23" y="80" width="9" height="8" rx="2" fill="#0a0202" />
+    <rect x="38" y="80" width="9" height="8" rx="2" fill="#0a0202" />
+  </g>
+
+  <!-- Sci-Fi HUD Overlay -->
+  <!-- Target Box around Mars -->
+  <g stroke="#ef4444" stroke-width="1" fill="none" opacity="0.4">
+    <!-- Reticle Corners -->
+    <path d="M 405,100 L 425,100 M 405,100 L 405,120" />
+    <path d="M 695,100 L 675,100 M 695,100 L 695,120" />
+    <path d="M 405,340 L 425,340 M 405,340 L 405,320" />
+    <path d="M 695,340 L 675,340 M 695,340 L 695,320" />
+    <!-- Reticle Center Crosshair -->
+    <line x1="550" y1="210" x2="550" y2="230" />
+    <line x1="540" y1="220" x2="560" y2="220" />
+  </g>
+
+  <!-- Telemetry Text -->
+  <text x="35" y="45" font-family="'JetBrains Mono', monospace" font-size="12" fill="#ef4444" letter-spacing="2">SYS.LOC: MARS // SECTOR: ARES-03</text>
+  <text x="35" y="65" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f97316" opacity="0.8">STATUS: THERMAL ANOMALY // MAGMA SPIKE DETECTED</text>
+  <line x1="35" y1="75" x2="280" y2="75" stroke="#ef4444" stroke-width="1.5" opacity="0.4" />
+  <rect x="35" y="82" width="12" height="12" fill="#ef4444" opacity="0.8">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <text x="53" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ef4444" opacity="0.8">SYSTEM TEMP: 1043K [CRITICAL]</text>
+</svg>

@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Dark room) -->
+    <radialGradient id="room-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#091824" />
+      <stop offset="70%" stop-color="#02070c" />
+      <stop offset="100%" stop-color="#000102" />
+    </radialGradient>
+
+    <!-- Monitor Glow Gradient -->
+    <radialGradient id="screen-glow" cx="30%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="40%" stop-color="#67e8f9" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Window space gradient -->
+    <radialGradient id="window-space" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a2538" />
+      <stop offset="100%" stop-color="#020810" />
+    </radialGradient>
+
+    <!-- Planet gradient -->
+    <radialGradient id="planet-grad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#67e8f9" />
+      <stop offset="100%" stop-color="#0e7490" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+    
+    .window-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+
+    /* Animations */
+    @keyframes screen-pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .screen-pulse-group { animation: screen-pulse 3s infinite ease-in-out; }
+    .twinkling-star { animation: star-twinkle 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background (Room Interior) -->
+  <rect width="800" height="450" fill="url(#room-bg)" />
+
+  <!-- Background Window Frame (Circular Observatory/Space Window) -->
+  <g transform="translate(600, 160)">
+    <!-- Window Glass area -->
+    <circle cx="0" cy="0" r="110" fill="url(#window-space)" stroke="#67e8f9" stroke-width="2" stroke-opacity="0.3" />
+    
+    <!-- Stars outside -->
+    <circle cx="-60" cy="-40" r="1" fill="#ffffff" class="twinkling-star" />
+    <circle cx="30" cy="-60" r="1.5" fill="#ffffff" class="twinkling-star" style="animation-delay: 1s;" />
+    <circle cx="70" cy="40" r="1" fill="#ffffff" class="twinkling-star" style="animation-delay: 2s;" />
+    <circle cx="-50" cy="50" r="1.2" fill="#ffffff" class="twinkling-star" style="animation-delay: 3s;" />
+
+    <!-- Distant Uranus Planet (vertical ring) -->
+    <g transform="translate(-10, -10) scale(0.4)">
+      <!-- Back rings -->
+      <ellipse cx="0" cy="0" rx="10" ry="70" fill="none" stroke="#67e8f9" stroke-width="1.5" transform="rotate(-15)" opacity="0.4" />
+      <!-- Planet -->
+      <circle cx="0" cy="0" r="30" fill="url(#planet-grad)" filter="url(#glow)" />
+      <!-- Front rings -->
+      <path d="M -7 55 A 10 70 0 0 0 7 -55" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(-15)" filter="url(#glow)" />
+    </g>
+
+    <!-- Faint orbital lines / coordinate grid in space window -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" />
+    <line x1="0" y1="-110" x2="0" y2="110" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" />
+    
+    <!-- HUD labeling outside window -->
+    <text x="35" y="90" class="window-text">URANUS_LOC</text>
+  </g>
+
+  <!-- Room Details (Walls and Floor shadows, very minimalist) -->
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#67e8f9" stroke-width="1.5" stroke-opacity="0.2" />
+  
+  <!-- Desk Setup (Developer / Writer Workspace) -->
+  <g transform="translate(100, 240)">
+    <!-- Desk Tabletop (Silhouette) -->
+    <polygon points="50,120 400,120 380,140 30,140" fill="#020810" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.3" />
+    <!-- Desk Legs -->
+    <line x1="60" y1="120" x2="60" y2="210" stroke="#67e8f9" stroke-width="2" opacity="0.3" />
+    <line x1="370" y1="120" x2="370" y2="210" stroke="#67e8f9" stroke-width="2" opacity="0.3" />
+
+    <!-- Computer Monitor / Laptop (Side Silhouette) -->
+    <path d="M 280,120 L 290,75 L 340,82 L 330,120 Z" fill="#010408" stroke="#67e8f9" stroke-width="1.5" />
+    <!-- Laptop screen (white/cyan emissive face) -->
+    <polygon points="289,76 339,83 330,119 281,112" fill="#ffffff" filter="url(#glow)" />
+    
+    <!-- Keyboard/Mouse faint glowing dots -->
+    <rect x="230" y="116" width="30" height="2" fill="#67e8f9" filter="url(#glow)" />
+    <circle cx="210" cy="117" r="1.5" fill="#67e8f9" />
+
+    <!-- Coffee Mug (Silhouette with a tiny wisp of steam) -->
+    <rect x="150" y="105" width="10" height="15" rx="1" fill="#020810" stroke="#67e8f9" stroke-width="1" />
+    <!-- Steam line -->
+    <path d="M 153,100 Q 155,95 153,90 T 155,80" fill="none" stroke="#67e8f9" stroke-width="0.75" opacity="0.5" />
+
+    <!-- Screen Glow Casting Light onto Workspace -->
+    <polygon points="289,76 100,150 280,210 330,119" fill="url(#screen-glow)" class="screen-pulse-group" />
+
+    <!-- Silhouette of the Individual (Sitting in a high-back office chair) -->
+    <!-- Chair Base & Back -->
+    <path d="M 100,210 L 120,210 M 110,210 L 110,150 L 80,80 L 100,80 Z" fill="#010407" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.2" />
+    <!-- Person Silhouette -->
+    <!-- Head leaning forward slightly -->
+    <circle cx="135" cy="85" r="9" fill="#020810" stroke="#67e8f9" stroke-width="1.5" />
+    <!-- Torso / Back curved slightly -->
+    <path d="M 115,100 C 115,100 130,115 135,130 C 140,145 130,170 120,180" fill="none" stroke="#020810" stroke-width="16" stroke-linecap="round" />
+    <!-- Arms reaching forward to keyboard -->
+    <path d="M 125,115 Q 165,115 210,116" fill="none" stroke="#67e8f9" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Glowing face profile highlight -->
+    <path d="M 143,80 Q 146,85 143,90" fill="none" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)" />
+  </g>
+
+  <!-- HUD Overlay Elements (Scenario Info) -->
+  <g>
+    <!-- Top Left -->
+    <text x="50" y="45" class="hud-text">DAILY_SCENARIO // UR_84</text>
+    <rect x="50" y="52" width="160" height="1" fill="#67e8f9" opacity="0.3" />
+    <text x="50" y="65" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.5;">CONCEPTS: ALONE_BUT_CONNECTED // FOCUS_MODE</text>
+
+    <!-- Bottom Left -->
+    <text x="50" y="405" class="hud-text" style="font-size: 14px; font-weight: 700; fill: #ffffff; letter-spacing: 3px;">03:14 AM // QUIET HOURS</text>
+    <text x="50" y="420" class="hud-text" style="fill: #67e8f9;">ISOLATED ENVIRONMENTS ENHANCE COGNITIVE FOCUS</text>
+
+    <!-- Bottom Right -->
+    <text x="750" y="405" class="hud-text" style="text-anchor: end;">CONNECTION STATUS: LOCAL</text>
+    <!-- Simple network signal diagram showing 1 bar -->
+    <g transform="translate(720, 412)" fill="#67e8f9">
+      <rect x="0" y="-4" width="4" height="4" opacity="0.9" />
+      <rect x="8" y="-8" width="4" height="8" opacity="0.2" />
+      <rect x="16" y="-12" width="4" height="12" opacity="0.2" />
+      <rect x="24" y="-16" width="4" height="16" opacity="0.2" />
+    </g>
+    <text x="750" y="426" class="hud-text" style="text-anchor: end; font-size: 8px; fill: #ffffff; opacity: 0.5;">DISTURBANCE RATE // 0.00%</text>
+  </g>
+
+  <!-- Technical border frame -->
+  <path d="M 30 30 L 30 420 L 770 420 L 770 30 Z" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.2" fill="none" />
+</svg>

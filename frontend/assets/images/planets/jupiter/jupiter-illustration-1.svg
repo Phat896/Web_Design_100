@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#191007" />
+      <stop offset="60%" stop-color="#090603" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Node Glow -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="chemical-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulse-synapse {
+      0%, 100% { stroke-width: 1.5; opacity: 0.5; }
+      50% { stroke-width: 3; opacity: 0.9; }
+    }
+    @keyframes fire-node {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #fbbf24); }
+      50% { transform: scale(1.3); filter: drop-shadow(0 0 8px #fef08a); }
+    }
+    @keyframes flow-dots {
+      0% { stroke-dashoffset: 40; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .synapse { animation: pulse-synapse 4s infinite ease-in-out; }
+    .firing-node { animation: fire-node 3s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 6 6; animation: flow-dots 5s infinite linear; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Neural Flow Grid Background -->
+  <g stroke="#ea580c" stroke-width="0.5" opacity="0.1">
+    <circle cx="400" cy="225" r="100" fill="none" />
+    <circle cx="400" cy="225" r="200" fill="none" />
+    <line x1="100" y1="225" x2="700" y2="225" />
+    <line x1="400" y1="25" x2="400" y2="425" />
+  </g>
+
+  <!-- Chemical Structure: Dopamine (Synthesizer of Confidence) -->
+  <g transform="translate(100, 100)" stroke="url(#chemical-grad)" stroke-width="2.5" fill="none" opacity="0.8">
+    <!-- Hexagon Ring -->
+    <polygon points="50,20 90,40 90,80 50,100 10,80 10,40" />
+    <!-- Double Bonds -->
+    <line x1="48" y1="25" x2="83" y2="42" stroke-width="1.5" />
+    <line x1="85" y1="77" x2="50" y2="95" stroke-width="1.5" />
+    <line x1="15" y1="42" x2="15" y2="78" stroke-width="1.5" />
+    
+    <!-- Hydroxyl OH groups -->
+    <!-- Top Left OH -->
+    <line x1="10" y1="40" x2="-10" y2="30" />
+    <text x="-25" y="32" font-family="JetBrains Mono, monospace" font-size="10" fill="#fbbf24" stroke="none">HO</text>
+    
+    <!-- Bottom Left OH -->
+    <line x1="10" y1="80" x2="-10" y2="90" />
+    <text x="-25" y="97" font-family="JetBrains Mono, monospace" font-size="10" fill="#fbbf24" stroke="none">HO</text>
+
+    <!-- Carbon Chain (Ethylamine) -->
+    <polyline points="90,60 130,60 155,85 195,85" />
+    <!-- Nitrogen/Amine group NH2 -->
+    <text x="200" y="89" font-family="JetBrains Mono, monospace" font-size="10" fill="#fef08a" font-weight="bold" stroke="none">NH₂</text>
+    
+    <!-- Label -->
+    <text x="10" y="120" font-family="JetBrains Mono, monospace" font-size="9" fill="#fb923c" stroke="none" letter-spacing="1">MOL: DOPAMINE (C₈H₁₁NO₂)</text>
+  </g>
+
+  <!-- Stylized Neural Pathways / Brain lobes in Gold -->
+  <g stroke="#fbbf24" stroke-linecap="round" fill="none">
+    <!-- Center Neural Brain Stem / Core -->
+    <path d="M 400 320 C 400 280, 420 250, 440 220 C 460 190, 480 180, 480 140" class="synapse" stroke-width="2" />
+    <path d="M 400 320 C 400 280, 380 250, 360 220 C 340 190, 320 180, 320 140" class="synapse" stroke-width="2" />
+    
+    <!-- Left hemisphere curves -->
+    <path d="M 320 140 C 270 120, 220 160, 220 210 C 220 260, 270 300, 340 300" class="synapse" stroke-width="1.5" />
+    <path d="M 320 140 C 290 100, 350 70, 400 90" class="synapse" stroke-width="1.5" />
+    <path d="M 220 210 C 180 220, 160 270, 200 310 C 240 350, 320 340, 360 320" class="synapse" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Right hemisphere curves -->
+    <path d="M 480 140 C 530 120, 580 160, 580 210 C 580 260, 530 300, 460 300" class="synapse" stroke-width="1.5" />
+    <path d="M 480 140 C 510 100, 450 70, 400 90" class="synapse" stroke-width="1.5" />
+    <path d="M 580 210 C 620 220, 640 270, 600 310 C 560 350, 480 340, 440 320" class="synapse" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Flow paths showing movement -->
+    <path d="M 220 210 C 220 260, 270 300, 340 300" stroke="#fef08a" stroke-width="2" class="flow-line" />
+    <path d="M 480 140 C 530 120, 580 160, 580 210" stroke="#ea580c" stroke-width="2" class="flow-line" />
+  </g>
+
+  <!-- Neural Nodes (Synapses firing) -->
+  <g fill="#fef08a" filter="url(#glow)">
+    <!-- Central nodes -->
+    <circle cx="400" cy="90" r="6" class="firing-node" />
+    <circle cx="320" cy="140" r="5" class="firing-node" />
+    <circle cx="480" cy="140" r="5" class="firing-node" />
+    <circle cx="440" cy="220" r="4.5" class="firing-node" />
+    <circle cx="360" cy="220" r="4.5" class="firing-node" />
+    
+    <!-- Outer sensory nodes -->
+    <circle cx="220" cy="210" r="7" fill="#fb923c" class="firing-node" />
+    <circle cx="580" cy="210" r="7" fill="#fb923c" class="firing-node" />
+    <circle cx="200" cy="310" r="5" fill="#ea580c" class="firing-node" />
+    <circle cx="600" cy="310" r="5" fill="#ea580c" class="firing-node" />
+    <circle cx="340" cy="300" r="6" fill="#fbbf24" class="firing-node" />
+    <circle cx="460" cy="300" r="6" fill="#fbbf24" class="firing-node" />
+  </g>
+
+  <!-- Synapse connection lines (Dotted/Geometric) -->
+  <g stroke="#fb923c" stroke-width="1" stroke-dasharray="2 3" opacity="0.7">
+    <line x1="320" y1="140" x2="400" y2="90" />
+    <line x1="480" y1="140" x2="400" y2="90" />
+    <line x1="320" y1="140" x2="360" y2="220" />
+    <line x1="480" y1="140" x2="440" y2="220" />
+    <line x1="360" y1="220" x2="440" y2="220" />
+    <line x1="220" y1="210" x2="320" y2="140" />
+    <line x1="580" y1="210" x2="480" y2="140" />
+  </g>
+
+  <!-- HUD overlay left panel -->
+  <g font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" opacity="0.8">
+    <text x="40" y="360">NEURON_SYNC_RATE: 99.8%</text>
+    <text x="40" y="375">CHEMISTRY: SEROTONIN_FLOW_UP</text>
+    <text x="40" y="390">FRONTAL_CORTEX: MAX_CHARGE</text>
+    <line x1="40" y1="400" x2="220" y2="400" stroke="#fb923c" stroke-width="1" />
+  </g>
+
+  <!-- HUD overlay right panel -->
+  <g font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" opacity="0.8" text-anchor="end">
+    <text x="760" y="360">COGNITIVE INDEX: EMPOWERED</text>
+    <text x="760" y="375">RESONANCE FIELD: JUPITER_GOLD</text>
+    <text x="760" y="390">SELF_EFFICACY_COEF: 1.84</text>
+    <line x1="580" y1="400" x2="760" y2="400" stroke="#fb923c" stroke-width="1" />
+  </g>
+
+  <!-- Title top right -->
+  <g font-family="JetBrains Mono, monospace" text-anchor="end" fill="#ffffff" opacity="0.9">
+    <text x="760" y="45" font-size="12" font-weight="bold" letter-spacing="2" filter="url(#glow)">NEURO-COGNITIVE MAP</text>
+    <text x="760" y="60" fill="#fb923c" font-size="8">PLANETARY INFLUENCE: JUPITER (CONFIDENCE)</text>
+  </g>
+
+  <!-- Outer HUD frames -->
+  <path d="M 20 40 L 20 20 L 40 20" fill="none" stroke="#fbbf24" stroke-width="1.5" />
+  <path d="M 780 40 L 780 20 L 760 20" fill="none" stroke="#fbbf24" stroke-width="1.5" />
+  <path d="M 20 410 L 20 430 L 40 430" fill="none" stroke="#fbbf24" stroke-width="1.5" />
+  <path d="M 780 410 L 780 430 L 760 430" fill="none" stroke="#fbbf24" stroke-width="1.5" />
+</svg>

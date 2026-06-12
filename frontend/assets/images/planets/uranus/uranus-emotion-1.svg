@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1d2e" />
+      <stop offset="60%" stop-color="#040c14" />
+      <stop offset="100%" stop-color="#010305" />
+    </radialGradient>
+
+    <!-- Core Glow Gradient -->
+    <radialGradient id="core-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#e0f7fa" />
+      <stop offset="60%" stop-color="#67e8f9" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Ice Shard Gradients -->
+    <linearGradient id="crystal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#67e8f9" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#083344" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-light" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 10px;
+      letter-spacing: 2px;
+      opacity: 0.7;
+    }
+    
+    /* Animations */
+    @keyframes pulse-core {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+
+    @keyframes rotate-cages {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes rotate-cages-reverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes drift-crystals {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+    }
+
+    .core { animation: pulse-core 6s infinite ease-in-out; transform-origin: 400px 225px; }
+    .cage-clockwise { animation: rotate-cages 40s infinite linear; transform-origin: 400px 225px; }
+    .cage-counter { animation: rotate-cages-reverse 60s infinite linear; transform-origin: 400px 225px; }
+    .drift { animation: drift-crystals 8s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Outer HUD Rings / Coordinates System -->
+  <g stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.2" fill="none">
+    <circle cx="400" cy="225" r="210" stroke-dasharray="4,12" />
+    <circle cx="400" cy="225" r="170" />
+    <line x1="400" y1="0" x2="400" y2="450" stroke-dasharray="2,8" />
+    <line x1="0" y1="225" x2="800" y2="225" stroke-dasharray="2,8" />
+  </g>
+
+  <!-- Isolated Core (A solitary glowing sphere inside cages of loneliness) -->
+  <g class="core">
+    <!-- Huge glowing sphere -->
+    <circle cx="400" cy="225" r="90" fill="url(#core-grad)" filter="url(#glow-heavy)" />
+    <!-- Center white-hot tiny point of consciousness -->
+    <circle cx="400" cy="225" r="6" fill="#ffffff" filter="url(#glow-light)" />
+  </g>
+
+  <!-- Concentric Orbiting "Cages" or Barrier Lines -->
+  <!-- Clockwise Cages -->
+  <g class="cage-clockwise" stroke="#67e8f9" fill="none">
+    <!-- Concentric rings with gaps to symbolize breakages or isolation walls -->
+    <circle cx="400" cy="225" r="110" stroke-width="1.5" stroke-dasharray="90,40,20,50" opacity="0.6" />
+    <circle cx="400" cy="225" r="140" stroke-width="1" stroke-dasharray="120,60,40,80" opacity="0.4" />
+    <circle cx="400" cy="225" r="190" stroke-width="0.75" stroke-dasharray="50,150,10,30" opacity="0.3" />
+    <!-- Fine ticks -->
+    <path d="M 400 100 L 400 105 M 400 345 L 400 350" stroke-width="2" opacity="0.8" />
+  </g>
+
+  <!-- Counter-Clockwise Cages -->
+  <g class="cage-counter" stroke="#ffffff" fill="none">
+    <circle cx="400" cy="225" r="125" stroke-width="1" stroke-dasharray="30,100,60,90" opacity="0.5" />
+    <circle cx="400" cy="225" r="155" stroke-width="0.75" stroke-dasharray="80,120,50,40" opacity="0.3" />
+  </g>
+
+  <!-- Ice Crystal Shards (representing cold isolation boundaries) -->
+  <g class="drift" fill="url(#crystal-grad)" stroke="#67e8f9" stroke-width="0.5">
+    <!-- Shard 1 (Top Left) -->
+    <polygon points="230,120 250,110 245,130 225,135" />
+    <!-- Shard 2 (Bottom Left) -->
+    <polygon points="260,320 270,305 285,325 275,335" />
+    <!-- Shard 3 (Top Right) -->
+    <polygon points="560,140 580,135 565,160 550,150" />
+    <!-- Shard 4 (Bottom Right) -->
+    <polygon points="530,300 545,290 550,315 535,320" />
+    
+    <!-- Ultra-sharp shard intersecting the ring -->
+    <polygon points="380,50 395,20 405,45 390,60" opacity="0.8" stroke="#ffffff" filter="url(#glow-light)" />
+    <polygon points="410,400 425,380 430,410 415,420" opacity="0.8" />
+  </g>
+
+  <!-- Faint connections that fail to touch -->
+  <g stroke="#67e8f9" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="3,6" fill="none">
+    <path d="M 400 225 Q 300 170 240 125" />
+    <path d="M 400 225 Q 500 280 540 307" />
+    <path d="M 400 225 Q 300 280 272 315" />
+    <path d="M 400 225 Q 500 170 562 147" />
+    <!-- Connection interrupted symbols -->
+    <circle cx="240" cy="125" r="3" fill="#040c14" stroke="#67e8f9" />
+    <circle cx="540" cy="307" r="3" fill="#040c14" stroke="#67e8f9" />
+    <circle cx="272" cy="315" r="3" fill="#040c14" stroke="#67e8f9" />
+    <circle cx="562" cy="147" r="3" fill="#040c14" stroke="#67e8f9" />
+  </g>
+
+  <!-- HUD Labels -->
+  <g>
+    <!-- Top Left HUD -->
+    <text x="40" y="45" class="hud-text">EMOTION_CORE // UR_01</text>
+    <rect x="40" y="52" width="150" height="1" fill="#67e8f9" opacity="0.3" />
+    <text x="40" y="65" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.5;">VALENCE: NEGATIVE / DEEP_ISOLATION</text>
+
+    <!-- Bottom Left HUD -->
+    <text x="40" y="385" class="hud-text">STATE // LONELINESS</text>
+    <text x="40" y="400" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.6;">OBSERVATION: NO ECHO DETECTED</text>
+    <text x="40" y="412" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.6;">ISOLATION INDEX: 0.982</text>
+
+    <!-- Bottom Right HUD -->
+    <text x="610" y="385" class="hud-text">COORD MATRIX</text>
+    <text x="610" y="400" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.6;">X-AXIS: -92.4839</text>
+    <text x="610" y="412" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.6;">Y-AXIS: +04.1205</text>
+    <path d="M 735 375 L 755 375 L 755 420" stroke="#67e8f9" stroke-width="1" fill="none" opacity="0.6" />
+  </g>
+
+  <!-- Subtle corner crosshairs -->
+  <path d="M 20 20 L 30 20 M 20 20 L 20 30" stroke="#67e8f9" stroke-width="1" opacity="0.5" />
+  <path d="M 780 20 L 770 20 M 780 20 L 780 30" stroke="#67e8f9" stroke-width="1" opacity="0.5" />
+  <path d="M 20 430 L 30 430 M 20 430 L 20 420" stroke="#67e8f9" stroke-width="1" opacity="0.5" />
+  <path d="M 780 430 L 770 430 M 780 430 L 780 420" stroke="#67e8f9" stroke-width="1" opacity="0.5" />
+</svg>

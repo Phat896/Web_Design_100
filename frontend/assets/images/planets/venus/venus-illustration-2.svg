@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#24053e"/>
+      <stop offset="50%" stop-color="#0f011d"/>
+      <stop offset="100%" stop-color="#030008"/>
+    </radialGradient>
+
+    <!-- Lake Water reflection gradient -->
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#120024"/>
+      <stop offset="100%" stop-color="#03000b"/>
+    </linearGradient>
+
+    <!-- Glowing reflection gradient -->
+    <radialGradient id="reflection-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ffb6c1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#da70d6" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="blur-water" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .star { fill: #ffffff; opacity: 0.3; }
+    .star-twinkle-1 { animation: twinkle 3s infinite ease-in-out; }
+    .star-twinkle-2 { animation: twinkle 4.5s infinite ease-in-out 1.5s; }
+    
+    /* Animations */
+    .ripple { fill: none; stroke: #ffb6c1; stroke-width: 0.75; transform-origin: 400px 320px; animation: water-ripple 6s infinite linear; }
+    .reflection-pulse { transform-origin: 400px 325px; animation: pulse-reflection 4s infinite ease-in-out; }
+    .stardust { fill: #ffd700; opacity: 0.6; animation: drift 5s infinite ease-in-out; }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+      50% { opacity: 0.9; transform: scale(1.2); }
+    }
+    @keyframes water-ripple {
+      0% { rx: 10; ry: 2; opacity: 0.8; }
+      100% { rx: 180; ry: 36; opacity: 0; }
+    }
+    @keyframes pulse-reflection {
+      0%, 100% { transform: scale(0.95); opacity: 0.6; filter: drop-shadow(0 0 5px #ffd700); }
+      50% { transform: scale(1.05); opacity: 0.95; filter: drop-shadow(0 0 20px #ffb6c1); }
+    }
+    @keyframes drift {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-15px) translateX(10px); opacity: 0.8; }
+    }
+  </style>
+
+  <!-- Background (Sky) -->
+  <rect width="800" height="280" class="bg"/>
+
+  <!-- Twinkling Stars -->
+  <g>
+    <circle cx="60" cy="50" r="1.5" class="star star-twinkle-1"/>
+    <circle cx="150" cy="90" r="2.5" class="star star-twinkle-2"/>
+    <circle cx="280" cy="40" r="1" class="star star-twinkle-1"/>
+    <circle cx="420" cy="80" r="2" class="star star-twinkle-2"/>
+    <circle cx="560" cy="50" r="1.5" class="star star-twinkle-1"/>
+    <circle cx="690" cy="90" r="2.5" class="star star-twinkle-2"/>
+    <circle cx="750" cy="40" r="1" class="star star-twinkle-1"/>
+  </g>
+
+  <!-- Constellation paths in the sky -->
+  <g stroke="#da70d6" stroke-width="0.5" fill="none" opacity="0.35">
+    <path d="M 150 90 L 280 40 L 420 80 M 560 50 L 690 90 M 280 40 L 400 120" />
+    <!-- Small stardust heart constellation in sky -->
+    <path d="M 400 120 C 390 110 375 110 365 120 C 355 110 340 110 330 120 C 315 130 335 155 365 175 C 395 155 415 130 400 120 Z" 
+          stroke="#ffd700" stroke-width="1" stroke-dasharray="2, 4"/>
+  </g>
+
+  <!-- Lake Surface Background -->
+  <rect x="0" y="280" width="800" height="170" fill="url(#water-grad)"/>
+
+  <!-- Lake Horizon Separation Line -->
+  <line x1="0" y1="280" x2="800" y2="280" stroke="#da70d6" stroke-width="1" opacity="0.6"/>
+
+  <!-- Ripples on the lake -->
+  <ellipse cx="400" cy="320" rx="30" ry="6" class="ripple"/>
+  <ellipse cx="400" cy="320" rx="60" ry="12" class="ripple" style="animation-delay: 2s;"/>
+  <ellipse cx="400" cy="320" rx="120" ry="24" class="ripple" style="animation-delay: 4s;"/>
+
+  <!-- Glowing Reflection of Inner Self (Blooming Flower Reflection) -->
+  <g class="reflection-pulse" filter="url(#blur-water)" opacity="0.7">
+    <!-- Outer light glow -->
+    <circle cx="400" cy="325" r="70" fill="url(#reflection-glow)"/>
+
+    <!-- Reflected Blooming Flower shape (upside down/distorted) -->
+    <g transform="translate(400, 325) scale(0.65)" opacity="0.8">
+      <path d="M 0 0 C -15 30 -30 40 0 80 C 30 40 15 30 0 0 Z" fill="#ffd700"/>
+      <path d="M 0 0 C -15 30 -30 40 0 80 C 30 40 15 30 0 0 Z" fill="#ffb6c1" transform="rotate(72)"/>
+      <path d="M 0 0 C -15 30 -30 40 0 80 C 30 40 15 30 0 0 Z" fill="#da70d6" transform="rotate(144)"/>
+      <path d="M 0 0 C -15 30 -30 40 0 80 C 30 40 15 30 0 0 Z" fill="#ffb6c1" transform="rotate(216)"/>
+      <path d="M 0 0 C -15 30 -30 40 0 80 C 30 40 15 30 0 0 Z" fill="#da70d6" transform="rotate(288)"/>
+      <circle cx="0" cy="0" r="12" fill="#ffd700"/>
+    </g>
+  </g>
+
+  <!-- Distorted grid lines representing holographic simulation/reflection -->
+  <g stroke="#da70d6" stroke-width="0.5" opacity="0.2" fill="none">
+    <path d="M 50 450 L 250 280 M 750 450 L 550 280 M 400 450 L 400 280" />
+    <horizontal-line y="300" x1="200" x2="600" />
+    <path d="M 100 310 L 700 310 M 50 350 L 750 350 M 0 410 L 800 410" />
+  </g>
+
+  <!-- Human Seeker Silhouette (Standing on the shore, looking down) -->
+  <g transform="translate(370, 200)">
+    <!-- Seeker body outline -->
+    <!-- Head -->
+    <circle cx="30" cy="15" r="8" fill="#080010" stroke="#ffb6c1" stroke-width="1"/>
+    <!-- Torso -->
+    <path d="M 18 80 L 15 45 Q 15 25 30 25 Q 45 25 45 45 L 42 80 Z" fill="#080010" stroke="#ffb6c1" stroke-width="1.5"/>
+    <!-- Cloak / Scarf floating (Love connection paths) -->
+    <path d="M 18 35 Q 5 40 2 60" fill="none" stroke="#ffd700" stroke-width="2" class="stardust"/>
+    <path d="M 42 35 Q 55 30 65 50" fill="none" stroke="#ffd700" stroke-width="1.5" class="stardust" style="animation-delay: 2.5s;"/>
+    
+    <!-- Arm (raised slightly in reflection/discovery) -->
+    <path d="M 18 32 Q 5 28 -5 38" fill="none" stroke="#080010" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 18 32 Q 5 28 -5 38" fill="none" stroke="#ffb6c1" stroke-width="1" stroke-linecap="round"/>
+    
+    <path d="M 42 32 Q 50 50 45 70" fill="none" stroke="#080010" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 42 32 Q 50 50 45 70" fill="none" stroke="#ffb6c1" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating golden stardust sparks (rising from lake / self) -->
+  <g class="stardust" filter="url(#glow)">
+    <circle cx="340" cy="260" r="1.5"/>
+    <circle cx="460" cy="230" r="2.5" style="animation-delay: 2s;"/>
+    <circle cx="390" cy="275" r="1" style="animation-delay: 3.5s;"/>
+  </g>
+
+  <!-- Sci-Fi HUD markings -->
+  <!-- Top Left Diagnostics -->
+  <g transform="translate(30, 40)" font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="10" opacity="0.8">
+    <text x="0" y="0" font-weight="bold" fill="#ffd700">REFLECTION MATRIX // SEC.06</text>
+    <text x="0" y="15">IDENT: SEEKER-885</text>
+    <text x="0" y="30">EMOTIVE FIELD STABILITY: 100%</text>
+  </g>
+
+  <!-- Bottom Left Diagnostics -->
+  <g transform="translate(30, 420)" font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="9" opacity="0.6">
+    <text x="0" y="0">DEPTH: 14.2M // COGNITIVE SCAN ACTIVE</text>
+  </g>
+
+  <!-- Bottom Right Diagnostic Bar -->
+  <g transform="translate(770, 420)" font-family="JetBrains Mono, Courier New, monospace" font-size="9" fill="#ffb6c1" text-anchor="end" opacity="0.8">
+    <text x="0" y="0">CORE CONCEPT: SELF-DISCOVERY</text>
+  </g>
+</svg>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1e2d" />
+      <stop offset="60%" stop-color="#030b12" />
+      <stop offset="100%" stop-color="#010305" />
+    </radialGradient>
+
+    <!-- Crystal Gradient -->
+    <linearGradient id="crystal-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#a5f3fc" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="crystal-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#083344" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glow-light" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 10px;
+      letter-spacing: 2px;
+      opacity: 0.7;
+    }
+
+    /* Animations */
+    @keyframes pulse-crystal {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+      50% { transform: scale(1.03) rotate(1deg); opacity: 1; }
+    }
+
+    @keyframes beam-drift {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
+    }
+
+    .crystal-group { animation: pulse-crystal 10s infinite ease-in-out; transform-origin: 400px 225px; }
+    .beam { animation: beam-drift 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Constellations & grid in background -->
+  <g stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" fill="none">
+    <circle cx="400" cy="225" r="180" stroke-dasharray="2,6" />
+    <circle cx="400" cy="225" r="220" />
+    <line x1="100" y1="225" x2="700" y2="225" stroke-dasharray="4,8" />
+  </g>
+
+  <!-- Faint Reflection silhouette (Face Profile looking at the crystal from the left) -->
+  <path d="M 0 450 L 0 350 C 30 350 50 310 60 290 C 70 270 65 240 70 220 C 75 200 85 180 80 160 C 75 140 60 110 50 100 L 0 60 L 0 0" fill="none" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.15" />
+  <path d="M 0 450 L 0 350 C 30 350 50 310 60 290 C 70 270 65 240 70 220 C 75 200 85 180 80 160 C 75 140 60 110 50 100 L 0 60" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.08" stroke-dasharray="3,9" />
+
+  <!-- Incident Ray (White, coming from left/self) -->
+  <path d="M 80 220 L 370 225" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8" filter="url(#glow-light)" class="beam" />
+  <circle cx="80" cy="220" r="3" fill="#ffffff" filter="url(#glow-light)" />
+
+  <!-- Refracted Rays (Spreading out to the right, showing self-discovery) -->
+  <g class="beam">
+    <!-- Ray 1 (Ice Blue) -->
+    <path d="M 430 225 L 680 120" fill="none" stroke="#67e8f9" stroke-width="2" stroke-opacity="0.8" filter="url(#glow-light)" />
+    <!-- Ray 2 (Cyan-White) -->
+    <path d="M 430 225 L 720 225" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.9" filter="url(#glow-light)" />
+    <!-- Ray 3 (Deep Ice Blue) -->
+    <path d="M 430 225 L 680 330" fill="none" stroke="#0e7490" stroke-width="2.5" stroke-opacity="0.6" />
+    
+    <!-- Fine terminal nodes at the end of refracted rays -->
+    <circle cx="680" cy="120" r="4" fill="#67e8f9" />
+    <circle cx="720" cy="225" r="3" fill="#ffffff" filter="url(#glow-light)" />
+    <circle cx="680" cy="330" r="4" fill="#0e7490" />
+  </g>
+
+  <!-- Central Prism / Low-Poly Ice Crystal -->
+  <g class="crystal-group">
+    <!-- Main Diamond Body Shards (Layered) -->
+    <!-- Top Face -->
+    <polygon points="400,150 430,225 400,240 370,225" fill="url(#crystal-grad-1)" stroke="#ffffff" stroke-width="0.75" />
+    <!-- Bottom Face -->
+    <polygon points="400,300 430,225 400,240 370,225" fill="url(#crystal-grad-2)" stroke="#67e8f9" stroke-width="0.75" />
+    <!-- Left Facet -->
+    <polygon points="400,150 370,225 400,300 350,225" fill="#0b2c3d" fill-opacity="0.6" stroke="#67e8f9" stroke-width="0.5" />
+    <!-- Right Facet -->
+    <polygon points="400,150 430,225 400,300 450,225" fill="#1b4d66" fill-opacity="0.4" stroke="#67e8f9" stroke-width="0.5" />
+    
+    <!-- Glowing core inside the crystal -->
+    <circle cx="400" cy="225" r="15" fill="#ffffff" filter="url(#glow-heavy)" opacity="0.7" />
+  </g>
+
+  <!-- Floating Crystal Sparks (Aura of self-reflection) -->
+  <g fill="none" stroke="#67e8f9" stroke-width="0.75" opacity="0.6">
+    <polygon points="340,140 348,135 345,145" />
+    <polygon points="470,150 475,140 478,153" />
+    <polygon points="440,310 445,300 448,312" />
+    <polygon points="330,280 338,275 335,285" />
+  </g>
+
+  <!-- HUD Text Info -->
+  <g>
+    <!-- Top Left -->
+    <text x="50" y="45" class="hud-text">REFRACTION_INDEX // 2.42</text>
+    <text x="50" y="58" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.5;">CRYSTALLINE_ALIGNMENT: ACTIVE</text>
+    
+    <!-- Top Right -->
+    <text x="750" y="45" class="hud-text" style="text-anchor: end;">SPECTRUM: COLD_EMISSION</text>
+    <text x="750" y="58" class="hud-text" style="text-anchor: end; font-size: 8px; fill: #ffffff; opacity: 0.5;">SECTOR: UR_06_ILLUS</text>
+
+    <!-- Bottom Left -->
+    <text x="50" y="405" class="hud-text" style="font-size: 14px; font-weight: 700; fill: #ffffff; letter-spacing: 4px;">SELF-REFLECTION</text>
+    <text x="50" y="420" class="hud-text" style="fill: #67e8f9;">DISCOVERING CLARITY IN ISOLATION</text>
+
+    <!-- Bottom Right -->
+    <text x="750" y="405" class="hud-text" style="text-anchor: end;">SIGNAL STABILITY</text>
+    <!-- Simple horizontal bar graph -->
+    <rect x="630" y="412" width="120" height="4" fill="#67e8f9" opacity="0.2" />
+    <rect x="630" y="412" width="95" height="4" fill="#ffffff" filter="url(#glow-light)" />
+    <text x="750" y="426" class="hud-text" style="text-anchor: end; font-size: 8px; fill: #ffffff; opacity: 0.5;">DECAY RATE: MINIMAL</text>
+  </g>
+
+  <!-- Tech crosshairs/marks -->
+  <path d="M 400 20 L 400 30 M 400 420 L 400 430" stroke="#67e8f9" stroke-width="1" opacity="0.4" />
+</svg>

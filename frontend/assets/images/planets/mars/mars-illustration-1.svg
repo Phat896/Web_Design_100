@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="dark-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#140205"/>
+      <stop offset="100%" stop-color="#040001"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-bright">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="2" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="chem-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .synapse-pulse { animation: synapseGlow 2.5s infinite ease-in-out; }
+    .firing-spark { stroke-dasharray: 6 6; animation: fire 8s infinite linear; }
+    .chemical-node { animation: nodePulse 4s infinite alternate ease-in-out; }
+    
+    @keyframes synapseGlow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; filter: drop-shadow(0 0 8px #ef4444); }
+    }
+    @keyframes fire {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes nodePulse {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      100% { transform: scale(1.05); opacity: 1; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#dark-bg)" />
+
+  <!-- Technical grid -->
+  <g stroke="#991b1b" stroke-width="0.5" opacity="0.1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="350" y1="0" x2="350" y2="400" />
+    <line x1="550" y1="0" x2="550" y2="400" />
+    <line x1="750" y1="0" x2="750" y2="400" />
+  </g>
+
+  <!-- Neural Network Structure (Background) -->
+  <g stroke="#991b1b" stroke-width="1.5" fill="none" opacity="0.3">
+    <path d="M 100,100 L 250,150 L 300,280 L 480,220 L 600,300 L 720,180" />
+    <path d="M 250,150 L 400,80 L 480,220" />
+    <path d="M 300,280 L 200,320 L 100,100" />
+  </g>
+
+  <!-- Neural Firing Pathways (Animating Sparks) -->
+  <g stroke="#ef4444" stroke-width="2.5" fill="none" filter="url(#glow)">
+    <path d="M 100,100 L 250,150 L 300,280 L 480,220 L 600,300 L 720,180" class="firing-spark" />
+    <path d="M 250,150 L 400,80 L 480,220" class="firing-spark" style="animation-delay: 1.5s;" />
+  </g>
+
+  <!-- Synapse Junctions (Nodes) -->
+  <circle cx="100" cy="100" r="8" fill="#ef4444" filter="url(#glow-bright)" class="synapse-pulse" />
+  <circle cx="250" cy="150" r="10" fill="#f97316" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 0.5s;" />
+  <circle cx="300" cy="280" r="7" fill="#ef4444" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 1s;" />
+  <circle cx="480" cy="220" r="12" fill="#facc15" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 1.5s;" />
+  <circle cx="600" cy="300" r="8" fill="#ef4444" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 2s;" />
+  <circle cx="720" cy="180" r="6" fill="#f97316" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 2.5s;" />
+  <circle cx="400" cy="80" r="9" fill="#ef4444" filter="url(#glow-bright)" class="synapse-pulse" style="animation-delay: 3s;" />
+
+  <!-- Chemical Structure Overlay (Adrenaline / Epinephrine) -->
+  <g class="chemical-node" transform="translate(420, 90) scale(0.9)">
+    <!-- Benzene Ring outline -->
+    <polygon points="120,80 160,103 160,149 120,172 80,149 80,103" fill="none" stroke="url(#chem-grad)" stroke-width="2.5" filter="url(#glow)" />
+    <!-- Inner double bonds -->
+    <line x1="117" y1="88" x2="152" y2="108" stroke="#f97316" stroke-width="1.5" />
+    <line x1="152" y1="144" x2="120" y2="162" stroke="#f97316" stroke-width="1.5" />
+    <line x1="88" y1="144" x2="88" y2="108" stroke="#f97316" stroke-width="1.5" />
+    
+    <!-- Hydroxyl OH groups left -->
+    <line x1="80" y1="103" x2="50" y2="86" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <text x="25" y="88" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ef4444">HO</text>
+    
+    <line x1="80" y1="149" x2="50" y2="166" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <text x="25" y="176" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ef4444">HO</text>
+
+    <!-- Side chain -->
+    <line x1="160" y1="126" x2="195" y2="106" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <!-- OH branch -->
+    <line x1="195" y1="106" x2="195" y2="76" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <text x="187" y="68" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#facc15">OH</text>
+    
+    <!-- Nitrogen chain -->
+    <line x1="195" y1="106" x2="235" y2="129" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <text x="238" y="133" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">NH</text>
+    <line x1="260" y1="129" x2="290" y2="112" stroke="url(#chem-grad)" stroke-width="2.5" />
+    <text x="294" y="115" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#facc15">CH₃</text>
+    
+    <!-- Chemical Name Tag -->
+    <rect x="70" y="195" width="180" height="24" rx="4" fill="#150505" stroke="#ef4444" stroke-width="1" />
+    <text x="160" y="211" font-family="'JetBrains Mono', monospace" font-size="10" fill="#facc15" text-anchor="middle" font-weight="bold">EPINEPHRINE [C₉H₁₃NO₃]</text>
+  </g>
+
+  <!-- Labels & Info text -->
+  <text x="35" y="325" font-family="'Outfit', sans-serif" font-size="20" font-weight="bold" fill="#ef4444" letter-spacing="1">ADRENALINE STORM</text>
+  <text x="35" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#f87171" opacity="0.8">Hyper-excitation of the central nervous system driven by hormonal release.</text>
+  <text x="35" y="368" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f97316" opacity="0.9">TRANSMISSION: ACCELERATED // SYS.REACT: IMMEDIATE</text>
+</svg>

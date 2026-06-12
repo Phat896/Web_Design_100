@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="fog" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0f172a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="70%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .mist { opacity: 0.4; animation: drift 8s infinite ease-in-out; }
+    .mist-reverse { opacity: 0.3; animation: drift 10s infinite ease-in-out reverse; }
+    @keyframes drift {
+      0%, 100% { transform: translateX(-20px) translateY(0); }
+      50% { transform: translateX(20px) translateY(-10px); }
+    }
+  </style>
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#020617" />
+  
+  <!-- Fog Overlay -->
+  <circle cx="400" cy="180" r="280" fill="url(#fog)" />
+
+  <!-- Road leading into uncertainty -->
+  <path d="M 100,400 L 700,400 L 440,180 L 360,180 Z" fill="url(#road)" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" />
+  
+  <!-- Road guide lines -->
+  <line x1="400" y1="400" x2="400" y2="180" stroke="#38bdf8" stroke-width="2" stroke-dasharray="10 15" opacity="0.6" />
+
+  <!-- Floating mist shapes -->
+  <ellipse cx="320" cy="190" rx="120" ry="30" fill="#2563eb" filter="blur(20px)" class="mist" />
+  <ellipse cx="480" cy="200" rx="140" ry="35" fill="#3b82f6" filter="blur(25px)" class="mist-reverse" />
+  <ellipse cx="400" cy="160" rx="80" ry="20" fill="#22d3ee" filter="blur(15px)" class="mist" />
+
+  <!-- A distant mysterious sign/portal -->
+  <circle cx="400" cy="180" r="8" fill="#22d3ee" opacity="0.8" />
+  <circle cx="400" cy="180" r="16" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.5" />
+  
+  <text x="30" y="360" font-family="'Outfit', sans-serif" font-size="20" font-weight="bold" fill="#22d3ee">FEAR OF UNCERTAINTY</text>
+  <text x="30" y="380" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8">The path that vanishes into the thick cosmic mist.</text>
+</svg>

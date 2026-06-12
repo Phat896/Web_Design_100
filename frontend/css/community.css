@@ -1,13 +1,19 @@
 /* ── CỘNG ĐỒNG - PHONG CÁCH KÍNH MỜ VŨ TRỤ ── */
 
+html, body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: auto !important;
+}
+
 :root {
   --comm-acc:      #00d4ff;
   --comm-acc-rgb:  0, 212, 255;
   --comm-glass:    rgba(2, 12, 30, 0.65);
   --comm-border:   rgba(0, 212, 255, 0.12);
   --comm-white:    #e8f4ff;
-  --comm-font-h:   'Syne', sans-serif;
-  --comm-font-ui:  'DM Sans', sans-serif;
+  --comm-font-h:   'Outfit', sans-serif;
+  --comm-font-ui:  'Inter', sans-serif;
   --comm-font-b:   'Inter', sans-serif;
   --comm-ease:     cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -691,4 +697,256 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+/* ── PLANET FILTER BAR ───────────────────────────────────── */
+.planet-filter-bar {
+  display: flex;
+  gap: 8px;
+  padding: 16px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: commFadeUp 0.8s var(--comm-ease) 0.15s both;
+}
+.planet-filter-bar::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(232, 244, 255, 0.08);
+  border-radius: 20px;
+  color: rgba(232, 244, 255, 0.5);
+  font-family: var(--comm-font-ui);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.28s var(--comm-ease);
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  color: rgba(232, 244, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(232, 244, 255, 0.15);
+  transform: translateY(-1px);
+}
+.filter-btn.active {
+  color: var(--comm-white);
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.08);
+}
+.filter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+  transition: box-shadow 0.28s;
+}
+.filter-btn.active .filter-dot {
+  box-shadow: 0 0 10px currentColor, 0 0 4px currentColor;
+}
+
+/* Planet-specific active colors */
+.filter-btn[data-planet="mercury"].active { border-color: rgba(138,156,168,0.4); background: rgba(138,156,168,0.1); }
+.filter-btn[data-planet="venus"].active { border-color: rgba(255,182,193,0.4); background: rgba(255,182,193,0.1); }
+.filter-btn[data-planet="earth"].active { border-color: rgba(74,158,223,0.4); background: rgba(74,158,223,0.1); }
+.filter-btn[data-planet="mars"].active { border-color: rgba(255,69,0,0.4); background: rgba(255,69,0,0.1); }
+.filter-btn[data-planet="jupiter"].active { border-color: rgba(240,230,140,0.4); background: rgba(240,230,140,0.1); }
+.filter-btn[data-planet="saturn"].active { border-color: rgba(232,213,152,0.4); background: rgba(232,213,152,0.1); }
+.filter-btn[data-planet="uranus"].active { border-color: rgba(125,232,232,0.4); background: rgba(125,232,232,0.1); }
+.filter-btn[data-planet="neptune"].active { border-color: rgba(64,128,255,0.4); background: rgba(64,128,255,0.1); }
+
+/* ── PLANET BADGE (on posts) ───────────────────────────── */
+.planet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: var(--comm-font-ui);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(232, 244, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  margin-left: 8px;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: transform .2s ease, filter .2s ease;
+}
+.planet-badge:hover { transform: translateY(-1px); filter: brightness(1.25); }
+.planet-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Planet badge color variants */
+.planet-badge[data-planet="mercury"] { color: #8a9ca8; border-color: rgba(138,156,168,0.25); background: rgba(138,156,168,0.06); }
+.planet-badge[data-planet="mercury"] .badge-dot { background: #8a9ca8; box-shadow: 0 0 6px #8a9ca8; }
+.planet-badge[data-planet="venus"] { color: #ffb6c1; border-color: rgba(255,182,193,0.25); background: rgba(255,182,193,0.06); }
+.planet-badge[data-planet="venus"] .badge-dot { background: #ffb6c1; box-shadow: 0 0 6px #ffb6c1; }
+.planet-badge[data-planet="earth"] { color: #4a9edf; border-color: rgba(74,158,223,0.25); background: rgba(74,158,223,0.06); }
+.planet-badge[data-planet="earth"] .badge-dot { background: #4a9edf; box-shadow: 0 0 6px #4a9edf; }
+.planet-badge[data-planet="mars"] { color: #ff4500; border-color: rgba(255,69,0,0.25); background: rgba(255,69,0,0.06); }
+.planet-badge[data-planet="mars"] .badge-dot { background: #ff4500; box-shadow: 0 0 6px #ff4500; }
+.planet-badge[data-planet="jupiter"] { color: #f0e68c; border-color: rgba(240,230,140,0.25); background: rgba(240,230,140,0.06); }
+.planet-badge[data-planet="jupiter"] .badge-dot { background: #f0e68c; box-shadow: 0 0 6px #f0e68c; }
+.planet-badge[data-planet="saturn"] { color: #e8d598; border-color: rgba(232,213,152,0.25); background: rgba(232,213,152,0.06); }
+.planet-badge[data-planet="saturn"] .badge-dot { background: #e8d598; box-shadow: 0 0 6px #e8d598; }
+.planet-badge[data-planet="uranus"] { color: #7de8e8; border-color: rgba(125,232,232,0.25); background: rgba(125,232,232,0.06); }
+.planet-badge[data-planet="uranus"] .badge-dot { background: #7de8e8; box-shadow: 0 0 6px #7de8e8; }
+.planet-badge[data-planet="neptune"] { color: #4080ff; border-color: rgba(64,128,255,0.25); background: rgba(64,128,255,0.06); }
+.planet-badge[data-planet="neptune"] .badge-dot { background: #4080ff; box-shadow: 0 0 6px #4080ff; }
+
+/* ── SIGNAL LEVEL BADGE ────────────────────────────────── */
+.signal-level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: var(--comm-font-ui);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: rgba(232, 244, 255, 0.65);
+  border: 1px solid rgba(232, 244, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  margin-left: 6px;
+}
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+.signal-bars .sbar {
+  width: 3px;
+  border-radius: 1px;
+  background: rgba(232, 244, 255, 0.15);
+  transition: background 0.2s;
+}
+.signal-bars .sbar:nth-child(1) { height: 4px; }
+.signal-bars .sbar:nth-child(2) { height: 6px; }
+.signal-bars .sbar:nth-child(3) { height: 8px; }
+.signal-bars .sbar:nth-child(4) { height: 10px; }
+.signal-bars .sbar:nth-child(5) { height: 12px; }
+.signal-bars .sbar.on { background: var(--comm-acc); box-shadow: 0 0 4px rgba(0, 212, 255, 0.4); }
+
+/* Signal level color intensities */
+.signal-level-badge[data-level="1"] { color: rgba(232, 244, 255, 0.45); }
+.signal-level-badge[data-level="2"] { color: rgba(0, 212, 255, 0.6); }
+.signal-level-badge[data-level="3"] { color: rgba(0, 212, 255, 0.75); }
+.signal-level-badge[data-level="4"] { color: #ffaa30; border-color: rgba(255, 170, 48, 0.2); }
+.signal-level-badge[data-level="4"] .sbar.on { background: #ffaa30; box-shadow: 0 0 4px rgba(255, 170, 48, 0.4); }
+.signal-level-badge[data-level="5"] { color: #ff6060; border-color: rgba(255, 96, 96, 0.2); background: rgba(255, 96, 96, 0.04); }
+.signal-level-badge[data-level="5"] .sbar.on { background: #ff6060; box-shadow: 0 0 4px rgba(255, 96, 96, 0.4); }
+
+.auth-field small {
+  color: rgba(196, 213, 229, 0.62);
+  font-family: var(--comm-font-b);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.auth-field input[type="email"] {
+  padding-right: 42px;
+  background-image: radial-gradient(circle at calc(100% - 20px) 50%, rgba(0, 212, 255, 0.5) 0 2px, transparent 3px);
+  background-repeat: no-repeat;
+}
+
+
+/* Community stream interactions */
+.community-stream-meta {
+  width: min(100%, 760px);
+  margin: 14px auto 8px;
+  padding: 0 6px;
+  color: rgba(232, 244, 255, 0.55);
+  font-family: var(--comm-font-ui);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.feed-status {
+  padding: 24px;
+  text-align: center;
+}
+
+.feed-status-error {
+  color: #ff7d8d;
+}
+
+.action-btn:focus-visible,
+.reply-btn:focus-visible,
+.reply-textarea:focus-visible {
+  outline: 2px solid #7cecff;
+  outline-offset: 3px;
+}
+
+.action-btn:disabled,
+.reply-btn:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.comm-post .like-btn.liked {
+  color: #ff6f91;
+  background: rgba(255, 88, 129, 0.1);
+}
+
+.like-btn.liked .heart-icon {
+  fill: currentColor;
+  filter: drop-shadow(0 0 5px rgba(255, 88, 129, 0.55));
+}
+
+.like-count {
+  min-width: 1ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .community-stream-meta {
+    margin-top: 10px;
+    padding-inline: 16px;
+  }
+
+  .post-actions {
+    gap: 6px;
+  }
+
+  .action-btn {
+    min-height: 44px;
+    padding-inline: 10px;
+  }
+
+  .reply-composer {
+    align-items: stretch;
+  }
+
+  .reply-btn {
+    min-width: 64px;
+    min-height: 44px;
+    padding-inline: 14px;
+  }
 }

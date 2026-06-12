@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#0f2b3d" />
+      <stop offset="50%" stop-color="#040e17" />
+      <stop offset="100%" stop-color="#010305" />
+    </radialGradient>
+
+    <!-- Glowing Rising Sphere -->
+    <radialGradient id="sun-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#e0fafc" />
+      <stop offset="70%" stop-color="#67e8f9" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Ice Crystal Path Gradient -->
+    <linearGradient id="cliff-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#154a66" />
+      <stop offset="50%" stop-color="#09202e" />
+      <stop offset="100%" stop-color="#02080c" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 10px;
+      letter-spacing: 2px;
+      opacity: 0.8;
+    }
+
+    /* Animations */
+    @keyframes floating-spark {
+      0% { transform: translateY(20px) translateX(0) scale(0.5); opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-100px) translateX(10px) scale(1); opacity: 0; }
+    }
+
+    @keyframes pulse-sun {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+
+    @keyframes float-ray {
+      0%, 100% { stroke-dashoffset: 0; }
+      50% { stroke-dashoffset: 40; }
+    }
+
+    .sun { animation: pulse-sun 8s infinite ease-in-out; transform-origin: 400px 320px; }
+    .spark-1 { animation: floating-spark 6s infinite linear; }
+    .spark-2 { animation: floating-spark 8s infinite linear 2s; }
+    .spark-3 { animation: floating-spark 7s infinite linear 4s; }
+    .ray-flow { stroke-dasharray: 10, 30; animation: float-ray 12s infinite linear; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="100" cy="80" r="1" />
+    <circle cx="280" cy="50" r="1.5" />
+    <circle cx="450" cy="90" r="1" />
+    <circle cx="680" cy="70" r="1.2" />
+    <circle cx="730" cy="150" r="1" />
+    <circle cx="200" cy="160" r="1" />
+    <circle cx="580" cy="180" r="1.5" />
+  </g>
+
+  <!-- Rising Crystalline Sun / Gateway of Solitude -->
+  <g class="sun">
+    <circle cx="400" cy="320" r="160" fill="url(#sun-grad)" filter="url(#glow-heavy)" />
+    <!-- Core white center -->
+    <circle cx="400" cy="320" r="30" fill="#ffffff" opacity="0.9" filter="url(#glow-soft)" />
+  </g>
+
+  <!-- Wide Horizon: Faint Crystal Spires in distance -->
+  <g fill="#082130" opacity="0.5">
+    <polygon points="100,380 120,330 140,380" />
+    <polygon points="135,380 150,345 165,380" />
+    <polygon points="620,380 640,310 660,380" />
+    <polygon points="650,380 670,335 690,380" />
+  </g>
+
+  <!-- Giant Ice Crystal Cliff / Projection from the Left -->
+  <g>
+    <!-- Under layer shadow -->
+    <polygon points="0,450 320,450 220,310 0,330" fill="#030b12" />
+    <!-- Main Cliff -->
+    <polygon points="0,450 310,450 210,300 0,320" fill="url(#cliff-grad)" stroke="#67e8f9" stroke-width="1.5" />
+    
+    <!-- Crystal facet lines (giving it a sharp low-poly look) -->
+    <line x1="0" y1="320" x2="210" y2="300" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8" filter="url(#glow-soft)" />
+    <line x1="210" y1="300" x2="160" y2="450" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="100" y1="315" x2="160" y2="450" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.3" />
+    <line x1="0" y1="390" x2="210" y2="300" stroke="#67e8f9" stroke-width="0.75" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Lonely Silhouette standing on the edge of the Cliff -->
+  <g transform="translate(195, 275) scale(0.6)">
+    <!-- Small isolated human figure, looking towards the glowing giant core -->
+    <!-- Head -->
+    <circle cx="0" cy="-28" r="5.5" fill="#040e17" stroke="#67e8f9" stroke-width="1.5" />
+    <!-- Torso -->
+    <path d="M -6 -20 L 6 -20 L 4 5 L -4 5 Z" fill="#040e17" stroke="#67e8f9" stroke-width="1.5" />
+    <!-- Arms crossed behind or resting at side -->
+    <path d="M -6 -20 C -10 -10 -8 0 -5 5" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 6 -20 C 10 -10 8 0 5 5" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Legs -->
+    <line x1="-3" y1="5" x2="-5" y2="35" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="3" y1="5" x2="5" y2="35" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" />
+    
+    <!-- Faint aura of balance glow around the silhouette -->
+    <circle cx="0" cy="-10" r="28" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="0.75" stroke-dasharray="2,4" />
+  </g>
+
+  <!-- Glowing rays rising from the silhouette up to the sky (Self-Discovery Connection) -->
+  <g stroke="#ffffff" stroke-opacity="0.5" fill="none">
+    <path d="M 195 240 Q 220 150 250 50" stroke-width="1.5" filter="url(#glow-soft)" class="ray-flow" />
+    <path d="M 195 240 Q 180 140 150 40" stroke-dasharray="2,8" stroke-width="0.75" opacity="0.6" />
+    <path d="M 195 240 Q 250 170 330 80" stroke-dasharray="3,12" stroke-width="1" opacity="0.8" />
+  </g>
+
+  <!-- Floating Sparkles / Rising energy nodes -->
+  <g fill="#ffffff" filter="url(#glow-soft)">
+    <circle cx="210" cy="180" r="2.5" class="spark-1" />
+    <circle cx="230" cy="120" r="1.5" class="spark-2" />
+    <circle cx="180" cy="150" r="2" class="spark-3" />
+    <circle cx="260" cy="90" r="3" class="spark-1" />
+    <circle cx="160" cy="100" r="1" class="spark-2" />
+  </g>
+
+  <!-- Sci-Fi HUD Overlays -->
+  <g>
+    <!-- Vertical gauge on the right side -->
+    <g transform="translate(740, 100)">
+      <line x1="0" y1="0" x2="0" y2="200" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.3" />
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#67e8f9" stroke-width="1.5" />
+      <line x1="-5" y1="200" x2="5" y2="200" stroke="#67e8f9" stroke-width="1.5" />
+      <!-- Gauge ticks -->
+      <line x1="-3" y1="50" x2="0" y2="50" stroke="#67e8f9" stroke-width="1" />
+      <line x1="-3" y1="100" x2="0" y2="100" stroke="#ffffff" stroke-width="2" />
+      <line x1="-3" y1="150" x2="0" y2="150" stroke="#67e8f9" stroke-width="1" />
+      <!-- Indicator tag -->
+      <polygon points="5,100 12,95 12,105" fill="#ffffff" filter="url(#glow-soft)" />
+      <text x="18" y="103" class="hud-text" style="font-size: 8px; fill: #ffffff;">BAL_POINT</text>
+    </g>
+
+    <!-- Top Left -->
+    <text x="40" y="45" class="hud-text">JOURNEY_STG // 03</text>
+    <text x="40" y="58" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.5;">TRANSFORMATION: IN_PROGRESS</text>
+    
+    <!-- Top Right -->
+    <text x="700" y="45" class="hud-text" style="text-anchor: end;">SECTOR: INNER_VOID</text>
+
+    <!-- Bottom Left -->
+    <text x="40" y="410" class="hud-text" style="font-size: 14px; font-weight: 700; fill: #ffffff; letter-spacing: 3px;">TRANSFORMATION</text>
+    <text x="40" y="423" class="hud-text" style="fill: #67e8f9;">BALANCING LONELINESS THROUGH COGNITION</text>
+
+    <!-- Bottom Right -->
+    <text x="620" y="415" class="hud-text" style="text-anchor: end;">INTEGRITY: 100%</text>
+    <text x="620" y="425" class="hud-text" style="text-anchor: end; font-size: 8px; fill: #ffffff; opacity: 0.5;">ECHO_DENSITY // BALANCED</text>
+  </g>
+</svg>

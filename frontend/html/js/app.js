@@ -1,7 +1,10 @@
 /* ================================================================
    SOLAR SYSTEM — Interactive Space Explorer  v2.0
    Full premium interactive orrery with:
-   - Accurate camera transform + hit-testing
+   - Accurate 
+   
+   
+   a transform + hit-testing
    - Asteroid belt (Mars–Jupiter)
    - Shooting stars
    - Planet light trails

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#1b1207" />
+      <stop offset="70%" stop-color="#070502" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Node Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradient for the timeline line -->
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="40%" stop-color="#d97706" />
+      <stop offset="75%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+
+    <!-- Pillar Gradients -->
+    <linearGradient id="pillar-1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="pillar-2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="pillar-3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="pillar-4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulse-glow {
+      0%, 100% { filter: drop-shadow(0px 0px 4px rgba(251, 191, 36, 0.6)); }
+      50% { filter: drop-shadow(0px 0px 12px rgba(254, 240, 138, 0.9)); }
+    }
+    @keyframes wave-flow {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .glowing-node { animation: pulse-glow 3s infinite ease-in-out; }
+    .timeline-flow { stroke-dasharray: 8 4; animation: wave-flow 10s infinite linear; }
+    .staggered-pillar { animation: pulse-glow 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Grid Lines (Sci-Fi background detail) -->
+  <g stroke="#d97706" stroke-width="0.5" opacity="0.15">
+    <line x1="100" y1="50" x2="100" y2="400" />
+    <line x1="280" y1="50" x2="280" y2="400" />
+    <line x1="460" y1="50" x2="460" y2="400" />
+    <line x1="640" y1="50" x2="640" y2="400" />
+    <line x1="50" y1="350" x2="750" y2="350" />
+    <line x1="50" y1="230" x2="750" y2="230" />
+    <line x1="50" y1="110" x2="750" y2="110" />
+  </g>
+
+  <!-- Title / Timeline HUD -->
+  <g font-family="JetBrains Mono, monospace" fill="#fbbf24" opacity="0.8" font-size="11">
+    <text x="50" y="45">ORIGIN TIMELINE // THE GENESIS OF CONFIDENCE</text>
+    <text x="50" y="60" fill="#fef08a" font-size="9">EVOLUTIONARY TRACKING SYSTEM</text>
+    <line x1="50" y1="70" x2="350" y2="70" stroke="#fb923c" stroke-width="1.5" opacity="0.5" />
+  </g>
+
+  <!-- Step Pillars (Exponential Growth) -->
+  <!-- Step 1: Spark of Self -->
+  <rect x="80" y="300" width="40" height="50" rx="3" fill="url(#pillar-1)" class="staggered-pillar" />
+  <!-- Step 2: Resilience / Inner Fire -->
+  <rect x="260" y="240" width="40" height="110" rx="3" fill="url(#pillar-2)" class="staggered-pillar" />
+  <!-- Step 3: Ascent of Will -->
+  <rect x="440" y="160" width="40" height="190" rx="3" fill="url(#pillar-3)" class="staggered-pillar" />
+  <!-- Step 4: Core Radiance -->
+  <rect x="620" y="80" width="40" height="270" rx="3" fill="url(#pillar-4)" class="staggered-pillar" />
+
+  <!-- Base Line -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#fb923c" stroke-width="2" />
+
+  <!-- Rising Wave (Exponential Confidence Curve) -->
+  <path d="M 100 325 C 200 325, 200 295, 280 295 C 360 295, 380 255, 460 255 C 540 255, 560 215, 640 215" 
+        fill="none" stroke="url(#line-grad)" stroke-width="4" filter="url(#glow)" />
+  <path d="M 100 325 C 200 325, 200 295, 280 295 C 360 295, 380 255, 460 255 C 540 255, 560 215, 640 215" 
+        fill="none" stroke="#ffffff" stroke-width="1.5" class="timeline-flow" opacity="0.8" />
+
+  <!-- Glowing Milestone Nodes -->
+  <!-- Node 1 -->
+  <g transform="translate(100, 325)" class="glowing-node">
+    <circle r="8" fill="#7c2d12" stroke="#b45309" stroke-width="1.5" />
+    <circle r="4" fill="#fb923c" />
+  </g>
+  <!-- Node 2 -->
+  <g transform="translate(280, 295)" class="glowing-node">
+    <circle r="8" fill="#b45309" stroke="#d97706" stroke-width="1.5" />
+    <circle r="4" fill="#fbbf24" />
+  </g>
+  <!-- Node 3 -->
+  <g transform="translate(460, 255)" class="glowing-node">
+    <circle r="10" fill="#d97706" stroke="#fbbf24" stroke-width="1.5" />
+    <circle r="5" fill="#fef08a" />
+  </g>
+  <!-- Node 4 -->
+  <g transform="translate(640, 215)" class="glowing-node">
+    <circle r="12" fill="#fbbf24" stroke="#ffffff" stroke-width="2" />
+    <circle r="6" fill="#ffffff" filter="url(#glow)" />
+  </g>
+
+  <!-- Text and Labels underneath milestones -->
+  <g font-family="JetBrains Mono, monospace" fill="#fbbf24" font-size="10" text-anchor="middle">
+    <!-- Milestone 1 -->
+    <text x="100" y="375" fill="#f87171" font-weight="bold">STAGE 01</text>
+    <text x="100" y="390" fill="#a1a1aa">SPARK</text>
+    <text x="100" y="405" fill="#a1a1aa" font-size="8">Self-Awareness</text>
+
+    <!-- Milestone 2 -->
+    <text x="280" y="375" fill="#fb923c" font-weight="bold">STAGE 02</text>
+    <text x="280" y="390" fill="#fb923c">RESILIENCE</text>
+    <text x="280" y="405" fill="#a1a1aa" font-size="8">Trial &amp; Adaptation</text>
+
+    <!-- Milestone 3 -->
+    <text x="460" y="375" fill="#fbbf24" font-weight="bold">STAGE 03</text>
+    <text x="460" y="390" fill="#fbbf24">ASCENT</text>
+    <text x="460" y="405" fill="#a1a1aa" font-size="8">Reclaiming Power</text>
+
+    <!-- Milestone 4 -->
+    <text x="640" y="375" fill="#fef08a" font-weight="bold">STAGE 04</text>
+    <text x="640" y="390" fill="#fef08a">RADIANCE</text>
+    <text x="640" y="405" fill="#a1a1aa" font-size="8">Absolute Belief</text>
+  </g>
+
+  <!-- Interactive data box in upper right -->
+  <g transform="translate(560, 40)" font-family="JetBrains Mono, monospace" font-size="9" fill="#fef08a" opacity="0.8">
+    <rect x="0" y="0" width="190" height="70" fill="#120c04" stroke="#fbbf24" stroke-width="1.5" rx="4" />
+    <text x="10" y="20" font-weight="bold">SYSTEM STATUS: HARMONIC</text>
+    <text x="10" y="35">INTEGRATION GAIN: +25.4%</text>
+    <text x="10" y="50">CURRENT STATE: RADIANCE_IV</text>
+    <path d="M 170 15 L 180 15 L 180 25" fill="none" stroke="#fbbf24" stroke-width="1" />
+  </g>
+
+  <!-- Side decorative elements -->
+  <line x1="50" y1="200" x2="50" y2="280" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 4" />
+  <line x1="750" y1="200" x2="750" y2="280" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 4" />
+  <circle cx="50" cy="240" r="3" fill="#fbbf24" />
+  <circle cx="750" cy="240" r="3" fill="#fbbf24" />
+</svg>

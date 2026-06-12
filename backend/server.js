@@ -19,6 +19,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/comments', require('./routes/comments'));
 app.use('/api/chat', require('./routes/chat'));
+app.use('/api/contact', require('./routes/contact'));
 
 // Root endpoint for testing
 app.get('/', (req, res) => {
@@ -31,3 +32,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
 });
+

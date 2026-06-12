@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#210535"/>
+      <stop offset="60%" stop-color="#0b001a"/>
+      <stop offset="100%" stop-color="#020005"/>
+    </radialGradient>
+
+    <!-- Center Heart Glow -->
+    <radialGradient id="heart-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#ffb6c1" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#da70d6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#210535" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gold-Pink Linear Gradient for lines -->
+    <linearGradient id="gold-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#ffb6c1"/>
+      <stop offset="100%" stop-color="#da70d6"/>
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .star { fill: #ffffff; opacity: 0.25; }
+    .star-twinkle-1 { animation: twinkle 3s infinite ease-in-out; }
+    .star-twinkle-2 { animation: twinkle 4s infinite ease-in-out 1s; }
+    
+    /* Animations */
+    .flower-group { transform-origin: 400px 210px; animation: spin-slow 40s linear infinite; }
+    .heart-pulse { transform-origin: 400px 210px; animation: pulse 4s infinite ease-in-out; }
+    .orbit-slow { transform-origin: 400px 210px; animation: spin-reverse 30s linear infinite; }
+    .wave-flow { stroke-dasharray: 8, 8; animation: slide-wave 12s linear infinite; }
+    .constellation-line { stroke-dasharray: 4, 15; animation: dash-crawl 8s linear infinite; }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.1; transform: scale(0.8); }
+      50% { opacity: 0.8; transform: scale(1.3); }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-reverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #ffb6c1); }
+      50% { transform: scale(1.06); filter: drop-shadow(0 0 25px #ffd700); }
+    }
+    @keyframes slide-wave {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes dash-crawl {
+      to { stroke-dashoffset: -30; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" class="bg"/>
+
+  <!-- Starfield -->
+  <g>
+    <circle cx="80" cy="90" r="1.5" class="star star-twinkle-1"/>
+    <circle cx="190" cy="60" r="1" class="star star-twinkle-2"/>
+    <circle cx="320" cy="110" r="2" class="star star-twinkle-1"/>
+    <circle cx="480" cy="50" r="1" class="star star-twinkle-2"/>
+    <circle cx="680" cy="80" r="2.5" class="star star-twinkle-1"/>
+    <circle cx="730" cy="120" r="1" class="star star-twinkle-2"/>
+    <circle cx="110" cy="350" r="1.5" class="star star-twinkle-2"/>
+    <circle cx="280" cy="390" r="1" class="star star-twinkle-1"/>
+    <circle cx="580" cy="380" r="2" class="star star-twinkle-2"/>
+    <circle cx="700" cy="360" r="1" class="star star-twinkle-1"/>
+  </g>
+
+  <!-- Giant Ambient Heart Glow in Center -->
+  <circle cx="400" cy="210" r="180" fill="url(#heart-glow)" opacity="0.45"/>
+
+  <!-- Waves of emotion (curved flowing lines) -->
+  <g stroke="url(#gold-pink)" fill="none" opacity="0.25">
+    <path d="M -50 180 Q 200 80 400 210 T 850 240" stroke-width="1.5" class="wave-flow"/>
+    <path d="M -50 240 Q 200 340 400 210 T 850 180" stroke-width="1.5" class="wave-flow" style="animation-delay: -6s;"/>
+  </g>
+
+  <!-- Concentric Orbital Paths representing rings of attraction -->
+  <g class="orbit-slow" stroke="#da70d6" fill="none" stroke-width="0.75" opacity="0.4">
+    <circle cx="400" cy="210" r="210" stroke-dasharray="10, 20"/>
+    <ellipse cx="400" cy="210" rx="280" ry="100" stroke-dasharray="3, 10" transform="rotate(-30 400 210)"/>
+    <ellipse cx="400" cy="210" rx="280" ry="100" stroke-dasharray="3, 10" transform="rotate(30 400 210)"/>
+  </g>
+
+  <!-- Star Constellation Lines forming a web / Heart Grid -->
+  <g stroke="#ffb6c1" fill="none" stroke-width="0.5" opacity="0.3" class="constellation-line">
+    <line x1="400" y1="90" x2="310" y2="150" />
+    <line x1="310" y1="150" x2="250" y2="210" />
+    <line x1="250" y1="210" x2="310" y2="270" />
+    <line x1="310" y1="270" x2="400" y2="330" />
+    <line x1="400" y1="330" x2="490" y2="270" />
+    <line x1="490" y1="270" x2="550" y2="210" />
+    <line x1="550" y1="210" x2="490" y2="150" />
+    <line x1="490" y1="150" x2="400" y2="90" />
+    
+    <!-- Cross links -->
+    <line x1="400" y1="90" x2="400" y2="330" stroke="#ffd700" stroke-width="0.75"/>
+    <line x1="250" y1="210" x2="550" y2="210" stroke="#ffd700" stroke-width="0.75"/>
+  </g>
+
+  <!-- Rotating Cosmic Flower structure -->
+  <g class="flower-group" opacity="0.85">
+    <!-- Petals made of elegant bezier paths -->
+    <!-- North Petal -->
+    <path d="M 400 210 C 370 140 370 60 400 40 C 430 60 430 140 400 210 Z" fill="url(#gold-pink)" opacity="0.25" filter="url(#glow)"/>
+    <!-- South Petal -->
+    <path d="M 400 210 C 370 280 370 360 400 380 C 430 360 430 280 400 210 Z" fill="url(#gold-pink)" opacity="0.25" filter="url(#glow)"/>
+    <!-- West Petal -->
+    <path d="M 400 210 C 330 180 250 180 230 210 C 250 240 330 240 400 210 Z" fill="url(#gold-pink)" opacity="0.25" filter="url(#glow)"/>
+    <!-- East Petal -->
+    <path d="M 400 210 C 470 180 550 180 570 210 C 550 240 470 240 400 210 Z" fill="url(#gold-pink)" opacity="0.25" filter="url(#glow)"/>
+
+    <!-- Diagonal Petals -->
+    <g transform="rotate(45 400 210)">
+      <path d="M 400 210 C 370 140 370 60 400 40 C 430 60 430 140 400 210 Z" fill="url(#gold-pink)" opacity="0.2"/>
+      <path d="M 400 210 C 370 280 370 360 400 380 C 430 360 430 280 400 210 Z" fill="url(#gold-pink)" opacity="0.2"/>
+      <path d="M 400 210 C 330 180 250 180 230 210 C 250 240 330 240 400 210 Z" fill="url(#gold-pink)" opacity="0.2"/>
+      <path d="M 400 210 C 470 180 550 180 570 210 C 550 240 470 240 400 210 Z" fill="url(#gold-pink)" opacity="0.2"/>
+    </g>
+
+    <!-- Outer small flower seeds / stars -->
+    <circle cx="400" cy="40" r="3" fill="#ffd700" filter="url(#glow)"/>
+    <circle cx="400" cy="380" r="3" fill="#ffd700" filter="url(#glow)"/>
+    <circle cx="230" cy="210" r="3" fill="#ffd700" filter="url(#glow)"/>
+    <circle cx="570" cy="210" r="3" fill="#ffd700" filter="url(#glow)"/>
+  </g>
+
+  <!-- Heart of Stardust in the very Center (Pulsing) -->
+  <g class="heart-pulse">
+    <!-- Outer glowing heart path -->
+    <path d="M 400 235 C 380 215 340 215 320 238 C 300 215 260 215 240 235 C 210 265 250 325 320 360 C 390 325 430 265 400 235 Z" 
+          fill="none" stroke="url(#gold-pink)" stroke-width="2" filter="url(#glow)" transform="translate(80, -70) scale(0.75)"/>
+    
+    <!-- Heart Fill (Semi transparent gold-purple) -->
+    <path d="M 400 235 C 380 215 340 215 320 238 C 300 215 260 215 240 235 C 210 265 250 325 320 360 C 390 325 430 265 400 235 Z" 
+          fill="url(#gold-pink)" opacity="0.45" transform="translate(80, -70) scale(0.75)"/>
+    
+    <!-- Smaller center heart -->
+    <path d="M 400 235 C 380 215 340 215 320 238 C 300 215 260 215 240 235 C 210 265 250 325 320 360 C 390 325 430 265 400 235 Z" 
+          fill="#ffd700" opacity="0.8" transform="translate(160, -93) scale(0.5)"/>
+  </g>
+
+  <!-- HUD overlay text & frames -->
+  <!-- Bottom Left Label -->
+  <g transform="translate(30, 390)" font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="10" opacity="0.8">
+    <text x="0" y="0" font-weight="bold" fill="#ffd700">EMOTIONAL FIELD: RESIDUE &amp; RESONANCE</text>
+    <text x="0" y="15">FREQUENCY: 528Hz // MATRIX LEVEL 4</text>
+    <text x="0" y="30">EMISSION: CONSTANT // ORBITAL EMOTION ENGINE</text>
+  </g>
+
+  <!-- Bottom Right System Diagnostics -->
+  <g transform="translate(770, 390)" font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="9" text-anchor="end" opacity="0.8">
+    <text x="0" y="0">SYSTEMS: SECURE</text>
+    <text x="0" y="12">CORE TEMP: 735K</text>
+    <text x="0" y="24">ATMOSPHERE: 96.5% CO2</text>
+    <text x="0" y="36">HUMAN INTERFACE: STABLE</text>
+  </g>
+
+  <!-- Corner tech markings -->
+  <path d="M 20 50 L 20 20 L 50 20" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 780 50 L 780 20 L 750 20" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 20 400 L 20 430 L 50 430" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 780 400 L 780 430 L 750 430" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.7"/>
+</svg>

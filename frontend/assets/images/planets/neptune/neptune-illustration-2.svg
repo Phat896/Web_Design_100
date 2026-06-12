@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#020818"/>
+      <stop offset="100%" stop-color="#010307"/>
+    </radialGradient>
+    <radialGradient id="nebula" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#1d4ed8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#020818" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="planet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="25" />
+    </filter>
+  </defs>
+  <style>
+    .cloud { animation: drift 12s infinite ease-in-out; }
+    .cloud-slow { animation: drift 16s infinite ease-in-out reverse; }
+    @keyframes drift {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.6; }
+      50% { transform: scale(1.1) translate(15px, -10px); opacity: 0.8; }
+    }
+  </style>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- Outer Nebula Cloud -->
+  <circle cx="450" cy="180" r="250" fill="url(#nebula)" filter="url(#blur)" class="cloud-slow" />
+  
+  <!-- Back mysterious planet -->
+  <circle cx="350" cy="180" r="90" fill="url(#planet)" />
+  <path d="M 260,180 A 90,90 0 0,0 440,180 A 90,30 0 0,1 260,180 Z" fill="#01040a" opacity="0.65" />
+
+  <!-- Front overlapping mist cloud -->
+  <ellipse cx="400" cy="220" rx="180" ry="70" fill="#1e40af" filter="url(#blur)" class="cloud" />
+  <ellipse cx="300" cy="150" rx="120" ry="50" fill="#1d4ed8" opacity="0.3" filter="url(#blur)" class="cloud-slow" />
+  <ellipse cx="480" cy="170" rx="100" ry="40" fill="#22d3ee" opacity="0.2" filter="url(#blur)" class="cloud" />
+
+  <!-- Star sparks -->
+  <g opacity="0.7">
+    <circle cx="280" cy="120" r="1.5" fill="#fff" />
+    <circle cx="360" cy="250" r="1" fill="#38bdf8" />
+    <circle cx="500" cy="130" r="2" fill="#fff" />
+    <circle cx="430" cy="90" r="1" fill="#fff" />
+  </g>
+</svg>

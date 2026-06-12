@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0713" />
+      <stop offset="50%" stop-color="#140c26" />
+      <stop offset="100%" stop-color="#05030b" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.05" />
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <!-- Glow Filter -->
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes blinkAlert {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    @keyframes screenPulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.9; }
+    }
+    @keyframes clockTurn {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes workMotion {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-2px) rotate(0.5deg); }
+    }
+    .alert { animation: blinkAlert 1.5s infinite ease-in-out; }
+    .screen { animation: screenPulse 4s infinite ease-in-out; }
+    .clock-hand { animation: clockTurn 60s linear infinite; transform-origin: 620px 140px; }
+    .clock-hand-fast { animation: clockTurn 5s linear infinite; transform-origin: 620px 140px; }
+    .worker { animation: workMotion 4s infinite ease-in-out; transform-origin: 220px 250px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Sci-Fi Window looking out at Saturn -->
+  <g transform="translate(0, 0)">
+    <!-- Window Frame -->
+    <path d="M 50 50 L 480 50 L 480 320 L 50 320 Z" fill="#08040d" stroke="#8a9ca8" stroke-width="2" />
+    <!-- Glass sheen -->
+    <path d="M 60 60 L 250 60 L 100 310 L 60 310 Z" fill="#ffffff" opacity="0.03" />
+
+    <!-- External View: Saturn Planet & Rings -->
+    <g transform="translate(-80, -30) scale(0.8)">
+      <!-- Back Ring -->
+      <ellipse cx="400" cy="220" rx="190" ry="50" transform="rotate(-15, 400, 220)" fill="none" stroke="#8a9ca8" stroke-width="14" opacity="0.4" />
+      <!-- Planet Body -->
+      <circle cx="400" cy="220" r="70" fill="#3b0764" stroke="#c084fc" stroke-width="1" />
+      <!-- Atmospheric shadow -->
+      <path d="M 330 220 A 70 70 0 0 0 470 220 Z" fill="#09050f" opacity="0.6" />
+      <!-- Front Ring -->
+      <ellipse cx="400" cy="220" rx="190" ry="50" transform="rotate(-15, 400, 220)" fill="none" stroke="#c084fc" stroke-width="14" filter="url(#glow)" opacity="0.7" />
+      <!-- Fine Ring overlay -->
+      <ellipse cx="400" cy="220" rx="210" ry="55" transform="rotate(-15, 400, 220)" fill="none" stroke="#8a9ca8" stroke-width="1.5" opacity="0.6" />
+    </g>
+
+    <!-- Small stars outside window -->
+    <circle cx="90" cy="80" r="1" fill="#ffffff" opacity="0.8" />
+    <circle cx="210" cy="90" r="1.5" fill="#ffffff" opacity="0.5" />
+    <circle cx="430" cy="110" r="1" fill="#ffffff" opacity="0.6" />
+    <circle cx="340" cy="280" r="1.5" fill="#c084fc" opacity="0.7" />
+  </g>
+
+  <!-- Giant Ticking Clock overlay in room background (Pressure symbol) -->
+  <g transform="translate(0, 0)" opacity="0.15">
+    <circle cx="620" cy="140" r="60" fill="none" stroke="#8a9ca8" stroke-width="4" />
+    <circle cx="620" cy="140" r="70" fill="none" stroke="#c084fc" stroke-width="2" stroke-dasharray="10 8" />
+    <!-- Clock Hands -->
+    <line x1="620" y1="140" x2="620" y2="95" stroke="#ffffff" stroke-width="3" class="clock-hand" />
+    <line x1="620" y1="140" x2="665" y2="140" stroke="#c084fc" stroke-width="2" class="clock-hand-fast" />
+  </g>
+
+  <!-- Worker Desk Scene -->
+  
+  <!-- Desk surface -->
+  <polygon points="30,320 770,320 740,400 60,400" fill="#0f091f" stroke="#8a9ca8" stroke-width="2" />
+  <line x1="60" y1="400" x2="740" y2="400" stroke="#c084fc" stroke-width="1.5" />
+
+  <!-- Worker Silhouette (User doing focused work under pressure) -->
+  <g class="worker">
+    <!-- Body -->
+    <path d="M 170 360 L 220 280 Q 250 260, 280 280 L 330 360 Z" fill="#08040d" stroke="#8a9ca8" stroke-width="2" />
+    <!-- Head/Hair -->
+    <circle cx="250" cy="240" r="18" fill="#08040d" stroke="#8a9ca8" stroke-width="2" />
+    <!-- Arm reaching to keyboard -->
+    <path d="M 220 295 Q 260 300, 290 325" fill="none" stroke="#8a9ca8" stroke-width="2" />
+    <path d="M 270 290 Q 290 310, 310 325" fill="none" stroke="#8a9ca8" stroke-width="1.5" />
+  </g>
+
+  <!-- Keyboard and Desk gear -->
+  <rect x="270" y="325" width="70" height="8" rx="2" fill="#1e1b4b" stroke="#8a9ca8" stroke-width="1" />
+  <!-- Holographic Mouse -->
+  <ellipse cx="360" cy="330" rx="6" ry="10" fill="#c084fc" opacity="0.5" filter="url(#glow)" />
+
+  <!-- Holographic Terminal Screens (Floating in front of worker) -->
+  
+  <!-- Main Coding Screen -->
+  <g class="screen" transform="translate(420, 210)">
+    <rect x="0" y="0" width="220" height="110" fill="url(#screenGrad)" stroke="#c084fc" stroke-width="1.5" rx="5" filter="url(#glow)" />
+    <!-- Screen Header -->
+    <line x1="5" y1="18" x2="215" y2="18" stroke="#c084fc" stroke-width="1" />
+    <circle cx="12" cy="9" r="3" fill="#ef4444" />
+    <circle cx="22" cy="9" r="3" fill="#eab308" />
+    <circle cx="32" cy="9" r="3" fill="#22c55e" />
+    <text x="50" y="12" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="8">IDE // SATURN_COMPILER.py</text>
+    
+    <!-- Code lines -->
+    <text x="10" y="32" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="8">import saturn_pressure_core as spc</text>
+    <text x="10" y="44" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="8">def stabilize_ego(load):</text>
+    <text x="20" y="56" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="8">if load &gt; limits.CRITICAL:</text>
+    <text x="30" y="68" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8">return spc.crystallize(load)</text>
+    <text x="20" y="80" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="8">return load.balance()</text>
+    
+    <!-- Cursor -->
+    <rect x="130" y="73" width="5" height="8" fill="#ffffff" class="alert" />
+  </g>
+
+  <!-- Side Floating Screen (Tasks / Alert load) -->
+  <g class="screen" transform="translate(650, 220)">
+    <rect x="0" y="0" width="110" height="90" fill="url(#screenGrad)" stroke="#8a9ca8" stroke-width="1" rx="4" />
+    <text x="10" y="15" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">TASKS LOAD</text>
+    <line x1="10" y1="20" x2="100" y2="20" stroke="#8a9ca8" stroke-width="0.5" />
+    
+    <text x="10" y="35" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="7" class="alert">[!] REFLEX_01</text>
+    <text x="10" y="48" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="7">[OK] CORE_VAL_02</text>
+    <text x="10" y="61" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="7">[OK] COGNIT_03</text>
+    <text x="10" y="74" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="7">RUNNING STRESS...</text>
+  </g>
+
+  <!-- Table Lamp (adds focus/light contrast) -->
+  <g transform="translate(130, 240)">
+    <!-- Base -->
+    <rect x="10" y="70" width="40" height="10" fill="#1e1b4b" stroke="#8a9ca8" stroke-width="1.5" />
+    <!-- Arm -->
+    <path d="M 30 70 Q 10 30, 40 10" fill="none" stroke="#8a9ca8" stroke-width="3" />
+    <!-- Head -->
+    <path d="M 30 10 L 55 -5 L 65 15 L 40 30 Z" fill="#3b0764" stroke="#c084fc" stroke-width="1.5" />
+    <!-- Glowing light cone -->
+    <polygon points="50,12 60,7 250,80 160,80" fill="url(#lampGlow)" opacity="0.35" />
+  </g>
+
+  <!-- Tech status readings -->
+  <g transform="translate(50, 345)" class="alert">
+    <circle cx="10" cy="-3" r="3.5" fill="#ef4444" />
+    <text x="20" y="0" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">DEADLINE: 00:04:12</text>
+  </g>
+  <g transform="translate(50, 360)">
+    <text x="20" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="8">ENVIR_PRESSURE: 10.4 M/S²</text>
+  </g>
+
+  <!-- HUD text in corners -->
+  <g transform="translate(40, 410)">
+    <text x="0" y="0" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">SCENARIO: NIGHT_COMPILATION // OBJ: SATURN // PERSISTENT</text>
+  </g>
+  <g transform="translate(760, 410)">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="end">SYS_TIME: 03:28:29 AM</text>
+  </g>
+</svg>

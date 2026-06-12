@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020916" />
+      <stop offset="50%" stop-color="#05172b" />
+      <stop offset="100%" stop-color="#0b2842" />
+    </linearGradient>
+    <radialGradient id="brainGlow" cx="45%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.25" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="neuronBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="neuronGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+    @keyframes spinRings {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes dashFlow {
+      0% { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatHex {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+    }
+    .node-p1 { animation: pulseNode 3s infinite ease-in-out; transform-origin: center; }
+    .node-p2 { animation: pulseNode 4s infinite ease-in-out 1s; transform-origin: center; }
+    .node-p3 { animation: pulseNode 2.5s infinite ease-in-out 1.5s; transform-origin: center; }
+    .spin-hud { animation: spinRings 40s linear infinite; transform-origin: 380px 210px; }
+    .flow-line { animation: dashFlow 2s linear infinite; }
+    .hex-float { animation: floatHex 6s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <circle cx="380" cy="210" r="220" fill="url(#brainGlow)" filter="url(#strongGlow)" />
+
+  <!-- Concentric HUD rings surrounding the brain core -->
+  <g class="spin-hud" opacity="0.3">
+    <circle cx="380" cy="210" r="180" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="10 40 100 40" />
+    <circle cx="380" cy="210" r="195" fill="none" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="4 8" />
+    <circle cx="380" cy="210" r="165" fill="none" stroke="#38bdf8" stroke-width="0.5" />
+  </g>
+
+  <!-- Chemical Formula HUD Node -->
+  <g class="hex-float" transform="translate(600, 180)">
+    <path d="M 0 0 L 25 -15 L 50 0 L 50 30 L 25 45 L 0 30 Z" fill="none" stroke="#38bdf8" stroke-width="2" filter="url(#glow)" />
+    <path d="M 50 0 L 75 -15 L 100 0 L 100 30 L 75 45 L 50 30" fill="none" stroke="#4ade80" stroke-width="2" filter="url(#glow)" />
+    
+    <!-- Chemistry Bonds -->
+    <line x1="25" y1="-15" x2="25" y2="-30" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="25" cy="-30" r="3" fill="#38bdf8" />
+    <line x1="75" y1="45" x2="75" y2="60" stroke="#4ade80" stroke-width="1.5" />
+    <circle cx="75" cy="60" r="3" fill="#4ade80" />
+    
+    <!-- Text annotation -->
+    <text x="-10" y="75" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9" letter-spacing="1">CHEMISTRY: 5HT-RECEPTOR</text>
+    <text x="-10" y="87" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="bold">HOMEOSTASIS RATE: OPTIMAL</text>
+  </g>
+
+  <!-- Neural Connection Links -->
+  <g stroke="#38bdf8" stroke-dasharray="4 4" stroke-width="1.2" opacity="0.4" fill="none">
+    <path d="M 460 180 Q 520 140, 600 180" class="flow-line" />
+    <path d="M 450 240 Q 530 270, 625 225" stroke="#4ade80" class="flow-line" style="animation-direction: reverse;" />
+  </g>
+
+  <!-- Brain/Mind Abstract Network Profile -->
+  <g filter="url(#glow)" id="neural-tree">
+    
+    <!-- Cerebrum (Upper hemisphere - blue waves of synapses) -->
+    <g fill="none" stroke="url(#neuronBlue)" stroke-linecap="round">
+      <path d="M 230 220 Q 200 170, 240 120 T 320 80 T 420 90 T 480 160 T 470 240" stroke-width="3" />
+      
+      <!-- Inner folding waves -->
+      <path d="M 260 210 Q 230 150, 290 130 T 380 110 T 440 160" stroke-width="2" />
+      <path d="M 280 220 Q 280 180, 330 160 T 420 150 T 450 210" stroke-width="2" />
+      <path d="M 330 220 Q 320 190, 360 170 T 430 180" stroke-width="1.5" />
+      
+      <!-- Horizontal synapses -->
+      <path d="M 250 170 Q 320 150, 380 180" stroke-width="1" stroke-dasharray="3 3" />
+      <path d="M 290 120 Q 370 120, 420 140" stroke-dasharray="5 5" class="flow-line" />
+    </g>
+
+    <!-- Cerebellum & Brain Stem (Lower portion - green nature roots) -->
+    <g fill="none" stroke="url(#neuronGreen)" stroke-linecap="round">
+      <!-- Cerebellum waves -->
+      <path d="M 230 220 Q 220 260, 270 280 T 350 280" stroke-width="2.5" />
+      <path d="M 250 240 Q 250 270, 300 270" stroke-width="1.8" />
+      
+      <!-- Roots / Brain Stem -->
+      <path d="M 360 260 L 360 340 Q 340 370, 310 390" stroke-width="3.5" />
+      <path d="M 360 300 Q 380 340, 400 380 Q 420 400, 440 410" stroke-width="3" />
+      <path d="M 360 270 L 380 340 Q 390 365, 380 395" stroke-width="2.5" />
+      <path d="M 310 390 Q 290 400, 270 405" stroke-width="2" />
+      <path d="M 380 395 Q 370 415, 350 420" stroke-width="1.5" />
+    </g>
+
+    <!-- Synaptic Nodes -->
+    <g>
+      <!-- Blue synaptic nodes -->
+      <circle cx="230" cy="220" r="5" fill="#38bdf8" class="node-p1" />
+      <circle cx="240" cy="120" r="6" fill="#38bdf8" class="node-p2" />
+      <circle cx="320" cy="80" r="5" fill="#38bdf8" class="node-p3" />
+      <circle cx="420" cy="90" r="6.5" fill="#38bdf8" class="node-p1" />
+      <circle cx="480" cy="160" r="5" fill="#38bdf8" class="node-p2" />
+      <circle cx="470" cy="240" r="6" fill="#38bdf8" class="node-p3" />
+      <circle cx="290" cy="130" r="4" fill="#38bdf8" class="node-p1" />
+      <circle cx="380" cy="110" r="4.5" fill="#38bdf8" class="node-p2" />
+      
+      <!-- Green root-endings -->
+      <circle cx="270" cy="280" r="5.5" fill="#4ade80" class="node-p2" />
+      <circle cx="310" cy="390" r="6" fill="#4ade80" class="node-p1" />
+      <circle cx="440" cy="410" r="6.5" fill="#4ade80" class="node-p3" />
+      <circle cx="270" cy="405" r="4" fill="#4ade80" class="node-p1" style="animation-delay: 0.5s;" />
+      <circle cx="350" cy="420" r="4.5" fill="#4ade80" class="node-p2" style="animation-delay: 0.8s;" />
+      <circle cx="380" cy="395" r="5" fill="#4ade80" class="node-p3" style="animation-delay: 1.2s;" />
+    </g>
+  </g>
+
+  <!-- Technical/HUD Indicators -->
+  <g transform="translate(400, 30)" opacity="0.8">
+    <text x="0" y="0" text-anchor="middle" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" letter-spacing="4">NEURAL NETWORK GRAPH: BALANCED STATE</text>
+    <line x1="-150" y1="8" x2="150" y2="8" stroke="url(#neuronGreen)" stroke-width="1" />
+  </g>
+
+  <!-- Left Bottom HUD box -->
+  <g transform="translate(40, 320)" opacity="0.75">
+    <rect width="200" height="90" rx="4" fill="#081b33" fill-opacity="0.6" stroke="#4ade80" stroke-width="1" />
+    <text x="15" y="22" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="bold">SYNAPTIC SCAN</text>
+    
+    <!-- Bar charts -->
+    <text x="15" y="42" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">DOPAMINE</text>
+    <rect x="75" y="36" width="100" height="5" rx="1.5" fill="#020916" />
+    <rect x="75" y="36" width="75" height="5" rx="1.5" fill="#38bdf8" />
+    
+    <text x="15" y="57" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">SEROTONIN</text>
+    <rect x="75" y="51" width="100" height="5" rx="1.5" fill="#020916" />
+    <rect x="75" y="51" width="82" height="5" rx="1.5" fill="#4ade80" />
+
+    <text x="15" y="74" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9">E-BALANCE: OPTIMAL (98.9%)</text>
+  </g>
+</svg>

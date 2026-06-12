@@ -29,10 +29,28 @@
   text-shadow: 0 0 14px rgba(0, 229, 255, 0.55);
   flex-shrink: 0;
   margin-right: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-logo span {
   color: #00e5ff;
+}
+
+.nav-logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  box-shadow: 0 0 13px rgba(0, 229, 255, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-logo:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.5);
 }
 
 .nav-links {

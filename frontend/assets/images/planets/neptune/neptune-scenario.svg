@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#040d21"/>
+      <stop offset="100%" stop-color="#010307"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- Desk and Chair Outline -->
+  <path d="M 280,320 L 520,320 L 520,335 L 280,335 Z" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+  <line x1="320" y1="335" x2="300" y2="400" stroke="#1e293b" stroke-width="3" />
+  <line x1="480" y1="335" x2="500" y2="400" stroke="#1e293b" stroke-width="3" />
+
+  <!-- Student Silhouette -->
+  <g transform="translate(350, 190)" fill="#020617" stroke="#38bdf8" stroke-width="2">
+    <!-- Torso -->
+    <path d="M 25,65 Q 10,85 5,110 L 65,110 Q 60,85 45,65 Z" />
+    <!-- Head leaning forward on hands -->
+    <circle cx="35" cy="40" r="14" />
+    <path d="M 20,48 Q 28,58 35,48" stroke-width="1.5" />
+    <!-- Arms crossed on desk -->
+    <path d="M 10,85 Q 25,95 40,90" fill="none" />
+  </g>
+
+  <!-- Glowing Clock (Symbol of Time Pressure/Uncertainty) -->
+  <g transform="translate(480, 140)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#ef4444" stroke-width="2" />
+    <line x1="0" y1="0" x2="0" y2="-18" stroke="#ef4444" stroke-width="2" />
+    <line x1="0" y1="0" x2="12" y2="8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
+    <text x="35" y="5" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ef4444">02:58 AM</text>
+  </g>
+
+  <!-- Floating Question Marks and Worries -->
+  <g fill="none" stroke="#60a5fa" opacity="0.6" filter="url(#glow)">
+    <!-- Question marks -->
+    <path d="M 280,130 C 280,110 300,110 300,120 C 300,130 290,135 290,140" stroke-width="2" />
+    <circle cx="290" cy="148" r="1.5" fill="#60a5fa" />
+    
+    <path d="M 580,220 C 580,200 600,200 600,210 C 600,220 590,225 590,230" stroke-width="2" style="stroke: #ef4444;" />
+    <circle cx="590" cy="238" r="1.5" fill="#ef4444" />
+  </g>
+  
+  <!-- Glowing laptop light reflecting -->
+  <path d="M 320,320 L 350,290 L 355,292 L 325,320 Z" fill="#38bdf8" opacity="0.3" filter="url(#glow)" />
+  <!-- Laptop silhouette -->
+  <path d="M 335,285 L 360,260 L 365,263 L 340,288 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+
+  <!-- Background stardust spirals -->
+  <path d="M 150,150 Q 250,50 380,100 T 550,50" fill="none" stroke="#1e3b8a" stroke-width="1" stroke-dasharray="4 4" opacity="0.4" />
+</svg>

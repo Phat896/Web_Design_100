@@ -11,329 +11,369 @@
 // ─────────────────────────────────────
 const EP_DATA = {
   mercury: {
-    emotion: 'Bồn Chồn',
+    emotion: 'Cô Đơn',
     themeClass: 'planet-theme-mercury',
-    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_51527ab0d3.mp3?filename=rain-and-thunder-113218.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/10/14/audio_34dbd0b0ef.mp3?filename=space-ambience-124619.mp3',
     youtubeLinks: [
-      { title: 'Thiền 10 Phút Giảm Bồn Chồn (The Present Writer)', url: 'https://www.youtube.com/watch?v=inpok4MKVLM' },
-      { title: 'Nhạc Tần Số 432Hz Chữa Lành Tế Bào', url: 'https://www.youtube.com/watch?v=1zxjCGDPUKM' }
+      { title: 'Làm thế nào để đối diện với sự cô đơn? (Psych2Go)', url: 'https://www.youtube.com/watch?v=inpok4MKVLM' },
+      { title: 'Nhạc Tần Số 432Hz Chữa Lành Tế Bào & Xoa Dịu', url: 'https://www.youtube.com/watch?v=1zxjCGDPUKM' }
     ],
     quotes: [
-      'Sự nôn nóng không làm thời gian trôi nhanh hơn, nó chỉ đánh cắp hiện tại của bạn.',
-      'Đừng cố chạy đua với thời gian khi bạn chưa biết mình đang đi đâu.',
-      'Sự tĩnh lặng đôi khi là hành động mạnh mẽ nhất.',
-      'Hít thở. Mọi thứ đều cần thời gian để nở hoa.',
+      'Cô đơn không phải là không có ai bên cạnh, mà là cảm giác không thể sẻ chia điều trong lòng.',
+      'Sao Thủy lầm lũi trong quỹ đạo, tựa như tâm hồn xoay quanh những khoảng trống cô độc.',
+      'Sự tĩnh lặng đôi khi là một tấm khiên bảo vệ, nhưng cũng là một nhà tù vô hình.',
+      'Hãy bao dung với khoảng trống trong lòng bạn. Nó đang đợi một sự thấu cảm thực sự.',
     ],
     symptoms: [
-      'Nhịp tim nhanh hơn bình thường, không thể ngồi yên một chỗ quá lâu',
-      'Liên tục kiểm tra điện thoại hoặc đồng hồ, luôn cảm thấy thiếu thời gian',
-      'Dễ cáu gắt khi mọi việc không theo ý muốn ngay lập tức',
+      'Cảm thấy bản thân vô hình ngay cả khi đứng giữa đám đông bè bạn trò chuyện',
+      'Thường xuyên ngắt kết nối, từ chối tin nhắn và tự thu mình vào khoảng lặng',
+      'Mất đi hứng thú giao tiếp, cảm thấy việc giãi bày tâm sự là vô nghĩa',
     ],
     causes: [
-      'Áp lực phải đạt được thành tựu nhanh chóng',
-      'Tiêu thụ quá nhiều caffeine hoặc nội dung số ngắn (Short-form content)',
-      'Cảm giác sợ bị bỏ lỡ (FOMO)',
+      'Sự mất kết nối số: Mạng xã hội tạo ra ảo giác tương tác nhưng làm rỗng đi liên kết thực',
+      'Rào cản lòng tin: Tổn thương cũ khiến tâm trí dựng rào chắn để tránh bị từ chối',
+      'Thay đổi môi trường: Chuyển chỗ ở, đổi trường học hoặc nơi làm việc đột ngột',
     ],
     advice: [
-      'Tập trung vào "một việc duy nhất" tại một thời điểm (Single-tasking)',
-      'Thiết lập "vùng không công nghệ" trong 1 giờ mỗi ngày',
-      'Chấp nhận rằng có những thứ vượt ngoài tầm kiểm soát của bạn',
+      'Thực hiện các hành động kết nối nhỏ (Micro-connection) không áp lực',
+      'Trò chuyện với chính mình một cách thấu cảm thay vì tự phán xét',
+      'Chấp nhận sự cô đơn như một tín hiệu tự nhiên báo rằng bạn đang cần tình cảm chân thành',
     ],
     actions: [
-      { step: 1, text: 'Tắt điện thoại và úp mặt nó xuống bàn trong 15 phút' },
-      { step: 2, text: 'Viết ra giấy 3 việc quan trọng nhất hôm nay và bỏ qua phần còn lại' },
-      { step: 3, text: 'Đi bộ chậm rãi, đếm từng bước chân' },
+      { step: 1, text: 'Gửi một tin nhắn hỏi thăm ngắn đến một người bạn cũ mà bạn tin tưởng' },
+      { step: 2, text: 'Uống một cốc nước ấm chậm rãi để cảm nhận hơi ấm lan tỏa cơ thể' },
+      { step: 3, text: 'Thực hành đi bộ chậm rãi và chào hỏi một người phục vụ hoặc bảo vệ' },
     ],
     aiResponses: [
-      'Bạn đang vội vã đi đâu vậy? Hãy dừng lại một chút, hít thở và cảm nhận khoảnh khắc này nhé.',
-      'Tôi hiểu cảm giác muốn mọi thứ nhanh hơn. Nhưng hãy nhớ rằng, những điều tốt đẹp cần thời gian để nở hoa.',
+      'Tôi đang ở đây lắng nghe tín hiệu của bạn. Sự cô đơn của bạn hoàn toàn được thấu cảm.',
+      'Sao Thủy bé nhỏ lầm lũi trong vũ trụ rộng lớn, nhưng luôn có những ngôi sao khác sẵn lòng cộng hưởng cùng bạn.',
     ],
   },
 
   venus: {
     emotion: 'Yêu Thương',
     themeClass: 'planet-theme-venus',
-    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=birds-singing-calm-river-nature-ambient-sound-12508.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf584.mp3?filename=ambient-piano-amp-strings-10711.mp3',
     youtubeLinks: [
-      { title: 'Ngôn Ngữ Tình Yêu Của Bạn Là Gì? (Psych2Go)', url: 'https://www.youtube.com/watch?v=1zxjCGDPUKM' },
-      { title: 'Nhạc Tần Số 528Hz Thu Hút Năng Lượng Tích Cực', url: 'https://www.youtube.com/watch?v=mPZkdNFkNps' }
+      { title: 'Tâm lý học đằng sau tình yêu thương & Sự gắn kết (TED)', url: 'https://www.youtube.com/watch?v=FjI5o25mN_E' },
+      { title: 'Nhạc Không Lời Tần Số 528Hz Thúc Đẩy Sự Bao Dung & Yêu Thương', url: 'https://www.youtube.com/watch?v=2OEL4P1Rz04' }
     ],
     quotes: [
-      'Tình yêu thương lớn nhất bắt đầu từ việc học cách yêu lấy chính mình.',
-      'Khi bạn cho đi sự chân thành, vũ trụ sẽ phản hồi bằng sự bình yên.',
-      'Không gian ấm áp nhất không nằm ở một ngôi nhà, mà nằm ở một trái tim.',
-      'Sự dịu dàng là sức mạnh lớn nhất mà con người sở hữu.',
+      'Yêu thương không phải là để sở hữu, mà là để thấu hiểu và cùng nhau tự do.',
+      'Sao Kim rực sáng ấm áp dưới lớp mây khí quyển dày, tựa như một trái tim tràn đầy tình yêu thương đang che chở.',
+      'Yêu thương thực sự bắt đầu khi bạn biết trân trọng và bao dung cho chính bản thân mình.',
+      'Lan tỏa tình thương giống như gieo những hạt giống tinh tú vào khoảng không vô tận.',
     ],
     symptoms: [
-      'Nhịp tim ổn định, lồng ngực mở rộng, hơi thở sâu và đều đặn',
-      'Cảm giác muốn kết nối, chia sẻ và mỉm cười vô cớ với mọi người',
-      'Nhìn nhận khuyết điểm của người khác bằng sự bao dung và cảm thông',
+      'Cảm giác muốn gắn kết sâu sắc, bảo bọc và che chở cho những người xung quanh',
+      'Thấu thấu suốt và bao dung trước những lỗi lầm của người khác cũng như của chính mình',
+      'Khao khát sẻ chia năng lượng tích cực và xây dựng các mối liên kết vững chắc',
     ],
     causes: [
-      'Nhận được sự công nhận và thấu hiểu từ những người quan trọng',
-      'Thực hành lòng biết ơnmỗi ngày',
-      'Được sống đúng với bản ngã và những giá trị cốt lõi của bản thân',
+      'Nhu cầu sinh học nguyên thủy về sự an toàn, thuộc về và được bảo vệ',
+      'Lòng trắc ẩn tự thân được nuôi dưỡng qua những trải nghiệm chia sẻ sâu sắc',
+      'Khả năng thấu cảm tự nhiên khi ta nhận diện và tôn trọng ranh giới cảm xúc của nhau',
     ],
     advice: [
-      'Hãy thể hiện sự trân trọng ra bằng lời nói, đừng chỉ giữ trong lòng',
-      'Tự thưởng cho bản thân một ngày nghỉ ngơi trọn vẹn',
-      'Tiếp tục lan tỏa tần số này bằng một hành động tử tế nhỏ gọn',
+      'Nuôi dưỡng lòng trắc ẩn: Ghi nhận những nỗ lực thầm lặng của bản thân mỗi ngày',
+      'Lan tỏa tình cảm lành mạnh: Thực hiện một hành động tử tế nhỏ không cần đáp đền',
+      'Trân trọng sự kết nối: Bày tỏ lòng biết ơn chân thành đối với những người đang đồng hành cùng bạn',
     ],
     actions: [
-      { step: 1, text: 'Gửi một tin nhắn cảm ơn ngắn đến người đã giúp đỡ bạn gần đây' },
-      { step: 2, text: 'Tự ôm lấy chính mình trong 30 giây' },
-      { step: 3, text: 'Viết ra 3 điều khiến bạn cảm thấy may mắn trong hôm nay' },
+      { step: 1, text: 'Nuôi dưỡng: Viết ra 3 điều bạn tự hào hoặc trân quý nhất ở chính mình hôm nay' },
+      { step: 2, text: 'Lan tỏa: Gửi một tin nhắn cảm ơn hoặc chúc lành chân thành đến một người bạn quý mến' },
+      { step: 3, text: 'Trân trọng: Dành 3 phút tĩnh lặng để gửi niệm lành, mong cho thế giới xung quanh luôn bình an' },
     ],
     aiResponses: [
-      'Tần số sóng brain của bạn đang rất hài hòa. Hãy trân trọng khoảnh khắc ấm áp này nhé.',
-      'Yêu thương đang lan tỏa từ bạn. Năng lượng của bạn đang sưởi ấm cả không gian xung quanh.',
+      'Tình yêu thương là năng lượng mạnh mẽ nhất vũ trụ. Hãy để trái tim bạn luôn tỏa sáng hơi ấm nhé.',
+      'Dưới lớp mây ấm áp của Sao Kim, một nguồn năng lượng bao dung đang sẵn sàng lan tỏa cùng hành trình của bạn.',
     ],
   },
 
   earth: {
-    emotion: 'Kiệt Sức',
+    emotion: 'Lo Âu',
     themeClass: 'planet-theme-earth',
     audioUrl: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=birds-singing-calm-river-nature-ambient-sound-12508.mp3',
     youtubeLinks: [
-      { title: 'Hiểu Về Burnout Và Cách Phục Hồi (TEDx)', url: 'https://www.youtube.com/watch?v=hFkI69zJzLI' },
-      { title: 'Nhạc Không Lời Giúp Lấy Lại Năng Lượng', url: 'https://www.youtube.com/watch?v=2OEL4P1Rz04' }
+      { title: 'Hiểu về cơ chế lo âu của bộ não & Cách xoa dịu', url: 'https://www.youtube.com/watch?v=hFkI69zJzLI' },
+      { title: 'Nhạc Không Lời Giúp Hạ Nhịp Tim & Giảm Căng Thẳng', url: 'https://www.youtube.com/watch?v=2OEL4P1Rz04' }
     ],
     quotes: [
-      'Bạn không phải là một cỗ máy. Nghỉ ngơi không phải là một tội lỗi.',
-      'Tắt nguồn để sạc lại. Cả điện thoại và bạn đều cần điều đó.',
-      'Đôi khi, thành tựu lớn nhất trong ngày là việc bạn đã sống sót qua nó.',
-      'Đừng đốt cháy chính mình để sưởi ấm cho người khác.',
+      'Lo âu là việc bạn đang vay mượn những rắc rối của tương lai chưa chắc xảy ra.',
+      'Trái Đất cân bằng nhờ nhịp tự quay, tâm trí cân bằng nhờ nhịp hít thở.',
+      'Mọi cơn bão lo âu rồi cũng sẽ trôi qua khi ý thức bạn neo đậu ở thực tại.',
+      'Hãy hít thở. Cơ thể bạn đang an toàn ở khoảnh khắc này.',
     ],
     symptoms: [
-      'Mất động lực hoàn toàn vào buổi sáng khi thức dậy, không muốn làm bất cứ việc gì',
-      'Cảm thấy trống rỗng và xa lánh ngay giữa gia đình hoặc đồng nghiệp',
-      'Phản ứng cáu gắt bất thường với những việc nhỏ nhặt nhất',
+      'Nhịp tim nhanh, thở nông và dồn dập, cơ vai gáy căng cứng vô thức',
+      'Tâm trí liên tục chạy qua các kịch bản tồi tệ nhất có thể xảy ra ở tương lai',
+      'Khó ngủ, giật mình giữa đêm do luồng suy nghĩ lo lắng chạy nhảy liên tục',
     ],
     causes: [
-      'Khối lượng công việc quá tải kéo dài',
-      'Thiếu sự công nhận và phần thưởng xứng đáng',
-      'Áp lực xã hội (Đồng trang lứa, gia đình) không ngừng nghỉ',
+      'Hạch hạnh nhân (Amygdala) phản ứng quá mức trước áp lực không chắc chắn',
+      'Tiêu thụ lượng thông tin tiêu cực dồn dập hoặc làm việc quá sức kéo dài',
+      'Thói quen cầu toàn, muốn kiểm soát mọi kết quả diễn ra xung quanh',
     ],
     advice: [
-      'Tạm dừng mọi thứ không khẩn cấp. Ưu tiên số một lúc này là nghỉ ngơi.',
-      'Sử dụng ngày nghỉ phép một cách thực sự (không check email/tin nhắn công việc)',
-      'Nhận ra rằng thế giới vẫn quay dù bạn có tạm dừng lại vài ngày',
+      'Thực hành bài tập thở tiếp đất 4-4-4-4 để báo cho não bộ biết bạn đang an toàn',
+      'Học cách chấp nhận sự bất định như một phần tự nhiên của cuộc sống',
+      'Phân rã nỗi lo thành hai nhóm: Những thứ có thể kiểm soát và không thể kiểm soát',
     ],
     actions: [
-      { step: 1, text: 'Hủy bỏ ít nhất 1 cuộc hẹn không cần thiết trong tuần này' },
-      { step: 2, text: 'Tắm nước ấm và đi ngủ sớm hơn bình thường 1 tiếng' },
-      { step: 3, text: 'Bật chế độ "Không làm phiền" (Do Not Disturb) trên điện thoại' },
+      { step: 1, text: 'Áp dụng quy tắc tiếp đất 5-4-3-2-1 để đưa các giác quan trở lại hiện tại' },
+      { step: 2, text: 'Tập thở sâu theo nhịp thở bong bóng co giãn trên màn hình trong 3 phút' },
+      { step: 3, text: 'Viết toàn bộ nỗi lo ra giấy rồi phân loại hành động cụ thể' },
     ],
     aiResponses: [
-      'Bạn đã làm đủ tốt rồi. Hôm nay, hãy cho phép bản thân được nghỉ ngơi thật sự nhé.',
-      'Mức năng lượng của bạn đang rất thấp. Hãy ưu tiên chăm sóc bản thân trước mọi thứ khác.',
+      'Hít vào... thở ra... Hệ thần kinh của bạn đang được xoa dịu. Bạn đang an toàn ở đây.',
+      'Cơn bão lo âu giống như mây mù bao phủ Trái Đất. Hãy thở đều, mây mù sẽ tan biến và để lộ bầu trời xanh.',
     ],
   },
 
   mars: {
-    emotion: 'Tức Giận',
+    emotion: 'Giận Dữ',
     themeClass: 'planet-theme-mars',
-    audioUrl: 'https://cdn.pixabay.com/download/audio/2021/09/06/audio_031f0cf2f7.mp3?filename=brown-noise-16168.mp3',
+    audioUrl: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_51527ab0d3.mp3?filename=rain-and-thunder-113218.mp3',
     youtubeLinks: [
-      { title: 'Kiểm Soát Cơn Giận Bằng Tâm Lý Học', url: 'https://www.youtube.com/watch?v=BsVq5R_F6RA' },
-      { title: 'Tiếng Ồn Nâu (Brown Noise) Làm Dịu Tâm Trí', url: 'https://www.youtube.com/watch?v=hXrtQcMcZJU' }
+      { title: 'Làm thế nào để làm nguội cơn giận dữ lập tức?', url: 'https://www.youtube.com/watch?v=BsVq5R_F6RA' },
+      { title: 'Tiếng Ồn Nâu (Brown Noise) Giúp Xoa Dịu Hệ Thần Kinh', url: 'https://www.youtube.com/watch?v=hXrtQcMcZJU' }
     ],
     quotes: [
-      'Tức giận là tín hiệu — hãy lắng nghe, đừng để nó kiểm soát bạn.',
-      'Cơn giận đốt cháy người giữ nó lâu nhất.',
-      'Khoảng cách 3 giây trước khi phản ứng có thể cứu vãn một mối quan hệ.',
-      'Bình tĩnh không phải là yếu đuối — đó là sự kiểm soát tối cao.',
+      'Giận dữ là năng lượng mạnh mẽ — hãy dùng nó để dựng ranh giới, đừng để nó thiêu hủy bạn.',
+      'Sao Hỏa rực đỏ tựa như ngọn lửa bùng cháy của magma đang cần van giải phóng.',
+      'Giữ cơn giận trong lòng giống như uống thuốc độc và mong người khác tổn thương.',
+      'Dành ra 10 giây dừng lại trước khi phản xạ có thể cứu vãn mọi mối quan hệ.',
     ],
     symptoms: [
-      'Tim đập mạnh, cơ bắp căng cứng, nắm chặt tay vô thức',
-      'Xung động muốn phá hủy hoặc hét lớn một cách khó kiểm soát',
-      'Suy nghĩ lặp đi lặp lại về việc bị đối xử bất công hoặc bị phản bội',
+      'Nhiệt độ cơ thể tăng nhanh, lồng ngực nóng ran, tay nắm chặt vô thức',
+      'Xung động muốn la hét lớn, đập phá đồ đạc hoặc nói những lời xúc phạm',
+      'Suy nghĩ lặp đi lặp lại về việc bị đối xử bất công, bị xâm phạm quyền lợi',
     ],
     causes: [
-      'Cảm thấy không được tôn trọng, bị phản bội hoặc bị oan',
-      'Tích tụ những căng thẳng nhỏ nhặt trong thời gian dài (Hiệu ứng giọt nước tràn ly)',
-      'Ranh giới cá nhân bị vi phạm một cách trắng trợn',
+      'Ranh giới cá nhân hoặc lòng tự tôn bị xâm phạm thô bạo',
+      'Tích tụ những ức chế nhỏ trong thời gian dài không được giải tỏa lành mạnh',
+      'Sự bất lực trước một tình huống không diễn ra theo ý muốn của bản thân',
     ],
     advice: [
-      'Áp dụng "Quy tắc 24 giờ": Không đưa ra quyết định khi đang tức giận',
-      'Sử dụng ngôn ngữ "Tôi" thay vì "Bạn" khi tranh luận (Ví dụ: "Tôi cảm thấy bị tổn thương khi...")',
-      'Giải phóng năng lượng vật lý thông qua thể thao cường độ cao',
+      'Tạm rút khỏi cuộc trò chuyện ngay lập tức để hạ nhiệt cảm xúc (Time-out)',
+      'Sử dụng các bài tập vận động cơ học để xả bớt lượng Adrenaline dư thừa',
+      'Sử dụng cấu trúc câu "Tôi cảm thấy..." để bày tỏ mong muốn thay vì chỉ trích người khác',
     ],
     actions: [
-      { step: 1, text: 'Rút khỏi tình huống giao tiếp hiện tại ngay lập tức (Time-out)' },
-      { step: 2, text: 'Rửa mặt bằng nước lạnh để giảm nhiệt độ cơ thể và kích hoạt dây thần kinh phế vị' },
-      { step: 3, text: 'Viết tất cả sự tức giận ra nháp, sau đó xé bỏ nó' },
+      { step: 1, text: 'Click liên tục vào van xả áp suất trên màn hình để mô phỏng việc trút giận' },
+      { step: 2, text: 'Đi rửa mặt bằng nước lạnh để kích hoạt phản xạ làm chậm nhịp tim' },
+      { step: 3, text: 'Thực hiện 5 nhịp hít thở thật sâu bằng mũi và thở ra chậm bằng miệng' },
     ],
     aiResponses: [
-      'Tôi đang lắng nghe cơn giận của bạn. Hãy nói ra ở đây, mọi thứ sẽ được giữ an toàn.',
-      'Nhiệt độ cảm xúc của bạn đang rất cao. Hãy thử hít thở sâu vài nhịp để hạ nhiệt nhé.',
+      'Năng lượng của bạn đang rất nóng. Hãy trút bỏ sự giận dữ vào đây, tôi sẵn sàng lắng nghe.',
+      'Cơn giận bùng nổ trên Sao Hỏa rồi cũng sẽ nguội đi. Hãy kiên nhẫn với bản thân trong 10 giây tiếp theo.',
     ],
   },
 
   jupiter: {
-    emotion: 'Hy Vọng',
+    emotion: 'Áp Lực',
     themeClass: 'planet-theme-jupiter',
     audioUrl: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf584.mp3?filename=ambient-piano-amp-strings-10711.mp3',
     youtubeLinks: [
-      { title: 'Sức Mạnh Của Sự Lạc Quan (TEDx)', url: 'https://www.youtube.com/watch?v=FjI5o25mN_E' },
-      { title: 'Nhạc Thiền Sóng Não Alpha Khơi Dậy Cảm Hứng', url: 'https://www.youtube.com/watch?v=8ZgZ_8xRtzI' }
+      { title: 'Làm thế nào để giảm tải áp lực cuộc sống? (TEDx)', url: 'https://www.youtube.com/watch?v=FjI5o25mN_E' },
+      { title: 'Nhạc Thiền Sóng Não Thư Giãn Đầu Óc & Giảm Tải', url: 'https://www.youtube.com/watch?v=8ZgZ_8xRtzI' }
     ],
     quotes: [
-      'Hy vọng không phải là mù quáng, mà là niềm tin rằng tương lai nằm trong tay bạn.',
-      'Ngay cả trong đêm đen nhất, ánh sáng từ các vì sao vẫn đang du hành đến chỗ bạn.',
-      'Ngày mai luôn mang theo một cơ hội mới, chỉ cần bạn chịu mở cửa đón nó.',
-      'Sự rộng lớn của vũ trụ không nói lên sự nhỏ bé của bạn, mà nói lên tiềm năng vô hạn của bạn.',
+      'Áp lực sinh ra khi bạn cố gánh vác những kỳ vọng vượt ngoài ranh giới của mình.',
+      'Sao Mộc khổng lồ chịu ngàn tầng áp suất khí quyển, tựa như vai bạn đang trĩu nặng gánh lo.',
+      'Bạn không cần phải hoàn hảo. Đôi khi, làm ở mức vừa đủ đã là một thành công lớn.',
+      'Nói lời từ chối là cách bạn bảo vệ nguồn năng lượng sống của chính mình.',
     ],
     symptoms: [
-      'Mắt sáng, cơ bắp linh hoạt, tràn đầy năng lượng vào mỗi buổi sáng',
-      'Nhìn thấy giải pháp thay vì tập trung vào khó khăn',
-      'Luồng suy nghĩ mạch lạc, tự tin hướng tới mục tiêu tương lai',
+      'Luôn có cảm giác thiếu thời gian, thấy tội lỗi dằn vặt khi cho phép mình nghỉ ngơi',
+      'Cơ thể mỏi mệt vùng vai gáy kinh niên, đầu óc căng thẳng khó tập trung',
+      'Sợ hãi làm người khác thất vọng, liên tục ôm đồm công việc vào người',
     ],
     causes: [
-      'Đạt được một bước tiến nhỏ trong mục tiêu dài hạn',
-      'Được truyền cảm hứng từ một câu chuyện, cuốn sách hoặc một người cố vấn',
-      'Nhận ra rằng khó khăn hiện tại chỉ là một chặng đường mang tính tạm thời',
+      'Thói quen cầu toàn thái quá, đặt tiêu chuẩn không thực tế cho bản thân',
+      'Áp lực đồng trang lứa và kỳ vọng lớn từ gia đình, xã hội đè nặng',
+      'Không biết cách thiết lập ranh giới cá nhân và từ chối các yêu cầu quá tải',
     ],
     advice: [
-      'Chia nhỏ mục tiêu lớn thành các bước cực kỳ nhỏ để duy trì động lực này',
-      'Ghi chép lại cảm giác tuyệt vời này để đọc lại vào những ngày "giông bão"',
-      'Chia sẻ năng lượng này với những người đang cần một chút ánh sáng',
+      'Học cách thiết lập ranh giới và nói lời từ chối với những việc không cần thiết',
+      'Chia nhỏ các dự án lớn thành từng bước vi mô và chỉ làm từng việc một',
+      'Cho phép bản thân được nghỉ ngơi vô điều kiện mà không dằn vặt tự trách',
     ],
     actions: [
-      { step: 1, text: 'Vạch ra 1 hành động nhỏ nhất có thể làm ngay hôm nay cho ước mơ của bạn' },
-      { step: 2, text: 'Tưởng tượng chi tiết về phiên bản thành công nhất của bạn trong 5 năm tới' },
-      { step: 3, text: 'Nghe một bản nhạc không lời mang âm hưởng hùng tráng, vui tươi' },
+      { step: 1, text: 'Kéo thả các khối gánh nặng kỳ vọng vào hố đen vũ trụ trên màn hình' },
+      { step: 2, text: 'Viết ra 3 việc quan trọng nhất cần làm hôm nay và tạm gác phần còn lại' },
+      { step: 3, text: 'Dành 15 phút ngắt kết nối hoàn toàn khỏi các thiết bị làm việc' },
     ],
     aiResponses: [
-      'Năng lượng của bạn đang rất rạng rỡ, cánh cửa tương lai đang mở rộng. Hãy giữ vững nhịp bước này.',
-      'Tín hiệu tích cực rất mạnh! Hãy giữ vững tay lái, bạn đang đi đúng hướng.',
+      'Vai bạn đang rất mỏi đúng không? Hãy đặt gánh nặng xuống một chút và nghỉ ngơi đi nhé.',
+      'Dưới ngàn tầng áp suất của Sao Mộc, bạn vẫn đang làm rất tốt. Đừng ép mình phải gồng gánh quá sức.',
     ],
   },
 
   saturn: {
-    emotion: 'Ràng Buộc',
+    emotion: 'Trầm Cảm',
     themeClass: 'planet-theme-saturn',
     audioUrl: 'https://cdn.pixabay.com/download/audio/2022/02/10/audio_51db0f19c6.mp3?filename=wind-howling-1-115372.mp3',
     youtubeLinks: [
-      { title: 'Tại Sao Chấp Nhận Bản Thân Lại Khó Khăn?', url: 'https://www.youtube.com/watch?v=zR7T8O2XGhw' },
-      { title: 'Nhạc Thư Giãn Giải Tỏa Cảm Giác Tội Lỗi', url: 'https://www.youtube.com/watch?v=V1bFr2SWP1I' }
+      { title: 'Vượt qua trầm cảm: Những hành động cực nhỏ giúp phục hồi', url: 'https://www.youtube.com/watch?v=zR7T8O2XGhw' },
+      { title: 'Nhạc Không Lời Làm Dịu Tâm Trí & Tiếp Thêm Sức Sống', url: 'https://www.youtube.com/watch?v=V1bFr2SWP1I' }
     ],
     quotes: [
-      'Quá khứ là một bài học, không phải là một nhà tù.',
-      'Bạn không thể bắt đầu chương tiếp theo nếu cứ đọc mãi chương cũ.',
-      'Tha thứ cho bản thân là bước đầu tiên để cởi bỏ xiềng xích.',
-      'Sự hoàn hảo là một ảo ảnh. Hãy cho phép mình được sai lầm.',
+      'Trầm cảm không phải là yếu đuối, đó là khi cơ thể bạn đã gồng mình mạnh mẽ quá lâu.',
+      'Sao Thổ chìm trong vành đai bóng tối lạnh lẽo, tựa như hố sâu trống rỗng của tâm hồn.',
+      'Không cần những bước đi vĩ đại. Hôm nay, chỉ cần uống một ngụm nước ấm đã là đáng quý.',
+      'Ánh sáng vẫn luôn tồn tại phía sau vành đai mây mù, chờ bạn thắp sáng từng tinh tú.',
     ],
     symptoms: [
-      'Cảm giác dằn vặt dai dẳng về một sai lầm trong quá khứ, không thể buông bỏ',
-      'Tự trừng phạt bản thân, tin rằng mình không xứng đáng có niềm vui',
-      'Sợ tiến lên phía trước vì sợ lặp lại vòng lặp cũ',
+      'Cảm giác trống rỗng bao trùm, mất đi mọi hứng thú và niềm vui trong cuộc sống',
+      'Kiệt quệ sinh lực hoàn toàn, gặp khó khăn lớn ngay cả việc bước ra khỏi giường',
+      'Trơ lì cảm xúc, thờ ơ trước mọi biến động và muốn cô lập bản thân hoàn toàn',
     ],
     causes: [
-      'Sống theo kỳ vọng quá mức của gia đình hoặc xã hội',
-      'Những chấn thương tâm lý chưa được giải quyết',
-      'Sự hối hận vì những lựa chọn không thể thay đổi',
+      'Sự cạn kiệt serotonin kéo dài sau các biến cố tình cảm hoặc áp lực quá mức',
+      'Cơ chế tự vệ phân ly (Dissociation) khi tâm trí bị quá tải cảm xúc tiêu cực',
+      'Mất định hướng sống và cảm giác thiếu kết nối sâu sắc với thế giới xung quanh',
     ],
     advice: [
-      'Nhận thức rằng phiên bản quá khứ của bạn đã làm tốt nhất có thể với sự hiểu biết lúc đó',
-      'Xác định những quy tắc/định kiến nào đang trói buộc bạn và tự hỏi: "Chúng có còn đúng không?"',
-      'Trò chuyện với chuyên gia tâm lý nếu bóng ma quá khứ quá lớn',
+      'Không đặt áp lực phải vui vẻ hay làm việc. Cho phép bản thân ở trạng thái tĩnh lặng',
+      'Thực hiện những hành động siêu nhỏ (Micro-actions) không tốn nhiều sinh lực',
+      'Tìm kiếm sự giúp đỡ từ những người bạn đáng tin cậy hoặc chuyên gia tâm lý',
     ],
     actions: [
-      { step: 1, text: 'Viết một lá thư tha thứ cho chính phiên bản cũ của mình' },
-      { step: 2, text: 'Xác định 1 "vành đai" (quy tắc cứng nhắc) bạn sẽ phá vỡ trong hôm nay' },
-      { step: 3, text: 'Thực hành lòng từ bi với bản thân (Self-compassion) khi soi gương' },
+      { step: 1, text: 'Click thắp sáng các ngôi sao nhỏ trên màn hình để tạo chòm sao hy vọng' },
+      { step: 2, text: 'Mở rèm cửa đón ánh sáng tự nhiên hoặc rửa mặt nhẹ bằng nước ấm' },
+      { step: 3, text: 'Uống một ngụm nước nhỏ và tập trung cảm nhận dòng nước mát lành' },
     ],
     aiResponses: [
-      'Bạn đang mang trên vai trọng lượng của những ngày cũ. Đã đến lúc nhẹ nhàng đặt nó xuống chưa?',
-      'Phiên bản quá khứ của bạn đã làm tốt nhất có thể. Hãy tha thứ cho người đó nhé.',
+      'Tôi không cần bạn phải tỏ ra mạnh mẽ lúc này. Cứ để bản thân được nghỉ ngơi ở đây.',
+      'Vành đai Sao Thổ mờ tối lạnh lẽo, nhưng từng đốm sáng nhỏ bạn thắp lên sẽ dẫn lối bạn trở lại.',
     ],
   },
 
   uranus: {
-    emotion: 'Trống Rỗng',
+    emotion: 'Tự Ti',
     themeClass: 'planet-theme-uranus',
     audioUrl: 'https://cdn.pixabay.com/download/audio/2022/10/14/audio_34dbd0b0ef.mp3?filename=space-ambience-124619.mp3',
     youtubeLinks: [
-      { title: 'Cách Vượt Qua Sự Trống Rỗng (Sống Tỉnh Thức)', url: 'https://www.youtube.com/watch?v=7h2P4_H2o8c' },
-      { title: 'Nhạc Không Gian Giúp Suy Nghĩ Tích Cực', url: 'https://www.youtube.com/watch?v=vV1pS7N6A_s' }
+      { title: 'Làm thế nào để ngừng nghi ngờ bản thân và tự tin hơn?', url: 'https://www.youtube.com/watch?v=7h2P4_H2o8c' },
+      { title: 'Nhạc Tần Số Nâng Cao Lòng Tự Tôn & Sự Tự Tin Nội Tại', url: 'https://www.youtube.com/watch?v=vV1pS7N6A_s' }
     ],
     quotes: [
-      'Trống rỗng không có nghĩa là bạn đã hỏng. Đó là không gian chờ được lấp đầy.',
-      'Bạn không cần phải cảm thấy vui vẻ mọi lúc. Cảm giác "tê liệt" cũng là một phản ứng bảo vệ.',
-      'Lạc lối là một phần của việc tìm ra con đường mới.',
-      'Đôi khi, tồn tại qua ngày hôm nay đã là một thành tựu.',
+      'Tự ti là chiếc kính lọc méo mó phóng đại khuyết điểm và thu nhỏ ưu điểm của bạn.',
+      'Sao Thiên Vương quay nghiêng độc nhất, tựa như vẻ đẹp khác biệt đang e ngại tỏa sáng.',
+      'Bạn không cần phải giống bất kỳ ai khác để trở nên có giá trị.',
+      'Hãy đối xử tử tế với bản thân như cách bạn đối xử với một người bạn thân nhất.',
     ],
     symptoms: [
-      'Cảm giác tê liệt cảm xúc, không buồn cũng không vui, mọi thứ đều nhạt nhòa',
-      'Đặt câu hỏi "Mọi thứ có ý nghĩa gì?" một cách vô vọng và mệt mỏi',
-      'Cắt đứt các kết nối xã hội vì không thấy hứng thú với bất cứ điều gì',
+      'Luôn có suy nghĩ "mình không đủ tốt", phóng đại những sai lầm nhỏ nhặt của bản thân',
+      'E ngại bày tỏ ý kiến trước đám đông vì sợ bị phán xét hoặc chê cười',
+      'Hội chứng kẻ giả mạo (Impostor Syndrome), nghĩ thành tựu của mình chỉ là may mắn',
     ],
     causes: [
-      'Bảo vệ bản thân sau một cú sốc tình cảm cực lớn (Disassociation)',
-      'Mất định hướng nghề nghiệp hoặc khủng hoảng bản sắc cá nhân',
-      'Thiếu vắng một mục đích sống (Purpose) rõ ràng kéo dài',
+      'Lòng tự tôn bị tổn thương do các lời phán xét tiêu cực trong quá khứ',
+      'Thói quen so sánh khuyết điểm của mình với ưu điểm nổi bật của người khác',
+      'Tiêu chuẩn quá khắt khe từ môi trường giáo dục hoặc gia đình',
     ],
     advice: [
-      'Đừng ép bản thân phải "cảm thấy" ngay lập tức. Hãy kiên nhẫn với sự trống rỗng này.',
-      'Bắt đầu kết nối lại thông qua các giác quan vật lý (Hương vị, Âm thanh, Chạm)',
-      'Tìm kiếm những niềm vui vi mô (Micro-joys) trong cuộc sống hàng ngày',
+      'Thực hành ghi nhận những thành tựu nhỏ và ưu điểm thực tế của bản thân',
+      'Sử dụng lăng kính nhận thức khách quan để lọc bỏ các suy nghĩ tự phê phán tiêu cực',
+      'Chấp nhận rằng sai sót là một phần tất yếu của quá trình học hỏi và phát triển',
     ],
     actions: [
-      { step: 1, text: 'Làm một việc đòi hỏi sự tập trung tay chân (Vẽ, nặn đất, gấp giấy)' },
-      { step: 2, text: 'Ăn một món ăn có vị giác mạnh (chua, cay) để kích thích cảm giác' },
-      { step: 3, text: 'Ngồi dưới ánh nắng mặt trời buổi sáng trong 15 phút' },
+      { step: 1, text: 'Nhập một câu tự ti vào lăng kính lọc trên màn hình để chuyển hóa suy nghĩ' },
+      { step: 2, text: 'Viết ra 3 điều bạn đã nỗ lực làm tốt trong tuần này' },
+      { step: 3, text: 'Đứng trước gương và tự nói một câu khẳng định giá trị bản thân' },
     ],
     aiResponses: [
-      'Sự trống rỗng là một lời mời để xây dựng lại từ đầu. Hôm nay, bạn muốn bắt đầu từ đâu?',
-      'Tôi không cần bạn phải cảm thấy gì cả lúc này. Chỉ cần bạn biết rằng bạn không đơn độc.',
+      'Bộ lọc tự ti đang che mắt bạn. Hãy nhìn lại những nỗ lực thầm lặng tuyệt vời của mình đi nhé.',
+      'Sao Thiên Vương nghiêng bóng đầy kiêu hãnh. Sự khác biệt của bạn chính là nét độc bản đáng trân quý.',
     ],
   },
 
   neptune: {
-    emotion: 'Sợ Hãi',
+    emotion: 'Mất Phương Hướng',
     themeClass: 'planet-theme-neptune',
     audioUrl: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=ocean-waves-ambient-sound-12508.mp3',
     youtubeLinks: [
-      { title: 'Hiểu Về Nỗi Lo Âu Và Panic Attack', url: 'https://www.youtube.com/watch?v=WWloIAQpMcQ' },
-      { title: 'Tiếng Sóng Biển Thư Giãn (Deep Sleep)', url: 'https://www.youtube.com/watch?v=f77SKdyn-1Y' }
+      { title: 'Tìm lại bản đồ cuộc sống khi bạn bị lạc lối (Psych2Go)', url: 'https://www.youtube.com/watch?v=WWloIAQpMcQ' },
+      { title: 'Nhạc Không Gian Định Tâm & Xác Định Hướng Đi Mới', url: 'https://www.youtube.com/watch?v=f77SKdyn-1Y' }
     ],
     quotes: [
-      'Sợ hãi bóng tối không làm nó sáng lên, thắp một ngọn nến thì có.',
-      'Bạn dũng cảm hơn bạn tưởng, và mạnh mẽ hơn bạn nghĩ.',
-      'Phần lớn những điều ta sợ hãi đều không bao giờ xảy ra.',
-      'Đừng để nỗi sợ tương lai đánh cắp hiện tại của bạn.',
+      'Lạc lối không phải là dấu chấm hết, nó là điểm bắt đầu của một con đường mới.',
+      'Sao Hải Vương mờ tối đầy bão tố, tựa như bản đồ cuộc sống đang bị che phủ bởi sương mù.',
+      'Khi không biết đi đâu, hãy dừng lại và tìm về la bàn giá trị cốt lõi bên trong bạn.',
+      'Bạn không cần phải có mọi câu trả lời ngay lập tức. Hãy đi từng bước nhỏ một.',
     ],
     symptoms: [
-      'Cảm giác lo âu mơ hồ không có đối tượng cụ thể, như một nỗi sợ lơ lừng',
-      'Ám ảnh về tương lai bất định hoặc những thảm họa tưởng tượng không có thật',
-      'Hay giật mình, cảnh giác cao độ và luôn ở trạng thái phòng thủ',
+      'Hoang mang sâu sắc khi nghĩ về tương lai, liên tục thay đổi quyết định định hướng',
+      'Cảm giác trôi nổi vô định, không biết mục đích sống của mình là gì',
+      'Mệt mỏi, chán nản vì thấy các hoạt động hàng ngày trôi qua vô nghĩa',
     ],
     causes: [
-      'Thiếu thông tin hoặc mất kiểm soát về một sự kiện sắp diễn ra',
-      'Tích tụ từ những trải nghiệm không an toàn trong quá khứ',
-      'Đọc quá nhiều tin tức tiêu cực (Doomscrolling)',
+      'Chạy theo các mục tiêu và quy chuẩn của người khác thay vì hiểu mong muốn thực sự của mình',
+      'Đứng trước quá nhiều sự lựa chọn mà thiếu đi kim chỉ nam giá trị cốt lõi',
+      'Thiếu sự thấu suốt về năng lực và ranh giới tự thân',
     ],
     advice: [
-      'Chấp nhận sự thật rằng "Không chắc chắn" (Uncertainty) is bản chất của cuộc sống',
-      'Giới hạn thời gian tiêu thụ tin tức giật gân, bi kịch',
-      'Tạo ra một thói quen (Routine) cố định hàng ngày để tạo cảm giác kiểm soát (An toàn)',
+      'Dành thời gian xác định lại các giá trị sống quan trọng nhất đối với bạn lúc này',
+      'Tập trung hoàn thành tốt các công việc nhỏ trước mắt thay vì lo lắng mục tiêu vĩ mô',
+      'Chấp nhận rằng lạc lối là một giai đoạn tự nhiên trước khi định hình bản ngã rõ ràng',
     ],
     actions: [
-      { step: 1, text: 'Thực hiện bài tập "Chiếc hộp lo âu": Đặt giờ lo lắng cố định trong 15p mỗi ngày' },
-      { step: 2, text: 'Dọn dẹp lại không gian làm việc hoặc phòng ngủ để lấy lại cảm giác kiểm soát' },
-      { step: 3, text: 'Nghe âm thanh tiếng ồn trắng (White noise) hoặc tiếng mưa rơi' },
+      { step: 1, text: 'Sắp xếp la bàn giá trị cốt lõi trên màn hình để tìm lại phương hướng phát triển' },
+      { step: 2, text: 'Viết ra 1 việc cụ thể bạn có thể hoàn thành tốt ngay trong ngày hôm nay' },
+      { step: 3, text: 'Tìm kiếm lời khuyên hoặc trò chuyện định hướng cùng một người cố vấn tin cậy' },
     ],
     aiResponses: [
-      'Tôi đang ở đây với bạn. Bóng tối ngoài kia có thể rất lớn, nhưng bạn không đơn độc.',
-      'Nỗi sợ của bạn hoàn toàn hợp lệ. Hãy cho phép mình được cảm thấy như vậy, rồi chúng ta sẽ tìm cách cùng nhau.',
+      'Bản đồ đang mờ nhạt đúng không? Không sao cả, hãy dừng lại và xác định điểm xuất phát của mình trước nhé.',
+      'Giữa những cơn bão siêu thanh của Sao Hải Vương, la bàn nội tâm sẽ luôn chỉ lối cho bạn trở về ranh giới an toàn.',
     ],
   },
 };
 
-// ─────────────────────────────────────
-//  SHARED FEELINGS MOCK DATA
-// ─────────────────────────────────────
+const EP_PAGE_META = {
+  mercury: {
+    kicker: 'Trạng thái: Cô đơn',
+    path: 'Sao Thủy • Khoảng lặng của tâm trí',
+    intro: 'Dữ liệu chỉ ra sự cô độc. Bạn cảm thấy ngắt kết nối với thế giới xung quanh và lầm lũi một mình.',
+  },
+  venus: {
+    kicker: 'Trạng thái: Yêu Thương',
+    path: 'Sao Kim • Sức mạnh lan tỏa tình thương',
+    intro: 'Hệ thống năng lượng yêu thương đang được kích hoạt. Hãy để hơi ấm thấu cảm che chở và kết nối tâm hồn bạn.',
+  },
+  earth: {
+    kicker: 'Trạng thái: Lo âu',
+    path: 'Trái Đất • Nhịp hít thở bình yên',
+    intro: 'Hệ thống lo âu đang quá tải. Nhịp tim tăng nhanh và tâm trí ngập tràn viễn cảnh bất ổn.',
+  },
+  mars: {
+    kicker: 'Trạng thái: Giận dữ',
+    path: 'Sao Hỏa • Ngọn lửa rực lửa bên trong',
+    intro: 'Cơn thịnh nộ đang bộc phát mạnh mẽ. Năng lượng giận dữ cần được giải phóng và làm nguội kịp thời.',
+  },
+  jupiter: {
+    kicker: 'Trạng thái: Áp lực',
+    path: 'Sao Mộc • Gánh nặng ngàn tầng',
+    intro: 'Kỳ vọng đè nặng lên vai. Bạn kiệt sức vì chạy đua với những tiêu chuẩn quá tải.',
+  },
+  saturn: {
+    kicker: 'Trạng thái: Trầm cảm',
+    path: 'Sao Thổ • Vòng tối đóng băng cảm xúc',
+    intro: 'Trống rỗng bao trùm hoàn toàn. Bạn cạn kiệt sinh lực và thấy cuộc sống nhạt nhòa.',
+  },
+  uranus: {
+    kicker: 'Trạng thái: Tự ti',
+    path: 'Sao Thiên Vương • Bộ lọc nghi ngờ bản thân',
+    intro: 'Sự nghi ngờ nội tại làm mờ mắt bạn. Bạn phóng đại khuyết điểm và quên đi giá trị của mình.',
+  },
+  neptune: {
+    kicker: 'Trạng thái: Mất phương hướng',
+    path: 'Sao Hải Vương • Bản đồ mờ trong sương mù',
+    intro: 'Bão vô định đang che phủ. Bạn hoang mang không biết tương lai của mình sẽ đi về đâu.',
+  },
+};
+
 const EP_FEELINGS = [
   'Hôm nay tôi mệt mỏi nhưng cũng nhẹ nhõm hơn sau khi viết ra cảm xúc...',
   'Đang cố gắng từng ngày. Không dễ nhưng vẫn tiếp tục cố.',
@@ -347,52 +387,6 @@ const EP_FEELINGS = [
   'Cảm ơn những người đã ở bên tôi trong ngày khó khăn nhất.',
 ];
 
-const EP_PAGE_META = {
-  mercury: {
-    kicker: 'Trạng thái: Bồn chồn',
-    path: 'Sao Thủy • Khoảng lặng của tâm trí',
-    intro: 'Dữ liệu chỉ ra sự mất ổn định. Bạn không thể ngồi yên, cảm giác thời gian đang tuột khỏi tay.',
-  },
-  venus: {
-    kicker: 'Trạng thái: Hài hòa',
-    path: 'Sao Kim • Ánh sáng của yêu thương',
-    intro: 'Tần số dao động đang ở mức lý tưởng. Năng lượng chữa lành đang lấp đầy không gian xung quanh bạn.',
-  },
-  earth: {
-    kicker: 'Trạng thái: Kiệt sức',
-    path: 'Trái Đất • Nơi cần được nghỉ ngơi',
-    intro: 'Năng lượng của bạn đang ở mức rất thấp. Cơ thể và tâm trí đang cần được ngắt kết nối và phục hồi.',
-  },
-  mars: {
-    kicker: 'Trạng thái: Tức giận',
-    path: 'Sao Hỏa • Ngọn lửa bên trong',
-    intro: 'Cảm xúc của bạn đang bùng nổ mạnh mẽ. Nếu không được xử lý, nó có thể gây tổn thương cho chính bạn và người xung quanh.',
-  },
-  jupiter: {
-    kicker: 'Trạng thái: Hy vọng',
-    path: 'Sao Mộc • Ánh sáng của tương lai',
-    intro: 'Tầm nhìn của bạn đang quang đãng. Mọi giới hạn đang được phá vỡ bởi niềm tin và nghị lực.',
-  },
-  saturn: {
-    kicker: 'Trạng thái: Ràng buộc',
-    path: 'Sao Thổ • Xiềng xích của quá khứ',
-    intro: 'Bạn đang mang theo trọng lượng của những sai lầm và hối tiếc. Đã đến lúc học cách buông bỏ.',
-  },
-  uranus: {
-    kicker: 'Trạng thái: Trống rỗng',
-    path: 'Sao Thiên Vương • Vùng đóng băng cảm xúc',
-    intro: 'Cảm xúc của bạn đang ở trạng thái tê liệt. Đây là cơ chế tự bảo vệ của tâm trí khi quá tải.',
-  },
-  neptune: {
-    kicker: 'Trạng thái: Sợ hãi',
-    path: 'Sao Hải Vương • Vùng tối của nỗi sợ',
-    intro: 'Những nỗi sợ vô hình đang bao trùm. Bạn cảm thấy mất phương hướng trong không gian bất định của cuộc sống.',
-  },
-};
-
-// ─────────────────────────────────────
-//  LOCAL STATE
-// ─────────────────────────────────────
 const epState = {
   currentPlanetId: null,
   activeTab: 'overview',
@@ -410,9 +404,6 @@ const BREATH_PHASES = [
 let breathPhaseIdx = 0;
 let breathCycleCount = 0;
 
-// ─────────────────────────────────────
-//  LOCALSTORAGE
-// ─────────────────────────────────────
 const LS_PLANET = 'ep_last_planet';
 const LS_LEVEL = 'ep_emotion_level';
 
@@ -432,9 +423,6 @@ function epLoad() {
   } catch (_) { return {}; }
 }
 
-// ─────────────────────────────────────
-//  NAVBAR
-// ─────────────────────────────────────
 function epInitNavbar() {
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', e => {
@@ -472,9 +460,6 @@ function epSyncMenuIcon() {
   target.appendChild(fallback);
 }
 
-// ─────────────────────────────────────
-//  TAB SWITCHING
-// ─────────────────────────────────────
 function epSwitchTab(tabId) {
   epState.activeTab = tabId;
   const panel = document.getElementById('planetPanel');
@@ -504,9 +489,6 @@ function epInitTabs() {
   });
 }
 
-// ─────────────────────────────────────
-//  APPLY PLANET THEME
-// ─────────────────────────────────────
 function epApplyTheme(planetId) {
   const panel = document.getElementById('planetPanel');
   if (!panel) return;
@@ -541,9 +523,6 @@ function epApplyTheme(planetId) {
   epSyncMenuIcon();
 }
 
-// ─────────────────────────────────────
-//  POPULATE TAB CONTENT
-// ─────────────────────────────────────
 function epPopulateTabs(planetId) {
   const data = EP_DATA[planetId];
   if (!data) return;
@@ -576,9 +555,6 @@ function epFillActions(actions) {
   ).join('');
 }
 
-// ─────────────────────────────────────
-//  LOCALSTORAGE PERSONALIZATION
-// ─────────────────────────────────────
 function epRestoreVisit() {
   const { planet, level } = epLoad();
   if (!planet) return;
@@ -604,9 +580,6 @@ function epRestoreVisit() {
   tryHighlight();
 }
 
-// ─────────────────────────────────────
-//  BREATHING GUIDE
-// ─────────────────────────────────────
 function epStartBreath() {
   if (epState.breathingActive) { epStopBreath(); return; }
   epState.breathingActive = true;
@@ -648,7 +621,6 @@ function epRunBreathPhase() {
   }, 1000);
 }
 
-// Stop breathing
 function epStopBreath() {
   epState.breathingActive = false;
   clearInterval(epState.breathTimer);
@@ -669,9 +641,6 @@ function epInitBreathing() {
   if (btn) btn.addEventListener('click', epStartBreath);
 }
 
-// ─────────────────────────────────────
-//  AI INPUT / INTERACT TAB
-// ─────────────────────────────────────
 function epInitAiInput() {
   const btn = document.getElementById('ep-ai-send');
   const input = document.getElementById('ep-ai-input');
@@ -704,9 +673,6 @@ function epInitAiInput() {
   });
 }
 
-// ─────────────────────────────────────
-//  SHARED FEELINGS
-// ─────────────────────────────────────
 function epInitFeelings() {
   const list = document.getElementById('ep-feelings-list');
   if (!list) return;
@@ -725,9 +691,6 @@ function epSetFeelingsVisible(show) {
   if (section) section.classList.toggle('visible', show);
 }
 
-// ─────────────────────────────────────
-//  MUTATION OBSERVER — watch panel state
-// ─────────────────────────────────────
 function epObservePanel() {
   const panel = document.getElementById('planetPanel');
   if (!panel) return;
@@ -752,7 +715,7 @@ function epObservePanel() {
 
       epApplyTheme(planetId);
       epPopulateTabs(planetId);
-      epSwitchTab('overview');       // always start on overview
+      epSwitchTab('overview');
       epSetFeelingsVisible(true);
       setTimeout(epSyncMenuIcon, 0);
 
@@ -779,9 +742,6 @@ function epObservePanel() {
   }).observe(panel, { attributes: true, attributeFilter: ['class'], childList: true, subtree: true });
 }
 
-// ─────────────────────────────────────
-//  INIT
-// ─────────────────────────────────────
 function epInit() {
   epInitNavbar();
   epInitTabs();

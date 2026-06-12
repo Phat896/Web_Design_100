@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#071926" />
+      <stop offset="60%" stop-color="#030b12" />
+      <stop offset="100%" stop-color="#010406" />
+    </radialGradient>
+    
+    <!-- Planet Gradient -->
+    <radialGradient id="planet-grad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="40%" stop-color="#67e8f9" />
+      <stop offset="85%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#083344" />
+    </radialGradient>
+
+    <!-- Ring Gradient -->
+    <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#67e8f9" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#0e7490" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="slight-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 10px;
+      letter-spacing: 2px;
+      opacity: 0.8;
+    }
+    
+    .hud-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ffffff;
+      letter-spacing: 5px;
+    }
+
+    /* Animations */
+    @keyframes pulse-glow {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.3; }
+    }
+
+    @keyframes float-astronaut {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-10px, -15px) rotate(-5deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    @keyframes rotate-ring {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    .pulsing-hud { animation: pulse-glow 4s infinite ease-in-out; }
+    .astronaut { animation: float-astronaut 12s infinite ease-in-out; transform-origin: 620px 220px; }
+    .star-twinkle-1 { animation: twinkle 3s infinite ease-in-out; }
+    .star-twinkle-2 { animation: twinkle 5s infinite ease-in-out; }
+    .star-twinkle-3 { animation: twinkle 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Stars grid / Scattered points -->
+  <g fill="#ffffff">
+    <!-- Star Group 1 -->
+    <circle cx="70" cy="80" r="1" class="star-twinkle-1" />
+    <circle cx="150" cy="320" r="1.5" class="star-twinkle-2" />
+    <circle cx="280" cy="90" r="1" class="star-twinkle-3" />
+    <circle cx="410" cy="50" r="1.2" class="star-twinkle-1" />
+    <circle cx="520" cy="380" r="1" class="star-twinkle-2" />
+    <circle cx="720" cy="120" r="1.5" class="star-twinkle-3" />
+    <circle cx="630" cy="310" r="0.8" class="star-twinkle-1" />
+    <circle cx="90" cy="240" r="1.2" class="star-twinkle-2" />
+    <circle cx="340" cy="270" r="1" class="star-twinkle-3" />
+  </g>
+
+  <!-- Constellation lines (faint) -->
+  <path d="M 70 80 L 150 320 M 410 50 L 520 380 M 630 310 L 720 120" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.15" stroke-dasharray="2,4" />
+
+  <!-- HUD Grid Lines -->
+  <g stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" fill="none">
+    <line x1="50" y1="50" x2="750" y2="50" />
+    <line x1="50" y1="400" x2="750" y2="400" />
+    <line x1="100" y1="50" x2="100" y2="400" />
+    <line x1="700" y1="50" x2="700" y2="400" />
+  </g>
+
+  <!-- Radial HUD Scanners -->
+  <g class="pulsing-hud" stroke="#67e8f9" fill="none" stroke-opacity="0.25">
+    <circle cx="350" cy="225" r="180" stroke-width="0.5" stroke-dasharray="5,15" />
+    <circle cx="350" cy="225" r="230" stroke-width="0.5" stroke-dasharray="2,8" />
+  </g>
+
+  <!-- Uranus Planet (rotated on its side 98 degrees, rings are vertical) -->
+  <g transform="translate(350, 225)">
+    <!-- Back of the rings -->
+    <ellipse cx="0" cy="0" rx="30" ry="170" fill="none" stroke="url(#ring-grad)" stroke-width="3" transform="rotate(-15)" opacity="0.4" />
+    <ellipse cx="0" cy="0" rx="20" ry="150" fill="none" stroke="url(#ring-grad)" stroke-width="1.5" transform="rotate(-15)" opacity="0.6" />
+    <ellipse cx="0" cy="0" rx="45" ry="200" fill="none" stroke="url(#ring-grad)" stroke-width="1" transform="rotate(-15)" opacity="0.2" />
+
+    <!-- Planet Sphere -->
+    <circle cx="0" cy="0" r="85" fill="url(#planet-grad)" filter="url(#glow)" />
+    
+    <!-- Front of the rings (layered for 3D effect, clipping mask or manual arc) -->
+    <!-- We draw an arc that represents the front side of the ring.
+         An ellipse rotated by -15 deg, but we only draw the right side or left side.
+         To keep it simple and clean, we overlay a semi-ellipse or draw rings with stroke-dasharray,
+         or just let the rings run completely and use opacity, but Uranus' rings are thin.
+         To make it look like they wrap, we can overlay a clip path, or we can draw the front arc.
+         Let's overlay a path that is the front ring half. -->
+    <path d="M -44 193 A 45 200 0 0 0 44 -193" fill="none" stroke="#67e8f9" stroke-width="1.2" transform="rotate(-15)" opacity="0.75" filter="url(#slight-glow)" />
+    <path d="M -29 165 A 30 170 0 0 0 29 -165" fill="none" stroke="#ffffff" stroke-width="3" transform="rotate(-15)" opacity="0.9" filter="url(#slight-glow)" />
+    <path d="M -19 146 A 20 150 0 0 0 19 -146" fill="none" stroke="#67e8f9" stroke-width="1.8" transform="rotate(-15)" opacity="0.8" />
+  </g>
+
+  <!-- Floating Astronaut (Lone figure) -->
+  <g class="astronaut">
+    <!-- Faint tether line disappearing into empty space -->
+    <path d="M 620 220 C 580 250, 520 270, 480 250" fill="none" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="3,3" />
+    
+    <!-- Astronaut Silhouette with cyan highlight -->
+    <g transform="translate(620, 220) scale(0.7)">
+      <!-- Jetpack / backpack -->
+      <rect x="-18" y="-20" width="12" height="36" rx="4" fill="#0c2538" stroke="#67e8f9" stroke-width="1.5" />
+      <!-- Body -->
+      <rect x="-10" y="-15" width="20" height="35" rx="8" fill="#081b29" stroke="#67e8f9" stroke-width="2" />
+      <!-- Helmet -->
+      <circle cx="0" cy="-22" r="10" fill="#081b29" stroke="#67e8f9" stroke-width="2" />
+      <!-- Visor (Glowing white/cyan) -->
+      <path d="M -6 -24 Q 0 -28 6 -24 Q 8 -18 0 -18 Q -8 -18 -6 -24 Z" fill="#ffffff" filter="url(#slight-glow)" />
+      <!-- Limbs -->
+      <!-- Left Arm -->
+      <path d="M -10 -8 Q -20 -12 -22 -2" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" />
+      <!-- Right Arm -->
+      <path d="M 10 -8 Q 18 -5 22 -15" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" />
+      <!-- Left Leg -->
+      <path d="M -6 20 Q -10 32 -18 35" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" />
+      <!-- Right Leg -->
+      <path d="M 6 20 Q 8 35 15 38" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Isolated Ice Crystal Shards floating -->
+  <g fill="none" stroke="#67e8f9" stroke-width="1" opacity="0.7">
+    <!-- Shard 1 -->
+    <polygon points="120,130 135,120 140,135 125,145" fill="#0f3d59" fill-opacity="0.3" filter="url(#slight-glow)" />
+    <!-- Shard 2 -->
+    <polygon points="200,340 208,330 215,342 205,350" fill="#0f3d59" fill-opacity="0.3" />
+    <!-- Shard 3 -->
+    <polygon points="560,90 572,80 580,95 565,100" fill="#0f3d59" fill-opacity="0.3" />
+  </g>
+
+  <!-- HUD Interface Details (Bottom & Corners) -->
+  <g>
+    <!-- Top Left -->
+    <text x="50" y="35" class="hud-text">SYS.LOC // URANUS_SECTOR</text>
+    <text x="50" y="45" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.5;">DEEP_SPACE_OBSERVATION</text>
+    
+    <!-- Top Right -->
+    <text x="630" y="35" class="hud-text">COORD // 84°04′N 43°12′E</text>
+    <text x="690" y="45" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.5;">RANGE: 2.87 BILLION KM</text>
+
+    <!-- Bottom Left -->
+    <text x="50" y="420" class="hud-title">URANUS</text>
+    <text x="50" y="435" class="hud-text" style="fill: #ffffff;">CORE CONCEPT: LONELINESS</text>
+
+    <!-- Bottom Right -->
+    <text x="640" y="420" class="hud-text" style="font-size: 11px;">STATUS: ISOLATED</text>
+    <rect x="640" y="425" width="110" height="2" fill="#67e8f9" opacity="0.3" />
+    <rect x="640" y="425" width="35" height="2" fill="#ffffff" />
+    <text x="640" y="438" class="hud-text" style="font-size: 8px; fill: #ffffff; opacity: 0.5;">SIGNAL LOSS: 94.2%</text>
+  </g>
+
+  <!-- Tech crosshairs -->
+  <path d="M 350 15 L 350 25 M 350 425 L 350 435 M 15 225 L 25 225 M 775 225 L 785 225" stroke="#67e8f9" stroke-width="1" opacity="0.5" />
+</svg>

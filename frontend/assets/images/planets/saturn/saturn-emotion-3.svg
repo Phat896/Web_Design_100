@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090510" />
+      <stop offset="50%" stop-color="#140a24" />
+      <stop offset="100%" stop-color="#020104" />
+    </linearGradient>
+    <radialGradient id="crystalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="40%" stop-color="#6b21a8" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a9ca8" stop-opacity="0" />
+      <stop offset="30%" stop-color="#c084fc" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#8a9ca8" stop-opacity="0" />
+    </linearGradient>
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatCentral {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes energyPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 0.9; }
+    }
+    @keyframes orbitNode {
+      0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+    .ring-rot { animation: rotateRing 25s linear infinite; transform-origin: 400px 225px; }
+    .crystal-float { animation: floatCentral 6s infinite ease-in-out; transform-origin: 400px 225px; }
+    .energy-beam { animation: energyPulse 4s infinite ease-in-out; }
+    .orbiter { animation: orbitNode 12s linear infinite; transform-origin: 400px 225px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Background Geometry of Balance -->
+  <g fill="none" stroke="#8a9ca8" stroke-width="0.5" opacity="0.2">
+    <circle cx="400" cy="225" r="200" />
+    <circle cx="400" cy="225" r="150" stroke-dasharray="6 6" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="100" y1="225" x2="700" y2="225" />
+    <polygon points="400,25 600,225 400,425 200,225" />
+  </g>
+
+  <!-- Vertical Core Energy Column (Stabilizer) -->
+  <rect x="396" y="25" width="8" height="400" fill="url(#beamGrad)" class="energy-beam" filter="url(#glow)" />
+  
+  <!-- Outer Energy Rings (Horizontal/Angle) -->
+  <g class="crystal-float">
+    <!-- Concentric Balanced Rings -->
+    <ellipse cx="400" cy="225" rx="220" ry="50" transform="rotate(-15, 400, 225)" fill="none" stroke="#c084fc" stroke-width="4" filter="url(#glow)" opacity="0.8" />
+    <ellipse cx="400" cy="225" rx="180" ry="40" transform="rotate(-15, 400, 225)" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7" />
+    <ellipse cx="400" cy="225" rx="140" ry="30" transform="rotate(-15, 400, 225)" fill="none" stroke="#8a9ca8" stroke-width="3" stroke-dasharray="8 8" opacity="0.6" />
+
+    <!-- Central Diamond (The Transformed Core) -->
+    <!-- Glow -->
+    <circle cx="400" cy="225" r="80" fill="url(#crystalGlow)" opacity="0.7" />
+    <!-- Crystalline Core -->
+    <polygon points="400,165 435,225 400,285 365,225" fill="#c084fc" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
+    <!-- Inner details -->
+    <polygon points="400,185 418,225 400,265 382,225" fill="#581c87" opacity="0.6" />
+    <circle cx="400" cy="225" r="10" fill="#ffffff" filter="url(#glow)" />
+  </g>
+
+  <!-- Orbiting Balance Nodes -->
+  <g class="orbiter">
+    <circle cx="400" cy="225" r="8" fill="#8a9ca8" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)" />
+    <circle cx="400" cy="225" r="15" fill="none" stroke="#8a9ca8" stroke-width="1" opacity="0.5" />
+  </g>
+  <g class="orbiter" style="animation-delay: -6s;">
+    <circle cx="400" cy="225" r="8" fill="#c084fc" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)" />
+    <circle cx="400" cy="225" r="15" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.5" />
+  </g>
+
+  <!-- Stable floating clock/gear details on the side -->
+  <g transform="translate(150, 120)" opacity="0.4" class="ring-rot">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#8a9ca8" stroke-width="2" />
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#8a9ca8" stroke-width="3" stroke-dasharray="6 6" />
+    <line x1="-30" y1="0" x2="30" y2="0" />
+    <line x1="0" y1="-30" x2="0" y2="30" />
+  </g>
+  
+  <g transform="translate(650, 330)" opacity="0.4" class="ring-rot" style="animation-duration: 40s;">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#c084fc" stroke-width="2" />
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#c084fc" stroke-width="4" stroke-dasharray="8 8" />
+    <line x1="-40" y1="0" x2="40" y2="0" />
+    <line x1="0" y1="-40" x2="0" y2="40" />
+  </g>
+
+  <!-- Balanced/Equilibrium UI lines -->
+  <path d="M 220 380 L 320 380 L 340 360" fill="none" stroke="#8a9ca8" stroke-width="1.5" />
+  <circle cx="220" cy="380" r="3" fill="#8a9ca8" />
+  <text x="230" y="375" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">EQUILIBRIUM: STABLE</text>
+
+  <path d="M 580 70 L 480 70 L 460 90" fill="none" stroke="#c084fc" stroke-width="1.5" />
+  <circle cx="580" cy="70" r="3" fill="#c084fc" />
+  <text x="570" y="65" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="end">SYS_BAL: 99.8%</text>
+
+  <!-- HUD text in corners -->
+  <g transform="translate(40, 410)">
+    <text x="0" y="0" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2">TRANSFORMATION: PRESSURE INTEGRATION COMPLETE</text>
+  </g>
+  <g transform="translate(760, 410)">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="end">SYS_TYPE: BALANCED_CORE</text>
+  </g>
+</svg>

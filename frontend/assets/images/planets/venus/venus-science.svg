@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#190220"/>
+      <stop offset="60%" stop-color="#0a000e"/>
+      <stop offset="100%" stop-color="#010003"/>
+    </radialGradient>
+
+    <!-- Glowing effect -->
+    <radialGradient id="fire-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffb6c1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#da70d6" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .hud-grid { stroke: #da70d6; opacity: 0.15; stroke-dasharray: 5, 5; }
+    .synapse-outline { fill: none; stroke: #ffb6c1; stroke-width: 2.5; }
+    
+    /* Animations */
+    .transmitter-flow { stroke-dasharray: 5, 20; animation: cross-gap 4s linear infinite; }
+    .circle-spin { transform-origin: 580px 210px; animation: spin 20s linear infinite; }
+    .circle-spin-ccw { transform-origin: 580px 210px; animation: spin-ccw 25s linear infinite; }
+    .pulse-data { animation: pulse 3s infinite ease-in-out; }
+    .transmitter-particle { animation: float-particle 3s infinite ease-in-out; }
+
+    @keyframes cross-gap {
+      to { stroke-dashoffset: -100; }
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-ccw {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.95; }
+    }
+    @keyframes float-particle {
+      0%, 100% { transform: translateY(0) scale(0.9); opacity: 0.5; }
+      50% { transform: translateY(-8px) scale(1.1); opacity: 1; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" class="bg"/>
+
+  <!-- Scientific Grid -->
+  <g stroke="#da70d6" stroke-width="0.5" opacity="0.2">
+    <line x1="50" y1="50" x2="750" y2="50"/>
+    <line x1="50" y1="400" x2="750" y2="400"/>
+    <line x1="50" y1="50" x2="50" y2="400"/>
+    <line x1="750" y1="50" x2="750" y2="400"/>
+    
+    <!-- Grid pattern vertical/horizontal -->
+    <line x1="280" y1="50" x2="280" y2="400" class="hud-grid"/>
+    <line x1="500" y1="50" x2="500" y2="400" class="hud-grid"/>
+    <line x1="50" y1="225" x2="750" y2="225" class="hud-grid"/>
+  </g>
+
+  <!-- LEFT PANEL: Synaptic Cleft Diagram (Microscopic Biology) -->
+  <g transform="translate(60, 40)">
+    <!-- Header -->
+    <text x="20" y="35" font-family="JetBrains Mono, Courier New, monospace" font-size="12" font-weight="bold" fill="#ffd700">SYNAPSE JUNCTION SCAN // 01</text>
+    
+    <!-- Presynaptic Axon (Top part of synapse) -->
+    <path d="M 40 80 Q 80 150 140 150 T 240 80" class="synapse-outline" />
+    <!-- Postsynaptic Dendrite (Bottom part of synapse) -->
+    <path d="M 40 250 Q 80 180 140 180 T 240 250" class="synapse-outline" />
+    
+    <!-- Synaptic Vesicles containing transmitters -->
+    <g transform="translate(90, 100)">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.6"/>
+      <circle cx="-3" cy="-3" r="2" fill="#ffd700"/>
+      <circle cx="3" cy="3" r="2.5" fill="#ffb6c1"/>
+    </g>
+    <g transform="translate(140, 115)">
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.6"/>
+      <circle cx="-2" cy="2" r="3" fill="#ffb6c1"/>
+      <circle cx="4" cy="-2" r="2" fill="#ffd700"/>
+    </g>
+    <g transform="translate(190, 100)">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.6"/>
+      <circle cx="0" cy="-3" r="2.5" fill="#ffd700"/>
+      <circle cx="2" cy="4" r="2" fill="#da70d6"/>
+    </g>
+
+    <!-- Transmitters Firing Across Synaptic Cleft (The gap) -->
+    <!-- Flow path representation -->
+    <path d="M 100 145 L 100 185 M 140 148 L 140 182 M 180 145 L 180 185" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3, 10" class="transmitter-flow"/>
+
+    <!-- Flowing transmitters (Individual circles/particles with glow) -->
+    <circle cx="100" cy="165" r="3" fill="#ffb6c1" filter="url(#glow)" class="transmitter-particle"/>
+    <circle cx="140" cy="155" r="4.5" fill="#ffd700" filter="url(#glow)" class="transmitter-particle" style="animation-delay: 1.5s;"/>
+    <circle cx="140" cy="175" r="3" fill="#da70d6" class="transmitter-particle" style="animation-delay: 0.5s;"/>
+    <circle cx="180" cy="160" r="3.5" fill="#ffb6c1" filter="url(#glow)" class="transmitter-particle" style="animation-delay: 2.2s;"/>
+
+    <!-- Receptors on postsynaptic membrane -->
+    <path d="M 90 182 Q 100 192 110 182" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+    <path d="M 130 180 Q 140 190 150 180" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+    <path d="M 170 182 Q 180 192 190 182" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+
+    <!-- Annotations -->
+    <g font-family="JetBrains Mono, Courier New, monospace" fill="#ffb6c1" font-size="8" opacity="0.8">
+      <line x1="220" y1="110" x2="270" y2="110" stroke="#da70d6" stroke-width="0.75"/>
+      <circle cx="220" cy="110" r="1.5" fill="#ffd700"/>
+      <text x="275" y="113">PRE-SYNAPTIC VESICLE</text>
+      
+      <line x1="165" y1="168" x2="270" y2="200" stroke="#da70d6" stroke-width="0.75"/>
+      <circle cx="165" cy="168" r="1.5" fill="#ffd700"/>
+      <text x="275" y="203">TRANSMITTER RELEASE (OXYTOCIN)</text>
+      
+      <line x1="150" y1="210" x2="270" y2="260" stroke="#da70d6" stroke-width="0.75"/>
+      <circle cx="150" cy="210" r="1.5" fill="#ffd700"/>
+      <text x="275" y="263">POST-SYNAPTIC RECEPTOR</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANEL: Hormone Resonance Dial / HUD (Hormone synthesis data) -->
+  <g transform="translate(580, 210)">
+    <!-- Concentric diagnostic rings -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#da70d6" stroke-width="1" opacity="0.3"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#ffd700" stroke-width="2.5" stroke-dasharray="120, 40" class="circle-spin" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#ffb6c1" stroke-width="1.5" stroke-dasharray="10, 30" class="circle-spin-ccw"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#da70d6" stroke-width="0.75" opacity="0.4"/>
+    <circle cx="0" cy="0" r="30" fill="url(#fire-glow)" opacity="0.7" class="pulse-data"/>
+
+    <!-- Concentric details & markings -->
+    <line x1="0" y1="-100" x2="0" y2="-115" stroke="#ffd700" stroke-width="2"/>
+    <line x1="0" y1="100" x2="0" y2="115" stroke="#ffd700" stroke-width="2"/>
+    <line x1="-100" y1="0" x2="-115" y2="0" stroke="#ffd700" stroke-width="2"/>
+    <line x1="100" y1="0" x2="115" y2="0" stroke="#ffd700" stroke-width="2"/>
+
+    <!-- Core statistics overlay -->
+    <text x="0" y="-125" font-family="JetBrains Mono, Courier New, monospace" font-size="10" font-weight="bold" fill="#ffd700" text-anchor="middle">SYNAPSE RESONANCE DIAL</text>
+    <text x="0" y="132" font-family="JetBrains Mono, Courier New, monospace" font-size="9" fill="#ffb6c1" text-anchor="middle">RESONANCE RATING: 98.4 Hz</text>
+  </g>
+
+  <!-- MIDDLE HUD: Wave graphs representing signal amplitude -->
+  <g transform="translate(340, 280)" opacity="0.8">
+    <text x="0" y="-20" font-family="JetBrains Mono, Courier New, monospace" font-size="9" fill="#ffd700" font-weight="bold">SIGNAL AMPLITUDE</text>
+    <!-- Graph Grid -->
+    <line x1="0" y1="0" x2="160" y2="0" stroke="#da70d6" stroke-width="1" opacity="0.4"/>
+    <line x1="0" y1="50" x2="160" y2="50" stroke="#da70d6" stroke-width="1" opacity="0.4"/>
+    <!-- Sine waves (Synaptic pulses) -->
+    <path d="M 0 25 Q 20 5 40 25 T 80 25 T 120 25 T 160 25" fill="none" stroke="#ffb6c1" stroke-width="1.5" opacity="0.7"/>
+    <path d="M 0 25 Q 20 45 40 25 T 80 25 T 120 25 T 160 25" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3, 3" opacity="0.8"/>
+  </g>
+
+  <!-- Bottom Panel Info -->
+  <g transform="translate(60, 415)" font-family="JetBrains Mono, Courier New, monospace" font-size="10" opacity="0.85">
+    <text x="0" y="0" fill="#ffd700" font-weight="bold">VENUS MEDICAL BIOLOGY // HORMONE RESONANCE MODEL</text>
+    <text x="680" y="0" fill="#ffb6c1" text-anchor="end">SYS.REF: CHEM-RESONANCE-09</text>
+  </g>
+</svg>

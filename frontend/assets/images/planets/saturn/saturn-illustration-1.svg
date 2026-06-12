@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0612" />
+      <stop offset="50%" stop-color="#120c24" />
+      <stop offset="100%" stop-color="#04020a" />
+    </linearGradient>
+    <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a9ca8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseSynapse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+    @keyframes flowingSignal {
+      0% { stroke-dashoffset: 80; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes rotationGear {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .synapse { animation: pulseSynapse 3s infinite ease-in-out; transform-origin: center; }
+    .signal { stroke-dasharray: 10 15; animation: flowingSignal 4s linear infinite; }
+    .gear-spin { animation: rotationGear 20s linear infinite; transform-origin: 390px 210px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Brain/Head Silhouette Background Glow -->
+  <circle cx="400" cy="210" r="180" fill="url(#brainGlow)" />
+
+  <!-- Stylized Brain Outline (Futuristic HUD style) -->
+  <g stroke="#8a9ca8" stroke-width="1.5" fill="none" opacity="0.3">
+    <!-- Cerebrum outline -->
+    <path d="M 270 240 C 240 210, 240 130, 290 100 C 330 70, 470 70, 510 100 C 560 130, 560 210, 530 240 C 500 270, 480 300, 480 330 C 480 350, 470 360, 400 360 C 330 360, 320 350, 320 330 C 320 300, 300 270, 270 240 Z" stroke-dasharray="10 5" />
+    <!-- Cerebellum outline -->
+    <path d="M 320 330 C 300 340, 290 370, 320 390 C 350 410, 400 410, 400 360" />
+    <path d="M 480 330 C 500 340, 510 370, 480 390 C 450 410, 400 410, 400 360" />
+  </g>
+
+  <!-- Neural Network under Pressure (The "Clockwork Brain" concept) -->
+  
+  <!-- Central Gear (Represents processing/time/deadlines inside head) -->
+  <g class="gear-spin" opacity="0.25">
+    <circle cx="390" cy="210" r="90" fill="none" stroke="#c084fc" stroke-width="6" stroke-dasharray="12 12" />
+    <circle cx="390" cy="210" r="75" fill="none" stroke="#8a9ca8" stroke-width="2" />
+    <line x1="390" y1="120" x2="390" y2="300" stroke="#8a9ca8" stroke-width="1.5" />
+    <line x1="300" y1="210" x2="480" y2="210" stroke="#8a9ca8" stroke-width="1.5" />
+  </g>
+
+  <!-- Neural Pathways (Steel Blue & Purple glowing lines) -->
+  <g fill="none" stroke-linejoin="round">
+    <!-- Pathway 1: Frontal Lobe (Logic/Pressure Control) -->
+    <path d="M 290 140 L 330 130 L 360 170 L 390 150 L 440 180" stroke="url(#flowGrad)" stroke-width="2.5" filter="url(#glow)" />
+    <path d="M 290 140 L 330 130 L 360 170 L 390 150 L 440 180" stroke="#ffffff" stroke-width="1" class="signal" />
+
+    <!-- Pathway 2: Deep Core / Emotion Center -->
+    <path d="M 320 230 L 370 210 L 400 250 L 460 210 L 500 230" stroke="#c084fc" stroke-width="3" filter="url(#glow)" />
+    <path d="M 320 230 L 370 210 L 400 250 L 460 210 L 500 230" stroke="#ffffff" stroke-width="1.5" class="signal" style="animation-delay: -2s;" />
+
+    <!-- Pathway 3: Synaptic loops (compressed rings inside) -->
+    <path d="M 340 180 Q 400 120, 460 180 T 400 280 Z" stroke="#8a9ca8" stroke-width="1.5" stroke-dasharray="4 6" />
+  </g>
+
+  <!-- Synapse Nodes (Pulsing circles at intersections) -->
+  <g fill="#ffffff" filter="url(#glow)">
+    <circle cx="290" cy="140" r="5" class="synapse" style="animation-delay: 0s;" />
+    <circle cx="330" cy="130" r="4" class="synapse" style="animation-delay: 0.5s;" />
+    <circle cx="360" cy="170" r="6" fill="#c084fc" class="synapse" style="animation-delay: 1s;" />
+    <circle cx="390" cy="150" r="4.5" class="synapse" style="animation-delay: 1.5s;" />
+    <circle cx="440" cy="180" r="6.5" fill="#c084fc" class="synapse" style="animation-delay: 0.2s;" />
+    <circle cx="320" cy="230" r="4" class="synapse" style="animation-delay: 0.8s;" />
+    <circle cx="370" cy="210" r="7" fill="#ffffff" class="synapse" style="animation-delay: 1.2s;" />
+    <circle cx="400" cy="250" r="5" class="synapse" style="animation-delay: 2s;" />
+    <circle cx="460" cy="210" r="6" fill="#c084fc" class="synapse" style="animation-delay: 2.5s;" />
+    <circle cx="500" cy="230" r="4" class="synapse" style="animation-delay: 1.7s;" />
+  </g>
+
+  <!-- Chemical Flow Indicators (Cortisol / Neurotransmitter load) -->
+  <g transform="translate(600, 100)" opacity="0.8">
+    <rect x="0" y="0" width="160" height="130" fill="#0b0813" stroke="#8a9ca8" stroke-width="1" rx="4" />
+    <text x="10" y="20" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">NEUROCHEMICALS</text>
+    <line x1="10" y1="28" x2="150" y2="28" stroke="#c084fc" stroke-width="1" />
+    
+    <!-- Cortisol Level (Stress) -->
+    <text x="10" y="45" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">CORTISOL (STRESS)</text>
+    <rect x="10" y="50" width="100" height="6" fill="#475569" rx="3" />
+    <rect x="10" y="50" width="85" height="6" fill="#c084fc" rx="3" filter="url(#glow)" />
+    <text x="120" y="56" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="9">85%</text>
+
+    <!-- Adrenaline (Response) -->
+    <text x="10" y="75" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">ADRENALINE</text>
+    <rect x="10" y="80" width="100" height="6" fill="#475569" rx="3" />
+    <rect x="10" y="80" width="70" height="6" fill="#c084fc" rx="3" />
+    <text x="120" y="86" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="9">70%</text>
+
+    <!-- Dopamine (Reward/Focus) -->
+    <text x="10" y="105" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">DOPAMINE (FOCUS)</text>
+    <rect x="10" y="110" width="100" height="6" fill="#475569" rx="3" />
+    <rect x="10" y="110" width="45" height="6" fill="#8a9ca8" rx="3" />
+    <text x="120" y="116" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">45%</text>
+  </g>
+
+  <!-- Left Sidebar HUD statistics -->
+  <g transform="translate(40, 100)" opacity="0.8">
+    <rect x="0" y="0" width="160" height="130" fill="#0b0813" stroke="#8a9ca8" stroke-width="1" rx="4" />
+    <text x="10" y="20" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">COGNITIVE LOAD</text>
+    <line x1="10" y1="28" x2="150" y2="28" stroke="#8a9ca8" stroke-width="1" />
+    
+    <text x="10" y="45" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9">SYS_LOAD: CRITICAL</text>
+    <text x="10" y="60" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9">PULSE_FRQ: 14.5 HZ</text>
+    <text x="10" y="75" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="9">THETA_WAVE: ACTIVE</text>
+    <text x="10" y="90" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">TIME_LIMIT: T-0.4s</text>
+    <text x="10" y="110" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">ALERT: HIGH DENSITY</text>
+  </g>
+
+  <!-- HUD Text in corners -->
+  <g transform="translate(40, 410)">
+    <text x="0" y="0" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">NEUROLOGY GRAPH // SYS: SATURN_PRESSURE_LOAD // ACTIVE</text>
+  </g>
+  <g transform="translate(760, 410)">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="end">SYS_MD: NEURO_CHEMISTRY</text>
+  </g>
+</svg>

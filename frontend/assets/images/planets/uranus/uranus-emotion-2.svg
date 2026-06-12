@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#091b29" />
+      <stop offset="70%" stop-color="#030a0f" />
+      <stop offset="100%" stop-color="#010305" />
+    </radialGradient>
+
+    <!-- Node Glow -->
+    <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#67e8f9" />
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Fading path gradient -->
+    <linearGradient id="path-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#67e8f9" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#0e7490" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0.0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+    
+    .phase-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 11px;
+      fill: #ffffff;
+      letter-spacing: 2px;
+    }
+
+    /* Animations */
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+
+    @keyframes flow-line {
+      0% { stroke-dashoffset: 20; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .pulse-lone { animation: pulse-dot 3s infinite ease-in-out; transform-origin: 650px 225px; }
+    .pulse-faint-1 { animation: pulse-dot 4s infinite ease-in-out; transform-origin: 150px 225px; }
+    .pulse-faint-2 { animation: pulse-dot 5s infinite ease-in-out; transform-origin: 320px 150px; }
+    .flow { stroke-dasharray: 5, 5; animation: flow-line 2s infinite linear; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Grid lines representing timeline slots -->
+  <g stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1" fill="none">
+    <!-- Vertical timeline dividers -->
+    <line x1="200" y1="50" x2="200" y2="380" />
+    <line x1="380" y1="50" x2="380" y2="380" />
+    <line x1="560" y1="50" x2="560" y2="380" />
+    
+    <!-- Horizon Line -->
+    <line x1="50" y1="225" x2="750" y2="225" stroke-dasharray="1,4" />
+  </g>
+
+  <!-- Ice Crystal Shard silhouettes in the background -->
+  <g fill="#0e7490" fill-opacity="0.05" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.1">
+    <polygon points="100,80 120,40 130,70" />
+    <polygon points="250,380 270,350 280,390" />
+    <polygon points="500,90 525,50 515,100" />
+    <polygon points="680,360 700,320 710,370" />
+  </g>
+
+  <!-- Connections and Paths -->
+  <!-- Phase 1 to Phase 2: Rich network -->
+  <g stroke="#67e8f9" stroke-width="1.5" stroke-opacity="0.5" fill="none">
+    <!-- Center pathway -->
+    <line x1="150" y1="225" x2="320" y2="150" />
+    <line x1="150" y1="225" x2="320" y2="225" />
+    <line x1="150" y1="225" x2="320" y2="300" />
+
+    <!-- Branching paths -->
+    <line x1="120" y1="170" x2="150" y2="225" stroke="#ffffff" stroke-opacity="0.7" />
+    <line x1="110" y1="280" x2="150" y2="225" />
+  </g>
+
+  <!-- Phase 2 to Phase 3: Fading & Breaking network -->
+  <g stroke="url(#path-fade)" stroke-width="1.5" fill="none">
+    <!-- Upper branch dies -->
+    <path d="M 320 150 Q 400 120 480 140" stroke-dasharray="3,3" />
+    <!-- Lower branch dies -->
+    <path d="M 320 300 Q 420 340 480 320" stroke-dasharray="2,4" />
+    <!-- Middle branch narrows down -->
+    <path d="M 320 225 L 500 225" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.3" />
+  </g>
+
+  <!-- Phase 3 to Phase 4: Lonely path -->
+  <g stroke="#67e8f9" fill="none">
+    <!-- Only one thin, dashed, dying line makes it to the final node -->
+    <path d="M 500 225 L 650 225" stroke-width="1" stroke-dasharray="2,5" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Nodes (The points of connection) -->
+  <!-- Phase 1: Cohesion nodes (Fully connected) -->
+  <g fill="#67e8f9">
+    <circle cx="150" cy="225" r="6" fill="#ffffff" filter="url(#glow)" class="pulse-faint-1" />
+    <circle cx="120" cy="170" r="4" />
+    <circle cx="110" cy="280" r="4" />
+    <circle cx="80" cy="225" r="3" opacity="0.5" />
+  </g>
+  
+  <!-- Phase 2: Divergence nodes (Scattering) -->
+  <g fill="#67e8f9" opacity="0.8">
+    <circle cx="320" cy="150" r="5" class="pulse-faint-2" />
+    <circle cx="320" cy="225" r="5" />
+    <circle cx="320" cy="300" r="5" />
+  </g>
+
+  <!-- Phase 3: Dissipation (Fading) -->
+  <g fill="#67e8f9" opacity="0.4">
+    <!-- Dying end-nodes -->
+    <circle cx="480" cy="140" r="3" fill="#ffffff" />
+    <line x1="480" y1="135" x2="480" y2="145" stroke="#67e8f9" stroke-width="0.5" />
+    <line x1="475" y1="140" x2="485" y2="140" stroke="#67e8f9" stroke-width="0.5" />
+
+    <circle cx="480" cy="320" r="3" fill="#ffffff" />
+    <line x1="480" y1="315" x2="480" y2="325" stroke="#67e8f9" stroke-width="0.5" />
+    <line x1="475" y1="320" x2="485" y2="320" stroke="#67e8f9" stroke-width="0.5" />
+
+    <!-- Center node is fading -->
+    <circle cx="500" cy="225" r="4" fill="#0e7490" stroke="#67e8f9" stroke-width="1" />
+  </g>
+
+  <!-- Phase 4: Singularity (Isolated point in the dark void) -->
+  <g>
+    <!-- Giant faint radar circle centered on the lone node -->
+    <circle cx="650" cy="225" r="45" fill="none" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="2,6" class="flow" />
+    <circle cx="650" cy="225" r="70" fill="none" stroke="#67e8f9" stroke-width="0.25" stroke-opacity="0.15" />
+    <!-- The Lone Node -->
+    <circle cx="650" cy="225" r="12" fill="url(#node-glow)" filter="url(#glow)" />
+    <circle cx="650" cy="225" r="6" fill="#ffffff" class="pulse-lone" />
+  </g>
+
+  <!-- Label and Phase Details -->
+  <!-- Phase 1 Info -->
+  <g transform="translate(100, 340)">
+    <text x="0" y="0" class="phase-title">01 // INTEGRATION</text>
+    <text x="0" y="12" class="hud-text" style="opacity: 0.5;">CONN_COUNT: 12</text>
+    <text x="0" y="22" class="hud-text" style="opacity: 0.5;">SIGNAL: STRONG</text>
+  </g>
+
+  <!-- Phase 2 Info -->
+  <g transform="translate(270, 70)">
+    <text x="0" y="0" class="phase-title">02 // DIVERGENCE</text>
+    <text x="0" y="12" class="hud-text" style="opacity: 0.5;">PATHS SPLIT</text>
+    <text x="0" y="22" class="hud-text" style="opacity: 0.5;">DECAY BEGINS</text>
+  </g>
+
+  <!-- Phase 3 Info -->
+  <g transform="translate(440, 360)">
+    <text x="0" y="0" class="phase-title">03 // DISSIPATION</text>
+    <text x="0" y="12" class="hud-text" style="opacity: 0.5;">CONN_COUNT: 01</text>
+    <text x="0" y="22" class="hud-text" style="opacity: 0.5;">VALENCE: CRITICAL</text>
+  </g>
+
+  <!-- Phase 4 Info -->
+  <g transform="translate(600, 70)">
+    <text x="0" y="0" class="phase-title" style="fill: #67e8f9;">04 // SOLITUDE</text>
+    <text x="0" y="12" class="hud-text" style="opacity: 0.8; fill: #ffffff;">SINGULAR NODE</text>
+    <text x="0" y="22" class="hud-text" style="opacity: 0.5;">ECHO TIME: INFINITE</text>
+  </g>
+
+  <!-- Timeline HUD Frame -->
+  <g>
+    <!-- Top HUD Strip -->
+    <rect x="50" y="25" width="700" height="2" fill="#67e8f9" opacity="0.2" />
+    <text x="50" y="20" class="hud-text">ORIGIN_ANALYSIS // PATH_OF_ISOLATION</text>
+    <text x="700" y="20" class="hud-text" style="text-anchor: end;">REV_9.48</text>
+
+    <!-- Bottom HUD Strip -->
+    <rect x="50" y="425" width="700" height="2" fill="#67e8f9" opacity="0.2" />
+    <text x="50" y="440" class="hud-text">CHRONO_GRAPH // URANUS_EMOTION_2</text>
+    <text x="750" y="440" class="hud-text" style="text-anchor: end;">SECURE_MATRIX</text>
+  </g>
+</svg>

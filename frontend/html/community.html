@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CỘNG ĐỒNG — Trạm Giao Tiếp Cảm Xúc</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/branding/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/branding/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/branding/apple-touch-icon.png">
   <meta name="description" content="Chia sẻ cảm xúc của bạn với vũ trụ và kết nối với những hành tinh khác." />
   <meta name="theme-color" content="#010812" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/planets-enhanced.css" />
@@ -25,13 +28,12 @@
 
   <!-- ═══ TOP NAVBAR ════════════════════════════════════════════ -->
   <nav class="top-nav" id="topNav" role="navigation" aria-label="Menu chính">
-    <div class="nav-logo">🪐 STELLAR<span>MIND</span></div>
+    <a href="index.html" class="nav-logo" aria-label="StellarMind - Trang chủ"><img src="../assets/branding/stellarmind-logo.png" alt="Logo StellarMind" width="40" height="40"></a>
     <ul class="nav-links" role="list">
       <li><a href="index.html" class="nav-link" id="navHome">Trang chủ</a></li>
       <li><a href="#" class="nav-link" id="navExplore">Khám phá</a></li>
       <li><a href="community.html" class="nav-link active" id="navCommunity">Cộng đồng</a></li>
-      <li><a href="#" class="nav-link" id="navTest">Bài test</a></li>
-      <li><a href="#" class="nav-link" id="navContact">Liên hệ</a></li>
+      <li><a href="contact.html" class="nav-link" id="navContact">Liên hệ</a></li>
     </ul>
     <div class="nav-spacer"></div>
     <div class="nav-auth-section" id="navAuthSection">
@@ -74,6 +76,20 @@
       </div>
     </section>
 
+    <section class="planet-filter-bar" id="planetFilterBar">
+      <button class="filter-btn active" data-planet="all"><span class="filter-dot" style="background:#e8f4ff"></span>Tất cả</button>
+      <button class="filter-btn" data-planet="mercury"><span class="filter-dot" style="background:#8a9ca8"></span>Sao Thủy</button>
+      <button class="filter-btn" data-planet="venus"><span class="filter-dot" style="background:#ffb6c1"></span>Sao Kim</button>
+      <button class="filter-btn" data-planet="earth"><span class="filter-dot" style="background:#4a9edf"></span>Trái Đất</button>
+      <button class="filter-btn" data-planet="mars"><span class="filter-dot" style="background:#ff4500"></span>Sao Hỏa</button>
+      <button class="filter-btn" data-planet="jupiter"><span class="filter-dot" style="background:#f0e68c"></span>Sao Mộc</button>
+      <button class="filter-btn" data-planet="saturn"><span class="filter-dot" style="background:#e8d598"></span>Sao Thổ</button>
+      <button class="filter-btn" data-planet="uranus"><span class="filter-dot" style="background:#7de8e8"></span>S.T.Vương</button>
+      <button class="filter-btn" data-planet="neptune"><span class="filter-dot" style="background:#4080ff"></span>S.H.Vương</button>
+    </section>
+
+    <div class="community-stream-meta" id="communityStreamMeta" aria-live="polite"></div>
+
     <section class="comm-feed" id="commFeed">
       <!-- Posts will be generated here by JS -->
     </section>
@@ -98,6 +114,11 @@
           <div class="auth-field">
             <label for="authPassword">Mật khẩu</label>
             <input type="password" id="authPassword" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)..." required minlength="6" />
+          </div>
+          <div class="auth-field hidden" id="authEmailField">
+            <label for="authEmail">Email liên kết tài khoản</label>
+            <input type="email" id="authEmail" placeholder="example@email.com" autocomplete="email" maxlength="254" />
+            <small>Email này được dùng để đội ngũ StellarMind có thể phản hồi thư của bạn.</small>
           </div>
           <div class="auth-error-msg hidden" id="authErrorMsg"></div>
           <button type="submit" class="auth-submit-btn" id="authSubmitBtn">ĐĂNG NHẬP</button>

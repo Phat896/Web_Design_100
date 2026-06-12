@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010712" />
+      <stop offset="60%" stop-color="#04162e" />
+      <stop offset="100%" stop-color="#08253e" />
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0.1" />
+    </linearGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#4ade80" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    @keyframes dashFlow {
+      0% { stroke-dashoffset: 80; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) scale(0.8); opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
+    }
+    @keyframes ripple {
+      0% { rx: 20px; ry: 10px; opacity: 0.8; }
+      100% { rx: 300px; ry: 150px; opacity: 0; }
+    }
+    .portal-pulse { animation: pulseGlow 4s infinite ease-in-out; transform-origin: 400px 180px; }
+    .path-flow { animation: dashFlow 2.5s linear infinite; }
+    .particle-1 { animation: floatParticle 6s infinite ease-in-out; transform-origin: center; }
+    .particle-2 { animation: floatParticle 8s infinite ease-in-out 2s; transform-origin: center; }
+    .particle-3 { animation: floatParticle 7s infinite ease-in-out 4s; transform-origin: center; }
+    .ripple-ring { animation: ripple 5s infinite cubic-bezier(0.1, 0.8, 0.3, 1); transform-origin: 400px 180px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Stars -->
+  <g opacity="0.3">
+    <circle cx="80" cy="70" r="1" fill="#ffffff" />
+    <circle cx="150" cy="220" r="1.5" fill="#38bdf8" />
+    <circle cx="280" cy="110" r="1" fill="#4ade80" />
+    <circle cx="580" cy="80" r="1" fill="#ffffff" />
+    <circle cx="710" cy="240" r="1.5" fill="#4ade80" />
+  </g>
+
+  <!-- Concentric Balance Rings (Fading Horizon Ripples) -->
+  <ellipse cx="400" cy="180" rx="100" ry="50" fill="none" stroke="#4ade80" stroke-width="1.5" class="ripple-ring" />
+  <ellipse cx="400" cy="180" rx="200" ry="100" fill="none" stroke="#38bdf8" stroke-width="1" class="ripple-ring" style="animation-delay: 2.5s;" />
+
+  <!-- Horizon Line -->
+  <line x1="50" y1="180" x2="750" y2="180" stroke="#38bdf8" stroke-width="0.5" opacity="0.4" />
+
+  <!-- Perspective Grid lines (ground level) -->
+  <g opacity="0.15" stroke="#38bdf8" stroke-width="0.8">
+    <line x1="400" y1="180" x2="0" y2="300" />
+    <line x1="400" y1="180" x2="0" y2="400" />
+    <line x1="400" y1="180" x2="150" y2="450" />
+    <line x1="400" y1="180" x2="300" y2="450" />
+    <line x1="400" y1="180" x2="500" y2="450" />
+    <line x1="400" y1="180" x2="650" y2="450" />
+    <line x1="400" y1="180" x2="800" y2="400" />
+    <line x1="400" y1="180" x2="800" y2="300" />
+  </g>
+
+  <!-- Glowing Path Forward (Nature Wave flow style) -->
+  <path d="M 220 450 L 380 180 L 420 180 L 580 450 Z" fill="url(#pathGrad)" />
+  
+  <!-- Path Flow Gridlines (Flowing forward) -->
+  <g opacity="0.6">
+    <path d="M 300 450 L 390 180" stroke="#38bdf8" stroke-width="2" />
+    <path d="M 500 450 L 410 180" stroke="#38bdf8" stroke-width="2" />
+    <path d="M 400 450 L 400 180" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="10 10" class="path-flow" />
+    <path d="M 350 450 L 395 180" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="15 15" class="path-flow" />
+    <path d="M 450 450 L 405 180" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="15 15" class="path-flow" />
+  </g>
+
+  <!-- Horizon Portal/Gateway -->
+  <g class="portal-pulse">
+    <circle cx="400" cy="180" r="70" fill="url(#portalGlow)" filter="url(#strongGlow)" />
+    <!-- Architectural Sci-Fi Rings -->
+    <circle cx="400" cy="180" r="50" fill="none" stroke="#4ade80" stroke-width="2" />
+    <circle cx="400" cy="180" r="38" fill="none" stroke="#ffffff" stroke-width="1" />
+    <circle cx="400" cy="180" r="58" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="8 8" />
+  </g>
+
+  <!-- Floating Particles rising from path -->
+  <g filter="url(#glow)">
+    <circle cx="370" cy="360" r="4" fill="#4ade80" class="particle-1" />
+    <circle cx="450" cy="330" r="3" fill="#38bdf8" class="particle-2" />
+    <circle cx="390" cy="280" r="5" fill="#4ade80" class="particle-3" />
+    <circle cx="420" cy="390" r="3.5" fill="#ffffff" class="particle-1" style="animation-delay: 1.5s;" />
+    <circle cx="340" cy="310" r="4.5" fill="#38bdf8" class="particle-2" style="animation-delay: 3s;" />
+  </g>
+
+  <!-- Traveler Silhouette (Astronaut standing at beginning of the path) -->
+  <g transform="translate(400, 420)">
+    <!-- Base Glow -->
+    <ellipse cx="0" cy="10" rx="18" ry="6" fill="#38bdf8" opacity="0.6" filter="url(#glow)" />
+    <!-- Body -->
+    <!-- Legs -->
+    <rect x="-6" y="-10" width="4" height="18" rx="1" fill="#ffffff" />
+    <rect x="2" y="-10" width="4" height="18" rx="1" fill="#ffffff" />
+    <!-- Torso -->
+    <rect x="-8" y="-28" width="16" height="20" rx="3" fill="#ffffff" />
+    <!-- Life pack -->
+    <rect x="-10" y="-26" width="20" height="14" rx="2" fill="#94a3b8" />
+    <!-- Head/Helmet -->
+    <circle cx="0" cy="-35" r="7" fill="#ffffff" />
+    <path d="M -4 -36 Q 0 -41, 4 -36 Q 5 -31, 0 -29 Q -5 -31, -4 -36 Z" fill="#0f172a" />
+    <!-- Arm Highlights -->
+    <rect x="-11" y="-24" width="3" height="12" rx="1" fill="#ffffff" />
+    <rect x="8" y="-24" width="3" height="12" rx="1" fill="#ffffff" />
+  </g>
+
+  <!-- Sci-Fi HUD Details -->
+  <g transform="translate(400, 40)" opacity="0.8">
+    <text x="0" y="0" text-anchor="middle" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" letter-spacing="4">DESTINATION: EQUILIBRIUM CORRIDOR</text>
+    <line x1="-130" y1="8" x2="130" y2="8" stroke="#4ade80" stroke-width="1" />
+    <circle cx="0" cy="8" r="2" fill="#4ade80" />
+  </g>
+
+  <!-- Left HUD Metrics -->
+  <g transform="translate(40, 200)" opacity="0.7">
+    <line x1="0" y1="0" x2="0" y2="60" stroke="#38bdf8" stroke-width="2" />
+    <text x="10" y="12" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9" font-weight="bold">TRANSFORM DATA</text>
+    <text x="10" y="26" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11">STEP: INTEGRATION</text>
+    <text x="10" y="40" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9">RATE: 1.054e-4/s</text>
+    <text x="10" y="52" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">ALIGN: 100.00%</text>
+  </g>
+
+  <!-- Right HUD Radar/Compass -->
+  <g transform="translate(720, 220)" opacity="0.7">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#4ade80" stroke-width="1" stroke-dasharray="3 6" />
+    <line x1="-35" y1="0" x2="35" y2="0" stroke="#38bdf8" stroke-width="0.5" />
+    <line x1="0" y1="-35" x2="0" y2="35" stroke="#38bdf8" stroke-width="0.5" />
+    <!-- Pointer line -->
+    <line x1="0" y1="0" x2="21" y2="-21" stroke="#4ade80" stroke-width="1.5" />
+    <text x="-30" y="45" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">VEC.GRID // STABLE</text>
+  </g>
+</svg>

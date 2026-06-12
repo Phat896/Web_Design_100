@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020917" />
+      <stop offset="50%" stop-color="#05192e" />
+      <stop offset="100%" stop-color="#0a2a44" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.3" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="leafBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="leafGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <!-- Filters -->
+    <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.03); }
+    }
+    @keyframes rotateCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotateCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes floatWave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes ripple {
+      0% { r: 50px; opacity: 0.6; }
+      100% { r: 250px; opacity: 0; }
+    }
+    .main-pulse { animation: pulse 6s infinite ease-in-out; transform-origin: 400px 225px; }
+    .rot-cw { animation: rotateCW 30s linear infinite; transform-origin: 400px 225px; }
+    .rot-ccw { animation: rotateCCW 20s linear infinite; transform-origin: 400px 225px; }
+    .float-wave { animation: floatWave 5s infinite ease-in-out; }
+    .flow-lines { animation: dashFlow 2s linear infinite; }
+    .ripple-ring { animation: ripple 4s infinite cubic-bezier(0.1, 0.8, 0.3, 1); transform-origin: 400px 225px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <circle cx="400" cy="225" r="300" fill="url(#centerGlow)" filter="url(#intenseGlow)" />
+
+  <!-- Grid Overlay (low opacity) -->
+  <g stroke="#38bdf8" stroke-width="0.5" opacity="0.15">
+    <line x1="0" y1="75" x2="800" y2="75" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="225" x2="800" y2="225" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="375" x2="800" y2="375" />
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Concentric Balance Rings (Ripple) -->
+  <circle cx="400" cy="225" r="80" fill="none" stroke="#4ade80" stroke-width="1.5" class="ripple-ring" />
+  <circle cx="400" cy="225" r="160" fill="none" stroke="#38bdf8" stroke-width="1" class="ripple-ring" style="animation-delay: 2s;" />
+
+  <!-- Outer HUD Concentric Rings (Static & Spinning) -->
+  <g class="rot-cw">
+    <circle cx="400" cy="225" r="180" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="10 30 50 30" opacity="0.4" />
+    <circle cx="400" cy="225" r="190" fill="none" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="5 15" opacity="0.3" />
+  </g>
+  <g class="rot-ccw">
+    <circle cx="400" cy="225" r="160" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="80 20 120 40" opacity="0.5" />
+    <circle cx="400" cy="225" r="140" fill="none" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="40 10 20 10" opacity="0.4" />
+  </g>
+
+  <!-- Floating Wave Elements (Nature Waves) in background -->
+  <g opacity="0.25" stroke="#38bdf8" stroke-width="1.5" fill="none" class="float-wave">
+    <path d="M 100 120 Q 250 80, 400 120 T 700 120" />
+    <path d="M 100 330 Q 250 370, 400 330 T 700 330" stroke="#4ade80" />
+  </g>
+
+  <!-- The Emotional World Core: Stylized Balance Seed / Earth Lotus -->
+  <g class="main-pulse">
+    <!-- Outer energy blobs -->
+    <circle cx="400" cy="225" r="60" fill="#38bdf8" opacity="0.2" filter="url(#intenseGlow)" />
+    <circle cx="400" cy="225" r="45" fill="#4ade80" opacity="0.25" filter="url(#intenseGlow)" />
+
+    <!-- Overlapping stylized plant/water leaves forming a heart/globe -->
+    <g class="float-wave" filter="url(#blurGlow)">
+      <!-- Central Stem/Spine -->
+      <line x1="400" y1="130" x2="400" y2="320" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+      
+      <!-- Leaf/Wave Pairs (Left/Right Balance) -->
+      <!-- Lower Pair -->
+      <path d="M 400 300 Q 320 280, 310 240 Q 315 200, 400 240" fill="url(#leafBlue)" opacity="0.8" />
+      <path d="M 400 300 Q 480 280, 490 240 Q 485 200, 400 240" fill="url(#leafGreen)" opacity="0.8" />
+      
+      <!-- Middle Pair -->
+      <path d="M 400 250 Q 290 220, 280 180 Q 295 140, 400 190" fill="url(#leafGreen)" opacity="0.85" />
+      <path d="M 400 250 Q 510 220, 520 180 Q 505 140, 400 190" fill="url(#leafBlue)" opacity="0.85" />
+
+      <!-- Top Pair -->
+      <path d="M 400 200 Q 310 160, 320 130 Q 355 100, 400 150" fill="url(#leafBlue)" opacity="0.9" />
+      <path d="M 400 200 Q 490 160, 480 130 Q 445 100, 400 150" fill="url(#leafGreen)" opacity="0.9" />
+      
+      <!-- Center Core Sphere (Perfect Balance) -->
+      <circle cx="400" cy="210" r="18" fill="#ffffff" filter="url(#blurGlow)" />
+      <circle cx="400" cy="210" r="10" fill="#4ade80" />
+      <circle cx="400" cy="210" r="5" fill="#38bdf8" />
+    </g>
+
+    <!-- Swirling glowing nerve/energy lines wrapping the core -->
+    <path d="M 320 225 Q 360 270, 400 270 T 480 225 Q 440 180, 400 180 Z" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="5 5" class="flow-lines" />
+    <path d="M 280 225 Q 340 310, 400 310 T 520 225 Q 460 140, 400 140 Z" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="10 5" class="flow-lines" style="animation-direction: reverse;" />
+  </g>
+
+  <!-- Scientific/HUD Annotations -->
+  <g transform="translate(50, 50)" class="float-wave">
+    <text x="0" y="0" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" letter-spacing="2">EMOTIONAL CORE: SYNAPSE</text>
+    <text x="0" y="18" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">E-SYS ID: BALANCE_03</text>
+    <line x1="0" y1="28" x2="180" y2="28" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
+    <!-- Small tech cross -->
+    <path d="M -5 -5 L 5 -5 M -5 -5 L -5 5" fill="none" stroke="#4ade80" stroke-width="1" />
+  </g>
+
+  <g transform="translate(600, 350)" class="float-wave" style="animation-delay: 2.5s;">
+    <!-- Technical readings -->
+    <text x="150" y="0" text-anchor="end" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">RESONANCE STATUS</text>
+    <text x="150" y="15" text-anchor="end" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="14" font-weight="bold">HARMONIZED</text>
+    <text x="150" y="30" text-anchor="end" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9">VARIANCE &lt; 0.02%</text>
+    <line x1="-20" y1="38" x2="150" y2="38" stroke="#4ade80" stroke-width="1" opacity="0.5" />
+    
+    <!-- Waveform graph -->
+    <path d="M -20 25 Q -10 15, 0 25 T 20 25 T 40 25 T 60 25" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M -20 25 Q -10 30, 0 25 T 20 25 T 40 25 T 60 25" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.7" />
+  </g>
+
+  <!-- Frame Lines -->
+  <path d="M 20 40 L 20 20 L 40 20" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+  <path d="M 780 40 L 780 20 L 760 20" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+  <path d="M 20 410 L 20 430 L 40 430" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+  <path d="M 780 410 L 780 430 L 760 430" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+</svg>

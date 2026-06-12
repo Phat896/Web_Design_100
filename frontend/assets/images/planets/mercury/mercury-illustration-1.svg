@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Space Gradient -->
+    <radialGradient id="space-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#020d19"/>
+      <stop offset="60%" stop-color="#00060e"/>
+      <stop offset="100%" stop-color="#000103"/>
+    </radialGradient>
+    
+    <!-- Synapse Gradient -->
+    <linearGradient id="syn-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00a0ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00f0f0" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .star { fill: #ffffff; opacity: 0.3; animation: twinkle 4s infinite ease-in-out; }
+    .pulse-glow { animation: pulse 3s infinite ease-in-out; }
+    
+    /* Dopamine flow animation */
+    .dopa-molecule {
+      animation: dopaFlow 3s infinite linear;
+    }
+    .dopa-1 { animation-delay: 0s; }
+    .dopa-2 { animation-delay: 1s; }
+    .dopa-3 { animation-delay: 2s; }
+    
+    .sparkle { animation: pulse 1.5s infinite ease-in-out; }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1.0; transform: scale(1.1); }
+    }
+    @keyframes dopaFlow {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateY(80px) translateX(10px); opacity: 0; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#space-bg)" />
+  
+  <!-- Subtle technical grid -->
+  <g opacity="0.1">
+    <circle cx="400" cy="225" r="300" fill="none" stroke="#00f0f0" stroke-width="0.8" />
+    <circle cx="400" cy="225" r="200" fill="none" stroke="#00a0ff" stroke-width="0.8" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- Brain Silhouette Overlay (Left Side) -->
+  <g transform="translate(60, 90) scale(0.85)" opacity="0.45">
+    <!-- Brain Silhouette path -->
+    <path d="M 150,80 C 100,80 70,110 70,160 C 70,185 85,210 90,225 C 95,240 90,260 110,270 C 130,280 150,290 170,275 C 190,260 210,270 230,250 C 250,230 270,180 270,160 C 270,110 230,80 150,80 Z" fill="none" stroke="#00a0ff" stroke-width="2.5" stroke-dasharray="1000" />
+    
+    <!-- Active neural pathways -->
+    <path d="M 120,130 Q 150,150 170,130 T 220,180" fill="none" stroke="#00f0f0" stroke-width="1.5" />
+    <path d="M 90,180 Q 130,170 160,210 T 210,220" fill="none" stroke="#00f0f0" stroke-width="1.5" />
+    
+    <!-- Synaptic Nodes -->
+    <circle cx="120" cy="130" r="5" fill="#00f0f0" class="pulse-glow" filter="url(#glow)" />
+    <circle cx="170" cy="130" r="4" fill="#00a0ff" />
+    <circle cx="220" cy="180" r="5" fill="#00f0f0" class="pulse-glow" filter="url(#glow)" />
+    <circle cx="90" cy="180" r="4" fill="#00a0ff" />
+    <circle cx="160" cy="210" r="5" fill="#00f0f0" class="pulse-glow" filter="url(#glow)" />
+    <circle cx="210" cy="220" r="4" fill="#00a0ff" />
+  </g>
+
+  <!-- Connective Signal Line from Brain to Detail Cleft -->
+  <path d="M 270,220 L 450,220" fill="none" stroke="#00f0f0" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5" />
+  <polygon points="450,215 460,220 450,225" fill="#00f0f0" />
+
+  <!-- Magnified Synaptic Cleft (Right Side) -->
+  <g transform="translate(480, 80)">
+    <!-- Pre-synaptic terminal (Axon Button) -->
+    <path d="M 40,-30 C 40,30 20,80 70,90 C 120,100 200,100 240,70 C 260,55 250,-30 250,-30" fill="none" stroke="#00a0ff" stroke-width="3" />
+    <text x="140" y="30" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff" text-anchor="middle">PRE-SYNAPTIC MEMBRANE</text>
+
+    <!-- Vesicles inside Axon Button -->
+    <circle cx="100" cy="50" r="15" fill="#020d19" stroke="#00f0f0" stroke-width="1.5" />
+    <circle cx="95" cy="46" r="2" fill="#00f0f0" />
+    <circle cx="103" cy="52" r="2.5" fill="#00f0f0" />
+    
+    <circle cx="170" cy="65" r="18" fill="#020d19" stroke="#00f0f0" stroke-width="1.5" />
+    <circle cx="165" cy="60" r="3" fill="#00f0f0" />
+    <circle cx="175" cy="70" r="3" fill="#00f0f0" />
+    <circle cx="168" cy="72" r="2" fill="#00f0f0" />
+
+    <!-- Post-synaptic terminal (Dendrite Spines) -->
+    <path d="M 30,300 C 30,220 70,210 100,210 C 130,210 150,220 170,210 C 190,200 210,210 240,210 C 270,210 260,300 260,300" fill="none" stroke="#00a0ff" stroke-width="3" />
+    <text x="150" y="270" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff" text-anchor="middle">POST-SYNAPTIC MEMBRANE</text>
+
+    <!-- Receptor Sites on Post-Synaptic Membrane -->
+    <!-- Receptor 1 -->
+    <path d="M 85,210 Q 95,225 105,210" fill="none" stroke="#00f0f0" stroke-width="2.5" />
+    <!-- Receptor 2 -->
+    <path d="M 145,210 Q 155,225 165,210" fill="none" stroke="#00f0f0" stroke-width="2.5" />
+    <!-- Receptor 3 -->
+    <path d="M 205,210 Q 215,225 225,210" fill="none" stroke="#00f0f0" stroke-width="2.5" />
+
+    <!-- Dopamine Molecules Floating in Cleft (with Animations) -->
+    <g class="dopa-molecule dopa-1" style="transform-origin: 100px 90px;">
+      <circle cx="100" cy="90" r="4.5" fill="#00f0f0" filter="url(#glow)" />
+    </g>
+    <g class="dopa-molecule dopa-2" style="transform-origin: 155px 105px;">
+      <circle cx="155" cy="105" r="4.5" fill="#00f0f0" filter="url(#glow)" />
+    </g>
+    <g class="dopa-molecule dopa-3" style="transform-origin: 190px 95px;">
+      <circle cx="190" cy="95" r="4.5" fill="#00f0f0" filter="url(#glow)" />
+    </g>
+    <!-- Some docked/received molecules -->
+    <circle cx="155" cy="216" r="4.5" fill="#00f0f0" filter="url(#glow)" class="sparkle" />
+    
+    <!-- Action Potential electric spark indicators -->
+    <path d="M 230,30 L 220,50 L 235,55 L 225,80" fill="none" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)" />
+  </g>
+
+  <!-- HUD Labels and Details -->
+  <!-- Top Left Info -->
+  <g transform="translate(30, 40)">
+    <text font-family="'JetBrains Mono', monospace" font-size="12" fill="#00f0f0" letter-spacing="1" font-weight="bold">NEUROTRANSMITTER SCAN // CURIOSITY CORE</text>
+    <text y="16" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff">TARGET: MESOCORTICOLIMBIC DOPAMINE PATHWAY</text>
+    <line x1="0" y1="24" x2="320" y2="24" stroke="#00f0f0" stroke-width="1.2" opacity="0.4" />
+  </g>
+
+  <!-- Bottom Left Telemetry -->
+  <g transform="translate(30, 380)">
+    <text font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f0f0">VESICLE DOCKING: ACTIVE</text>
+    <text y="14" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff">DOPAMINE CONCENTRATION: +48.2% (HYPER-FLOW)</text>
+    <rect x="0" y="24" width="8" height="8" fill="#00f0f0" class="pulse-glow" />
+    <rect x="14" y="24" width="8" height="8" fill="#00a0ff" />
+    <rect x="28" y="24" width="8" height="8" fill="#00a0ff" opacity="0.5" />
+  </g>
+</svg>

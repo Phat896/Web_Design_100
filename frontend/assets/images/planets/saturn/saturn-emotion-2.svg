@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08050e" />
+      <stop offset="50%" stop-color="#120a22" />
+      <stop offset="100%" stop-color="#030206" />
+    </linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a9ca8" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d8b4fe" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    @keyframes lineFlow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -40; }
+    }
+    @keyframes textFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .node-pulse { animation: pulseNode 3s infinite ease-in-out; transform-origin: center; }
+    .flow-line { stroke-dasharray: 10 10; animation: lineFlow 5s linear infinite; }
+    .text-anim { animation: textFloat 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Background Grid lines -->
+  <g stroke="#8a9ca8" stroke-width="0.5" opacity="0.08">
+    <path d="M 0 100 L 800 100 M 0 200 L 800 200 M 0 300 L 800 300 M 0 400 L 800 400" />
+    <path d="M 150 0 L 150 450 M 300 0 L 300 450 M 450 0 L 450 450 M 600 0 L 600 450" />
+  </g>
+
+  <!-- Horizontal Timeline Flow Line -->
+  <line x1="100" y1="225" x2="700" y2="225" stroke="#475569" stroke-width="3" />
+  <line x1="100" y1="225" x2="700" y2="225" stroke="url(#flowGrad)" stroke-width="2" class="flow-line" />
+
+  <!-- Gravity waves emanating from stages -->
+  <path d="M 200 150 Q 200 225, 200 300" fill="none" stroke="#8a9ca8" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
+  <path d="M 450 120 Q 450 225, 450 330" fill="none" stroke="#c084fc" stroke-width="2" opacity="0.3" />
+  <path d="M 470 140 Q 470 225, 470 310" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.2" />
+
+  <!-- Timeline Nodes -->
+  
+  <!-- STAGE 1: ACCUMULATION (Steel Blue, dispersed particles) -->
+  <g transform="translate(200, 225)">
+    <!-- Glow -->
+    <circle cx="0" cy="0" r="40" fill="url(#nodeGlow)" opacity="0.4" />
+    <!-- Center Dot -->
+    <circle cx="0" cy="0" r="8" fill="#8a9ca8" class="node-pulse" style="animation-delay: 0s;" />
+    <!-- Orbits / Dispersed Rings -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#8a9ca8" stroke-width="1" stroke-dasharray="5 5" />
+    <!-- Dispersed particles -->
+    <circle cx="-15" cy="-15" r="2" fill="#8a9ca8" opacity="0.8" />
+    <circle cx="18" cy="12" r="1.5" fill="#8a9ca8" opacity="0.6" />
+    <circle cx="10" cy="-22" r="2.5" fill="#8a9ca8" opacity="0.7" />
+    <circle cx="-20" cy="18" r="1" fill="#8a9ca8" opacity="0.9" />
+  </g>
+
+  <!-- STAGE 2: CONDENSATION (Purple, gears start mesh, rings form) -->
+  <g transform="translate(450, 225)">
+    <!-- Glow -->
+    <circle cx="0" cy="0" r="50" fill="url(#nodeGlow)" opacity="0.6" />
+    <!-- Center Dot -->
+    <circle cx="0" cy="0" r="12" fill="#c084fc" class="node-pulse" style="animation-delay: 1s;" filter="url(#glow)"/>
+    <!-- Concentric dense rings -->
+    <ellipse cx="0" cy="0" rx="35" ry="12" fill="none" stroke="#c084fc" stroke-width="2" transform="rotate(-15)" />
+    <ellipse cx="0" cy="0" rx="28" ry="8" fill="none" stroke="#8a9ca8" stroke-width="1" transform="rotate(-15)" />
+    <!-- Compression vector arrows pointing inwards -->
+    <path d="M 0 -35 L 0 -22 M 0 -22 L -4 -26 M 0 -22 L 4 -26" fill="none" stroke="#c084fc" stroke-width="1.5" />
+    <path d="M 0 35 L 0 22 M 0 22 L -4 26 M 0 22 L 4 26" fill="none" stroke="#c084fc" stroke-width="1.5" />
+  </g>
+
+  <!-- STAGE 3: METALLIC DENSITY (Deep Violet/Pink, core crystallization, weight loads) -->
+  <g transform="translate(680, 225)">
+    <!-- Glow -->
+    <circle cx="0" cy="0" r="60" fill="url(#nodeGlow)" opacity="0.8" />
+    <!-- Crystalline dense core -->
+    <path d="M 0 -18 L 15 -5 L 10 15 L -10 15 L -15 -5 Z" fill="#e879f9" class="node-pulse" style="animation-delay: 2s;" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="5" fill="#ffffff" />
+    <!-- Super dense boundary circles -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#e879f9" stroke-width="2" />
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#8a9ca8" stroke-width="1" stroke-dasharray="2 2" />
+    <!-- Gravity vector fields -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#c084fc" stroke-width="0.5" opacity="0.5" />
+    <!-- Tiny orbiting dense satellites -->
+    <circle cx="38" cy="-18" r="3" fill="#ffffff" filter="url(#glow)" />
+  </g>
+
+  <!-- Text and labels for the Timeline (Top and Bottom) -->
+  
+  <!-- Left Header -->
+  <g transform="translate(100, 80)">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="1">ORIGIN TIMELINE</text>
+    <text x="0" y="18" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10">HOW PRESSURE DENSITIES SHAPED THE CORE</text>
+  </g>
+
+  <!-- Stage 1 description -->
+  <g transform="translate(200, 310)" class="text-anim" style="animation-delay: 0s;">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">STAGE_01</text>
+    <text x="0" y="14" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">ACCUMULATION</text>
+    <text x="0" y="26" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Dispersed mass &amp; gas</text>
+    <text x="0" y="36" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Density: 0.3 g/cm³</text>
+  </g>
+
+  <!-- Stage 2 description -->
+  <g transform="translate(450, 310)" class="text-anim" style="animation-delay: 1.3s;">
+    <text x="0" y="0" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">STAGE_02</text>
+    <text x="0" y="14" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">CONDENSATION</text>
+    <text x="0" y="26" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Gravitational collapse</text>
+    <text x="0" y="36" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Density: 1.2 g/cm³</text>
+  </g>
+
+  <!-- Stage 3 description -->
+  <g transform="translate(680, 310)" class="text-anim" style="animation-delay: 2.6s;">
+    <text x="0" y="0" fill="#e879f9" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">STAGE_03</text>
+    <text x="0" y="14" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">METALLIC CORE</text>
+    <text x="0" y="26" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Crystalline phase lock</text>
+    <text x="0" y="36" fill="#e879f9" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Density: 5.4+ g/cm³</text>
+  </g>
+
+  <!-- Graphical curve displaying pressure growth -->
+  <g fill="none" stroke-width="2" opacity="0.7">
+    <!-- Graph path -->
+    <path d="M 100 180 L 200 175 Q 320 160, 450 120 T 680 50" stroke="#c084fc" />
+    <path d="M 100 180 L 200 175 Q 320 160, 450 120 T 680 50" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="3 3" />
+    <!-- Graph labels -->
+    <circle cx="200" cy="175" r="3" fill="#8a9ca8" />
+    <circle cx="450" cy="120" r="3" fill="#c084fc" />
+    <circle cx="680" cy="50" r="3" fill="#e879f9" filter="url(#glow)" />
+    <text x="690" y="48" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8">MAX PRESSURE</text>
+  </g>
+
+  <!-- HUD text in corners -->
+  <g transform="translate(40, 410)">
+    <text x="0" y="0" fill="#8a9ca8" font-family="'JetBrains Mono', monospace" font-size="9">SATURN ORIGIN DATA GRAPH // SYSTEM_VER: 4.1</text>
+  </g>
+  <g transform="translate(680, 410)">
+    <text x="0" y="0" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="end">TIME REF: -4.5 BILLION YR</text>
+  </g>
+</svg>

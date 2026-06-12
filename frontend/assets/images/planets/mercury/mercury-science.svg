@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Space Gradient -->
+    <radialGradient id="space-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#010a18"/>
+      <stop offset="70%" stop-color="#00040b"/>
+      <stop offset="100%" stop-color="#000104"/>
+    </radialGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-node { animation: pulseNode 3s infinite ease-in-out; }
+    .pulse-node-delay { animation: pulseNode 3s infinite ease-in-out; animation-delay: 1.5s; }
+    .spin-scope { transform-origin: 580px 225px; animation: spinScope 15s infinite linear; }
+    
+    .wave-path {
+      stroke: #00f0f0;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-dasharray: 600;
+      stroke-dashoffset: 0;
+      animation: waveMove 10s infinite linear;
+    }
+
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1.0; fill: #ffffff; }
+    }
+    @keyframes spinScope {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes waveMove {
+      0% { stroke-dashoffset: 1200; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#space-bg)" />
+
+  <!-- Blueprint grid lines -->
+  <g opacity="0.12">
+    <path d="M 50,0 L 50,450 M 150,0 L 150,450 M 250,0 L 250,450 M 350,0 L 350,450 M 450,0 L 450,450 M 550,0 L 550,450 M 650,0 L 650,450 M 750,0 L 750,450" stroke="#00f0f0" stroke-width="0.5" />
+    <path d="M 0,50 L 800,50 M 0,125 L 800,125 M 0,200 L 800,200 M 0,275 L 800,275 M 0,350 L 800,350 M 0,425 L 800,425" stroke="#00f0f0" stroke-width="0.5" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- Left: Dopamine Molecule (C8H11NO2) Chemical Structure Diagram -->
+  <g transform="translate(100, 100)">
+    
+    <!-- Benzene Ring Hexagon (Catechol Core) -->
+    <!-- Center of hexagon at cx=140, cy=150. Radius R=60. Vertices: -->
+    <!-- V1: 140, 90 -->
+    <!-- V2: 192, 120 -->
+    <!-- V3: 192, 180 -->
+    <!-- V4: 140, 210 -->
+    <!-- V5: 88, 180 -->
+    <!-- V6: 88, 120 -->
+    
+    <!-- Outer structural ring -->
+    <polygon points="140,90 192,120 192,180 140,210 88,180 88,120" fill="none" stroke="#00a0ff" stroke-width="2" />
+    <!-- Inner double bonds for Benzene -->
+    <line x1="135" y1="102" x2="178" y2="127" stroke="#00f0f0" stroke-width="1.5" />
+    <line x1="183" y1="175" x2="135" y2="202" stroke="#00f0f0" stroke-width="1.5" />
+    <line x1="97" y1="175" x2="97" y2="125" stroke="#00f0f0" stroke-width="1.5" />
+
+    <!-- Oxygen Nodes & Hydroxyl (-OH) Groups -->
+    <!-- Attached to V5 (88, 180) and V6 (88, 120) -->
+    <line x1="88" y1="120" x2="48" y2="98" stroke="#00a0ff" stroke-width="2" />
+    <line x1="88" y1="180" x2="48" y2="202" stroke="#00a0ff" stroke-width="2" />
+    
+    <!-- HO- (V6-OH) Node -->
+    <circle cx="48" cy="98" r="8" fill="#010a18" stroke="#00f0f0" stroke-width="2" class="pulse-node" />
+    <text x="48" y="101" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00f0f0" font-weight="bold" text-anchor="middle">OH</text>
+    
+    <!-- HO- (V5-OH) Node -->
+    <circle cx="48" cy="202" r="8" fill="#010a18" stroke="#00f0f0" stroke-width="2" class="pulse-node-delay" />
+    <text x="48" y="205" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00f0f0" font-weight="bold" text-anchor="middle">OH</text>
+
+    <!-- Side Chain (Ethylamine group) -->
+    <!-- Attached to V2 (192, 120) -->
+    <!-- Path: V2 (192, 120) -> CH2 (242, 90) -> CH2 (292, 120) -> NH2 (342, 90) -->
+    <line x1="192" y1="120" x2="242" y2="90" stroke="#00a0ff" stroke-width="2" />
+    <line x1="242" y1="90" x2="292" y2="120" stroke="#00a0ff" stroke-width="2" />
+    <line x1="292" y1="120" x2="342" y2="90" stroke="#00a0ff" stroke-width="2" />
+
+    <!-- Carbon Nodes on Side Chain -->
+    <circle cx="242" cy="90" r="4" fill="#00f0f0" filter="url(#glow)" />
+    <circle cx="292" cy="120" r="4" fill="#00f0f0" filter="url(#glow)" />
+
+    <!-- Nitrogen Node (Amine group) - NH2 -->
+    <circle cx="342" cy="90" r="10" fill="#010a18" stroke="#00f0f0" stroke-width="2" class="pulse-node" />
+    <text x="342" y="93" font-family="'JetBrains Mono', monospace" font-size="7" fill="#00f0f0" font-weight="bold" text-anchor="middle">NH2</text>
+
+    <!-- Scientific Labels pointing to chemical groups -->
+    <!-- Callout 1: Catechol Core -->
+    <path d="M 120,150 L 150,150 L 180,60 H 220" fill="none" stroke="#00f0f0" stroke-dasharray="2 2" stroke-width="1" />
+    <text x="225" y="58" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00f0f0">CATECHOL_CORE</text>
+
+    <!-- Callout 2: Amine Group -->
+    <path d="M 342,80 L 342,40 H 290" fill="none" stroke="#00f0f0" stroke-dasharray="2 2" stroke-width="1" />
+    <text x="285" y="38" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00f0f0" text-anchor="end">ETHYLAMINE_SIDECHAIN</text>
+  </g>
+
+  <!-- Right: Sonar Scoped / Telemetry View -->
+  <g class="spin-scope">
+    <circle cx="580" cy="225" r="90" fill="none" stroke="#00f0f0" stroke-width="1" stroke-dasharray="5 15" />
+    <circle cx="580" cy="225" r="70" fill="none" stroke="#00a0ff" stroke-width="1.5" stroke-dasharray="40 10" />
+    <circle cx="580" cy="225" r="50" fill="none" stroke="#00f0f0" stroke-width="0.8" />
+    <line x1="580" y1="125" x2="580" y2="325" stroke="#00f0f0" stroke-width="0.7" opacity="0.5" />
+    <line x1="480" y1="225" x2="680" y2="225" stroke="#00f0f0" stroke-width="0.7" opacity="0.5" />
+  </g>
+
+  <!-- Scope static elements -->
+  <g transform="translate(580, 225)">
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#00f0f0" stroke-width="2" />
+    <circle cx="0" cy="0" r="2" fill="#ffffff" />
+    <polygon points="65,0 75,-5 75,5" fill="#00f0f0" />
+    <polygon points="-65,0 -75,-5 -75,5" fill="#00f0f0" />
+    <text x="90" y="4" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00f0f0">SCAN_RANGE</text>
+  </g>
+
+  <!-- Oscilloscope Waveform at the Bottom -->
+  <path d="M 50,390 L 150,390 Q 180,360 200,390 T 250,390 Q 280,410 300,390 T 350,390 L 750,390" class="wave-path" />
+
+  <!-- Technical Specs Table (Top Right) -->
+  <g transform="translate(480, 40)" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff">
+    <text font-weight="bold" fill="#00f0f0">MOLECULAR ANALYSIS</text>
+    <text y="15">FORMULA: C8H11NO2</text>
+    <text y="28">MOL. WT: 153.18 g/mol</text>
+    <text y="41">IUPAC: 4-(2-aminoethyl)benzene-1,2-diol</text>
+    <text y="54">FUNCTION: CURIOSITY/REWARD SYNAPSE</text>
+    <line x1="0" y1="-8" x2="280" y2="-8" stroke="#00f0f0" stroke-width="1" />
+  </g>
+
+  <!-- HUD Header (Top Left) -->
+  <g transform="translate(30, 40)">
+    <text font-family="'JetBrains Mono', monospace" font-size="12" fill="#00f0f0" font-weight="bold">CHEMICAL SCHEMATIC // DOPAMINE</text>
+    <text y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00a0ff">SYS.REF: CURIOSITY_CATALYST_REV3</text>
+    <rect x="0" y="24" width="180" height="2" fill="#00f0f0" />
+  </g>
+</svg>

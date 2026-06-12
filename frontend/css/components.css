@@ -1,0 +1,493 @@
+/* ════════════════════════════════════════════════════════════════
+   COMPONENTS - Reusable UI Components
+   StellarMind - Social Media Storytelling
+   ════════════════════════════════════════════════════════════════ */
+
+/* ─── SYMPTOM CARDS ─────────────────────────────────────────────── */
+
+.symptom-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease-expo) calc(var(--symptom, 1) * 0.1s) forwards;
+}
+
+.symptom-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--color-glow) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-smooth);
+  pointer-events: none;
+}
+
+.symptom-card:hover {
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-8px);
+}
+
+.symptom-card:hover::before {
+  opacity: 0.2;
+}
+
+.symptom-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: var(--spacing-md);
+  display: block;
+  transition: transform var(--duration-base) var(--ease-bounce);
+}
+
+.symptom-card:hover .symptom-icon {
+  transform: scale(1.2);
+}
+
+.symptom-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+}
+
+.symptom-desc {
+  font-size: 0.875rem;
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.5;
+}
+
+/* ─── SOCIAL THOUGHT CARDS ──────────────────────────────────────── */
+
+.thought-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  position: relative;
+  overflow: hidden;
+}
+
+.thought-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-smooth);
+  pointer-events: none;
+}
+
+.thought-card:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.thought-card:hover::after {
+  opacity: 0.05;
+}
+
+.thought-quote {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-white);
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+}
+
+.thought-quote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-primary);
+  opacity: 0.3;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+.thought-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.thought-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-bg);
+}
+
+.thought-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+/* ─── IMPACT CARDS ──────────────────────────────────────────────── */
+
+.impact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease-expo) 0.2s forwards;
+}
+
+.impact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  opacity: 0;
+  z-index: 0;
+  transition: opacity var(--duration-base) var(--ease-smooth);
+}
+
+.impact-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-12px);
+}
+
+.impact-card:hover::before {
+  opacity: 0.08;
+}
+
+.impact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.impact-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--spacing-lg);
+}
+
+.impact-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.impact-card p {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.75);
+  line-height: 1.6;
+}
+
+/* ─── ADVICE CARDS (FLIP) ───────────────────────────────────────── */
+
+.advice-card {
+  position: relative;
+  height: 300px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.advice-front,
+.advice-back {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-smooth);
+  backface-visibility: hidden;
+}
+
+.advice-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background-size: 200% 200%;
+  border: 1px solid var(--color-primary);
+}
+
+.advice-card.flipped .advice-front {
+  transform: rotateY(180deg);
+}
+
+.advice-card.flipped .advice-back {
+  transform: rotateY(0deg);
+}
+
+.advice-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.advice-front h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.advice-back p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-bg);
+}
+
+.advice-card:hover {
+  border-color: var(--color-primary);
+}
+
+/* ─── CTA CHECKLIST ─────────────────────────────────────────────── */
+
+.cta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+}
+
+.cta-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+}
+
+.cta-checkbox {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+}
+
+.cta-checkbox:checked + .cta-text {
+  text-decoration: line-through;
+  color: rgba(226, 232, 240, 0.5);
+}
+
+.cta-text {
+  font-size: 1rem;
+  color: rgba(226, 232, 240, 0.8);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+/* ─── CHAT INTERFACE ────────────────────────────────────────────── */
+
+.chat-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.chat-messages {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  animation: fadeUp 0.3s var(--ease-expo);
+}
+
+.chat-bubble.user {
+  justify-content: flex-end;
+}
+
+.chat-bubble p {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.chat-bubble.user p {
+  background: var(--color-primary);
+  border: none;
+  color: var(--color-bg);
+}
+
+.chat-bubble.bot p {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-input::placeholder {
+  color: rgba(226, 232, 240, 0.4);
+}
+
+.chat-send {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary);
+  border: none;
+  color: var(--color-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.chat-send:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--color-glow);
+}
+
+/* ─── PLANET CAROUSEL ───────────────────────────────────────────── */
+
+.carousel-item {
+  position: relative;
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-smooth);
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease-expo) 0.2s forwards;
+}
+
+.carousel-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  transition: all var(--duration-base) var(--ease-smooth);
+}
+
+.carousel-planet {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border-accent);
+  transition: all var(--duration-base) var(--ease-smooth);
+}
+
+.carousel-link:hover .carousel-planet {
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--color-glow);
+}
+
+.carousel-item h3 {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.carousel-item p {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* ─── BUTTONS ───────────────────────────────────────────────────── */
+
+.cta-share-btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border: none;
+  color: var(--color-bg);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+}
+
+.cta-share-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px var(--color-glow);
+}
+
+.cta-share-btn:active {
+  transform: translateY(-2px);
+}
+
+/* ─── ANIMATION HELPERS ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -530,7 +530,7 @@ function ppInitAi(id) {
   // Dynamic API configuration
   const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000/api'
-    : 'https://stellarmind-backend.onrender.com/api';
+    : 'https://project-web-bwm.onrender.com/';
 
   const btn = document.getElementById('ppAiSend');
   const input = document.getElementById('ppAiInput');

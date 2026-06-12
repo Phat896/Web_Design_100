@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010712" />
+      <stop offset="60%" stop-color="#041426" />
+      <stop offset="100%" stop-color="#072036" />
+    </linearGradient>
+    <radialGradient id="dialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#4ade80" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0" />
+    </radialGradient>
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes sweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulseAtom {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.25); opacity: 1; }
+    }
+    @keyframes graphMove {
+      0% { stroke-dashoffset: 40; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .sweep-anim { animation: sweep 20s linear infinite; transform-origin: 400px 210px; }
+    .sweep-reverse { animation: sweep 15s linear infinite reverse; transform-origin: 400px 210px; }
+    .atom-glow { animation: pulseAtom 3s infinite ease-in-out; transform-origin: center; }
+    .flow-wave { animation: graphMove 1.5s linear infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Scientific Blueprint Grid -->
+  <g stroke="#38bdf8" stroke-width="0.5" opacity="0.1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Title HUD -->
+  <g transform="translate(50, 45)" opacity="0.8">
+    <text x="0" y="0" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" letter-spacing="3">NEURO-CHEMICAL MAPPING DEVICE</text>
+    <text x="0" y="16" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9">TARGET SPECTRUM: DYNAMIC STABILITY (EARTH.G3)</text>
+    <line x1="0" y1="24" x2="250" y2="24" stroke="#4ade80" stroke-width="1" />
+  </g>
+
+  <!-- Left Side: Dopamine Molecule -->
+  <g transform="translate(140, 180)">
+    <!-- Title -->
+    <text x="-40" y="-45" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="bold">DOPAMINE [C8H11NO2]</text>
+    <text x="-40" y="-32" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">FUNCTION: reward / motivation</text>
+    <line x1="-40" y1="-24" x2="100" y2="-24" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
+    
+    <!-- Chemical Bonds (Benzene Ring) -->
+    <g stroke="#38bdf8" stroke-width="2" fill="none" filter="url(#glow)">
+      <!-- Hexagon Ring -->
+      <path d="M 0 0 L 25 -15 L 50 0 L 50 30 L 25 45 L 0 30 Z" />
+      <!-- Double bonds -->
+      <line x1="22" y1="-7" x2="44" y2="6" />
+      <line x1="44" y1="24" x2="22" y2="37" />
+      <line x1="6" y1="24" x2="6" y2="6" />
+      
+      <!-- Oxygen Branches -->
+      <line x1="0" y1="0" x2="-20" y2="-12" />
+      <line x1="0" y1="30" x2="-20" y2="42" />
+      
+      <!-- Ethylamine Side Chain -->
+      <path d="M 50 15 L 75 15 L 90 40 L 120 40" />
+    </g>
+
+    <!-- Atom Circles -->
+    <g transform="translate(-20, -12)">
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="8">OH</text>
+    </g>
+    <g transform="translate(-20, 42)">
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="8">OH</text>
+    </g>
+    <g transform="translate(120, 40)">
+      <circle cx="0" cy="0" r="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="8">NH₂</text>
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#38bdf8" stroke-width="0.5" class="atom-glow" />
+    </g>
+
+    <!-- Data Readings -->
+    <text x="-40" y="80" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">MOLECULAR WEIGHT: 153.18 g/mol</text>
+    <text x="-40" y="92" fill="#38bdf8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">STATUS: LEVEL EQUALIZED</text>
+  </g>
+
+  <!-- Right Side: Serotonin Molecule -->
+  <g transform="translate(520, 180)">
+    <!-- Title -->
+    <text x="-20" y="-45" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="bold">SEROTONIN [C10H12N2O]</text>
+    <text x="-20" y="-32" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">FUNCTION: mood / sleep / stability</text>
+    <line x1="-20" y1="-24" x2="140" y2="-24" stroke="#4ade80" stroke-width="1" opacity="0.5" />
+    
+    <!-- Chemical Bonds -->
+    <g stroke="#4ade80" stroke-width="2" fill="none" filter="url(#glow)">
+      <!-- Benzene Ring -->
+      <path d="M 0 0 L 25 -15 L 50 0 L 50 30 L 25 45 L 0 30 Z" />
+      <line x1="6" y1="6" x2="6" y2="24" />
+      <line x1="44" y1="6" x2="22" y2="-7" />
+      
+      <!-- Oxygen Branch -->
+      <line x1="0" y1="0" x2="-20" y2="-12" />
+      
+      <!-- Pyrrole Ring -->
+      <path d="M 50 0 L 80 -10 L 98 15 L 80 40 L 50 30" />
+      <line x1="77" y1="-3" x2="90" y2="15" />
+      
+      <!-- Ethylamine Side Chain -->
+      <path d="M 98 15 L 125 15 L 140 40 L 170 40" />
+    </g>
+
+    <!-- Atom Circles -->
+    <g transform="translate(-20, -12)">
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#4ade80" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-weight="bold" font-size="8">OH</text>
+    </g>
+    <g transform="translate(80, 40)">
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#4ade80" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-weight="bold" font-size="7">NH</text>
+    </g>
+    <g transform="translate(170, 40)">
+      <circle cx="0" cy="0" r="10" fill="#0f172a" stroke="#4ade80" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-weight="bold" font-size="8">NH₂</text>
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#4ade80" stroke-width="0.5" class="atom-glow" />
+    </g>
+
+    <!-- Data Readings -->
+    <text x="-20" y="80" fill="#94a3b8" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">MOLECULAR WEIGHT: 176.22 g/mol</text>
+    <text x="-20" y="92" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8">STATUS: LEVEL EQUALIZED</text>
+  </g>
+
+  <!-- Center: Concentric Balance Core -->
+  <g transform="translate(400, 210)">
+    <circle cx="0" cy="0" r="100" fill="url(#dialGlow)" />
+    
+    <!-- Spinning radar HUD dials -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="20 15 5 15" class="sweep-anim" />
+    <circle cx="0" cy="0" r="68" fill="none" stroke="#4ade80" stroke-width="1" stroke-dasharray="10 20" class="sweep-reverse" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#38bdf8" stroke-width="0.5" />
+    <circle cx="0" cy="0" r="5" fill="#ffffff" filter="url(#glow)" />
+    
+    <!-- Scanning bar -->
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="#38bdf8" stroke-width="0.5" opacity="0.6" class="sweep-anim" />
+    
+    <!-- Balance Dial Ticks -->
+    <line x1="0" y1="-80" x2="0" y2="-72" stroke="#4ade80" stroke-width="2" />
+    <line x1="0" y1="80" x2="0" y2="72" stroke="#38bdf8" stroke-width="2" />
+    <line x1="-80" y1="0" x2="-72" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <line x1="80" y1="0" x2="72" y2="0" stroke="#4ade80" stroke-width="2" />
+
+    <!-- Center text readout -->
+    <text x="0" y="-120" text-anchor="middle" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="bold">SYNAPSE BALANCE</text>
+    <text x="0" y="115" text-anchor="middle" fill="#4ade80" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10">RATIO: 1.0 : 1.0</text>
+  </g>
+
+  <!-- Wave connection lines -->
+  <path d="M 280 220 Q 340 160, 400 210 T 520 200" fill="none" stroke="#38bdf8" stroke-dasharray="4 2" stroke-width="1.5" class="flow-wave" />
+  <path d="M 280 220 Q 340 260, 400 210 T 520 200" fill="none" stroke="#4ade80" stroke-dasharray="8 4" stroke-width="1.2" class="flow-wave" style="animation-delay: 0.7s;" />
+
+  <!-- Diagnostics Block at bottom -->
+  <g transform="translate(250, 370)" opacity="0.75">
+    <rect width="300" height="50" rx="3" fill="#081b33" fill-opacity="0.6" stroke="#4ade80" stroke-width="1" />
+    <text x="15" y="20" fill="#ffffff" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="9">NEURAL REGULATION LEVEL: HOMEOSTATIC EQUILIBRIUM</text>
+    
+    <!-- Double mini graph representing synchronization -->
+    <path d="M 15 35 Q 35 25, 55 35 T 95 35 T 135 35 T 175 35 T 215 35 T 255 35 T 285 35" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M 15 35 Q 35 45, 55 35 T 95 35 T 135 35 T 175 35 T 215 35 T 255 35 T 285 35" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.8" />
+  </g>
+</svg>

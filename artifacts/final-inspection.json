@@ -1,0 +1,2067 @@
+{
+  "source": "artifacts\\Bao_cao_StellarMind_Nguyen_Tan_Phat_25AS037.docx",
+  "paragraph_count": 307,
+  "nonempty_paragraph_count": 250,
+  "table_count": 19,
+  "inline_shape_count": 15,
+  "section_count": 3,
+  "paragraphs": [
+    {
+      "index": 1,
+      "style": "Normal",
+      "text": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG VIỆT – HÀN"
+    },
+    {
+      "index": 2,
+      "style": "Normal",
+      "text": "KHOA KHOA HỌC MÁY TÍNH"
+    },
+    {
+      "index": 3,
+      "style": "Normal",
+      "text": "ĐỒ ÁN CƠ SỞ 2"
+    },
+    {
+      "index": 4,
+      "style": "Normal",
+      "text": "XÂY DỰNG WEBSITE STELLARMIND – HỆ THỐNG KHÁM PHÁ HỆ MẶT TRỜI TƯƠNG TÁC KẾT HỢP HỖ TRỢ CẢM XÚC"
+    },
+    {
+      "index": 11,
+      "style": "Normal",
+      "text": "Đà Nẵng, tháng 06 năm 2026"
+    },
+    {
+      "index": 14,
+      "style": "Normal",
+      "text": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG VIỆT – HÀN"
+    },
+    {
+      "index": 15,
+      "style": "Normal",
+      "text": "KHOA KHOA HỌC MÁY TÍNH"
+    },
+    {
+      "index": 16,
+      "style": "Normal",
+      "text": "ĐỒ ÁN CƠ SỞ 2"
+    },
+    {
+      "index": 17,
+      "style": "Normal",
+      "text": "XÂY DỰNG WEBSITE STELLARMIND – HỆ THỐNG KHÁM PHÁ HỆ MẶT TRỜI TƯƠNG TÁC KẾT HỢP HỖ TRỢ CẢM XÚC"
+    },
+    {
+      "index": 23,
+      "style": "Normal",
+      "text": "Đà Nẵng, tháng 06 năm 2026"
+    },
+    {
+      "index": 25,
+      "style": "Heading 1",
+      "text": "NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN"
+    },
+    {
+      "index": 26,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 27,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 28,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 29,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 30,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 31,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 32,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 33,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 34,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 35,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 36,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 37,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 38,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 39,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 40,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 41,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 42,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 43,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 44,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 45,
+      "style": "Normal",
+      "text": "........................................................................................................................"
+    },
+    {
+      "index": 47,
+      "style": "Heading 1",
+      "text": "LỜI CẢM ƠN"
+    },
+    {
+      "index": 48,
+      "style": "Normal",
+      "text": "Trước hết, em xin chân thành cảm ơn quý thầy cô Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, đặc biệt là các thầy cô Khoa Khoa học Máy tính, đã cung cấp nền tảng kiến thức về lập trình web, cơ sở dữ liệu và phân tích thiết kế hệ thống."
+    },
+    {
+      "index": 49,
+      "style": "Normal",
+      "text": "Em xin gửi lời cảm ơn sâu sắc đến ThS. Nguyễn Ngọc Huyền Trân, người đã hướng dẫn, góp ý và hỗ trợ em trong quá trình lựa chọn hướng tiếp cận, hoàn thiện sản phẩm và xây dựng báo cáo đồ án."
+    },
+    {
+      "index": 50,
+      "style": "Normal",
+      "text": "Em cũng cảm ơn bạn bè và những người đã dành thời gian trải nghiệm giao diện, chia sẻ nhận xét về khả năng sử dụng và động viên em trong quá trình thực hiện dự án StellarMind."
+    },
+    {
+      "index": 51,
+      "style": "Normal",
+      "text": "Do giới hạn về thời gian, kinh nghiệm phát triển và điều kiện kiểm thử, sản phẩm vẫn còn một số hạn chế. Em kính mong nhận được các ý kiến đóng góp để tiếp tục hoàn thiện hệ thống theo hướng ổn định, an toàn và có giá trị giáo dục cao hơn."
+    },
+    {
+      "index": 52,
+      "style": "Normal",
+      "text": "Sinh viên thực hiện Nguyễn Tấn Phát"
+    },
+    {
+      "index": 54,
+      "style": "Heading 1",
+      "text": "MỤC LỤC"
+    },
+    {
+      "index": 55,
+      "style": "Normal",
+      "text": "Mục lục sẽ được cập nhật khi mở tài liệu."
+    },
+    {
+      "index": 57,
+      "style": "Heading 1",
+      "text": "DANH MỤC HÌNH ẢNH"
+    },
+    {
+      "index": 58,
+      "style": "Normal",
+      "text": "Danh mục hình sẽ được cập nhật khi mở tài liệu."
+    },
+    {
+      "index": 60,
+      "style": "Heading 1",
+      "text": "DANH MỤC BẢNG BIỂU"
+    },
+    {
+      "index": 61,
+      "style": "Normal",
+      "text": "Danh mục bảng sẽ được cập nhật khi mở tài liệu."
+    },
+    {
+      "index": 63,
+      "style": "Heading 1",
+      "text": "DANH MỤC TỪ VIẾT TẮT"
+    },
+    {
+      "index": 64,
+      "style": "Table Caption",
+      "text": "Bảng 0.1. Danh mục từ viết tắt"
+    },
+    {
+      "index": 67,
+      "style": "Heading 1",
+      "text": "MỞ ĐẦU"
+    },
+    {
+      "index": 68,
+      "style": "Heading 2",
+      "text": "1. Lý do chọn đề tài"
+    },
+    {
+      "index": 69,
+      "style": "Normal",
+      "text": "Các website giáo dục thiên văn thường tập trung vào việc trình bày dữ liệu, hình ảnh hoặc mô phỏng quỹ đạo. Trong khi đó, các nền tảng chia sẻ cảm xúc thường sử dụng giao diện quen thuộc của mạng xã hội. Đề tài StellarMind được lựa chọn nhằm thử nghiệm một hướng kết hợp hai nhóm nội dung này trong cùng một trải nghiệm web tương tác."
+    },
+    {
+      "index": 70,
+      "style": "Normal",
+      "text": "Hệ Mặt Trời cung cấp một hệ thống hình tượng trực quan, có khả năng tổ chức nội dung theo tám hành tinh với màu sắc và đặc điểm riêng. Dự án sử dụng mỗi hành tinh như một không gian chủ đề để người dùng vừa tiếp cận kiến thức thiên văn cơ bản, vừa đọc nội dung tham khảo liên quan đến một trạng thái cảm xúc."
+    },
+    {
+      "index": 71,
+      "style": "Normal",
+      "text": "Về mặt kỹ thuật, đề tài tạo điều kiện vận dụng đồng thời các kiến thức về Canvas, thiết kế giao diện đáp ứng, lập trình JavaScript phía trình duyệt, xây dựng REST API, xác thực người dùng và lưu trữ dữ liệu NoSQL. Đây là phạm vi phù hợp với một đồ án cơ sở có cả frontend và backend nhưng vẫn có thể triển khai theo từng module độc lập."
+    },
+    {
+      "index": 72,
+      "style": "Heading 2",
+      "text": "2. Mục tiêu đề tài"
+    },
+    {
+      "index": 73,
+      "style": "Normal",
+      "text": "Mục tiêu tổng quát của đề tài là xây dựng một website tương tác có khả năng mô phỏng Hệ Mặt Trời, tổ chức nội dung theo tám hành tinh và cung cấp các công cụ chia sẻ, tương tác cộng đồng ở mức cơ bản."
+    },
+    {
+      "index": 74,
+      "style": "List Bullet",
+      "text": "Xây dựng mô phỏng quỹ đạo và giao diện khám phá hành tinh bằng HTML5 Canvas."
+    },
+    {
+      "index": 75,
+      "style": "List Bullet",
+      "text": "Thiết kế trang nội dung riêng cho tám hành tinh, có thông tin thiên văn và nội dung hỗ trợ cảm xúc."
+    },
+    {
+      "index": 76,
+      "style": "List Bullet",
+      "text": "Cung cấp bài tập thở, âm thanh và các hoạt động tương tác phía trình duyệt."
+    },
+    {
+      "index": 77,
+      "style": "List Bullet",
+      "text": "Xây dựng chức năng đăng ký, đăng nhập, đăng bài, trả lời và lọc bài viết."
+    },
+    {
+      "index": 78,
+      "style": "List Bullet",
+      "text": "Tích hợp chatbot Gemini để cung cấp phản hồi tham khảo theo ngữ cảnh của dự án."
+    },
+    {
+      "index": 79,
+      "style": "List Bullet",
+      "text": "Tổ chức mã nguồn theo hướng tách frontend, backend, model và route để thuận tiện bảo trì."
+    },
+    {
+      "index": 80,
+      "style": "Heading 2",
+      "text": "3. Đối tượng và phạm vi nghiên cứu"
+    },
+    {
+      "index": 81,
+      "style": "Normal",
+      "text": "Đối tượng nghiên cứu gồm kỹ thuật xây dựng giao diện web tương tác, mô phỏng đồ họa hai chiều bằng Canvas, kiến trúc REST API, cơ chế xác thực JWT, lưu trữ MongoDB và tích hợp dịch vụ sinh nội dung."
+    },
+    {
+      "index": 82,
+      "style": "Normal",
+      "text": "Phạm vi sản phẩm bao gồm trang chủ, tám trang hành tinh, trang cộng đồng, cửa sổ chatbot và trang liên hệ. Hệ thống chưa bao gồm phân quyền quản trị, kiểm duyệt nội dung, phân tích tâm lý chuyên môn hoặc chẩn đoán sức khỏe. Nội dung cảm xúc chỉ mang tính tham khảo và hỗ trợ trải nghiệm."
+    },
+    {
+      "index": 83,
+      "style": "Heading 2",
+      "text": "4. Phương pháp thực hiện"
+    },
+    {
+      "index": 84,
+      "style": "List Number",
+      "text": "Khảo sát yêu cầu và xác định phạm vi chức năng phù hợp với thời gian thực hiện."
+    },
+    {
+      "index": 85,
+      "style": "List Number",
+      "text": "Thiết kế giao diện, luồng tương tác và cấu trúc dữ liệu trước khi triển khai."
+    },
+    {
+      "index": 86,
+      "style": "List Number",
+      "text": "Phát triển từng module frontend, sau đó tích hợp backend và cơ sở dữ liệu."
+    },
+    {
+      "index": 87,
+      "style": "List Number",
+      "text": "Kiểm tra cú pháp, mở các trang trên máy chủ cục bộ và ghi nhận các chức năng cần kiểm thử tiếp."
+    },
+    {
+      "index": 88,
+      "style": "List Number",
+      "text": "Đối chiếu mã nguồn với báo cáo để loại bỏ nội dung không có bằng chứng hoặc chưa hoàn thiện."
+    },
+    {
+      "index": 89,
+      "style": "Heading 2",
+      "text": "5. Nội dung và kế hoạch thực hiện"
+    },
+    {
+      "index": 90,
+      "style": "Table Caption",
+      "text": "Bảng 0.2. Kế hoạch thực hiện đề tài"
+    },
+    {
+      "index": 92,
+      "style": "Heading 2",
+      "text": "6. Bố cục báo cáo"
+    },
+    {
+      "index": 93,
+      "style": "Normal",
+      "text": "Ngoài phần mở đầu, kết luận, tài liệu tham khảo và phụ lục, báo cáo được tổ chức thành ba chương. Chương 1 trình bày tổng quan và công nghệ. Chương 2 tập trung vào phân tích, thiết kế, dữ liệu và giao diện. Chương 3 mô tả quá trình triển khai, REST API, kiểm thử, kết quả và hạn chế."
+    },
+    {
+      "index": 95,
+      "style": "Heading 1",
+      "text": "CHƯƠNG 1: TỔNG QUAN VỀ DỰ ÁN STELLARMIND"
+    },
+    {
+      "index": 96,
+      "style": "Heading 2",
+      "text": "1.1. Giới thiệu đề tài"
+    },
+    {
+      "index": 97,
+      "style": "Normal",
+      "text": "StellarMind là website khám phá Hệ Mặt Trời tương tác được xây dựng theo phong cách khoa học viễn tưởng. Trang chủ thể hiện Mặt Trời, tám hành tinh, quỹ đạo, vành đai tiểu hành tinh và các lớp nền không gian bằng Canvas. Người dùng có thể chọn hành tinh từ thanh bên hoặc trực tiếp trên mô phỏng để xem thông tin và chuyển sang trang nội dung chi tiết."
+    },
+    {
+      "index": 98,
+      "style": "Normal",
+      "text": "Bên cạnh dữ liệu thiên văn, mỗi hành tinh được liên kết với một chủ đề cảm xúc. Các trang hành tinh sử dụng nội dung, màu sắc, hình ảnh, âm thanh và hoạt động tương tác khác nhau. Cách tổ chức này tạo ra hành trình khám phá có tính kể chuyện thay vì chỉ hiển thị thông tin dưới dạng danh sách."
+    },
+    {
+      "index": 99,
+      "style": "Heading 2",
+      "text": "1.2. Bài toán và nhu cầu thực tế"
+    },
+    {
+      "index": 100,
+      "style": "Normal",
+      "text": "Bài toán đặt ra là xây dựng một sản phẩm web vừa trực quan, vừa có nhiều hình thức tương tác nhưng không phụ thuộc vào một framework frontend lớn. Hệ thống cần duy trì tốc độ phản hồi tốt, hoạt động trên trình duyệt phổ biến và cho phép bổ sung nội dung hành tinh mà không thay đổi kiến trúc tổng thể."
+    },
+    {
+      "index": 101,
+      "style": "Normal",
+      "text": "Một nhu cầu khác là tạo không gian để người dùng ghi lại cảm xúc và nhận phản hồi từ cộng đồng. Do nội dung có tính cá nhân, hệ thống hỗ trợ cả chế độ hiển thị tên tài khoản và chế độ ẩn danh. Chatbot được bổ sung như một kênh tương tác tham khảo, không thay thế chuyên gia tâm lý hoặc dịch vụ y tế."
+    },
+    {
+      "index": 102,
+      "style": "Heading 2",
+      "text": "1.3. Mục tiêu của hệ thống"
+    },
+    {
+      "index": 103,
+      "style": "List Bullet",
+      "text": "Trình bày Hệ Mặt Trời bằng mô phỏng trực quan và có thể điều khiển."
+    },
+    {
+      "index": 104,
+      "style": "List Bullet",
+      "text": "Cung cấp nội dung nhất quán cho tám hành tinh và tám chủ đề cảm xúc."
+    },
+    {
+      "index": 105,
+      "style": "List Bullet",
+      "text": "Hỗ trợ người dùng thực hiện các hoạt động thư giãn đơn giản trên trình duyệt."
+    },
+    {
+      "index": 106,
+      "style": "List Bullet",
+      "text": "Cho phép tạo tài khoản và tham gia cộng đồng chia sẻ."
+    },
+    {
+      "index": 107,
+      "style": "List Bullet",
+      "text": "Cung cấp API rõ ràng cho xác thực, bình luận và chatbot."
+    },
+    {
+      "index": 108,
+      "style": "List Bullet",
+      "text": "Bảo đảm báo cáo phản ánh đúng trạng thái hiện tại của mã nguồn."
+    },
+    {
+      "index": 109,
+      "style": "Heading 2",
+      "text": "1.4. Đối tượng sử dụng"
+    },
+    {
+      "index": 110,
+      "style": "Normal",
+      "text": "Hệ thống hướng tới người dùng phổ thông có nhu cầu khám phá thiên văn qua giao diện tương tác, sinh viên muốn tham khảo cách kết hợp Canvas với REST API, và người dùng muốn ghi lại trạng thái cảm xúc trong một không gian trực quan nhẹ nhàng."
+    },
+    {
+      "index": 112,
+      "style": "Heading 2",
+      "text": "1.5. Phạm vi hệ thống"
+    },
+    {
+      "index": 113,
+      "style": "Normal",
+      "text": "Frontend gồm các trang HTML độc lập, stylesheet dùng chung, module JavaScript và tài nguyên hình ảnh. Backend gồm một Express server, cấu hình MongoDB, hai model Mongoose và ba nhóm route. Dữ liệu người dùng và bình luận được lưu trên MongoDB; trạng thái đăng nhập và hành tinh gần nhất được lưu trong LocalStorage."
+    },
+    {
+      "index": 114,
+      "style": "Normal",
+      "text": "Phạm vi hiện tại chưa có trang quản trị, phân quyền vai trò, chức năng xóa hoặc báo cáo bài viết, gửi email, lưu biểu mẫu liên hệ, bài test cảm xúc hoàn chỉnh và bộ kiểm thử tự động."
+    },
+    {
+      "index": 115,
+      "style": "Heading 2",
+      "text": "1.6. Các chức năng chính"
+    },
+    {
+      "index": 116,
+      "style": "Table Caption",
+      "text": "Bảng 1.1. Tổng hợp chức năng chính của StellarMind"
+    },
+    {
+      "index": 118,
+      "style": "Heading 2",
+      "text": "1.7. Công nghệ sử dụng"
+    },
+    {
+      "index": 119,
+      "style": "Normal",
+      "text": "Các công nghệ dưới đây được xác định từ package, file HTML, CSS và JavaScript của dự án. Phần giải thích tập trung vào vai trò thực tế trong StellarMind thay vì mô tả chung không liên quan."
+    },
+    {
+      "index": 120,
+      "style": "Table Caption",
+      "text": "Bảng 1.2. Công nghệ và vai trò trong dự án"
+    },
+    {
+      "index": 122,
+      "style": "Heading 2",
+      "text": "1.8. Tổng kết chương"
+    },
+    {
+      "index": 123,
+      "style": "Normal",
+      "text": "Chương 1 đã xác định mục tiêu, phạm vi, người dùng và các module có thật trong mã nguồn StellarMind. Hệ thống có nền tảng frontend tương tác, backend Express và dữ liệu MongoDB, đồng thời vẫn còn một số chức năng ở mức giao diện hoặc phụ thuộc cấu hình triển khai."
+    },
+    {
+      "index": 125,
+      "style": "Heading 1",
+      "text": "CHƯƠNG 2: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG"
+    },
+    {
+      "index": 126,
+      "style": "Heading 2",
+      "text": "2.1. Khảo sát và phân tích yêu cầu"
+    },
+    {
+      "index": 127,
+      "style": "Normal",
+      "text": "Yêu cầu được xác định bằng cách đối chiếu giao diện HTML, logic JavaScript, route Express và schema Mongoose. Cách tiếp cận này giúp phân biệt chức năng đã có luồng xử lý hoàn chỉnh với chức năng chỉ xuất hiện dưới dạng nút hoặc biểu mẫu."
+    },
+    {
+      "index": 128,
+      "style": "Normal",
+      "text": "Hệ thống được chia thành ba nhóm nghiệp vụ: khám phá nội dung, tương tác hỗ trợ cảm xúc và giao tiếp cộng đồng. Chatbot là dịch vụ tích hợp bên ngoài, trong khi MongoDB là thành phần lưu trữ lâu dài cho tài khoản và bình luận."
+    },
+    {
+      "index": 129,
+      "style": "Heading 2",
+      "text": "2.2. Đối tượng sử dụng hệ thống"
+    },
+    {
+      "index": 130,
+      "style": "Table Caption",
+      "text": "Bảng 2.1. Các tác nhân của hệ thống"
+    },
+    {
+      "index": 132,
+      "style": "Heading 2",
+      "text": "2.3. Yêu cầu chức năng"
+    },
+    {
+      "index": 133,
+      "style": "Table Caption",
+      "text": "Bảng 2.2. Yêu cầu chức năng"
+    },
+    {
+      "index": 135,
+      "style": "Heading 2",
+      "text": "2.4. Yêu cầu phi chức năng"
+    },
+    {
+      "index": 136,
+      "style": "Table Caption",
+      "text": "Bảng 2.3. Yêu cầu phi chức năng"
+    },
+    {
+      "index": 138,
+      "style": "Heading 2",
+      "text": "2.5. Biểu đồ Use Case tổng quát"
+    },
+    {
+      "index": 139,
+      "style": "Normal",
+      "text": "Biểu đồ Use Case tổng quát mô tả phạm vi tương tác của khách truy cập, người dùng đã đăng nhập và dịch vụ Gemini API. Hệ thống hiện không có tác nhân quản trị viên vì mã nguồn chưa triển khai module quản trị."
+    },
+    {
+      "index": 141,
+      "style": "Figure Caption",
+      "text": "Hình 2.1. Biểu đồ Use Case tổng quát của StellarMind"
+    },
+    {
+      "index": 142,
+      "style": "Normal",
+      "text": "Các chức năng khám phá và hỗ trợ cảm xúc có thể sử dụng mà không cần tài khoản. Việc tạo bài và trả lời được giao diện giới hạn cho người dùng đã đăng nhập. Chatbot kết nối đến Gemini thông qua backend để tránh đặt khóa API trực tiếp trong trình duyệt."
+    },
+    {
+      "index": 143,
+      "style": "Heading 2",
+      "text": "2.6. Mô tả các Use Case quan trọng"
+    },
+    {
+      "index": 144,
+      "style": "Table Caption",
+      "text": "Bảng 2.4. Mô tả tóm tắt các Use Case"
+    },
+    {
+      "index": 146,
+      "style": "Heading 2",
+      "text": "2.7. Kiến trúc tổng thể"
+    },
+    {
+      "index": 147,
+      "style": "Normal",
+      "text": "StellarMind sử dụng kiến trúc tách frontend và backend. Frontend là tập hợp tài nguyên tĩnh chạy trên trình duyệt. Backend Express tiếp nhận JSON, xác thực token, thao tác MongoDB và gọi Gemini API."
+    },
+    {
+      "index": 149,
+      "style": "Figure Caption",
+      "text": "Hình 2.2. Kiến trúc tổng thể của hệ thống"
+    },
+    {
+      "index": 150,
+      "style": "Normal",
+      "text": "Cấu trúc này cho phép triển khai frontend trên Vercel và backend trên một dịch vụ Node.js độc lập. Tuy nhiên, URL production của frontend phải trỏ đúng đến tiền tố /api; đây là cấu hình cần hoàn thiện trước khi đưa hệ thống vào sử dụng thực tế."
+    },
+    {
+      "index": 151,
+      "style": "Heading 2",
+      "text": "2.8. Thiết kế cơ sở dữ liệu"
+    },
+    {
+      "index": 152,
+      "style": "Normal",
+      "text": "Cơ sở dữ liệu sử dụng hai collection chính. Reply không được tách thành collection riêng mà được định nghĩa như subdocument trong mảng replies của Comment. Cách thiết kế này phù hợp với phạm vi nhỏ và giúp tải một bài viết cùng phản hồi trong một truy vấn."
+    },
+    {
+      "index": 153,
+      "style": "Table Caption",
+      "text": "Bảng 2.5. Thiết kế collection User"
+    },
+    {
+      "index": 155,
+      "style": "Table Caption",
+      "text": "Bảng 2.6. Thiết kế collection Comment"
+    },
+    {
+      "index": 157,
+      "style": "Table Caption",
+      "text": "Bảng 2.7. Thiết kế subdocument Reply"
+    },
+    {
+      "index": 159,
+      "style": "Heading 2",
+      "text": "2.9. Mô hình dữ liệu"
+    },
+    {
+      "index": 161,
+      "style": "Figure Caption",
+      "text": "Hình 2.3. Mô hình dữ liệu User, Comment và Reply"
+    },
+    {
+      "index": 162,
+      "style": "Normal",
+      "text": "Quan hệ giữa User và Comment là quan hệ mềm thông qua authorId. Khi bài được đăng ẩn danh hoặc request không có người dùng hợp lệ, authorId có thể bằng null. Điều này hỗ trợ trải nghiệm ẩn danh nhưng cũng đòi hỏi cơ chế kiểm duyệt và giới hạn tần suất trong các phiên bản sau."
+    },
+    {
+      "index": 163,
+      "style": "Heading 2",
+      "text": "2.10. Biểu đồ tuần tự"
+    },
+    {
+      "index": 164,
+      "style": "Heading 3",
+      "text": "2.10.1. Luồng đăng ký và đăng nhập"
+    },
+    {
+      "index": 165,
+      "style": "Normal",
+      "text": "Giao diện cộng đồng gửi username và password đến route auth. Backend truy vấn User, sử dụng bcryptjs để băm hoặc so sánh mật khẩu, sau đó tạo JWT có thời hạn 30 ngày."
+    },
+    {
+      "index": 167,
+      "style": "Figure Caption",
+      "text": "Hình 2.4. Biểu đồ tuần tự đăng ký và đăng nhập"
+    },
+    {
+      "index": 168,
+      "style": "Heading 3",
+      "text": "2.10.2. Luồng đăng bài và trả lời"
+    },
+    {
+      "index": 169,
+      "style": "Normal",
+      "text": "Frontend gửi Bearer token khi người dùng đã đăng nhập. Route comments kiểm tra token theo cơ chế tùy chọn, chuẩn hóa tác giả và lưu Comment hoặc Reply vào MongoDB."
+    },
+    {
+      "index": 171,
+      "style": "Figure Caption",
+      "text": "Hình 2.5. Biểu đồ tuần tự đăng bài và trả lời"
+    },
+    {
+      "index": 172,
+      "style": "Heading 3",
+      "text": "2.10.3. Luồng chatbot"
+    },
+    {
+      "index": 173,
+      "style": "Normal",
+      "text": "Chatbot UI chỉ gửi nội dung tin nhắn. System prompt và khóa Gemini được xử lý tại backend. Route chat thử nhiều model theo thứ tự dự phòng và trả nội dung đầu tiên hợp lệ."
+    },
+    {
+      "index": 175,
+      "style": "Figure Caption",
+      "text": "Hình 2.6. Biểu đồ tuần tự tương tác chatbot"
+    },
+    {
+      "index": 176,
+      "style": "Heading 2",
+      "text": "2.11. Thiết kế giao diện người dùng"
+    },
+    {
+      "index": 177,
+      "style": "Heading 3",
+      "text": "2.11.1. Trang chủ mô phỏng"
+    },
+    {
+      "index": 178,
+      "style": "Normal",
+      "text": "Trang chủ ưu tiên vùng Canvas toàn màn hình, thanh điều hướng, danh sách tám hành tinh và bảng điều khiển tốc độ. Các lớp nền, quỹ đạo và ánh sáng tạo cảm giác không gian nhưng vẫn giữ thông tin chính ở vùng dễ quan sát."
+    },
+    {
+      "index": 180,
+      "style": "Figure Caption",
+      "text": "Hình 2.7. Giao diện trang chủ mô phỏng Hệ Mặt Trời"
+    },
+    {
+      "index": 181,
+      "style": "Heading 3",
+      "text": "2.11.2. Trang hành tinh"
+    },
+    {
+      "index": 182,
+      "style": "Normal",
+      "text": "Trang hành tinh sử dụng màu chủ đề, hình texture lớn, thông tin thiên văn và các khối nội dung theo chiều cuộn. Ví dụ dưới đây là trang Trái Đất gắn với chủ đề lo âu."
+    },
+    {
+      "index": 184,
+      "style": "Figure Caption",
+      "text": "Hình 2.8. Giao diện trang hành tinh Trái Đất"
+    },
+    {
+      "index": 185,
+      "style": "Heading 3",
+      "text": "2.11.3. Trang cộng đồng và xác thực"
+    },
+    {
+      "index": 186,
+      "style": "Normal",
+      "text": "Trang cộng đồng có vùng soạn bài, hai chế độ hiển thị danh tính và bộ lọc theo hành tinh. Giao diện đăng nhập được trình bày dưới dạng modal để người dùng không phải rời khỏi trang."
+    },
+    {
+      "index": 188,
+      "style": "Figure Caption",
+      "text": "Hình 2.9. Giao diện trang cộng đồng"
+    },
+    {
+      "index": 190,
+      "style": "Figure Caption",
+      "text": "Hình 2.10. Giao diện đăng nhập và đăng ký"
+    },
+    {
+      "index": 191,
+      "style": "Heading 3",
+      "text": "2.11.4. Cửa sổ chatbot"
+    },
+    {
+      "index": 192,
+      "style": "Normal",
+      "text": "Chatbot được chèn như một module dùng chung trên nhiều trang. Cửa sổ có lời chào, gợi ý câu hỏi, vùng tin nhắn và trạng thái đang nhập. Thiết kế tách biệt này giúp tái sử dụng mà không thay đổi cấu trúc trang."
+    },
+    {
+      "index": 194,
+      "style": "Figure Caption",
+      "text": "Hình 2.11. Cửa sổ Trợ lý Tinh hà trên trang chủ"
+    },
+    {
+      "index": 195,
+      "style": "Heading 3",
+      "text": "2.11.5. Trang liên hệ"
+    },
+    {
+      "index": 196,
+      "style": "Normal",
+      "text": "Trang liên hệ giới thiệu đội ngũ, thông tin liên lạc và biểu mẫu. Phần xử lý hiện kiểm tra dữ liệu và mô phỏng trạng thái gửi; chưa có API hoặc collection lưu liên hệ."
+    },
+    {
+      "index": 198,
+      "style": "Figure Caption",
+      "text": "Hình 2.12. Giao diện trang liên hệ"
+    },
+    {
+      "index": 199,
+      "style": "Heading 2",
+      "text": "2.12. Tổng kết chương"
+    },
+    {
+      "index": 200,
+      "style": "Normal",
+      "text": "Chương 2 đã mô hình hóa các tác nhân, yêu cầu, Use Case, kiến trúc, dữ liệu và luồng xử lý cốt lõi. Thiết kế cho thấy frontend, backend, MongoDB và Gemini được phân tách rõ, đồng thời phản ánh đúng các giới hạn hiện tại như thiếu quản trị và biểu mẫu liên hệ chưa kết nối server."
+    },
+    {
+      "index": 202,
+      "style": "Heading 1",
+      "text": "CHƯƠNG 3: XÂY DỰNG, TRIỂN KHAI VÀ KIỂM THỬ"
+    },
+    {
+      "index": 203,
+      "style": "Heading 2",
+      "text": "3.1. Môi trường phát triển"
+    },
+    {
+      "index": 204,
+      "style": "Table Caption",
+      "text": "Bảng 3.1. Môi trường và công cụ phát triển"
+    },
+    {
+      "index": 206,
+      "style": "Heading 2",
+      "text": "3.2. Cấu trúc thư mục dự án"
+    },
+    {
+      "index": 207,
+      "style": "Normal",
+      "text": "Mã nguồn được chia thành frontend và backend. Frontend tiếp tục chia theo HTML, CSS, JavaScript, ảnh minh họa và texture. Backend chia thành config, models và routes."
+    },
+    {
+      "index": 209,
+      "style": "Figure Caption",
+      "text": "Hình 3.1. Cấu trúc thư mục chính của dự án"
+    },
+    {
+      "index": 210,
+      "style": "Normal",
+      "text": "Trong workspace hiện còn một số bản sao JavaScript trong frontend/html/js và frontend/js có nội dung khác nhau. Báo cáo lấy các file được trang HTML chính tham chiếu trong frontend/js làm căn cứ. Việc xóa hoặc đồng bộ các bản sao là nhiệm vụ bảo trì cần thực hiện sau đồ án."
+    },
+    {
+      "index": 211,
+      "style": "Heading 2",
+      "text": "3.3. Xây dựng mô phỏng Hệ Mặt Trời bằng Canvas"
+    },
+    {
+      "index": 212,
+      "style": "Normal",
+      "text": "Module app.js định nghĩa mảng PLANETS chứa bán kính hiển thị, bán kính quỹ đạo, tốc độ, màu sắc, góc ban đầu, thông số thiên văn và mô tả. Trạng thái ứng dụng theo dõi hành tinh đang chọn, tốc độ, camera, con trỏ, parallax và thời gian mô phỏng."
+    },
+    {
+      "index": 213,
+      "style": "Normal",
+      "text": "Canvas nền vẽ các lớp thiên hà, sao tĩnh và sao parallax. Canvas mô phỏng vẽ Mặt Trời, quỹ đạo, hành tinh, vành đai tiểu hành tinh và sao băng. Vòng lặp requestAnimationFrame cập nhật góc quay và vị trí theo hệ số tốc độ."
+    },
+    {
+      "index": 214,
+      "style": "Normal",
+      "text": "Hệ thống chuyển đổi tọa độ giữa không gian mô phỏng và màn hình để thực hiện hit-testing. Khi người dùng chọn một hành tinh, camera nội suy đến vị trí mục tiêu, bảng thông tin xuất hiện và các hành tinh không liên quan được làm mờ."
+    },
+    {
+      "index": 215,
+      "style": "Heading 2",
+      "text": "3.4. Xây dựng trang nội dung cho tám hành tinh"
+    },
+    {
+      "index": 216,
+      "style": "Normal",
+      "text": "Tám trang hành tinh sử dụng thuộc tính data-planet để xác định chủ đề. Module planets-enhanced.js chứa dữ liệu cảm xúc, trích dẫn, dấu hiệu, nguyên nhân, lời khuyên, hành động, âm thanh và liên kết video. Module planet-page.js đọc dữ liệu này để sinh nội dung và điều khiển tương tác."
+    },
+    {
+      "index": 217,
+      "style": "Normal",
+      "text": "Các hành tinh được gắn với chủ đề ở frontend như sau: Sao Thủy – cô đơn, Sao Kim – yêu thương, Trái Đất – lo âu, Sao Hỏa – giận dữ, Sao Mộc – áp lực, Sao Thổ – trầm cảm, Sao Thiên Vương – tự ti và Sao Hải Vương – mất phương hướng. Đây là hệ ánh xạ cần được đồng bộ lại với system prompt của backend."
+    },
+    {
+      "index": 218,
+      "style": "Heading 2",
+      "text": "3.5. Bài tập thở, âm thanh và hoạt động tương tác"
+    },
+    {
+      "index": 219,
+      "style": "Normal",
+      "text": "Bài tập thở được triển khai bằng một máy trạng thái đơn giản gồm các pha và bộ đếm thời gian. Sau mỗi pha, giao diện đổi nhãn và class CSS; bài tập dừng sau bốn chu kỳ hoặc khi người dùng chủ động dừng."
+    },
+    {
+      "index": 220,
+      "style": "Normal",
+      "text": "Âm thanh được phát bằng đối tượng Audio với thuộc tính loop. Danh sách tài nguyên video được mở trong modal. Ngoài chức năng dùng chung, mỗi hành tinh có một widget riêng, chẳng hạn radar kết nối, trắc nghiệm gắn bó, bài tập tiếp đất hoặc công cụ chuyển hóa suy nghĩ."
+    },
+    {
+      "index": 221,
+      "style": "Heading 2",
+      "text": "3.6. Xây dựng hệ thống đăng ký và đăng nhập"
+    },
+    {
+      "index": 222,
+      "style": "Normal",
+      "text": "Route đăng ký kiểm tra dữ liệu bắt buộc, tìm username trùng và tạo User. Middleware pre-save trong model sử dụng bcryptjs để tạo salt và băm mật khẩu. Route đăng nhập truy vấn User và gọi phương thức matchPassword trước khi phát hành JWT."
+    },
+    {
+      "index": 223,
+      "style": "Normal",
+      "text": "Frontend lưu token và username trong LocalStorage với khóa stellar_auth_token và stellar_auth_username. Khi tải trang cộng đồng, giao diện đọc hai giá trị này để hiển thị trạng thái đăng nhập và quyết định tên tác giả khi gửi request."
+    },
+    {
+      "index": 224,
+      "style": "Heading 2",
+      "text": "3.7. Xây dựng cộng đồng chia sẻ cảm xúc"
+    },
+    {
+      "index": 225,
+      "style": "Normal",
+      "text": "Trang cộng đồng tải danh sách Comment theo thời gian giảm dần. Mỗi bài hiển thị tác giả, avatar, thời gian, hành tinh, mức tín hiệu, nội dung và số phản hồi. Nội dung do người dùng nhập được escape trước khi chèn vào HTML để hạn chế chèn mã trực tiếp."
+    },
+    {
+      "index": 226,
+      "style": "Normal",
+      "text": "Ở chế độ công khai, backend ưu tiên username lấy từ JWT. Ở chế độ ẩn danh, frontend tạo một mật danh ngẫu nhiên và gửi isAnon=true. Bộ lọc hành tinh được thực hiện phía frontend sau khi nhận toàn bộ danh sách."
+    },
+    {
+      "index": 227,
+      "style": "Heading 2",
+      "text": "3.8. Tích hợp chatbot Gemini"
+    },
+    {
+      "index": 228,
+      "style": "Normal",
+      "text": "Module chatbot.js tạo giao diện dùng chung và gửi message đến /api/chat. Backend ghép system prompt, một phản hồi xác nhận vai trò và tin nhắn người dùng thành mảng contents của Gemini API."
+    },
+    {
+      "index": 229,
+      "style": "Normal",
+      "text": "Route thử lần lượt một danh sách model để xử lý trường hợp model trả về 404. Nếu không có GEMINI_API_KEY, backend trả một phản hồi hướng dẫn cục bộ. Cơ chế này giúp giao diện không bị treo nhưng không thay thế việc cấu hình và kiểm thử model hợp lệ trước khi triển khai."
+    },
+    {
+      "index": 231,
+      "style": "Heading 2",
+      "text": "3.9. Xây dựng và sử dụng REST API"
+    },
+    {
+      "index": 232,
+      "style": "Table Caption",
+      "text": "Bảng 3.2. Danh sách REST API"
+    },
+    {
+      "index": 234,
+      "style": "Normal",
+      "text": "Có sự khác biệt giữa giao diện và backend: giao diện yêu cầu đăng nhập trước khi đăng bài, trong khi route comments vẫn chấp nhận request không có token. Khi triển khai thực tế, chính sách xác thực nên được thống nhất tại backend vì kiểm tra phía giao diện có thể bị bỏ qua."
+    },
+    {
+      "index": 235,
+      "style": "Heading 2",
+      "text": "3.10. Triển khai hệ thống"
+    },
+    {
+      "index": 236,
+      "style": "Normal",
+      "text": "Frontend có file vercel.json chuyển hướng đường dẫn gốc sang /html/index.html. Backend đọc MONGO_URI, JWT_SECRET và GEMINI_API_KEY từ biến môi trường; nếu không có MONGO_URI, hệ thống thử MongoDB cục bộ."
+    },
+    {
+      "index": 237,
+      "style": "Normal",
+      "text": "Cấu hình production trong community.js, chatbot.js và planet-page.js hiện dùng domain Render nhưng thiếu tiền tố /api trước các endpoint. Vì vậy, bước triển khai chính thức phải chuẩn hóa API_BASE, cấu hình CORS theo domain frontend và loại bỏ khóa JWT dự phòng được viết trực tiếp trong mã nguồn."
+    },
+    {
+      "index": 238,
+      "style": "Heading 2",
+      "text": "3.11. Kiểm thử hệ thống"
+    },
+    {
+      "index": 239,
+      "style": "Normal",
+      "text": "Trong phạm vi lập báo cáo, các file JavaScript chính đã được kiểm tra cú pháp bằng node --check và các trang chủ, hành tinh, cộng đồng, modal đăng nhập, chatbot và liên hệ đã được mở trên máy chủ HTTP cục bộ. Các luồng phụ thuộc MongoDB hoặc Gemini chưa có đủ điều kiện để xác nhận kết quả đầu cuối."
+    },
+    {
+      "index": 240,
+      "style": "Table Caption",
+      "text": "Bảng 3.3. Kịch bản kiểm thử và trạng thái xác minh"
+    },
+    {
+      "index": 242,
+      "style": "Heading 2",
+      "text": "3.12. Kết quả đạt được"
+    },
+    {
+      "index": 243,
+      "style": "Table Caption",
+      "text": "Bảng 3.4. Mức độ hoàn thành các nhóm chức năng"
+    },
+    {
+      "index": 245,
+      "style": "Normal",
+      "text": "Kết quả chính của đồ án là một hệ thống web có bản sắc giao diện rõ, kết hợp Canvas, nội dung đa trang, REST API, xác thực và cơ sở dữ liệu. Mã nguồn thể hiện khả năng tích hợp nhiều kỹ thuật nhưng vẫn cần một giai đoạn ổn định hóa trước khi triển khai công khai."
+    },
+    {
+      "index": 246,
+      "style": "Heading 2",
+      "text": "3.13. Hạn chế hiện tại"
+    },
+    {
+      "index": 247,
+      "style": "List Bullet",
+      "text": "URL API production chưa thống nhất với tiền tố /api của backend."
+    },
+    {
+      "index": 248,
+      "style": "List Bullet",
+      "text": "Nội dung ánh xạ cảm xúc giữa frontend và system prompt chatbot chưa đồng bộ."
+    },
+    {
+      "index": 249,
+      "style": "List Bullet",
+      "text": "Chưa có trang quản trị, xóa bài, báo cáo nội dung hoặc giới hạn tần suất request."
+    },
+    {
+      "index": 250,
+      "style": "List Bullet",
+      "text": "Backend dùng JWT secret dự phòng trong mã nguồn và CORS chưa giới hạn domain."
+    },
+    {
+      "index": 251,
+      "style": "List Bullet",
+      "text": "Route bình luận cho phép xác thực tùy chọn trong khi giao diện yêu cầu đăng nhập."
+    },
+    {
+      "index": 252,
+      "style": "List Bullet",
+      "text": "Trang liên hệ chưa có API và dữ liệu liên hệ đang là thông tin mẫu."
+    },
+    {
+      "index": 253,
+      "style": "List Bullet",
+      "text": "Mục bài test chưa được triển khai hoàn chỉnh."
+    },
+    {
+      "index": 254,
+      "style": "List Bullet",
+      "text": "Một số số liệu thiên văn và cảm xúc chưa có trích dẫn nguồn ngay tại nội dung."
+    },
+    {
+      "index": 255,
+      "style": "List Bullet",
+      "text": "Có các bản sao file JavaScript không đồng nhất và chưa có kiểm thử tự động."
+    },
+    {
+      "index": 256,
+      "style": "Heading 2",
+      "text": "3.14. Tổng kết chương"
+    },
+    {
+      "index": 257,
+      "style": "Normal",
+      "text": "Chương 3 đã trình bày cách xây dựng từng module, danh sách API, phạm vi triển khai và trạng thái kiểm thử. Các kết quả được phân loại theo bằng chứng quan sát hoặc điều kiện cần kiểm tra, tránh khẳng định những luồng chưa được chạy đầu cuối."
+    },
+    {
+      "index": 259,
+      "style": "Heading 1",
+      "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN"
+    },
+    {
+      "index": 260,
+      "style": "Heading 2",
+      "text": "1. Kết quả đạt được"
+    },
+    {
+      "index": 261,
+      "style": "Normal",
+      "text": "Đồ án đã xây dựng được website StellarMind với mô phỏng Hệ Mặt Trời, tám trang hành tinh, các hoạt động tương tác, cộng đồng chia sẻ, xác thực và chatbot. Sản phẩm vận dụng đồng thời kỹ thuật đồ họa Canvas, lập trình giao diện, REST API, MongoDB, JWT và tích hợp dịch vụ bên ngoài."
+    },
+    {
+      "index": 262,
+      "style": "Normal",
+      "text": "Quá trình thực hiện giúp củng cố kỹ năng phân tích yêu cầu, tổ chức mã nguồn, thiết kế dữ liệu, xử lý trạng thái phía trình duyệt và xây dựng giao tiếp frontend–backend. Báo cáo cũng xác định rõ giới hạn của sản phẩm để tránh mô tả vượt quá mức độ hoàn thiện thực tế."
+    },
+    {
+      "index": 263,
+      "style": "Heading 2",
+      "text": "2. Hạn chế"
+    },
+    {
+      "index": 264,
+      "style": "Normal",
+      "text": "Hệ thống chưa có đầy đủ điều kiện kiểm thử đầu cuối, chưa hoàn thiện cấu hình production và còn thiếu các chức năng quản trị, kiểm duyệt, bài test và lưu liên hệ. Nội dung cảm xúc cần được rà soát nguồn, đồng bộ thuật ngữ và bổ sung cảnh báo sử dụng phù hợp."
+    },
+    {
+      "index": 265,
+      "style": "Heading 2",
+      "text": "3. Hướng phát triển"
+    },
+    {
+      "index": 266,
+      "style": "List Bullet",
+      "text": "Hoàn thiện bài test cảm xúc và giải thích rõ cơ sở của kết quả."
+    },
+    {
+      "index": 267,
+      "style": "List Bullet",
+      "text": "Đồng bộ ánh xạ cảm xúc giữa frontend, chatbot và tài liệu."
+    },
+    {
+      "index": 268,
+      "style": "List Bullet",
+      "text": "Xây dựng trang quản trị, cơ chế kiểm duyệt, xóa và báo cáo nội dung."
+    },
+    {
+      "index": 269,
+      "style": "List Bullet",
+      "text": "Tạo API lưu biểu mẫu liên hệ và thay thông tin mẫu bằng thông tin được xác nhận."
+    },
+    {
+      "index": 270,
+      "style": "List Bullet",
+      "text": "Bổ sung Jest, Supertest hoặc Playwright cho kiểm thử tự động."
+    },
+    {
+      "index": 271,
+      "style": "List Bullet",
+      "text": "Tối ưu Canvas, ảnh và animation trên thiết bị cấu hình thấp."
+    },
+    {
+      "index": 272,
+      "style": "List Bullet",
+      "text": "Đưa JWT secret, API key và CORS vào cấu hình môi trường an toàn."
+    },
+    {
+      "index": 273,
+      "style": "List Bullet",
+      "text": "Bổ sung rate limiting, validation và chính sách xác thực thống nhất ở backend."
+    },
+    {
+      "index": 274,
+      "style": "List Bullet",
+      "text": "Thêm nguồn chính thức cho dữ liệu thiên văn và nguồn chuyên môn cho nội dung cảm xúc."
+    },
+    {
+      "index": 275,
+      "style": "List Bullet",
+      "text": "Hoàn thiện URL production, logging và giám sát lỗi khi triển khai."
+    },
+    {
+      "index": 277,
+      "style": "Heading 1",
+      "text": "TÀI LIỆU THAM KHẢO"
+    },
+    {
+      "index": 278,
+      "style": "Normal",
+      "text": "[1] MDN Web Docs. Canvas API. Truy cập ngày 09/06/2026, từ https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
+    },
+    {
+      "index": 279,
+      "style": "Normal",
+      "text": "[2] OpenJS Foundation. Node.js Documentation. Truy cập ngày 09/06/2026, từ https://nodejs.org/en/docs/"
+    },
+    {
+      "index": 280,
+      "style": "Normal",
+      "text": "[3] Express.js. Express 4.x API Reference. Truy cập ngày 09/06/2026, từ https://expressjs.com/en/4x/api.html"
+    },
+    {
+      "index": 281,
+      "style": "Normal",
+      "text": "[4] MongoDB, Inc. MongoDB Documentation. Truy cập ngày 09/06/2026, từ https://www.mongodb.com/docs/"
+    },
+    {
+      "index": 282,
+      "style": "Normal",
+      "text": "[5] Mongoose. Mongoose Documentation. Truy cập ngày 09/06/2026, từ https://mongoosejs.com/docs/"
+    },
+    {
+      "index": 283,
+      "style": "Normal",
+      "text": "[6] Auth0. node-jsonwebtoken. Truy cập ngày 09/06/2026, từ https://github.com/auth0/node-jsonwebtoken"
+    },
+    {
+      "index": 284,
+      "style": "Normal",
+      "text": "[7] dcodeIO. bcrypt.js. Truy cập ngày 09/06/2026, từ https://github.com/dcodeIO/bcrypt.js/"
+    },
+    {
+      "index": 285,
+      "style": "Normal",
+      "text": "[8] GreenSock. ScrollTrigger Documentation. Truy cập ngày 09/06/2026, từ https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
+    },
+    {
+      "index": 286,
+      "style": "Normal",
+      "text": "[9] Google AI for Developers. Gemini API Documentation. Truy cập ngày 09/06/2026, từ https://ai.google.dev/gemini-api/docs/api-overview"
+    },
+    {
+      "index": 287,
+      "style": "Normal",
+      "text": "[10] Vercel. Vercel Documentation. Truy cập ngày 09/06/2026, từ https://vercel.com/docs/"
+    },
+    {
+      "index": 288,
+      "style": "Normal",
+      "text": "[11] Git. Git Reference. Truy cập ngày 09/06/2026, từ https://git-scm.com/docs"
+    },
+    {
+      "index": 290,
+      "style": "Heading 1",
+      "text": "PHỤ LỤC"
+    },
+    {
+      "index": 291,
+      "style": "Heading 2",
+      "text": "Phụ lục A. Cấu trúc thư mục rút gọn"
+    },
+    {
+      "index": 292,
+      "style": "Code",
+      "text": "Project_Web_BWD/ ├── frontend/ │ ├── html/ │ ├── css/ │ ├── js/ │ ├── assets/images/planets/ │ ├── planets/ │ └── vercel.json └── backend/ ├── config/db.js ├── models/User.js ├── models/Comment.js ├── routes/auth.js ├── routes/comments.js ├── routes/chat.js ├── server.js └── package.json"
+    },
+    {
+      "index": 293,
+      "style": "Heading 2",
+      "text": "Phụ lục B. Hướng dẫn cài đặt và chạy"
+    },
+    {
+      "index": 294,
+      "style": "List Number",
+      "text": "Cài Node.js và MongoDB hoặc chuẩn bị MONGO_URI từ dịch vụ MongoDB."
+    },
+    {
+      "index": 295,
+      "style": "List Number",
+      "text": "Mở thư mục backend và chạy npm install."
+    },
+    {
+      "index": 296,
+      "style": "List Number",
+      "text": "Tạo backend/.env với MONGO_URI, JWT_SECRET và GEMINI_API_KEY khi cần."
+    },
+    {
+      "index": 297,
+      "style": "List Number",
+      "text": "Chạy npm start hoặc npm run dev trong thư mục backend."
+    },
+    {
+      "index": 298,
+      "style": "List Number",
+      "text": "Phục vụ thư mục frontend bằng Live Server hoặc một HTTP server."
+    },
+    {
+      "index": 299,
+      "style": "List Number",
+      "text": "Mở /html/index.html trên trình duyệt và kiểm tra các route API."
+    },
+    {
+      "index": 300,
+      "style": "Heading 2",
+      "text": "Phụ lục C. Biến môi trường"
+    },
+    {
+      "index": 301,
+      "style": "Code",
+      "text": "MONGO_URI=mongodb://127.0.0.1:27017/stellarmind JWT_SECRET=<chuỗi_bí_mật_mạnh> GEMINI_API_KEY=<khóa_api_gemini> PORT=5000"
+    },
+    {
+      "index": 302,
+      "style": "Heading 2",
+      "text": "Phụ lục D. Một số đoạn mã tiêu biểu"
+    },
+    {
+      "index": 303,
+      "style": "Normal",
+      "text": "Đoạn mã sau thể hiện cách server gắn ba nhóm route chính. Nội dung được rút gọn từ backend/server.js."
+    },
+    {
+      "index": 304,
+      "style": "Code",
+      "text": "app.use(cors()); app.use(express.json()); app.use('/api/auth', require('./routes/auth')); app.use('/api/comments', require('./routes/comments')); app.use('/api/chat', require('./routes/chat'));"
+    },
+    {
+      "index": 305,
+      "style": "Normal",
+      "text": "Model User dùng hook pre-save để băm mật khẩu trước khi lưu."
+    },
+    {
+      "index": 306,
+      "style": "Code",
+      "text": "UserSchema.pre('save', async function(next) { if (!this.isModified('password')) return next(); const salt = await bcrypt.genSalt(10); this.password = await bcrypt.hash(this.password, salt); });"
+    }
+  ],
+  "tables": [
+    {
+      "index": 0,
+      "rows": [
+        [
+          "Sinh viên thực hiện:",
+          "Nguyễn Tấn Phát"
+        ],
+        [
+          "Lớp:",
+          "25AS"
+        ],
+        [
+          "Mã sinh viên:",
+          "25AS037"
+        ],
+        [
+          "Giảng viên hướng dẫn:",
+          "ThS. Nguyễn Ngọc Huyền Trân"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        [
+          "Sinh viên thực hiện:",
+          "Nguyễn Tấn Phát"
+        ],
+        [
+          "Lớp:",
+          "25AS"
+        ],
+        [
+          "Mã sinh viên:",
+          "25AS037"
+        ],
+        [
+          "Giảng viên hướng dẫn:",
+          "ThS. Nguyễn Ngọc Huyền Trân"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        [
+          "Từ viết tắt",
+          "Tên đầy đủ",
+          "Ý nghĩa sử dụng trong báo cáo"
+        ],
+        [
+          "API",
+          "Application Programming Interface",
+          "Giao diện lập trình ứng dụng"
+        ],
+        [
+          "CSS",
+          "Cascading Style Sheets",
+          "Ngôn ngữ định kiểu giao diện web"
+        ],
+        [
+          "DOM",
+          "Document Object Model",
+          "Mô hình đối tượng tài liệu HTML"
+        ],
+        [
+          "HTML",
+          "HyperText Markup Language",
+          "Ngôn ngữ đánh dấu siêu văn bản"
+        ],
+        [
+          "HTTP",
+          "HyperText Transfer Protocol",
+          "Giao thức trao đổi dữ liệu web"
+        ],
+        [
+          "JSON",
+          "JavaScript Object Notation",
+          "Định dạng dữ liệu trao đổi giữa frontend và backend"
+        ],
+        [
+          "JWT",
+          "JSON Web Token",
+          "Mã thông báo dùng cho xác thực"
+        ],
+        [
+          "REST",
+          "Representational State Transfer",
+          "Phong cách thiết kế API"
+        ],
+        [
+          "UI",
+          "User Interface",
+          "Giao diện người dùng"
+        ],
+        [
+          "UX",
+          "User Experience",
+          "Trải nghiệm người dùng"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": [
+        [
+          "Giai đoạn",
+          "Nội dung chính",
+          "Sản phẩm đầu ra"
+        ],
+        [
+          "1. Khảo sát",
+          "Xác định chủ đề, người dùng và chức năng cốt lõi",
+          "Danh sách yêu cầu"
+        ],
+        [
+          "2. Thiết kế",
+          "Thiết kế UI, kiến trúc, model và route",
+          "Sơ đồ và cấu trúc dữ liệu"
+        ],
+        [
+          "3. Frontend",
+          "Mô phỏng Canvas, trang hành tinh, cộng đồng, liên hệ",
+          "Giao diện có thể chạy cục bộ"
+        ],
+        [
+          "4. Backend",
+          "Xác thực, bình luận, chatbot và kết nối MongoDB",
+          "REST API Express"
+        ],
+        [
+          "5. Hoàn thiện",
+          "Kiểm tra, sửa lỗi, chụp giao diện và viết báo cáo",
+          "Sản phẩm và tài liệu đồ án"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": [
+        [
+          "Lưu ý phạm vi: StellarMind không thu thập dữ liệu lâm sàng, không chẩn đoán bệnh và không đưa ra phác đồ điều trị. Các nội dung về cảm xúc, bài tập thở và phản hồi chatbot chỉ mang tính tham khảo."
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": [
+        [
+          "Nhóm chức năng",
+          "Mô tả",
+          "Trạng thái"
+        ],
+        [
+          "Khám phá Hệ Mặt Trời",
+          "Hiển thị quỹ đạo, hành tinh, tooltip, bảng thông tin, tốc độ và phím tắt.",
+          "Đã triển khai"
+        ],
+        [
+          "Trang hành tinh",
+          "Tám trang theo chủ đề với dữ liệu thiên văn, nội dung cảm xúc và điều hướng.",
+          "Đã triển khai"
+        ],
+        [
+          "Bài tập và tương tác",
+          "Bài tập thở, âm thanh, tài nguyên video và widget riêng theo hành tinh.",
+          "Đã triển khai ở frontend"
+        ],
+        [
+          "Xác thực",
+          "Đăng ký, đăng nhập, mã hóa mật khẩu và phát hành JWT.",
+          "Đã có mã nguồn backend"
+        ],
+        [
+          "Cộng đồng",
+          "Đăng bài công khai/ẩn danh, trả lời và lọc theo hành tinh.",
+          "Đã có frontend và API"
+        ],
+        [
+          "Chatbot",
+          "Gửi câu hỏi đến Gemini API, có phản hồi dự phòng khi thiếu khóa.",
+          "Phụ thuộc cấu hình API"
+        ],
+        [
+          "Liên hệ",
+          "Kiểm tra tên, email, nội dung và hiển thị trạng thái gửi.",
+          "Mới ở mức giao diện"
+        ],
+        [
+          "Bài test",
+          "Mục điều hướng đã xuất hiện nhưng chưa có quy trình xử lý hoàn chỉnh.",
+          "Chưa hoàn thiện"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "rows": [
+        [
+          "Công nghệ",
+          "Vai trò trong StellarMind"
+        ],
+        [
+          "HTML5",
+          "Tổ chức cấu trúc trang chủ, trang hành tinh, cộng đồng và liên hệ."
+        ],
+        [
+          "CSS3",
+          "Xây dựng theme không gian, responsive, glassmorphism, animation và component."
+        ],
+        [
+          "Vanilla JavaScript",
+          "Điều khiển DOM, Canvas, trạng thái giao diện, gọi API và LocalStorage."
+        ],
+        [
+          "Canvas API",
+          "Vẽ mô phỏng quỹ đạo, hành tinh, sao, hiệu ứng nền và hit-testing [1]."
+        ],
+        [
+          "GSAP / ScrollTrigger",
+          "Tạo hiệu ứng xuất hiện, chuyển động và tương tác theo vị trí cuộn [8]."
+        ],
+        [
+          "Node.js",
+          "Môi trường thực thi JavaScript cho backend [2]."
+        ],
+        [
+          "Express.js",
+          "Khai báo middleware, server và REST API [3]."
+        ],
+        [
+          "MongoDB / Mongoose",
+          "Lưu User, Comment và ánh xạ schema trong Node.js [4], [5]."
+        ],
+        [
+          "JWT / bcryptjs",
+          "Phát hành token và băm/so sánh mật khẩu [6], [7]."
+        ],
+        [
+          "Gemini API",
+          "Sinh phản hồi chatbot từ system prompt và tin nhắn người dùng [9]."
+        ],
+        [
+          "Vercel",
+          "Cấu hình redirect và triển khai frontend tĩnh [10]."
+        ],
+        [
+          "Tailwind CSS",
+          "Chỉ được nạp bằng CDN và dùng cục bộ trong trang contact.html."
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "rows": [
+        [
+          "Tác nhân",
+          "Quyền và trách nhiệm"
+        ],
+        [
+          "Khách truy cập",
+          "Khám phá mô phỏng, xem hành tinh, sử dụng bài tập frontend, xem cộng đồng và chatbot."
+        ],
+        [
+          "Người dùng đã đăng nhập",
+          "Có quyền đăng bài công khai/ẩn danh và trả lời bài viết thông qua giao diện cộng đồng."
+        ],
+        [
+          "Gemini API",
+          "Nhận system prompt và tin nhắn, sau đó trả nội dung phản hồi cho route /api/chat."
+        ],
+        [
+          "MongoDB",
+          "Lưu trữ User, Comment và Reply; không phải tác nhân người dùng nhưng là hệ thống liên kết."
+        ]
+      ]
+    },
+    {
+      "index": 8,
+      "rows": [
+        [
+          "Mã",
+          "Yêu cầu",
+          "Mức ưu tiên"
+        ],
+        [
+          "FR01",
+          "Hệ thống hiển thị mô phỏng Hệ Mặt Trời và tám hành tinh.",
+          "Cao"
+        ],
+        [
+          "FR02",
+          "Người dùng có thể chọn hành tinh và xem bảng thông tin.",
+          "Cao"
+        ],
+        [
+          "FR03",
+          "Người dùng có thể mở trang chi tiết của từng hành tinh.",
+          "Cao"
+        ],
+        [
+          "FR04",
+          "Trang hành tinh hiển thị dấu hiệu, nguyên nhân, lời khuyên và hành động.",
+          "Cao"
+        ],
+        [
+          "FR05",
+          "Người dùng có thể chạy bài tập thở và hoạt động tương tác.",
+          "Trung bình"
+        ],
+        [
+          "FR06",
+          "Người dùng có thể đăng ký và đăng nhập.",
+          "Cao"
+        ],
+        [
+          "FR07",
+          "Hệ thống lưu token đăng nhập và cập nhật trạng thái giao diện.",
+          "Cao"
+        ],
+        [
+          "FR08",
+          "Người dùng đã đăng nhập có thể đăng bài công khai hoặc ẩn danh.",
+          "Cao"
+        ],
+        [
+          "FR09",
+          "Người dùng có thể trả lời bài viết và lọc theo hành tinh.",
+          "Cao"
+        ],
+        [
+          "FR10",
+          "Người dùng có thể gửi tin nhắn đến chatbot.",
+          "Trung bình"
+        ],
+        [
+          "FR11",
+          "Hệ thống trả nội dung dự phòng khi Gemini API chưa được cấu hình.",
+          "Trung bình"
+        ],
+        [
+          "FR12",
+          "Trang liên hệ kiểm tra dữ liệu trước khi mô phỏng gửi.",
+          "Thấp"
+        ]
+      ]
+    },
+    {
+      "index": 9,
+      "rows": [
+        [
+          "Mã",
+          "Nhóm",
+          "Yêu cầu"
+        ],
+        [
+          "NFR01",
+          "Khả năng sử dụng",
+          "Điều hướng rõ ràng, phản hồi trực quan và ngôn ngữ tiếng Việt."
+        ],
+        [
+          "NFR02",
+          "Hiệu năng",
+          "Canvas duy trì chuyển động mượt trên thiết bị phổ biến; ảnh có kích thước hợp lý."
+        ],
+        [
+          "NFR03",
+          "Tương thích",
+          "Hoạt động trên trình duyệt hiện đại hỗ trợ Canvas, Fetch và ES6."
+        ],
+        [
+          "NFR04",
+          "Responsive",
+          "Bố cục thích ứng với desktop, tablet và điện thoại."
+        ],
+        [
+          "NFR05",
+          "Bảo mật",
+          "Mật khẩu được băm; token được xác minh; bí mật phải đặt trong biến môi trường."
+        ],
+        [
+          "NFR06",
+          "Bảo trì",
+          "Tách CSS, JavaScript, route, model và tài nguyên theo chức năng."
+        ],
+        [
+          "NFR07",
+          "Mở rộng",
+          "Có thể bổ sung hành tinh, hoạt động hoặc route mà không thay đổi toàn hệ thống."
+        ]
+      ]
+    },
+    {
+      "index": 10,
+      "rows": [
+        [
+          "Use Case",
+          "Tác nhân",
+          "Luồng chính",
+          "Kết quả"
+        ],
+        [
+          "Khám phá Hệ Mặt Trời",
+          "Khách",
+          "Mở trang chủ, chọn hành tinh, thay đổi tốc độ hoặc góc nhìn.",
+          "Mô phỏng và bảng thông tin được cập nhật."
+        ],
+        [
+          "Xem trang hành tinh",
+          "Khách",
+          "Chọn nút khám phá hoặc liên kết hành tinh.",
+          "Trang chủ đề hành tinh được mở."
+        ],
+        [
+          "Thực hiện bài tập thở",
+          "Khách",
+          "Nhấn bắt đầu, theo dõi các pha hít–giữ–thở.",
+          "Hoàn thành tối đa bốn chu kỳ."
+        ],
+        [
+          "Đăng ký",
+          "Khách",
+          "Nhập username/password, gửi POST /api/auth/register.",
+          "Tạo User và nhận JWT nếu hợp lệ."
+        ],
+        [
+          "Đăng nhập",
+          "Khách",
+          "Gửi thông tin đến /api/auth/login.",
+          "Lưu token và username trong LocalStorage."
+        ],
+        [
+          "Đăng bài",
+          "Thành viên",
+          "Chọn chế độ, nhập nội dung và gửi bình luận.",
+          "Comment mới được lưu."
+        ],
+        [
+          "Trả lời bài viết",
+          "Thành viên",
+          "Nhập phản hồi tại bài viết.",
+          "Reply được thêm vào Comment."
+        ],
+        [
+          "Lọc bài viết",
+          "Khách",
+          "Chọn hành tinh trên thanh bộ lọc.",
+          "Feed chỉ hiển thị bài phù hợp."
+        ],
+        [
+          "Trò chuyện chatbot",
+          "Khách",
+          "Nhập câu hỏi và gửi đến /api/chat.",
+          "Hiển thị phản hồi Gemini hoặc fallback."
+        ]
+      ]
+    },
+    {
+      "index": 11,
+      "rows": [
+        [
+          "Trường",
+          "Kiểu",
+          "Ràng buộc / mục đích"
+        ],
+        [
+          "username",
+          "String",
+          "Bắt buộc, duy nhất, viết thường, tối thiểu 3 ký tự."
+        ],
+        [
+          "password",
+          "String",
+          "Bắt buộc, tối thiểu 6 ký tự; được băm trước khi lưu."
+        ],
+        [
+          "createdAt",
+          "Date",
+          "Thời điểm tạo tài khoản, mặc định Date.now."
+        ]
+      ]
+    },
+    {
+      "index": 12,
+      "rows": [
+        [
+          "Trường",
+          "Kiểu",
+          "Ràng buộc / mục đích"
+        ],
+        [
+          "author",
+          "String",
+          "Tên hiển thị của người đăng."
+        ],
+        [
+          "authorId",
+          "ObjectId",
+          "Tham chiếu User, không bắt buộc."
+        ],
+        [
+          "avatar",
+          "String",
+          "Ký tự đại diện."
+        ],
+        [
+          "text",
+          "String",
+          "Nội dung bài viết, bắt buộc."
+        ],
+        [
+          "isAnon",
+          "Boolean",
+          "Đánh dấu chế độ ẩn danh."
+        ],
+        [
+          "planet",
+          "String",
+          "Mã hành tinh liên quan, có thể null."
+        ],
+        [
+          "signalLevel",
+          "Number",
+          "Cường độ từ 1 đến 5, có thể null."
+        ],
+        [
+          "timestamp",
+          "Date",
+          "Thời điểm tạo."
+        ],
+        [
+          "replies",
+          "Reply[]",
+          "Danh sách phản hồi lồng."
+        ]
+      ]
+    },
+    {
+      "index": 13,
+      "rows": [
+        [
+          "Trường",
+          "Kiểu",
+          "Mục đích"
+        ],
+        [
+          "author",
+          "String",
+          "Tên người phản hồi."
+        ],
+        [
+          "authorId",
+          "ObjectId",
+          "Tham chiếu User nếu đã đăng nhập."
+        ],
+        [
+          "avatar",
+          "String",
+          "Ký tự đại diện."
+        ],
+        [
+          "text",
+          "String",
+          "Nội dung phản hồi."
+        ],
+        [
+          "timestamp",
+          "Date",
+          "Thời điểm phản hồi."
+        ]
+      ]
+    },
+    {
+      "index": 14,
+      "rows": [
+        [
+          "Thành phần",
+          "Sử dụng"
+        ],
+        [
+          "Visual Studio Code",
+          "Soạn thảo HTML, CSS, JavaScript và cấu hình dự án."
+        ],
+        [
+          "Git",
+          "Quản lý phiên bản mã nguồn [11]."
+        ],
+        [
+          "Trình duyệt hiện đại",
+          "Chạy Canvas, kiểm tra DOM, Fetch API và responsive."
+        ],
+        [
+          "Node.js / npm",
+          "Cài dependency và chạy Express server."
+        ],
+        [
+          "MongoDB",
+          "Lưu dữ liệu cục bộ hoặc từ dịch vụ MongoDB tương thích."
+        ],
+        [
+          "Live Server / HTTP server",
+          "Phục vụ frontend qua HTTP để tránh hạn chế khi mở file trực tiếp."
+        ]
+      ]
+    },
+    {
+      "index": 15,
+      "rows": [
+        [
+          "Nguyên tắc sử dụng: Phản hồi của chatbot phải được trình bày là gợi ý hỗ trợ cảm xúc, không phải tư vấn y khoa. Với tình huống khẩn cấp hoặc nguy cơ gây hại, sản phẩm tương lai cần hiển thị hướng dẫn tìm trợ giúp chuyên môn."
+        ]
+      ]
+    },
+    {
+      "index": 16,
+      "rows": [
+        [
+          "Phương thức",
+          "Endpoint",
+          "Chức năng",
+          "Xác thực"
+        ],
+        [
+          "POST",
+          "/api/auth/register",
+          "Tạo tài khoản và trả JWT.",
+          "Không"
+        ],
+        [
+          "POST",
+          "/api/auth/login",
+          "Kiểm tra tài khoản và trả JWT.",
+          "Không"
+        ],
+        [
+          "GET",
+          "/api/comments",
+          "Lấy danh sách bình luận mới nhất.",
+          "Không"
+        ],
+        [
+          "POST",
+          "/api/comments",
+          "Tạo bình luận mới.",
+          "Token tùy chọn ở backend"
+        ],
+        [
+          "POST",
+          "/api/comments/:id/reply",
+          "Thêm phản hồi vào bình luận.",
+          "Token tùy chọn ở backend"
+        ],
+        [
+          "POST",
+          "/api/chat",
+          "Gửi tin nhắn tới Gemini hoặc fallback.",
+          "Không"
+        ]
+      ]
+    },
+    {
+      "index": 17,
+      "rows": [
+        [
+          "Mã",
+          "Kịch bản",
+          "Kết quả mong đợi",
+          "Trạng thái"
+        ],
+        [
+          "TC01",
+          "Mở trang chủ",
+          "Canvas và danh sách tám hành tinh hiển thị.",
+          "Đã quan sát"
+        ],
+        [
+          "TC02",
+          "Mở trang Trái Đất",
+          "Hero, texture và thông tin hành tinh hiển thị.",
+          "Đã quan sát"
+        ],
+        [
+          "TC03",
+          "Mở trang cộng đồng",
+          "Composer, bộ lọc và nút đăng nhập hiển thị.",
+          "Đã quan sát"
+        ],
+        [
+          "TC04",
+          "Mở modal đăng nhập",
+          "Form username/password xuất hiện.",
+          "Đã quan sát"
+        ],
+        [
+          "TC05",
+          "Kiểm tra cú pháp JavaScript chính",
+          "Không có SyntaxError.",
+          "Đạt kiểm tra cú pháp"
+        ],
+        [
+          "TC06",
+          "Đăng ký tài khoản mới",
+          "Tạo User và nhận token.",
+          "Cần kiểm tra với MongoDB"
+        ],
+        [
+          "TC07",
+          "Đăng nhập",
+          "Xác minh mật khẩu và lưu token.",
+          "Cần kiểm tra với MongoDB"
+        ],
+        [
+          "TC08",
+          "Đăng bài và trả lời",
+          "Comment/Reply được lưu và tải lại.",
+          "Cần kiểm tra với MongoDB"
+        ],
+        [
+          "TC09",
+          "Gửi chatbot",
+          "Nhận phản hồi Gemini.",
+          "Cần GEMINI_API_KEY"
+        ],
+        [
+          "TC10",
+          "Mất kết nối backend",
+          "Giao diện hiển thị thông báo lỗi.",
+          "Cần kiểm tra"
+        ],
+        [
+          "TC11",
+          "Responsive",
+          "Không tràn hoặc che khuất nội dung.",
+          "Cần kiểm tra đa thiết bị"
+        ],
+        [
+          "TC12",
+          "Triển khai production",
+          "Frontend gọi đúng /api.",
+          "Chưa đạt cấu hình hiện tại"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "rows": [
+        [
+          "Nhóm",
+          "Kết quả"
+        ],
+        [
+          "Mô phỏng và điều hướng",
+          "Có thể chạy cục bộ; giao diện và Canvas hiển thị đúng."
+        ],
+        [
+          "Tám trang hành tinh",
+          "Đã có nội dung và hoạt động riêng; cấu trúc Sao Thủy khác các trang còn lại."
+        ],
+        [
+          "Cộng đồng và xác thực",
+          "Đã có frontend, model và route; cần kiểm thử đầu cuối với MongoDB."
+        ],
+        [
+          "Chatbot",
+          "Đã có UI, route, prompt và fallback; cần xác nhận model và API key."
+        ],
+        [
+          "Liên hệ",
+          "Đã hoàn thiện giao diện và validation; chưa gửi hoặc lưu dữ liệu."
+        ],
+        [
+          "Kiểm thử",
+          "Đã kiểm tra cú pháp và hiển thị chọn lọc; chưa có test tự động."
+        ]
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "width": 7560310,
+      "height": 10692130,
+      "top_margin": 720090,
+      "bottom_margin": 720090,
+      "left_margin": 1080135,
+      "right_margin": 720090
+    },
+    {
+      "index": 1,
+      "width": 7560310,
+      "height": 10692130,
+      "top_margin": 720090,
+      "bottom_margin": 720090,
+      "left_margin": 1080135,
+      "right_margin": 720090
+    },
+    {
+      "index": 2,
+      "width": 7560310,
+      "height": 10692130,
+      "top_margin": 720090,
+      "bottom_margin": 720090,
+      "left_margin": 1080135,
+      "right_margin": 720090
+    }
+  ]
+}

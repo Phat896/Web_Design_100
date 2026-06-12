@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#081824" />
+      <stop offset="60%" stop-color="#03090f" />
+      <stop offset="100%" stop-color="#010305" />
+    </radialGradient>
+
+    <!-- Brain Glow -->
+    <radialGradient id="brain-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;700&amp;display=swap');
+    
+    .hud-text {
+      font-family: 'JetBrains Mono', monospace;
+      fill: #67e8f9;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+    }
+    
+    .hud-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 13px;
+      fill: #ffffff;
+      letter-spacing: 3px;
+    }
+
+    /* Animations */
+    @keyframes synapse-pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 0.9; transform: scale(1.05); }
+    }
+
+    @keyframes trace-flow {
+      0% { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .synapse { animation: synapse-pulse 4s infinite ease-in-out; }
+    .synapse-node-1 { animation: synapse-pulse 3s infinite ease-in-out; transform-origin: 340px 180px; }
+    .synapse-node-2 { animation: synapse-pulse 5s infinite ease-in-out; transform-origin: 460px 140px; }
+    .flow-trace { stroke-dasharray: 4, 12; animation: trace-flow 8s infinite linear; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Grid overlay -->
+  <g stroke="#67e8f9" stroke-width="0.25" stroke-opacity="0.08" fill="none">
+    <path d="M 50 0 L 50 450 M 150 0 L 150 450 M 250 0 L 250 450 M 350 0 L 350 450 M 450 0 L 450 450 M 550 0 L 550 450 M 650 0 L 650 450 M 750 0 L 750 450" />
+    <path d="M 0 50 L 800 50 M 0 150 L 800 150 M 0 250 L 800 250 M 0 350 L 800 350" />
+  </g>
+
+  <!-- Stylized Brain Profile Silhouette (Background Glow) -->
+  <path d="M 260 280 C 240 250 230 180 270 130 C 310 80 430 70 480 110 C 530 150 540 220 520 280 C 500 320 460 330 440 330 C 430 350 400 380 390 380 C 380 380 375 350 360 330 C 310 330 280 310 260 280 Z" fill="url(#brain-glow)" />
+  
+  <path d="M 260 280 C 240 250 230 180 270 130 C 310 80 430 70 480 110 C 530 150 540 220 520 280 C 500 320 460 330 440 330 C 430 350 400 380 390 380 C 380 380 375 350 360 330 C 310 330 280 310 260 280 Z" fill="none" stroke="#67e8f9" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="8,4" />
+
+  <!-- Sparse Neural Pathways (Isolated and long circuits) -->
+  <g fill="none" stroke-linecap="round">
+    <!-- Cortical Pathway -->
+    <path d="M 280 170 C 310 130 380 110 440 130 C 480 145 500 180 490 230" stroke="#67e8f9" stroke-width="1.5" stroke-opacity="0.6" />
+    <path d="M 280 170 C 310 130 380 110 440 130 C 480 145 500 180 490 230" stroke="#ffffff" stroke-width="1.5" class="flow-trace" filter="url(#glow-light)" />
+
+    <!-- Deep Brain/Limbic Pathway (Short & cut-off loops) -->
+    <path d="M 330 240 Q 380 210 430 250" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.4" />
+    <path d="M 330 240 C 350 270 380 280 410 270" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2,2" />
+    <path d="M 390 380 L 390 320 Q 380 280 360 260" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.4" />
+
+    <!-- Isolated Synapse Lines reaching out to empty nodes -->
+    <line x1="330" y1="240" x2="340" y2="180" stroke="#67e8f9" stroke-width="0.75" stroke-opacity="0.5" />
+    <line x1="430" y1="250" x2="460" y2="140" stroke="#67e8f9" stroke-width="0.75" stroke-opacity="0.5" />
+  </g>
+
+  <!-- Neural Nodes (Synapses) -->
+  <g>
+    <!-- Frontal Lobe Node -->
+    <g class="synapse-node-1">
+      <circle cx="340" cy="180" r="10" fill="none" stroke="#67e8f9" stroke-width="0.5" stroke-dasharray="2,4" />
+      <circle cx="340" cy="180" r="4" fill="#ffffff" filter="url(#glow-light)" />
+    </g>
+
+    <!-- Parietal Lobe Node (Isolated) -->
+    <g class="synapse-node-2">
+      <circle cx="460" cy="140" r="12" fill="none" stroke="#67e8f9" stroke-width="0.5" stroke-dasharray="1,6" />
+      <circle cx="460" cy="140" r="3.5" fill="#67e8f9" filter="url(#glow-light)" />
+    </g>
+
+    <!-- Occipital Lobe Node (Isolated) -->
+    <g transform="translate(490, 230)">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#67e8f9" stroke-width="0.5" />
+      <circle cx="0" cy="0" r="3" fill="#67e8f9" opacity="0.6" />
+    </g>
+
+    <!-- Temporal Lobe Node (Faded) -->
+    <g transform="translate(330, 240)">
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1" />
+      <circle cx="0" cy="0" r="2" fill="#ffffff" opacity="0.5" />
+    </g>
+
+    <!-- Midbrain Node -->
+    <g transform="translate(410, 270)">
+      <circle cx="0" cy="0" r="2" fill="#67e8f9" />
+    </g>
+  </g>
+
+  <!-- HUD Chemical Formula (Oxytocin / Bond Deficit Representation) -->
+  <g transform="translate(50, 80)">
+    <!-- Chemistry diagram: Rings -->
+    <path d="M 20 60 L 40 50 L 60 60 L 60 80 L 40 90 L 20 80 Z" fill="none" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.4" />
+    <!-- Disconnected side chain -->
+    <path d="M 60 60 L 80 50 L 100 60" fill="none" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.4" />
+    <path d="M 100 60 L 120 50" fill="none" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="2,2" />
+    
+    <!-- Chemical Markers -->
+    <text x="35" y="45" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.5;">OH</text>
+    <text x="123" y="52" class="hud-text" style="font-size: 7px; fill: #67e8f9;">[OXT_DEFICIT]</text>
+    <text x="15" y="98" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.5;">NH2</text>
+    
+    <!-- Formula Title -->
+    <text x="20" y="25" class="hud-header">NEURO-CHEMISTRY</text>
+    <text x="20" y="37" class="hud-text" style="fill: #ffffff; opacity: 0.6;">OXYTOCIN INHIBITION MATRIX</text>
+  </g>
+
+  <!-- Right Side HUD Monitor -->
+  <g transform="translate(570, 80)">
+    <text x="20" y="25" class="hud-header">SYNAPTIC GAP</text>
+    <rect x="20" y="32" width="160" height="2" fill="#67e8f9" opacity="0.3" />
+    <rect x="20" y="32" width="40" height="2" fill="#ffffff" />
+    
+    <!-- Value fields -->
+    <text x="20" y="50" class="hud-text">GAP_WIDTH // 45.8 NM</text>
+    <text x="20" y="62" class="hud-text">RETAKE_RATE // HIGH</text>
+    <text x="20" y="74" class="hud-text">SIGNAL_DECAY // 88%</text>
+    <text x="20" y="86" class="hud-text">ISOLATION_INDEX // 0.94</text>
+    
+    <!-- Small graph indicator -->
+    <path d="M 20 150 L 50 145 L 80 155 L 110 135 L 140 160 L 170 150" fill="none" stroke="#67e8f9" stroke-width="1" stroke-opacity="0.5" />
+    <path d="M 20 150 L 50 145 L 80 155 L 110 135 L 140 160 L 170 150" fill="none" stroke="#ffffff" stroke-width="0.75" stroke-dasharray="2,4" />
+    <text x="20" y="120" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.5;">SIGNAL PROPAGATION GRAPH</text>
+  </g>
+
+  <!-- Bottom HUD Status Bar -->
+  <g>
+    <rect x="50" y="405" width="700" height="1" fill="#67e8f9" opacity="0.2" />
+    <!-- Status readout -->
+    <text x="50" y="423" class="hud-text">SYSTEM: BRAIN_FLOW_MONITOR</text>
+    <text x="50" y="433" class="hud-text" style="font-size: 7px; fill: #ffffff; opacity: 0.4;">SENSORS: ACTIVE // DEEP_CORTICAL_SCAN</text>
+
+    <text x="750" y="423" class="hud-text" style="text-anchor: end; fill: #ffffff;">STATUS: COLD_ISOLATION</text>
+    <text x="750" y="433" class="hud-text" style="text-anchor: end; font-size: 7px; fill: #ffffff; opacity: 0.4;">SUBJECT ID: U-8404</text>
+  </g>
+
+  <!-- Faint tech frame borders -->
+  <path d="M 15 40 L 15 15 L 40 15" stroke="#67e8f9" stroke-width="1" opacity="0.4" fill="none" />
+  <path d="M 785 40 L 785 15 L 760 15" stroke="#67e8f9" stroke-width="1" opacity="0.4" fill="none" />
+</svg>

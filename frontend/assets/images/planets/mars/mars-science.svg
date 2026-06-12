@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tech-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0e0204"/>
+      <stop offset="100%" stop-color="#020000"/>
+    </radialGradient>
+
+    <filter id="glow-red">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-orange">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .flow-arrow { stroke-dasharray: 6 4; animation: travel 5s infinite linear; }
+    .flash-alert { animation: alertFlash 1.5s infinite alternate ease-in-out; }
+    .pulse-organ { animation: organGlow 3s infinite ease-in-out; }
+
+    @keyframes travel {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes alertFlash {
+      0% { fill: #f97316; opacity: 0.6; }
+      100% { fill: #ef4444; opacity: 1; filter: drop-shadow(0 0 8px #ef4444); }
+    }
+    @keyframes organGlow {
+      0%, 100% { filter: drop-shadow(0 0 2px #ef4444); }
+      50% { filter: drop-shadow(0 0 8px #ef4444); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#tech-bg)" />
+
+  <!-- Technical Grid -->
+  <g stroke="#450a0a" stroke-width="0.5" opacity="0.2">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <!-- Diagonal lines -->
+    <line x1="0" y1="0" x2="800" y2="450" />
+  </g>
+
+  <!-- Title / Header HUD -->
+  <text x="40" y="45" font-family="'Outfit', sans-serif" font-size="18" font-weight="bold" fill="#ef4444" letter-spacing="1">PHYSIOLOGY OF ARDOR</text>
+  <text x="40" y="68" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f97316" opacity="0.8">FIGHT-OR-FLIGHT ENDOCRINE RESPONSE</text>
+  <line x1="40" y1="78" x2="350" y2="78" stroke="#ef4444" stroke-width="1.5" opacity="0.3" />
+
+  <!-- LEFT SIDE: Kidney & Adrenal Gland Diagram -->
+  <g transform="translate(180, 230)" class="pulse-organ">
+    <!-- Outer boundary box -->
+    <rect x="-100" y="-120" width="200" height="230" rx="8" fill="#0c0102" stroke="#450a0a" stroke-width="1" />
+    
+    <!-- Kidney Outline (Left Side View) -->
+    <path d="M -20,-80 
+             C -60,-80 -80,-50 -80,-10 
+             C -80,30 -60,60 -20,60 
+             C 10,60 15,30 5,10 
+             C -3,-5 -3,-20 5,-35 
+             C 15,-55 10,-80 -20,-80 Z" 
+          fill="#1c0406" stroke="#991b1b" stroke-width="2.5" />
+          
+    <!-- Adrenal Gland Outline (Triangular Cap on Kidney) -->
+    <path d="M -50,-83 
+             C -40,-108 -10,-113 0,-92 
+             C -5,-80 -20,-75 -50,-83 Z" 
+          fill="#ef4444" stroke="#f97316" stroke-width="2.5" class="flash-alert" />
+
+    <!-- Technical labels for organs -->
+    <text x="25" y="-90" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f97316" font-weight="bold">ADRENAL GLAND [HYPERACTIVE]</text>
+    <text x="25" y="45" font-family="'JetBrains Mono', monospace" font-size="10" fill="#991b1b">RENAL ORGANS</text>
+    
+    <!-- Target pointer lines -->
+    <line x1="-25" y1="-92" x2="20" y2="-92" stroke="#f97316" stroke-dasharray="2 2" stroke-width="1" />
+    <line x1="-30" y1="20" x2="20" y2="42" stroke="#991b1b" stroke-dasharray="2 2" stroke-width="1" />
+  </g>
+
+  <!-- CENTER: Hormonal Flow Vectors (Arrows escaping) -->
+  <g fill="none" stroke-width="2.5" filter="url(#glow-orange)">
+    <!-- Paths going from kidney region to info cards -->
+    <path d="M 280,140 Q 340,110 420,130" stroke="#f97316" class="flow-arrow" />
+    <path d="M 280,240 Q 360,240 420,240" stroke="#ef4444" class="flow-arrow" style="animation-delay: 1.5s;" />
+  </g>
+
+  <!-- RIGHT SIDE: Information HUD Blocks -->
+  <!-- Card 1: Hypothalamic Trigger -->
+  <g transform="translate(450, 100)">
+    <rect width="280" height="75" rx="6" fill="#140203" stroke="#450a0a" stroke-width="1.5" />
+    <text x="15" y="25" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">1. SYMPATHETIC STIMULATION</text>
+    <text x="15" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Hypothalamus alerts the nervous system,</text>
+    <text x="15" y="58" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">directing preganglionic fibers to adrenal medulla.</text>
+    <rect x="-10" y="25" width="4" height="25" fill="#facc15" />
+  </g>
+
+  <!-- Card 2: Adrenaline Release -->
+  <g transform="translate(450, 195)">
+    <rect width="280" height="75" rx="6" fill="#140203" stroke="#ef4444" stroke-width="1.5" filter="url(#glow-red)" />
+    <text x="15" y="25" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">2. CATACHOLAMINE EFFLUX</text>
+    <text x="15" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#f87171">Massive surge of epinephrine &amp; norepinephrine</text>
+    <text x="15" y="58" font-family="'Inter', sans-serif" font-size="10" fill="#f87171">floods the bloodstream at high velocity.</text>
+    <rect x="-10" y="25" width="4" height="25" fill="#ef4444" />
+  </g>
+
+  <!-- Card 3: Systemic Impact -->
+  <g transform="translate(450, 290)">
+    <rect width="280" height="75" rx="6" fill="#140203" stroke="#450a0a" stroke-width="1.5" />
+    <text x="15" y="25" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">3. SYSTEMIC OVERLOAD</text>
+    <text x="15" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Heart rate accelerates, airways dilate,</text>
+    <text x="15" y="58" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">and glycogen is rapidly converted to glucose.</text>
+    <rect x="-10" y="25" width="4" height="25" fill="#f97316" />
+  </g>
+
+  <!-- Bottom Stats Dashboard -->
+  <g transform="translate(40, 395)" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ef4444" opacity="0.8">
+    <text x="0" y="0">HEART_RATE: 146 BPM</text>
+    <text x="180" y="0">SYS.PRESSURE: 165/98 mmHg</text>
+    <text x="380" y="0">GLUCOSE: 180 mg/dL</text>
+    <text x="560" y="0">EPINEPHRINE: +420% CRIT</text>
+  </g>
+</svg>

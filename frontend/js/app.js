@@ -1215,7 +1215,9 @@ function showPlanetPanel(planet, index) {
 
   // CTA → planet detail page
   const ctaBtn = document.getElementById('panelCta');
-  if (ctaBtn) ctaBtn.href = `${planet.id}.html`;
+  if (ctaBtn) {
+    ctaBtn.href = `${planet.id}.html`;
+  }
 
   // Planet dots
   buildPlanetDots(index);

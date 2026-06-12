@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug — Community Comments</title>
+  <style>
+    body { font-family: monospace; background: #010812; color: #e8f4ff; padding: 24px; }
+    h1 { color: #00d4ff; }
+    .post { background: rgba(0,212,255,0.06); border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+    .has-planet { border-color: rgba(100,255,150,0.5); background: rgba(100,255,150,0.05); }
+    .no-planet { border-color: rgba(255,100,100,0.3); background: rgba(255,100,100,0.04); }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-size: 12px; margin-left: 8px; }
+    .badge.planet { background: rgba(100,200,255,0.15); color: #60deff; border: 1px solid rgba(100,200,255,0.3); }
+    .badge.null { background: rgba(255,100,100,0.1); color: #ff8888; border: 1px solid rgba(255,100,100,0.2); }
+    .row { margin: 4px 0; }
+    label { color: #8fa0b4; font-size: 11px; display: inline-block; width: 110px; }
+    #status { padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; }
+    .ok { background: rgba(0,255,128,0.08); border: 1px solid rgba(0,255,128,0.2); color: #60ffa0; }
+    .err { background: rgba(255,80,80,0.08); border: 1px solid rgba(255,80,80,0.2); color: #ff8888; }
+    button { background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);
+      color: #00d4ff; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-family: monospace; }
+    button:hover { background: rgba(0,212,255,0.2); }
+    select { background: #020c1e; border: 1px solid rgba(0,212,255,0.2); color: #e8f4ff;
+      padding: 6px 12px; border-radius: 8px; font-family: monospace; }
+    #summary { padding: 12px 16px; background: rgba(0,0,0,0.3); border-radius: 8px; margin-bottom: 16px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <h1>🔭 Debug — Bình luận trong Database</h1>
+
+  <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+    <select id="apiSelect">
+      <option value="https://project-web-bwm.onrender.com/api">🌐 Production (Render)</option>
+      <option value="http://localhost:5000/api">💻 Local (localhost:5000)</option>
+    </select>
+    <select id="planetFilter">
+      <option value="">Tất cả hành tinh</option>
+      <option value="mercury">Mercury</option>
+      <option value="venus">Venus</option>
+      <option value="earth">Earth</option>
+      <option value="mars">Mars</option>
+      <option value="jupiter">Jupiter</option>
+      <option value="saturn">Saturn</option>
+      <option value="uranus">Uranus</option>
+      <option value="neptune">Neptune</option>
+    </select>
+    <button onclick="loadComments()">🔄 Tải bình luận</button>
+    <button onclick="testPost()">📡 Gửi test từ Mercury</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="summary"></div>
+  <div id="feed"></div>
+
+  <script>
+    const PLANET_NAMES = {
+      mercury:'Sao Thủy', venus:'Sao Kim', earth:'Trái Đất', mars:'Sao Hỏa',
+      jupiter:'Sao Mộc', saturn:'Sao Thổ', uranus:'Sao T.Vương', neptune:'Sao H.Vương'
+    };
+
+    function getApi() {
+      return document.getElementById('apiSelect').value;
+    }
+
+    async function loadComments() {
+      const status = document.getElementById('status');
+      const feed = document.getElementById('feed');
+      const summary = document.getElementById('summary');
+      const planet = document.getElementById('planetFilter').value;
+
+      status.className = '';
+      status.textContent = '⏳ Đang kết nối...';
+      feed.innerHTML = '';
+      summary.innerHTML = '';
+
+      const url = planet
+        ? `${getApi()}/comments?planet=${planet}`
+        : `${getApi()}/comments`;
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        if (!data.success) throw new Error(data.message || 'API error');
+
+        const posts = data.data || [];
+        const withPlanet = posts.filter(p => p.planet);
+        const noPlanet = posts.filter(p => !p.planet);
+
+        status.className = 'ok';
+        status.textContent = `✅ Kết nối OK — ${posts.length} bình luận tổng cộng`;
+
+        summary.innerHTML = `
+          <b>Tóm tắt:</b><br>
+          📌 Tổng số: <b>${posts.length}</b> bình luận<br>
+          🪐 CÓ hành tinh (từ trang planet): <b style="color:#60ffa0">${withPlanet.length}</b><br>
+          ⬜ KHÔNG có hành tinh (từ community page): <b style="color:#ff8888">${noPlanet.length}</b><br>
+          📊 API URL: <code style="color:#00d4ff">${url}</code>
+        `;
+
+        if (posts.length === 0) {
+          feed.innerHTML = '<p style="color:#8fa0b4">Chưa có bình luận nào.</p>';
+          return;
+        }
+
+        posts.forEach(post => {
+          const hasPlanet = Boolean(post.planet);
+          const planetLabel = hasPlanet
+            ? `<span class="badge planet">🪐 ${PLANET_NAMES[post.planet] || post.planet}</span>`
+            : `<span class="badge null">⬜ Không có hành tinh</span>`;
+
+          feed.innerHTML += `
+            <div class="post ${hasPlanet ? 'has-planet' : 'no-planet'}">
+              <div class="row"><label>ID:</label> <code>${post._id}</code></div>
+              <div class="row"><label>Tác giả:</label> <b>${post.author}</b> ${post.isAnon ? '(ẩn danh)' : '(công khai)'}</div>
+              <div class="row"><label>Nội dung:</label> "${post.text}"</div>
+              <div class="row"><label>Hành tinh:</label> ${planetLabel}</div>
+              <div class="row"><label>Signal level:</label> ${post.signalLevel || 'null'}/5</div>
+              <div class="row"><label>Thời gian:</label> ${new Date(post.timestamp).toLocaleString('vi-VN')}</div>
+              <div class="row"><label>Replies:</label> ${post.replies?.length || 0}</div>
+            </div>`;
+        });
+
+      } catch (err) {
+        status.className = 'err';
+        status.textContent = `❌ Lỗi: ${err.message}`;
+        feed.innerHTML = `<p style="color:#ff8888">Không thể kết nối. Kiểm tra backend đang chạy chưa.</p>`;
+      }
+    }
+
+    async function testPost() {
+      const status = document.getElementById('status');
+      const testText = `[Debug] Tín hiệu test từ Mercury — ${new Date().toLocaleTimeString('vi-VN')}`;
+
+      try {
+        const res = await fetch(`${getApi()}/comments`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            text: testText,
+            planet: 'mercury',
+            signalLevel: 3,
+            isAnon: true,
+            author: 'Debug_Tester'
+          })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          status.className = 'ok';
+          status.textContent = `✅ Gửi test thành công! planet='mercury' đã lưu vào DB. Nhấn "Tải bình luận" để xem.`;
+          loadComments();
+        } else {
+          throw new Error(data.message || data.error);
+        }
+      } catch (err) {
+        status.className = 'err';
+        status.textContent = `❌ Gửi thất bại: ${err.message}`;
+      }
+    }
+
+    // Auto-load on open
+    loadComments();
+  </script>
+</body>
+</html>
