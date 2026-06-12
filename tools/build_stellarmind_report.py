@@ -825,10 +825,8 @@ def add_chapter_two(document):
             ("FR08", "Người dùng đã đăng nhập có thể đăng bài công khai hoặc ẩn danh.", "Cao"),
             ("FR09", "Người dùng có thể trả lời, thích bài viết và lọc theo hành tinh.", "Cao"),
             ("FR10", "Khách có thể gửi tín hiệu ẩn danh kèm hành tinh và cường độ từ trang cảm xúc.", "Trung bình"),
-            ("FR11", "Người dùng có thể gửi tin nhắn đến chatbot.", "Trung bình"),
-            ("FR12", "Hệ thống trả nội dung dự phòng khi Gemini API chưa được cấu hình.", "Trung bình"),
-            ("FR13", "Người dùng đã đăng nhập có thể liên kết hoặc cập nhật email tài khoản.", "Trung bình"),
-            ("FR14", "Trang liên hệ kiểm tra dữ liệu và gửi email qua backend khi SMTP được cấu hình.", "Trung bình"),
+            ("FR11", "Người dùng có thể gửi tin nhắn đến chatbot; hệ thống có phản hồi dự phòng khi thiếu khóa API.", "Trung bình"),
+            ("FR12", "Trang liên hệ có thể liên kết email tài khoản, kiểm tra dữ liệu và gửi thư khi SMTP được cấu hình.", "Trung bình"),
         ],
         [0.65, 4.65, 0.9],
     )
@@ -1451,18 +1449,6 @@ def add_appendices(document):
         "app.use('/api/contact', require('./routes/contact'));"
     )
 
-    add_body(
-        document,
-        "Model User dùng hook pre-save để băm mật khẩu trước khi lưu.",
-    )
-    p = document.add_paragraph(style="Code")
-    p.add_run(
-        "UserSchema.pre('save', async function(next) {\n"
-        "  if (!this.isModified('password')) return next();\n"
-        "  const salt = await bcrypt.genSalt(10);\n"
-        "  this.password = await bcrypt.hash(this.password, salt);\n"
-        "});"
-    )
 
 
 def build():

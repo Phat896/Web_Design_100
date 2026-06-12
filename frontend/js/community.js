@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic API configuration: automatically switch between local development and production
   const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '' || window.location.protocol === 'file:'
     ? 'http://localhost:5000/api'
-    : 'https://project-web-bwm.onrender.com/api';
+    : 'https://backen-stellarmind.onrender.com/api';
   const feedEl = document.getElementById('commFeed');
   const streamMetaEl = document.getElementById('communityStreamMeta');
   const sendBtn = document.getElementById('commSendBtn');

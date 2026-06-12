@@ -127,7 +127,8 @@ def create_use_case():
     actor_boxes = [
         ((65, 300, 340, 450), "Khách truy cập", CYAN),
         ((65, 650, 340, 800), "Người dùng\nđã đăng nhập", ORANGE),
-        ((1460, 470, 1730, 620), "Gemini API", PURPLE),
+        ((1460, 350, 1730, 500), "Gemini API", PURPLE),
+        ((1460, 680, 1730, 830), "Dịch vụ SMTP", TEAL),
     ]
     for xy, label, color in actor_boxes:
         draw.rounded_rectangle(xy, radius=25, fill=WHITE, outline=color, width=5)
@@ -136,13 +137,13 @@ def create_use_case():
     use_cases = [
         ((490, 280, 830, 380), "Khám phá Hệ Mặt Trời", BLUE),
         ((945, 280, 1300, 380), "Xem trang hành tinh", TEAL),
-        ((490, 430, 830, 530), "Thực hành bài tập thở", GREEN),
-        ((945, 430, 1300, 530), "Nghe âm thanh / tương tác", CYAN),
+        ((490, 430, 830, 530), "Thực hành theo hành tinh", GREEN),
+        ((945, 430, 1300, 530), "Gửi tín hiệu cảm xúc", CYAN),
         ((490, 580, 830, 680), "Đăng ký / đăng nhập", ORANGE),
-        ((945, 580, 1300, 680), "Đăng bài chia sẻ", RED),
+        ((945, 580, 1300, 680), "Đăng bài và thích bài", RED),
         ((490, 730, 830, 830), "Trả lời và lọc bài viết", PURPLE),
         ((945, 730, 1300, 830), "Trò chuyện với chatbot", BLUE),
-        ((720, 880, 1070, 980), "Gửi biểu mẫu liên hệ", TEAL),
+        ((720, 880, 1070, 980), "Gửi liên hệ qua email", TEAL),
     ]
     for xy, label, color in use_cases:
         draw.rounded_rectangle(xy, radius=50, fill=WHITE, outline=color, width=4)
@@ -150,12 +151,14 @@ def create_use_case():
 
     guest = (340, 375)
     member = (340, 725)
-    gemini = (1460, 545)
+    gemini = (1460, 425)
+    smtp = (1460, 755)
     for target in [(490, 330), (945, 330), (490, 480), (945, 480), (490, 630), (945, 780), (720, 930)]:
         arrow(draw, guest, target, fill=LINE, width=3)
     for target in [(490, 630), (945, 630), (490, 780), (945, 780)]:
         arrow(draw, member, target, fill=ORANGE, width=4)
     arrow(draw, gemini, (1300, 780), fill=PURPLE, width=4, label="GenerateContent")
+    arrow(draw, smtp, (1070, 930), fill=TEAL, width=4, label="SMTP")
     return save(image, "07-use-case.png")
 
 
@@ -166,7 +169,7 @@ def create_architecture():
     )
     rounded_box(
         draw, (80, 260, 410, 830), "TRÌNH DUYỆT",
-        ["HTML5 / CSS3", "Vanilla JavaScript", "Canvas API", "GSAP / ScrollTrigger", "LocalStorage"],
+        ["HTML5 / CSS3", "Vanilla JavaScript", "Canvas API", "IntersectionObserver", "LocalStorage"],
         fill=WHITE, outline=CYAN, title_fill=CYAN,
     )
     rounded_box(
@@ -176,23 +179,29 @@ def create_architecture():
     )
     rounded_box(
         draw, (1100, 240, 1450, 850), "BACKEND EXPRESS",
-        ["Route /api/auth", "Route /api/comments", "Route /api/chat", "JWT và bcryptjs", "Mongoose models", "CORS + JSON middleware"],
+        ["Route /api/auth", "Route /api/comments", "Route /api/chat", "Route /api/contact", "JWT và bcryptjs", "Mongoose + Nodemailer"],
         fill=WHITE, outline=ORANGE, title_fill=ORANGE,
     )
     rounded_box(
-        draw, (1530, 210, 1740, 500), "MONGODB",
-        ["User", "Comment", "Reply lồng"],
+        draw, (1510, 175, 1760, 430), "MONGODB",
+        ["User + email", "Comment + likedBy", "Reply lồng"],
         fill=WHITE, outline=GREEN, title_fill=GREEN,
     )
     rounded_box(
-        draw, (1530, 620, 1740, 910), "GEMINI API",
+        draw, (1510, 500, 1760, 735), "GEMINI API",
         ["Prompt hệ thống", "Sinh phản hồi", "Fallback khi thiếu khóa"],
         fill=WHITE, outline=PURPLE, title_fill=PURPLE,
     )
     arrow(draw, (410, 520), (550, 520), label="Tương tác UI")
     arrow(draw, (960, 465), (1100, 465), label="HTTP/JSON")
-    arrow(draw, (1450, 380), (1530, 380), fill=GREEN, label="Mongoose")
-    arrow(draw, (1450, 735), (1530, 735), fill=PURPLE, label="HTTPS")
+    rounded_box(
+        draw, (1510, 800, 1760, 1010), "SMTP",
+        ["Nodemailer", "Gửi thư liên hệ", "Phụ thuộc cấu hình"],
+        fill=WHITE, outline=TEAL, title_fill=TEAL,
+    )
+    arrow(draw, (1450, 330), (1510, 330), fill=GREEN, label="Mongoose")
+    arrow(draw, (1450, 620), (1510, 620), fill=PURPLE, label="HTTPS")
+    arrow(draw, (1450, 895), (1510, 895), fill=TEAL, label="SMTP")
     arrow(draw, (1100, 700), (960, 700), fill=ORANGE, label="JSON response")
     draw.text((94, 940), "Triển khai dự kiến:", font=F_BODY_B, fill=NAVY)
     draw.text(
@@ -214,6 +223,7 @@ def create_data_model():
         [
             "_id: ObjectId",
             "username: String, unique",
+            "email: String, unique, sparse",
             "password: String (bcrypt hash)",
             "createdAt: Date",
         ],
@@ -230,6 +240,7 @@ def create_data_model():
             "isAnon: Boolean",
             "planet: String | null",
             "signalLevel: Number 1..5",
+            "likedBy: ObjectId[]",
             "timestamp: Date",
             "replies: Reply[]",
         ],
@@ -304,32 +315,32 @@ def create_sequences():
         "BIỂU ĐỒ TUẦN TỰ: ĐĂNG KÝ VÀ ĐĂNG NHẬP",
         ["Người dùng", "Community UI", "Express Auth", "MongoDB"],
         [
-            (0, 1, "Nhập username và password", False),
+            (0, 1, "Nhập username, email và password khi đăng ký", False),
             (1, 2, "POST /api/auth/register hoặc /login", False),
             (2, 3, "Tìm User / tạo User", False),
             (3, 2, "Trả kết quả truy vấn", True),
             (2, 2, "bcrypt hash/compare và tạo JWT", False),
-            (2, 1, "JSON: success, username, token", True),
-            (1, 0, "Lưu token vào LocalStorage và cập nhật UI", True),
+            (2, 1, "JSON: success, username, email, token", True),
+            (1, 0, "Lưu token, username, email và cập nhật UI", True),
         ],
         "10-tuan-tu-xac-thuc.png",
-        "Hai luồng dùng chung route auth; mật khẩu được xử lý bởi bcryptjs và token có hạn 30 ngày.",
+        "Đăng ký yêu cầu email duy nhất; tài khoản cũ có thể liên kết email qua PATCH /api/auth/email.",
     )
     sequence_diagram(
         "BIỂU ĐỒ TUẦN TỰ: ĐĂNG BÀI VÀ TRẢ LỜI",
         ["Người dùng", "Community UI", "Comments API", "MongoDB"],
         [
-            (0, 1, "Nhập nội dung, chọn công khai hoặc ẩn danh", False),
+            (0, 1, "Nhập bài hoặc gửi tín hiệu theo hành tinh", False),
             (1, 2, "POST /api/comments + Bearer token", False),
-            (2, 2, "Kiểm tra token tùy chọn và chuẩn hóa tác giả", False),
+            (2, 2, "Token tùy chọn khi tạo bài; chuẩn hóa dữ liệu", False),
             (2, 3, "Tạo Comment", False),
             (3, 2, "Comment đã lưu", True),
             (2, 1, "JSON dữ liệu bài viết", True),
-            (1, 2, "POST /api/comments/:id/reply", False),
-            (2, 3, "Thêm Reply vào mảng replies", False),
+            (1, 2, "POST /:id/reply hoặc /:id/like + JWT", False),
+            (2, 3, "Thêm Reply hoặc cập nhật likedBy", False),
         ],
         "11-tuan-tu-cong-dong.png",
-        "Reply là subdocument của Comment; giao diện tải lại feed sau khi thao tác thành công.",
+        "Reply và like bắt buộc xác thực; trạm tín hiệu có thể tạo Comment ẩn danh không kèm token.",
     )
     sequence_diagram(
         "BIỂU ĐỒ TUẦN TỰ: CHATBOT GEMINI",
@@ -346,6 +357,21 @@ def create_sequences():
         "12-tuan-tu-chatbot.png",
         "Khi thiếu khóa API, backend trả phản hồi hướng dẫn cục bộ thay vì gọi dịch vụ bên ngoài.",
     )
+    sequence_diagram(
+        "BIỂU ĐỒ TUẦN TỰ: GỬI LIÊN HỆ",
+        ["Người dùng", "Contact UI", "Express Contact", "SMTP"],
+        [
+            (0, 1, "Nhập tên, email, chủ đề và nội dung", False),
+            (1, 2, "PATCH /api/auth/email nếu email thay đổi", False),
+            (1, 2, "POST /api/contact + Bearer token", False),
+            (2, 2, "Kiểm tra JWT, dữ liệu và thời gian chờ 60 giây", False),
+            (2, 3, "Nodemailer gửi thư qua SMTP", False),
+            (3, 2, "Kết quả gửi thư", True),
+            (2, 1, "JSON thành công hoặc lỗi cấu hình", True),
+        ],
+        "14-tuan-tu-lien-he.png",
+        "Route liên hệ không lưu collection riêng và chỉ hoạt động khi máy chủ có cấu hình SMTP hợp lệ.",
+    )
 
 
 def create_folder_structure():
@@ -357,8 +383,8 @@ def create_folder_structure():
         ("Project_Web_BWD/", 0, NAVY, True),
         ("frontend/", 1, BLUE, True),
         ("html/ – trang chủ, 8 trang hành tinh, cộng đồng, liên hệ", 2, TEXT, False),
-        ("css/ – style, planet-page, community, chatbot, components", 2, TEXT, False),
-        ("js/ – app, planet-page, community, chatbot, animations", 2, TEXT, False),
+        ("css/ – style, emotion-pages, community, chatbot, components", 2, TEXT, False),
+        ("js/ – app, planet-data, emotion-pages, community, chatbot", 2, TEXT, False),
         ("assets/images/planets/ – hình minh họa theo hành tinh", 2, TEXT, False),
         ("planets/ – ảnh texture hành tinh", 2, TEXT, False),
         ("vercel.json – điều hướng triển khai frontend", 2, TEXT, False),
@@ -366,7 +392,8 @@ def create_folder_structure():
         ("server.js – khởi tạo Express và khai báo route", 2, TEXT, False),
         ("config/db.js – kết nối MongoDB", 2, TEXT, False),
         ("models/User.js, Comment.js", 2, TEXT, False),
-        ("routes/auth.js, comments.js, chat.js", 2, TEXT, False),
+        ("routes/auth.js, comments.js, chat.js, contact.js", 2, TEXT, False),
+        ("services/mailer.js – cấu hình và gửi thư SMTP", 2, TEXT, False),
         ("package.json – dependencies và script start/dev", 2, TEXT, False),
         ("Tài liệu và công cụ hỗ trợ", 1, TEAL, True),
         ("README.md, DESIGN_SYSTEM.md, IMPLEMENTATION_SUMMARY.md", 2, TEXT, False),
@@ -386,7 +413,7 @@ def create_folder_structure():
     notes = [
         "Frontend không dùng framework SPA.",
         "Backend chỉ cung cấp API và không render HTML.",
-        "Dữ liệu cảm xúc tập trung trong JavaScript.",
+        "Dữ liệu cảm xúc tập trung trong planet-data.js.",
         "Ảnh và style được tổ chức theo chức năng.",
         "Hiện tồn tại một số bản sao file trong frontend/html/js cần đồng bộ.",
     ]
@@ -412,6 +439,7 @@ def main():
             OUT / "10-tuan-tu-xac-thuc.png",
             OUT / "11-tuan-tu-cong-dong.png",
             OUT / "12-tuan-tu-chatbot.png",
+            OUT / "14-tuan-tu-lien-he.png",
         ]
     )
     for path in paths:

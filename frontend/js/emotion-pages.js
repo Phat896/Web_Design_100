@@ -16,7 +16,7 @@ function getApiBase() {
   const h = window.location.hostname;
   return (h === 'localhost' || h === '127.0.0.1' || h === '' || window.location.protocol === 'file:')
     ? 'http://localhost:5000/api'
-    : 'https://project-web-bwm.onrender.com/api';
+    : 'https://backen-stellarmind.onrender.com/api';
 }
 
 function fmtDate(d) {

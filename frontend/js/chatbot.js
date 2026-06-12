@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic API configuration: automatically switch between local development and production
     const API_CHAT = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '' || window.location.protocol === 'file:'
     ? 'http://localhost:5000/api/chat'
-    : 'https://project-web-bwm.onrender.com/api/chat';
+    : 'https://backen-stellarmind.onrender.com/api/chat';
   // 1. Inject Chatbot HTML into document body if not already present
   if (!document.getElementById('cosmicChatLauncher')) {
     const isVenus = document.body.dataset.planet === 'venus';
