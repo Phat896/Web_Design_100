@@ -826,7 +826,7 @@ def add_chapter_two(document):
             ("FR09", "Người dùng có thể trả lời, thích bài viết và lọc theo hành tinh.", "Cao"),
             ("FR10", "Khách có thể gửi tín hiệu ẩn danh kèm hành tinh và cường độ từ trang cảm xúc.", "Trung bình"),
             ("FR11", "Người dùng có thể gửi tin nhắn đến chatbot; hệ thống có phản hồi dự phòng khi thiếu khóa API.", "Trung bình"),
-            ("FR12", "Trang liên hệ có thể liên kết email tài khoản, kiểm tra dữ liệu và gửi thư khi SMTP được cấu hình.", "Trung bình"),
+            ("FR12", "Gửi liên hệ qua backend khi đã đăng nhập, có email và SMTP được cấu hình.", "Trung bình"),
         ],
         [0.65, 4.65, 0.9],
     )
