@@ -1,5 +1,5 @@
 {
-  "cleanUrls": true,
+  "cleanUrls": false,
   "redirects": [
     { "source": "/", "destination": "/html/index.html", "statusCode": 302 },
     { "source": "/index.html", "destination": "/html/index.html", "statusCode": 302 }
